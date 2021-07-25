@@ -1,0 +1,289 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='ie=edge' />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="Henrique Fernandez Teixeira">
+    <link rel="icon" type="image/ico" href="images/icon-16x16.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.0.0/turbolinks.js" integrity="sha512-P3/SDm/poyPMRBbZ4chns8St8nky2t8aeG09fRjunEaKMNEDKjK3BuAstmLKqM7f6L1j0JBYcIRL4h2G6K6Lew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script></script>
+
+      <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=60bc2b44a75109001138d6ff&product=sticky-share-buttons' async='async'></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161733672-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-161733672-1');
+      </script>
+      <title>@truehenrique - PWA com Elixir e Phoenix em 5 minutos</title>
+        <meta property="og:image" content="https://truehenrique.com/images/pwa-com-elixir-e-phoenix-em-5-minutos.png">
+        <meta name="twitter:image:src" content="https://truehenrique.com/images/pwa-com-elixir-e-phoenix-em-5-minutos.png">
+      <meta property="og:type" content="article" />
+      <meta property="article:author" content="https://www.truehenrique.com/sobre">
+      <meta property="og:site_name" content="@truehenrique" />
+      <meta property="og:description" content="" />
+      <meta property="twitter:description" content="">
+      <meta name="description" content="">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="robots" content="index,follow">
+      <meta name="keywords" content="elixir,phoenix">
+      <meta property="og:title" content="PWA com Elixir e Phoenix em 5 minutos" />
+      <meta property="twitter:title" content="PWA com Elixir e Phoenix em 5 minutos">
+      <meta name="title" content ="PWA com Elixir e Phoenix em 5 minutos">
+      <meta property="og:url" content="https://www.truehenrique.com/2020/03/04/pwa-com-elixir-e-phoenix-em-5-minutos/">
+      <link rel="canonical" href="https://www.truehenrique.com/2020/03/04/pwa-com-elixir-e-phoenix-em-5-minutos/"/>
+      <link rel="author" href="https://www.truehenrique.com/sobre">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
+
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <link href="/stylesheets/picnic.css" rel="stylesheet" /><link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/site.js"></script>
+  </head>
+  <body>
+    <header>
+  <h1>@truehenrique</h1>
+  <div class="wrap">
+    <a href="/"><img src="/images/logo-white.png" alt="" /></a>
+  </div>
+</header>
+<div class="nav">
+  <nav class="wrap">
+    <a href="#" class="brand">
+      <img src="/images/logo-white.png" alt="" />
+    </a>
+    <!-- responsive-->
+    <input id="bmenub" type="checkbox" class="show">
+    <label for="bmenub" class="burger pseudo button large"><i class="fi-list"></i> </label>
+
+    <div class="menu wrap">
+      <a href="/" class="pseudo button icon-puzzle active"><i class="fi-page-multiple"></i> Blog</a>
+      <a href="/sobre" data-turbolinks=false class="pseudo button icon-picture "><i class="fi-torso-business"></i> Sobre</a>
+      <a href="https://github.com/henriquefernandez" class="pseudo button icon-picture" target="_blank"><i class="fi-social-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/henrique-fernandez-teixeira-93a4a3127/" class="pseudo button icon-picture" target="_blank"><i class="fi-social-linkedin"></i> Linkedin</a>
+    </div>
+  </nav>
+</div>
+
+
+    <div class="flex one three-800 wrap">
+      <main role="main" class="two-third-800">
+          <div id="fb-root"></div>
+          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v6.0"></script>
+
+          <div class="wwrap">
+            <h2>PWA com Elixir e Phoenix em 5 minutos</h2>
+            <small class="color-lite">Mar  4</small>
+            <div class="article-image" style="background-image: url(/images/pwa-com-elixir-e-phoenix-em-5-minutos.png)" alt="PWA com Elixir e Phoenix em 5 minutos"></div>
+
+        <div>Construir um <em>PWA (Progressive Web App)</em> é uma maneira de possibilitar que sua aplicação <em>web </em>escrita em <em>html</em>, <em>css</em> e <em>javascript</em> funcione praticamente como um aplicativo para <em>smartphones</em>, <em>desktops </em>e<em> tablets</em> podendo inclusive ser instalada, ter <em>"push notifications" </em>e funcionamento completamente <em>offline</em>. Nesse <em>post</em> não vou me aprofundar tanto no conceito, mas mostrarei como é simples e rápido transformar um projeto <em>Elixir</em> e <em>Phoenix</em> em um <em>PWA.</em>&nbsp;<br /><br /></div>
+<div>Vamos aos passos para criar o seu <em>PWA</em> com <em>Elixir e Phoenix</em>:</div>
+<h3><br /></h3>
+<h3>Passo 1:</h3>
+<div><br />Adicione um arquivo chamado <strong><em>manifest.json</em></strong> no seu<em> priv/static </em>contendo o seguinte conteúdo:</div>
+<div><br /></div>
+<pre><code class="javascript">{
+
+  "short_name": "My App", // Nome em que aparecerá junto ao ícone
+
+  "name": "My Very Progressive Web App @PWA", // Descrição que aparecerá enquanto o aplicativo é carregado
+
+  "icons": [ // Coloque aqui a localização dos ícones do seu aplicativo
+
+    {
+
+      "src": "/images/logo.png",  
+
+      "type": "image/png"
+
+    }
+
+  ],
+
+  "start_url": "/", // Aqui vai o endereço principal do seu aplicativo (o que irá ser acessado primeiro quando abrirmos o app)
+
+  "background_color": "#fff", // Definimos uma cor de fundo enquanto ao aplicativo é carregado.
+
+  "display": "standalone", // Definimos o modo primário que o navegador deve considerar para exibir o aplicativo.
+
+  "scope": "/", // Definimos o escopo, limite, das páginas a serem consideradas como PWA
+
+  "theme_color": "#000"   // Definimos uma cor para personalizar a interface do dispositivo em uso
+
+} 
+
+            <em>                                 </em></code></pre>
+<div><br />Este arquivo é o responsável por personalizar a aparência do nosso <em>PWA</em> e um pouco da experiência de uso. Além das configurações setadas acima, também podemos adicionar as seguintes:<br /><br /></div>
+<ul><li><em>lang</em>: Definimos o idioma utilizado (ex: <em>pt-BR</em>).</li><li><em>orientation</em>: Definimos a orientação de como exibir o aplicativo (ex: <em>any, natural, landscape, landscape-primary, landscape-secondary, portrait, portrait-primary, portrait-secondary</em>).</li><li><em>prefer_related_applications</em>: Informa se há uma outra aplicação complementar (<em>Boolean</em>).</li><li><em>related_applications</em>: Definimos as aplicações complementares (<em>Array</em> de objetos de aplicações com os possíveis valores: <em>platform, url e id</em>).</li><li><em>dir</em>: Definimos a direção do texto nas especifcações do manifesto.</li></ul>
+<div><br />Para agilizar o processo de criação do nosso <strong><em>manifest.json</em></strong> podemos recorrer a ferramentas de automatização. Esse site é bem eficiente e também nos ajuda a gerar os ícones formatados:<br /><br /><a href="https://app-manifest.firebaseapp.com/">https://app-manifest.firebaseapp.com/</a></div>
+<div><br /></div>
+<h3>Passo 2:</h3>
+<div><br />Adicione um arquivo chamado <strong><em>service_worker.js</em></strong> no seu <em>priv/static</em> contendo o seguinte conteúdo:<br /><br /></div>
+<pre><code class="javascript">self.addEventListener('install', function(e) {
+
+  e.waitUntil(
+
+    fetch('/cache_manifest.json')
+
+    .then(function(response) {
+
+      return response.json()
+
+    })  
+
+    .then(function(cacheManifest) {
+
+      var cacheName = 'cache:static:' + cacheManifest.version
+
+      var all = Object.values(cacheManifest.latest).filter(
+
+        function(fn) { return fn.match(/^(images|css|js|fonts)/);
+
+        })
+
+      caches.open(cacheName).then(function(cache) {
+
+        return cache.addAll(all).then(function() {
+
+          self.skipWaiting();
+
+        });
+
+      })
+
+    })
+
+  );
+
+});
+
+
+
+self.addEventListener('fetch', function(event) {
+
+  event.respondWith(
+
+    caches.match(event.request).then(function(response) {
+
+      if (response) {
+
+        return response;
+
+      }
+
+      return fetch(event.request);
+
+    })
+
+  );
+
+});</code></pre>
+<div><br /></div>
+<blockquote>Essencialmente, um <em>service worker</em> se comporta como um servidor <em>proxy</em> situado entre uma aplicação web, o navegador e a rede (quando esta estiver disponível). Eles servem, dentre outras coisas, para possibilitar a criação de experiências <em>offline</em> eficientes, interceptar requisições de rede – agindo adequadamente de acordo com o <em>status</em> atual da conexão – e atualizar os <em>assets</em> que residem no servidor. Service workers também permitem o acesso às APIs de <em>push notification</em> e <em>background sync</em>.<br /><br />- <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Service_Worker_API">https://developer.mozilla.org/pt-BR/docs/Web/API/Service_Worker_API</a></blockquote>
+<div><br />No nosso caso, estamos escutando a dois eventos <em>"install" e "fetch"</em>.<br /><br /></div>
+<ul><li><em>install</em>: Na hora da instalação do aplicativo informamos a localização do nosso<strong><em> cache_manifest.json. </em></strong>Uma vantagem de utilizar o<em> framework Phoenix </em>para <em>PWA's </em>é que ele gera automaticamente este arquivo quando rodamos a <em>task </em><strong><em>mix phx.digest</em></strong>! Este arquivo é responsável por informar dados de <em>cache</em> que são utilizados para o aplicativo funcionar de forma mais rápida, econômica e até de maneira <em>offline </em>dependendo do caso.</li><li><em>fetch</em>: É disparado quando houver uma visita a uma <em>url</em>, se já tivermos cache, responde com o cache, se não executamos o fluxo normal.</li></ul>
+<div><br /></div>
+<h3>Passo 3:</h3>
+<div><br />Permita que os arquivos <strong><em>service_worker.js</em></strong>, <strong><em>cache_manifest.json </em></strong>e <strong><em>manifest.json</em></strong> sejam acessados de forma estática, adicionando nas configurações de <strong><em>Plug.Static</em></strong>, encontradas no módulo <strong><em>Endpoint</em></strong> do seu projeto encontrado em<em> (lib/seu_projeto_web/endpoint.ex):</em><br /><br /></div>
+<pre><code class="elixir">plug Plug.Static,
+
+  at: "/",
+
+  from: :seu_projeto,
+
+  gzip: false,
+
+  only: ~w(css fonts images js favicon.ico robots.txt service_worker.js cache_manifest.json manifest.json) # aqui</code></pre>
+<div><br /><br /></div>
+<h3>Passo 4:</h3>
+<div><br />Adicione um link para o seu <strong><em>manifest.json</em></strong> e o seguinte script no layout principal do seu projeto:<br /><br /></div>
+<pre><code class="html">&lt;link rel="manifest" href="/manifest.json"&gt;
+
+&lt;script&gt;
+
+  if (navigator.serviceWorker) {
+
+    navigator.serviceWorker.register('/service_worker.js', { scope: './' })
+
+      .then(function(reg) {
+
+        console.log('[ServiceWorker]', 'Service worker registered!');
+
+        console.log(reg);
+
+      });
+
+  }
+
+&lt;/script&gt;</code></pre>
+<div><br />Este <em>script</em> basicamente registra o nosso <em>service worker </em>no navegador.<br /><br />É isso! nossa <em>PWA</em> está pronta. <br /><br /> fontes:<br /><em><br /></em><a href="https://www.botsquad.com/2018/03/07/phoenix-sw/"><em>https://www.botsquad.com/2018/03/07/phoenix-sw/</em></a><em><br /></em><a href="https://blog.apiki.com/web-app-manifest/"><em>https://blog.apiki.com/web-app-manifest/</em></a><a href="https://gobacklog.com/blog/progressive-web-apps/"><em><br />https://gobacklog.com/blog/progressive-web-apps/</em></a></div>
+<div><a href="https://vizir.com.br/2017/08/o-que-e-pwa-progressive-web-app-porque-isso-pode-aumentar-seus-resultados-mobile/"><em>https://vizir.com.br/2017/08/o-que-e-pwa-progressive-web-app-porque-isso-pode-aumentar-seus-resultados-mobile/</em></a><em><br /></em><a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Service_Worker_API"><em>https://developer.mozilla.org/pt-BR/docs/Web/API/Service_Worker_API</em></a></div>
+
+
+
+            <br/>
+            <hr>
+            Ei, o que achou desse <i>artigo</i>?
+            <br/>
+            <br/>
+            Compartilhe e dê sua opinião clicando em uma das redes abaixo:
+            <br/>
+            <br/>
+            <div class="sharethis-inline-share-buttons"></div>
+            <br/>
+            Muito obrigado!
+            <hr>
+            <br/>
+            <div class="fb-comments" data-href="https://truehenrique.com/2020/03/04/pwa-com-elixir-e-phoenix-em-5-minutos/" data-width="" data-numposts="10"></div>
+          </div>
+      </main>
+
+      <div>
+      <aside>
+        <h3>Artigos Recentes</h3>
+        <ul data-turbolinks="false">
+              <li><a href="/2020/07/17/elixir-e-phoenix-na-velocidade-da-luz/">Elixir + Phoenix, programando na velocidade da luz</a> <span>Jul 17</span></li>
+              <li><a href="/2020/03/04/pwa-com-elixir-e-phoenix-em-5-minutos/">PWA com Elixir e Phoenix em 5 minutos</a> <span>Mar  4</span></li>
+        </ul>
+        <h4><i class="fi-social-medium"></i> Medium:</h4>
+        <ul data-turbolinks="false">
+                <li><a href="https://medium.com/true-henrique/escreva-e-books-com-ruby-e-softcover-a5b361cee765?source=rss-ab53d3682b4d------2" target="_blank">Escreva e-books com Ruby e Softcover</a> <span>Fev 16</span></li>
+                <li><a href="https://medium.com/true-henrique/elixir-exunit-asser%C3%A7%C3%B5es-e-mocks-para-chamadas-de-fun%C3%A7%C3%B5es-f739de6d31a1?source=rss-ab53d3682b4d------2" target="_blank">[Elixir] ExUnit: Asserções e mocks para chamadas de funções</a> <span>Dez 16</span></li>
+                <li><a href="https://medium.com/true-henrique/o-programador-egoc%C3%AAntrico-d19c8fc92245?source=rss-ab53d3682b4d------2" target="_blank">O programador egocêntrico</a> <span>Dez  1</span></li>
+                <li><a href="https://medium.com/true-henrique/elixir-10-motivos-para-aprender-6cd4d6876f05?source=rss-ab53d3682b4d------2" target="_blank">|> Elixir: 10 motivos para aprender</a> <span>Nov 25</span></li>
+                <li><a href="https://medium.com/true-henrique/como-desenvolver-um-front-end-agrad%C3%A1vel-sem-ser-especialista-17681ab50ae2?source=rss-ab53d3682b4d------2" target="_blank">|> Como desenvolver um front-end agradável sem ser especialista.</a> <span>Nov  8</span></li>
+                <li><a href="https://medium.com/true-henrique/teste-suas-features-views-e-requests-bab15be8749d?source=rss-ab53d3682b4d------2" target="_blank">[Ruby] Testando Features, Views e Requests</a> <span>Jul 16</span></li>
+                <li><a href="https://medium.com/true-henrique/programa%C3%A7%C3%A3o-funcional-pura-ruby-e-monads-i-introdu%C3%A7%C3%A3o-b16687db63d?source=rss-ab53d3682b4d------2" target="_blank">Programação Funcional — Guia de Introdução</a> <span>Mar 27</span></li>
+        </ul>
+        <hr>
+
+        <h3>Tags</h3>
+        <ol>
+            <li><a href="/tags/elixir/">#elixir</a></li>
+            <li><a href="/tags/phoenix/">#phoenix</a></li>
+        </ol>
+        <hr/>
+
+        <h3>Por Ano</h3>
+        <ol>
+            <li><a href="/2020/">2020</a></li>
+        </ol>
+        <hr/>
+
+        <h3>Arquivo completo</h3>
+        <a data-turbolinks=false class="pseudo button" href="/arquivo">Abrir</a>
+        <br>
+      </aside>
+      </div>
+    </div>
+    <footer class="social-footer">
+  <div class="wrap">
+    @truehenrique
+  </div>
+</footer>
+
+  </body>
+</html>

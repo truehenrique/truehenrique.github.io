@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog Name</title>
+  <subtitle>Blog subtitle</subtitle>
+  <id>http://blog.url.com/</id>
+  <link href="http://blog.url.com/"/>
+  <link href="http://blog.url.com/feed.xml" rel="self"/>
+  <updated>2020-07-17T13:52:00-03:00</updated>
+  <author>
+    <name>Blog Author</name>
+  </author>
+  <entry>
+    <title>Elixir + Phoenix, programando na velocidade da luz</title>
+    <link rel="alternate" href="http://blog.url.com/2020/07/17/elixir-e-phoenix-na-velocidade-da-luz/"/>
+    <id>http://blog.url.com/2020/07/17/elixir-e-phoenix-na-velocidade-da-luz/</id>
+    <published>2020-07-17T13:52:00-03:00</published>
+    <updated>2021-07-24T13:00:11-03:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;div&gt;Hoje resolvi trazer alguns "pontos chave" sobre como podemos ser mais produtivos programando com &lt;em&gt;Elixir &lt;/em&gt;e &lt;em&gt;Phoenix&lt;/em&gt;, este post pode ser tanto para quem já tem alguma experiência com a linguagem quanto para quem está iniciando. Talvez você já conheça algumas dessas dicas, outras talvez descubra agora, mas o principal é compartilhar e aprender. vamos lá:&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;h3&gt;1. Entenda todos os detalhes de &lt;strong&gt;&lt;em&gt;pattern matching&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;, &lt;/strong&gt;&lt;strong&gt;&lt;em&gt;guards&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;, &lt;/strong&gt;&lt;strong&gt;&lt;em&gt;keyword lists&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt; e &lt;/strong&gt;&lt;strong&gt;&lt;em&gt;structs&lt;/em&gt;&lt;/strong&gt;.&lt;br /&gt;&lt;br /&gt;&lt;/h3&gt;
+&lt;div&gt;Conhecendo-os temos um grande ganho em produtividade. Diria que &lt;em&gt;60%&lt;/em&gt; do código que lemos e escrevemos com a linguagem envolvem essas estruturas, vale a pena dedicar bastante tempo as explorando e estudando, dessa forma ganhamos muito mais "fluidez" no desenvolvimento das demandas do dia a dia.&lt;br /&gt;&lt;br /&gt;Veja alguns exemplos de detalhes que podem nos pegar de surpresa em determinado momento do nosso desenvolvimento&lt;strong&gt;:&lt;/strong&gt;&lt;/div&gt;
+&lt;div&gt;&lt;br /&gt;&lt;strong&gt;1.1 &lt;/strong&gt;&lt;em&gt;Pattern&lt;/em&gt; ma&lt;em&gt;tching&lt;/em&gt; com &lt;em&gt;structs&lt;/em&gt; funcionam dessa forma:&amp;nbsp;&lt;/div&gt;
+&lt;pre&gt;&lt;code class="html"&gt;iex(1)&amp;gt; %x{} = %MinhaStruct{}
+
+%MinhaStruct{hello: nil}
+
+iex(2)&amp;gt; x
+
+MinhaStruct &lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;&lt;br /&gt;Porém, não conseguimos criar structs através de variáveis:&lt;/div&gt;
+&lt;pre&gt;&lt;code class="html"&gt;iex(12)&amp;gt; x = MinhaStruct
+
+MinhaStruct
+
+iex(13)&amp;gt; %x{}
+
+** (CompileError) iex:13: expected struct name to be a compile time atom or alias, got: x&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;&lt;br /&gt;Caso isso seja necessário, devemos utilizar a função &lt;strong&gt;&lt;em&gt;struct&lt;/em&gt;&lt;/strong&gt;:&lt;/div&gt;
+&lt;pre&gt;&lt;code class="html"&gt;iex(13)&amp;gt; defmodule User do
+
+...(13)&amp;gt; defstruct name: "john"
+
+  ...(13)&amp;gt; end
+
+  iex(14)&amp;gt; x = User
+
+  iex(15)&amp;gt; struct(x)
+
+  %User{name: "john"}&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;&lt;br /&gt;&lt;strong&gt;1.2 &lt;/strong&gt;Na definição de &lt;em&gt;guards&lt;/em&gt;, não podemos utilizar funções definidas no módulo:&lt;/div&gt;
+&lt;pre&gt;&lt;code class="html"&gt;iex(4)&amp;gt; defmodule Teste do
+
+  ...(4)&amp;gt; def maiorquequatro(x), do: x &amp;gt; 4
+
+  ...(4)&amp;gt; def verifica(numero) when maiorquequatro(numero), do: IO.puts("é maior que quatro") 
+
+  ...(4)&amp;gt; def verifica(_numero), do: IO.puts("não é maior que quatro")                             
+
+  ...(4)&amp;gt; end
+
+  ** (CompileError) iex:6: cannot find or invoke local maiorquequatro/1 inside guard. Only macros can be invoked in a guard and they must be defined before their invocation. Called as: maiorquequatro(numero)&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;&lt;br /&gt;Para utilizar funções customizadas em &lt;em&gt;guards&lt;/em&gt;, utilizamos macros:&lt;/div&gt;
+&lt;pre&gt;&lt;code class="html"&gt; iex(9)&amp;gt; defmodule Teste do                                    
+
+  ...(9)&amp;gt; defmacro maiorquequatro(numero) do
+
+  ...(9)&amp;gt; quote do: unquote(numero) &amp;gt; 4                   
+
+  ...(9)&amp;gt; end
+
+  ...(9)&amp;gt; def verifica(numero) when maiorquequatro(numero), do: IO.puts("é maior que quatro")
+
+  ...(9)&amp;gt; def verifica(_numero), do: IO.puts("não é maior que quatro")
+
+  ...(9)&amp;gt; end
+
+  iex(10)&amp;gt; Teste.verifica(2)
+
+  não é maior que quatro
+
+  :ok
+
+  iex(11)&amp;gt; Teste.verifica(5)
+
+  é maior que quatro
+
+  :ok&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;&lt;br /&gt;&lt;strong&gt;1.3&lt;/strong&gt; &lt;em&gt;Pattern matching&lt;/em&gt; em &lt;em&gt;keyword lists&lt;/em&gt; funcionam dessa forma:&amp;nbsp;&lt;/div&gt;
+&lt;pre&gt;&lt;code class="html"&gt;iex(4)&amp;gt; [{:name, nome} | _] = [name: "henrique", id: 3]
+
+  [name: "henrique", id: 3]
+
+  iex(5)&amp;gt; nome
+
+  "henrique"&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;&lt;br /&gt;Lembrando que &lt;em&gt;keyword lists&lt;/em&gt; são um &lt;em&gt;syntax sugar&lt;/em&gt; para uma lista de tuplas...&lt;/div&gt;
+&lt;pre&gt;&lt;code class="html"&gt;iex(7)&amp;gt; [{:name, nome}, {:id, 3}] == [name: "henrique", id: 3]
+
+  true&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;&lt;br /&gt;Se quisessemos extrair somente o nome, por exemplo, não poderiamos fazer dessa maneira:&lt;/div&gt;
+&lt;pre&gt;&lt;code class="html"&gt;iex(6)&amp;gt; [{:name, nome}] = [name: "henrique", id: 3]    
+
+  ** (MatchError) no match of right hand side value: [name: "henrique", id: 3]&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;&lt;br /&gt;Aqui vão &lt;em&gt;links&lt;/em&gt; de estudo para se aprofundar bastante sobre esses temas:&lt;br /&gt;&lt;a href="https://hexdocs.pm/elixir/Kernel.html#defstruct/1"&gt;https://hexdocs.pm/elixir/Kernel.html#defstruct/1&lt;/a&gt;&lt;br /&gt;&lt;a href="https://hexdocs.pm/elixir/Kernel.html#struct/2"&gt;https://hexdocs.pm/elixir/Kernel.html#struct/2&lt;/a&gt;&lt;br /&gt;&lt;a href="https://www.poeticoding.com/the-beauty-of-pattern-matching-in-elixir/"&gt;https://www.poeticoding.com/the-beauty-of-pattern-matching-in-elixir/&lt;/a&gt;&lt;br /&gt;&lt;a href="https://joyofelixir.com/6-pattern-matching"&gt;https://joyofelixir.com/6-pattern-matching&lt;/a&gt;&lt;br /&gt;&lt;a href="https://elixir-lang.org/getting-started/pattern-matching.html"&gt;https://elixir-lang.org/getting-started/pattern-matching.html&lt;/a&gt;&lt;br /&gt;&lt;a href="https://elixir-lang.org/getting-started/keywords-and-maps.html"&gt;https://elixir-lang.org/getting-started/keywords-and-maps.html&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;h3&gt;2. Escreva um alias (autocomplete) na sua &lt;em&gt;IDE&lt;/em&gt; para o require &lt;em&gt;IEx; IEx.pry &lt;/em&gt;&lt;del&gt;por favor&lt;/del&gt;.&lt;/h3&gt;
+&lt;div&gt;&lt;br /&gt;Passamos bastante tempo "debugando" código nas aplicações, em qualquer linguagem. Felizmente o &lt;em&gt;Elixir&lt;/em&gt; conta com ferramentas muito boas para nos auxiliar. Uma das mais usadas requer o módulo &lt;strong&gt;IEx&lt;/strong&gt;:&lt;/div&gt;
+&lt;pre&gt;&lt;code class="elixir"&gt;require IEx&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;&lt;br /&gt;Dessa forma podemos criar um breakpoint que irá abrir um terminal quando o código passar por essa linha:&lt;/div&gt;
+&lt;pre&gt;&lt;code class="elixir"&gt;def hello(), do: IEx.pry&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;&lt;br /&gt;Porém, é comum esquecermos o&lt;strong&gt; require IEx &lt;/strong&gt;no início do arquivo, logo passamos a escrever:&lt;/div&gt;
+&lt;pre&gt;&lt;code class="elixir"&gt;require IEx; IEx.pry&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div&gt;Acredite em mim, com o tempo você vai ficar cansado de escrever &lt;strong&gt;require IEx; IEx.pry&lt;/strong&gt; toda hora! Na minha &lt;em&gt;IDE&lt;/em&gt; tenho um alias que funciona da seguinte maneira, quando escrevo "pry" e salvo o arquivo ou dou um espaço ela automaticamente completa com o resto.&lt;br /&gt;&lt;br /&gt;Se a sua &lt;em&gt;IDE&lt;/em&gt; de preferência for o &lt;em&gt;VIM&lt;/em&gt; (assim como a minha), adicione esse trecho de configuração no seu &lt;strong&gt;~/.vimrc:&lt;/strong&gt;&amp;nbsp;&lt;/div&gt;
+&lt;pre&gt;&lt;code class="html"&gt;abbr pry require IEx; IEx.pry&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;&lt;br /&gt;Faça isso e seja feliz!&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;h3&gt;3. Rode testes com&lt;strong&gt; iex -S mix test --trace &lt;/strong&gt;para não dar timeout na sessão do &lt;strong&gt;IEx&lt;/strong&gt;&amp;nbsp;&lt;/h3&gt;
+&lt;div&gt;&lt;br /&gt;Quando vamos debugar algum ponto do código por um tempo mais longo (utilizando o&lt;em&gt; &lt;/em&gt;&lt;strong&gt;&lt;em&gt;require IEx; IEx.pry &lt;/em&gt;&lt;/strong&gt;com os testes), o ideal é usar o comando acima ou alterar o tempo limite da sessão, caso contrário sua sessão encerrará em 60 segundos.&lt;/div&gt;
+&lt;pre&gt;&lt;code class="html"&gt;** (ExUnit.TimeoutError) test timed out after 60000ms. You can change the timeout:&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;&lt;br /&gt;Inclusive, também seria interessante criar um alias para esse comando, no seu terminal (&lt;strong&gt;&lt;em&gt;~/.bashrc&lt;/em&gt;&lt;/strong&gt;)&lt;/div&gt;
+&lt;pre&gt;&lt;code class="html"&gt;alias mixtest="iex -S mix test --trace"&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;&lt;br /&gt;4. Domine a biblioteca &lt;strong&gt;&lt;em&gt;Plug&lt;/em&gt;&lt;/strong&gt;&amp;nbsp;&lt;/h3&gt;
+&lt;div&gt;&lt;br /&gt;A biblioteca &lt;em&gt;Plug&lt;/em&gt; é uma das principais "portas de entrada" para o &lt;em&gt;Elixir&lt;/em&gt; na &lt;em&gt;web&lt;/em&gt;, inclusive, o &lt;em&gt;framework Phoenix&lt;/em&gt; foi construído baseado nela. Ter domínio e confiança em sua utilização nos trás mais segurança e assertividade nas decisões tomadas em projetos &lt;em&gt;Phoenix&lt;/em&gt;.&lt;br /&gt;&lt;br /&gt;&lt;em&gt;links&lt;/em&gt; para estudo: &lt;br /&gt;&lt;a href="https://ieftimov.com/post/a-deeper-dive-in-elixir-plug/"&gt;https://ieftimov.com/post/a-deeper-dive-in-elixir-plug/&lt;/a&gt;&lt;br /&gt;&lt;a href="https://elixirschool.com/pt/lessons/specifics/plug/"&gt;https://elixirschool.com/pt/lessons/specifics/plug/&lt;/a&gt;&lt;br /&gt;&lt;a href="https://hexdocs.pm/plug/readme.html"&gt;https://hexdocs.pm/plug/readme.html&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;h3&gt;5. Conheça essas dicas do &lt;strong&gt;IEx&lt;/strong&gt;:&lt;/h3&gt;
+&lt;div&gt;&lt;br /&gt;&lt;strong&gt;5.1&lt;/strong&gt; É possível escrever um arquivo de ajuda para iniciar automaticamente variáveis e tudo o que queremos quando abrirmos o terminal do &lt;strong&gt;IEx &lt;/strong&gt;em um projeto. Basta criar um arquivo chamado &lt;strong&gt;&lt;em&gt;.iex.exs &lt;/em&gt;&lt;/strong&gt;na raiz do projeto, exemplo:&lt;/div&gt;
+&lt;pre&gt;&lt;code class="elixir"&gt;# Importe funções e módulos
+
+import_if_available(MinhaApp.MeuModulo)
+
+
+
+# De print em algo antes do terminal iniciar
+
+  IO.puts("hello world")
+
+
+
+# Faça o bind de variáveis que ficarão disponíveis no terminal
+
+  value = 13&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;&lt;br /&gt;&lt;strong&gt;5.2&lt;/strong&gt; Existem diversas funções disponíveis no &lt;strong&gt;IEx&lt;/strong&gt; que podem nos deixar mais produtivos, veja alguma delas:&lt;/div&gt;
+&lt;pre&gt;&lt;code class="html"&gt;  • b/1            - prints callbacks info and docs for a given module
+
+  • c/1            - compiles a file into the current directory
+
+  • c/2            - compiles a file to the given path
+
+  • cd/1           - changes the current directory
+
+  • clear/0        - clears the screen
+
+  • exports/1      - shows all exports (functions + macros) in a module
+
+  • flush/0        - flushes all messages sent to the shell
+
+  • h/0            - prints this help message
+
+  • h/1            - prints help for the given module, function or macro
+
+  • i/0            - prints information about the last value
+
+  • i/1            - prints information about the given term
+
+  • ls/0           - lists the contents of the current directory
+
+  • ls/1           - lists the contents of the specified directory
+
+  • open/1         - opens the source for the given module or function in
+
+  your editor
+
+  • pid/1          - creates a PID from a string
+
+  • pid/3          - creates a PID with the 3 integer arguments passed
+
+  • ref/1          - creates a Reference from a string
+
+  • ref/4          - creates a Reference with the 4 integer arguments
+
+  passed
+
+  • pwd/0          - prints the current working directory
+
+  • r/1            - recompiles the given module's source file
+
+  • recompile/0    - recompiles the current project
+
+• runtime_info/0 - prints runtime info (versions, memory usage, stats)
+
+  • v/0            - retrieves the last value from the history
+
+  • v/1            - retrieves the nth value from the history&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;strong&gt;5.3&lt;/strong&gt; &lt;strong&gt;&lt;em&gt;Tab&lt;/em&gt;&lt;/strong&gt; completa o nome de módulos, funções e também mostra os métodos quando finalizamos um nome com ".":&lt;/div&gt;
+&lt;pre&gt;&lt;code class="html"&gt; iex(9)&amp;gt; Enum.
+
+  EmptyError           OutOfBoundsError     all?/1               
+
+  all?/2               any?/1               any?/2                   
+
+  ...&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;&lt;br /&gt;Os exemplos foram retirados da documentação do &lt;strong&gt;IEx&lt;/strong&gt;: &lt;a href="https://hexdocs.pm/iex/IEx.html#module-the-iex-exs-file"&gt;https://hexdocs.pm/iex/IEx.html#module-the-iex-exs-file&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;h3&gt;6. Conheça e utilize os diversos plugins para &lt;em&gt;Elixir&lt;/em&gt; e &lt;em&gt;Phoenix&lt;/em&gt; na sua &lt;em&gt;IDE&lt;/em&gt;&lt;/h3&gt;
+&lt;div&gt;&lt;br /&gt;Não se limite ao básico! Os plugins existem para serem utilizados, abuse deles!&lt;br /&gt;&lt;br /&gt;Se você é usuário do &lt;em&gt;VSCode&lt;/em&gt;, este artigo tem dicas muito boas: &lt;a href="https://thinkingelixir.com/elixir-in-vs-code/"&gt;https://thinkingelixir.com/elixir-in-vs-code/&lt;/a&gt;&lt;br /&gt;Para o &lt;em&gt;VIM, de uma lida aqui&lt;/em&gt;: &lt;a href="https://medium.com/@siever/setup-vim-for-elixir-development-280a01150152"&gt;https://medium.com/@siever/setup-vim-for-elixir-development-280a01150152&lt;/a&gt;&lt;br /&gt;Para o Atom: &lt;a href="https://atom.io/packages/atom-elixir"&gt;https://atom.io/packages/atom-elixir&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;h3&gt;7. Seguindo as dicas acima e utilizando a biblioteca &lt;a href="https://github.com/henriquefernandez/phoenix_up"&gt;&lt;strong&gt;&lt;em&gt;phoenix_up&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;, chegaremos a&lt;em&gt; &lt;/em&gt;&lt;strong&gt;&lt;em&gt;"299.792.458&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;&lt;em&gt;features"&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt; por segundo!&lt;/strong&gt;:&lt;/h3&gt;
+&lt;div&gt;&lt;br /&gt;&lt;a href="https://github.com/henriquefernandez/phoenix_up"&gt;&lt;strong&gt;&lt;em&gt;phoenix_up&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;&lt;em&gt;a&lt;/em&gt;diciona mais &lt;em&gt;generators&lt;/em&gt; para desenvolver projetos &lt;em&gt;Phoenix&lt;/em&gt;, basicamente, com essa biblioteca não teremos mais o trabalho de escrever arquivo por arquivo e estruturas repetitivas como: "&lt;em&gt;BlaController, BlaView, templates/bla, BlaControllerTest&lt;/em&gt;" e etc.. Nos meus projetos, eu sempre uso!&lt;/div&gt;
+&lt;div&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;h3&gt;Concluindo..&lt;/h3&gt;
+&lt;div&gt;&lt;br /&gt;Apesar de algumas dicas serem mais "práticas", podemos perceber que outras são pontos onde vale a pena reforçar o estudo! Particularmente, hoje me sinto bastante confortável e produtivo com &lt;em&gt;Elixir e Phoenix, e&lt;/em&gt; isso foi graças a esse equilíbrio de buscar ferramentas que me auxiliassem e estudar a fundo pontos fundamentais!
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
+    <title>PWA com Elixir e Phoenix em 5 minutos</title>
+    <link rel="alternate" href="http://blog.url.com/2020/03/04/pwa-com-elixir-e-phoenix-em-5-minutos/"/>
+    <id>http://blog.url.com/2020/03/04/pwa-com-elixir-e-phoenix-em-5-minutos/</id>
+    <published>2020-03-04T12:51:00-03:00</published>
+    <updated>2021-07-24T13:29:50-03:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;div&gt;Construir um &lt;em&gt;PWA (Progressive Web App)&lt;/em&gt; é uma maneira de possibilitar que sua aplicação &lt;em&gt;web &lt;/em&gt;escrita em &lt;em&gt;html&lt;/em&gt;, &lt;em&gt;css&lt;/em&gt; e &lt;em&gt;javascript&lt;/em&gt; funcione praticamente como um aplicativo para &lt;em&gt;smartphones&lt;/em&gt;, &lt;em&gt;desktops &lt;/em&gt;e&lt;em&gt; tablets&lt;/em&gt; podendo inclusive ser instalada, ter &lt;em&gt;"push notifications" &lt;/em&gt;e funcionamento completamente &lt;em&gt;offline&lt;/em&gt;. Nesse &lt;em&gt;post&lt;/em&gt; não vou me aprofundar tanto no conceito, mas mostrarei como é simples e rápido transformar um projeto &lt;em&gt;Elixir&lt;/em&gt; e &lt;em&gt;Phoenix&lt;/em&gt; em um &lt;em&gt;PWA.&lt;/em&gt;&amp;nbsp;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div&gt;Vamos aos passos para criar o seu &lt;em&gt;PWA&lt;/em&gt; com &lt;em&gt;Elixir e Phoenix&lt;/em&gt;:&lt;/div&gt;
+&lt;h3&gt;&lt;br /&gt;&lt;/h3&gt;
+&lt;h3&gt;Passo 1:&lt;/h3&gt;
+&lt;div&gt;&lt;br /&gt;Adicione um arquivo chamado &lt;strong&gt;&lt;em&gt;manifest.json&lt;/em&gt;&lt;/strong&gt; no seu&lt;em&gt; priv/static &lt;/em&gt;contendo o seguinte conteúdo:&lt;/div&gt;
+&lt;div&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class="javascript"&gt;{
+
+  "short_name": "My App", // Nome em que aparecerá junto ao ícone
+
+  "name": "My Very Progressive Web App @PWA", // Descrição que aparecerá enquanto o aplicativo é carregado
+
+  "icons": [ // Coloque aqui a localização dos ícones do seu aplicativo
+
+    {
+
+      "src": "/images/logo.png",  
+
+      "type": "image/png"
+
+    }
+
+  ],
+
+  "start_url": "/", // Aqui vai o endereço principal do seu aplicativo (o que irá ser acessado primeiro quando abrirmos o app)
+
+  "background_color": "#fff", // Definimos uma cor de fundo enquanto ao aplicativo é carregado.
+
+  "display": "standalone", // Definimos o modo primário que o navegador deve considerar para exibir o aplicativo.
+
+  "scope": "/", // Definimos o escopo, limite, das páginas a serem consideradas como PWA
+
+  "theme_color": "#000"   // Definimos uma cor para personalizar a interface do dispositivo em uso
+
+} 
+
+            &lt;em&gt;                                 &lt;/em&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;&lt;br /&gt;Este arquivo é o responsável por personalizar a aparência do nosso &lt;em&gt;PWA&lt;/em&gt; e um pouco da experiência de uso. Além das configurações setadas acima, também podemos adicionar as seguintes:&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;ul&gt;&lt;li&gt;&lt;em&gt;lang&lt;/em&gt;: Definimos o idioma utilizado (ex: &lt;em&gt;pt-BR&lt;/em&gt;).&lt;/li&gt;&lt;li&gt;&lt;em&gt;orientation&lt;/em&gt;: Definimos a orientação de como exibir o aplicativo (ex: &lt;em&gt;any, natural, landscape, landscape-primary, landscape-secondary, portrait, portrait-primary, portrait-secondary&lt;/em&gt;).&lt;/li&gt;&lt;li&gt;&lt;em&gt;prefer_related_applications&lt;/em&gt;: Informa se há uma outra aplicação complementar (&lt;em&gt;Boolean&lt;/em&gt;).&lt;/li&gt;&lt;li&gt;&lt;em&gt;related_applications&lt;/em&gt;: Definimos as aplicações complementares (&lt;em&gt;Array&lt;/em&gt; de objetos de aplicações com os possíveis valores: &lt;em&gt;platform, url e id&lt;/em&gt;).&lt;/li&gt;&lt;li&gt;&lt;em&gt;dir&lt;/em&gt;: Definimos a direção do texto nas especifcações do manifesto.&lt;/li&gt;&lt;/ul&gt;
+&lt;div&gt;&lt;br /&gt;Para agilizar o processo de criação do nosso &lt;strong&gt;&lt;em&gt;manifest.json&lt;/em&gt;&lt;/strong&gt; podemos recorrer a ferramentas de automatização. Esse site é bem eficiente e também nos ajuda a gerar os ícones formatados:&lt;br /&gt;&lt;br /&gt;&lt;a href="https://app-manifest.firebaseapp.com/"&gt;https://app-manifest.firebaseapp.com/&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;h3&gt;Passo 2:&lt;/h3&gt;
+&lt;div&gt;&lt;br /&gt;Adicione um arquivo chamado &lt;strong&gt;&lt;em&gt;service_worker.js&lt;/em&gt;&lt;/strong&gt; no seu &lt;em&gt;priv/static&lt;/em&gt; contendo o seguinte conteúdo:&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class="javascript"&gt;self.addEventListener('install', function(e) {
+
+  e.waitUntil(
+
+    fetch('/cache_manifest.json')
+
+    .then(function(response) {
+
+      return response.json()
+
+    })  
+
+    .then(function(cacheManifest) {
+
+      var cacheName = 'cache:static:' + cacheManifest.version
+
+      var all = Object.values(cacheManifest.latest).filter(
+
+        function(fn) { return fn.match(/^(images|css|js|fonts)/);
+
+        })
+
+      caches.open(cacheName).then(function(cache) {
+
+        return cache.addAll(all).then(function() {
+
+          self.skipWaiting();
+
+        });
+
+      })
+
+    })
+
+  );
+
+});
+
+
+
+self.addEventListener('fetch', function(event) {
+
+  event.respondWith(
+
+    caches.match(event.request).then(function(response) {
+
+      if (response) {
+
+        return response;
+
+      }
+
+      return fetch(event.request);
+
+    })
+
+  );
+
+});&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;blockquote&gt;Essencialmente, um &lt;em&gt;service worker&lt;/em&gt; se comporta como um servidor &lt;em&gt;proxy&lt;/em&gt; situado entre uma aplicação web, o navegador e a rede (quando esta estiver disponível). Eles servem, dentre outras coisas, para possibilitar a criação de experiências &lt;em&gt;offline&lt;/em&gt; eficientes, interceptar requisições de rede – agindo adequadamente de acordo com o &lt;em&gt;status&lt;/em&gt; atual da conexão – e atualizar os &lt;em&gt;assets&lt;/em&gt; que residem no servidor. Service workers também permitem o acesso às APIs de &lt;em&gt;push notification&lt;/em&gt; e &lt;em&gt;background sync&lt;/em&gt;.&lt;br /&gt;&lt;br /&gt;- &lt;a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Service_Worker_API"&gt;https://developer.mozilla.org/pt-BR/docs/Web/API/Service_Worker_API&lt;/a&gt;&lt;/blockquote&gt;
+&lt;div&gt;&lt;br /&gt;No nosso caso, estamos escutando a dois eventos &lt;em&gt;"install" e "fetch"&lt;/em&gt;.&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;ul&gt;&lt;li&gt;&lt;em&gt;install&lt;/em&gt;: Na hora da instalação do aplicativo informamos a localização do nosso&lt;strong&gt;&lt;em&gt; cache_manifest.json. &lt;/em&gt;&lt;/strong&gt;Uma vantagem de utilizar o&lt;em&gt; framework Phoenix &lt;/em&gt;para &lt;em&gt;PWA's &lt;/em&gt;é que ele gera automaticamente este arquivo quando rodamos a &lt;em&gt;task &lt;/em&gt;&lt;strong&gt;&lt;em&gt;mix phx.digest&lt;/em&gt;&lt;/strong&gt;! Este arquivo é responsável por informar dados de &lt;em&gt;cache&lt;/em&gt; que são utilizados para o aplicativo funcionar de forma mais rápida, econômica e até de maneira &lt;em&gt;offline &lt;/em&gt;dependendo do caso.&lt;/li&gt;&lt;li&gt;&lt;em&gt;fetch&lt;/em&gt;: É disparado quando houver uma visita a uma &lt;em&gt;url&lt;/em&gt;, se já tivermos cache, responde com o cache, se não executamos o fluxo normal.&lt;/li&gt;&lt;/ul&gt;
+&lt;div&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;h3&gt;Passo 3:&lt;/h3&gt;
+&lt;div&gt;&lt;br /&gt;Permita que os arquivos &lt;strong&gt;&lt;em&gt;service_worker.js&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;cache_manifest.json &lt;/em&gt;&lt;/strong&gt;e &lt;strong&gt;&lt;em&gt;manifest.json&lt;/em&gt;&lt;/strong&gt; sejam acessados de forma estática, adicionando nas configurações de &lt;strong&gt;&lt;em&gt;Plug.Static&lt;/em&gt;&lt;/strong&gt;, encontradas no módulo &lt;strong&gt;&lt;em&gt;Endpoint&lt;/em&gt;&lt;/strong&gt; do seu projeto encontrado em&lt;em&gt; (lib/seu_projeto_web/endpoint.ex):&lt;/em&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class="elixir"&gt;plug Plug.Static,
+
+  at: "/",
+
+  from: :seu_projeto,
+
+  gzip: false,
+
+  only: ~w(css fonts images js favicon.ico robots.txt service_worker.js cache_manifest.json manifest.json) # aqui&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;h3&gt;Passo 4:&lt;/h3&gt;
+&lt;div&gt;&lt;br /&gt;Adicione um link para o seu &lt;strong&gt;&lt;em&gt;manifest.json&lt;/em&gt;&lt;/strong&gt; e o seguinte script no layout principal do seu projeto:&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class="html"&gt;&amp;lt;link rel="manifest" href="/manifest.json"&amp;gt;
+
+&amp;lt;script&amp;gt;
+
+  if (navigator.serviceWorker) {
+
+    navigator.serviceWorker.register('/service_worker.js', { scope: './' })
+
+      .then(function(reg) {
+
+        console.log('[ServiceWorker]', 'Service worker registered!');
+
+        console.log(reg);
+
+      });
+
+  }
+
+&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;&lt;br /&gt;Este &lt;em&gt;script&lt;/em&gt; basicamente registra o nosso &lt;em&gt;service worker &lt;/em&gt;no navegador.&lt;br /&gt;&lt;br /&gt;É isso! nossa &lt;em&gt;PWA&lt;/em&gt; está pronta. &lt;br /&gt;&lt;br /&gt; fontes:&lt;br /&gt;&lt;em&gt;&lt;br /&gt;&lt;/em&gt;&lt;a href="https://www.botsquad.com/2018/03/07/phoenix-sw/"&gt;&lt;em&gt;https://www.botsquad.com/2018/03/07/phoenix-sw/&lt;/em&gt;&lt;/a&gt;&lt;em&gt;&lt;br /&gt;&lt;/em&gt;&lt;a href="https://blog.apiki.com/web-app-manifest/"&gt;&lt;em&gt;https://blog.apiki.com/web-app-manifest/&lt;/em&gt;&lt;/a&gt;&lt;a href="https://gobacklog.com/blog/progressive-web-apps/"&gt;&lt;em&gt;&lt;br /&gt;https://gobacklog.com/blog/progressive-web-apps/&lt;/em&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;a href="https://vizir.com.br/2017/08/o-que-e-pwa-progressive-web-app-porque-isso-pode-aumentar-seus-resultados-mobile/"&gt;&lt;em&gt;https://vizir.com.br/2017/08/o-que-e-pwa-progressive-web-app-porque-isso-pode-aumentar-seus-resultados-mobile/&lt;/em&gt;&lt;/a&gt;&lt;em&gt;&lt;br /&gt;&lt;/em&gt;&lt;a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Service_Worker_API"&gt;&lt;em&gt;https://developer.mozilla.org/pt-BR/docs/Web/API/Service_Worker_API&lt;/em&gt;&lt;/a&gt;&lt;/div&gt;
+
+</content>
+  </entry>
+</feed>

@@ -1,0 +1,337 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='ie=edge' />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="Henrique Fernandez Teixeira">
+    <link rel="icon" type="image/ico" href="images/icon-16x16.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.0.0/turbolinks.js" integrity="sha512-P3/SDm/poyPMRBbZ4chns8St8nky2t8aeG09fRjunEaKMNEDKjK3BuAstmLKqM7f6L1j0JBYcIRL4h2G6K6Lew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script></script>
+
+      <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=60bc2b44a75109001138d6ff&product=sticky-share-buttons' async='async'></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161733672-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-161733672-1');
+      </script>
+      <title>@truehenrique - Elixir + Phoenix, programando na velocidade da luz</title>
+        <meta property="og:image" content="https://truehenrique.com/images/elixir-e-phoenix-programando-na-velocidade-da-luz.png">
+        <meta name="twitter:image:src" content="https://truehenrique.com/images/elixir-e-phoenix-programando-na-velocidade-da-luz.png">
+      <meta property="og:type" content="article" />
+      <meta property="article:author" content="https://www.truehenrique.com/sobre">
+      <meta property="og:site_name" content="@truehenrique" />
+      <meta property="og:description" content="" />
+      <meta property="twitter:description" content="">
+      <meta name="description" content="">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="robots" content="index,follow">
+      <meta name="keywords" content="elixir,phoenix">
+      <meta property="og:title" content="Elixir + Phoenix, programando na velocidade da luz" />
+      <meta property="twitter:title" content="Elixir + Phoenix, programando na velocidade da luz">
+      <meta name="title" content ="Elixir + Phoenix, programando na velocidade da luz">
+      <meta property="og:url" content="https://www.truehenrique.com/2020/07/17/elixir-e-phoenix-na-velocidade-da-luz/">
+      <link rel="canonical" href="https://www.truehenrique.com/2020/07/17/elixir-e-phoenix-na-velocidade-da-luz/"/>
+      <link rel="author" href="https://www.truehenrique.com/sobre">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
+
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <link href="/stylesheets/picnic.css" rel="stylesheet" /><link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/site.js"></script>
+  </head>
+  <body>
+    <header>
+  <h1>@truehenrique</h1>
+  <div class="wrap">
+    <a href="/"><img src="/images/logo-white.png" alt="" /></a>
+  </div>
+</header>
+<div class="nav">
+  <nav class="wrap">
+    <a href="#" class="brand">
+      <img src="/images/logo-white.png" alt="" />
+    </a>
+    <!-- responsive-->
+    <input id="bmenub" type="checkbox" class="show">
+    <label for="bmenub" class="burger pseudo button large"><i class="fi-list"></i> </label>
+
+    <div class="menu wrap">
+      <a href="/" class="pseudo button icon-puzzle active"><i class="fi-page-multiple"></i> Blog</a>
+      <a href="/sobre" data-turbolinks=false class="pseudo button icon-picture "><i class="fi-torso-business"></i> Sobre</a>
+      <a href="https://github.com/henriquefernandez" class="pseudo button icon-picture" target="_blank"><i class="fi-social-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/henrique-fernandez-teixeira-93a4a3127/" class="pseudo button icon-picture" target="_blank"><i class="fi-social-linkedin"></i> Linkedin</a>
+    </div>
+  </nav>
+</div>
+
+
+    <div class="flex one three-800 wrap">
+      <main role="main" class="two-third-800">
+          <div id="fb-root"></div>
+          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v6.0"></script>
+
+          <div class="wwrap">
+            <h2>Elixir + Phoenix, programando na velocidade da luz</h2>
+            <small class="color-lite">Jul 17</small>
+            <div class="article-image" style="background-image: url(/images/elixir-e-phoenix-programando-na-velocidade-da-luz.png)" alt="Elixir + Phoenix, programando na velocidade da luz"></div>
+
+        <div>Hoje resolvi trazer alguns "pontos chave" sobre como podemos ser mais produtivos programando com <em>Elixir </em>e <em>Phoenix</em>, este post pode ser tanto para quem já tem alguma experiência com a linguagem quanto para quem está iniciando. Talvez você já conheça algumas dessas dicas, outras talvez descubra agora, mas o principal é compartilhar e aprender. vamos lá:<br /><br /></div>
+<h3>1. Entenda todos os detalhes de <strong><em>pattern matching</em></strong><strong>, </strong><strong><em>guards</em></strong><strong>, </strong><strong><em>keyword lists</em></strong><strong> e </strong><strong><em>structs</em></strong>.<br /><br /></h3>
+<div>Conhecendo-os temos um grande ganho em produtividade. Diria que <em>60%</em> do código que lemos e escrevemos com a linguagem envolvem essas estruturas, vale a pena dedicar bastante tempo as explorando e estudando, dessa forma ganhamos muito mais "fluidez" no desenvolvimento das demandas do dia a dia.<br /><br />Veja alguns exemplos de detalhes que podem nos pegar de surpresa em determinado momento do nosso desenvolvimento<strong>:</strong></div>
+<div><br /><strong>1.1 </strong><em>Pattern</em> ma<em>tching</em> com <em>structs</em> funcionam dessa forma:&nbsp;</div>
+<pre><code class="html">iex(1)&gt; %x{} = %MinhaStruct{}
+
+%MinhaStruct{hello: nil}
+
+iex(2)&gt; x
+
+MinhaStruct </code></pre>
+<div><br />Porém, não conseguimos criar structs através de variáveis:</div>
+<pre><code class="html">iex(12)&gt; x = MinhaStruct
+
+MinhaStruct
+
+iex(13)&gt; %x{}
+
+** (CompileError) iex:13: expected struct name to be a compile time atom or alias, got: x</code></pre>
+<div><br />Caso isso seja necessário, devemos utilizar a função <strong><em>struct</em></strong>:</div>
+<pre><code class="html">iex(13)&gt; defmodule User do
+
+...(13)&gt; defstruct name: "john"
+
+  ...(13)&gt; end
+
+  iex(14)&gt; x = User
+
+  iex(15)&gt; struct(x)
+
+  %User{name: "john"}</code></pre>
+<div><br /><strong>1.2 </strong>Na definição de <em>guards</em>, não podemos utilizar funções definidas no módulo:</div>
+<pre><code class="html">iex(4)&gt; defmodule Teste do
+
+  ...(4)&gt; def maiorquequatro(x), do: x &gt; 4
+
+  ...(4)&gt; def verifica(numero) when maiorquequatro(numero), do: IO.puts("é maior que quatro") 
+
+  ...(4)&gt; def verifica(_numero), do: IO.puts("não é maior que quatro")                             
+
+  ...(4)&gt; end
+
+  ** (CompileError) iex:6: cannot find or invoke local maiorquequatro/1 inside guard. Only macros can be invoked in a guard and they must be defined before their invocation. Called as: maiorquequatro(numero)</code></pre>
+<div><br />Para utilizar funções customizadas em <em>guards</em>, utilizamos macros:</div>
+<pre><code class="html"> iex(9)&gt; defmodule Teste do                                    
+
+  ...(9)&gt; defmacro maiorquequatro(numero) do
+
+  ...(9)&gt; quote do: unquote(numero) &gt; 4                   
+
+  ...(9)&gt; end
+
+  ...(9)&gt; def verifica(numero) when maiorquequatro(numero), do: IO.puts("é maior que quatro")
+
+  ...(9)&gt; def verifica(_numero), do: IO.puts("não é maior que quatro")
+
+  ...(9)&gt; end
+
+  iex(10)&gt; Teste.verifica(2)
+
+  não é maior que quatro
+
+  :ok
+
+  iex(11)&gt; Teste.verifica(5)
+
+  é maior que quatro
+
+  :ok</code></pre>
+<div><br /><strong>1.3</strong> <em>Pattern matching</em> em <em>keyword lists</em> funcionam dessa forma:&nbsp;</div>
+<pre><code class="html">iex(4)&gt; [{:name, nome} | _] = [name: "henrique", id: 3]
+
+  [name: "henrique", id: 3]
+
+  iex(5)&gt; nome
+
+  "henrique"</code></pre>
+<div><br />Lembrando que <em>keyword lists</em> são um <em>syntax sugar</em> para uma lista de tuplas...</div>
+<pre><code class="html">iex(7)&gt; [{:name, nome}, {:id, 3}] == [name: "henrique", id: 3]
+
+  true</code></pre>
+<div><br />Se quisessemos extrair somente o nome, por exemplo, não poderiamos fazer dessa maneira:</div>
+<pre><code class="html">iex(6)&gt; [{:name, nome}] = [name: "henrique", id: 3]    
+
+  ** (MatchError) no match of right hand side value: [name: "henrique", id: 3]</code></pre>
+<div><br />Aqui vão <em>links</em> de estudo para se aprofundar bastante sobre esses temas:<br /><a href="https://hexdocs.pm/elixir/Kernel.html#defstruct/1">https://hexdocs.pm/elixir/Kernel.html#defstruct/1</a><br /><a href="https://hexdocs.pm/elixir/Kernel.html#struct/2">https://hexdocs.pm/elixir/Kernel.html#struct/2</a><br /><a href="https://www.poeticoding.com/the-beauty-of-pattern-matching-in-elixir/">https://www.poeticoding.com/the-beauty-of-pattern-matching-in-elixir/</a><br /><a href="https://joyofelixir.com/6-pattern-matching">https://joyofelixir.com/6-pattern-matching</a><br /><a href="https://elixir-lang.org/getting-started/pattern-matching.html">https://elixir-lang.org/getting-started/pattern-matching.html</a><br /><a href="https://elixir-lang.org/getting-started/keywords-and-maps.html">https://elixir-lang.org/getting-started/keywords-and-maps.html</a><br /><br /></div>
+<h3>2. Escreva um alias (autocomplete) na sua <em>IDE</em> para o require <em>IEx; IEx.pry </em><del>por favor</del>.</h3>
+<div><br />Passamos bastante tempo "debugando" código nas aplicações, em qualquer linguagem. Felizmente o <em>Elixir</em> conta com ferramentas muito boas para nos auxiliar. Uma das mais usadas requer o módulo <strong>IEx</strong>:</div>
+<pre><code class="elixir">require IEx</code></pre>
+<div><br />Dessa forma podemos criar um breakpoint que irá abrir um terminal quando o código passar por essa linha:</div>
+<pre><code class="elixir">def hello(), do: IEx.pry</code></pre>
+<div><br />Porém, é comum esquecermos o<strong> require IEx </strong>no início do arquivo, logo passamos a escrever:</div>
+<pre><code class="elixir">require IEx; IEx.pry</code></pre>
+<div><br /></div>
+<div>Acredite em mim, com o tempo você vai ficar cansado de escrever <strong>require IEx; IEx.pry</strong> toda hora! Na minha <em>IDE</em> tenho um alias que funciona da seguinte maneira, quando escrevo "pry" e salvo o arquivo ou dou um espaço ela automaticamente completa com o resto.<br /><br />Se a sua <em>IDE</em> de preferência for o <em>VIM</em> (assim como a minha), adicione esse trecho de configuração no seu <strong>~/.vimrc:</strong>&nbsp;</div>
+<pre><code class="html">abbr pry require IEx; IEx.pry</code></pre>
+<div><br />Faça isso e seja feliz!<br /><br /></div>
+<h3>3. Rode testes com<strong> iex -S mix test --trace </strong>para não dar timeout na sessão do <strong>IEx</strong>&nbsp;</h3>
+<div><br />Quando vamos debugar algum ponto do código por um tempo mais longo (utilizando o<em> </em><strong><em>require IEx; IEx.pry </em></strong>com os testes), o ideal é usar o comando acima ou alterar o tempo limite da sessão, caso contrário sua sessão encerrará em 60 segundos.</div>
+<pre><code class="html">** (ExUnit.TimeoutError) test timed out after 60000ms. You can change the timeout:</code></pre>
+<div><br />Inclusive, também seria interessante criar um alias para esse comando, no seu terminal (<strong><em>~/.bashrc</em></strong>)</div>
+<pre><code class="html">alias mixtest="iex -S mix test --trace"</code></pre>
+<h3><br />4. Domine a biblioteca <strong><em>Plug</em></strong>&nbsp;</h3>
+<div><br />A biblioteca <em>Plug</em> é uma das principais "portas de entrada" para o <em>Elixir</em> na <em>web</em>, inclusive, o <em>framework Phoenix</em> foi construído baseado nela. Ter domínio e confiança em sua utilização nos trás mais segurança e assertividade nas decisões tomadas em projetos <em>Phoenix</em>.<br /><br /><em>links</em> para estudo: <br /><a href="https://ieftimov.com/post/a-deeper-dive-in-elixir-plug/">https://ieftimov.com/post/a-deeper-dive-in-elixir-plug/</a><br /><a href="https://elixirschool.com/pt/lessons/specifics/plug/">https://elixirschool.com/pt/lessons/specifics/plug/</a><br /><a href="https://hexdocs.pm/plug/readme.html">https://hexdocs.pm/plug/readme.html</a><br /><br /></div>
+<h3>5. Conheça essas dicas do <strong>IEx</strong>:</h3>
+<div><br /><strong>5.1</strong> É possível escrever um arquivo de ajuda para iniciar automaticamente variáveis e tudo o que queremos quando abrirmos o terminal do <strong>IEx </strong>em um projeto. Basta criar um arquivo chamado <strong><em>.iex.exs </em></strong>na raiz do projeto, exemplo:</div>
+<pre><code class="elixir"># Importe funções e módulos
+
+import_if_available(MinhaApp.MeuModulo)
+
+
+
+# De print em algo antes do terminal iniciar
+
+  IO.puts("hello world")
+
+
+
+# Faça o bind de variáveis que ficarão disponíveis no terminal
+
+  value = 13</code></pre>
+<div><br /><strong>5.2</strong> Existem diversas funções disponíveis no <strong>IEx</strong> que podem nos deixar mais produtivos, veja alguma delas:</div>
+<pre><code class="html">  • b/1            - prints callbacks info and docs for a given module
+
+  • c/1            - compiles a file into the current directory
+
+  • c/2            - compiles a file to the given path
+
+  • cd/1           - changes the current directory
+
+  • clear/0        - clears the screen
+
+  • exports/1      - shows all exports (functions + macros) in a module
+
+  • flush/0        - flushes all messages sent to the shell
+
+  • h/0            - prints this help message
+
+  • h/1            - prints help for the given module, function or macro
+
+  • i/0            - prints information about the last value
+
+  • i/1            - prints information about the given term
+
+  • ls/0           - lists the contents of the current directory
+
+  • ls/1           - lists the contents of the specified directory
+
+  • open/1         - opens the source for the given module or function in
+
+  your editor
+
+  • pid/1          - creates a PID from a string
+
+  • pid/3          - creates a PID with the 3 integer arguments passed
+
+  • ref/1          - creates a Reference from a string
+
+  • ref/4          - creates a Reference with the 4 integer arguments
+
+  passed
+
+  • pwd/0          - prints the current working directory
+
+  • r/1            - recompiles the given module's source file
+
+  • recompile/0    - recompiles the current project
+
+• runtime_info/0 - prints runtime info (versions, memory usage, stats)
+
+  • v/0            - retrieves the last value from the history
+
+  • v/1            - retrieves the nth value from the history</code></pre>
+<div><br /></div>
+<div><strong>5.3</strong> <strong><em>Tab</em></strong> completa o nome de módulos, funções e também mostra os métodos quando finalizamos um nome com ".":</div>
+<pre><code class="html"> iex(9)&gt; Enum.
+
+  EmptyError           OutOfBoundsError     all?/1               
+
+  all?/2               any?/1               any?/2                   
+
+  ...</code></pre>
+<div><br />Os exemplos foram retirados da documentação do <strong>IEx</strong>: <a href="https://hexdocs.pm/iex/IEx.html#module-the-iex-exs-file">https://hexdocs.pm/iex/IEx.html#module-the-iex-exs-file</a><br /><br /></div>
+<h3>6. Conheça e utilize os diversos plugins para <em>Elixir</em> e <em>Phoenix</em> na sua <em>IDE</em></h3>
+<div><br />Não se limite ao básico! Os plugins existem para serem utilizados, abuse deles!<br /><br />Se você é usuário do <em>VSCode</em>, este artigo tem dicas muito boas: <a href="https://thinkingelixir.com/elixir-in-vs-code/">https://thinkingelixir.com/elixir-in-vs-code/</a><br />Para o <em>VIM, de uma lida aqui</em>: <a href="https://medium.com/@siever/setup-vim-for-elixir-development-280a01150152">https://medium.com/@siever/setup-vim-for-elixir-development-280a01150152</a><br />Para o Atom: <a href="https://atom.io/packages/atom-elixir">https://atom.io/packages/atom-elixir</a><br /><br /></div>
+<h3>7. Seguindo as dicas acima e utilizando a biblioteca <a href="https://github.com/henriquefernandez/phoenix_up"><strong><em>phoenix_up</em></strong></a>, chegaremos a<em> </em><strong><em>"299.792.458</em></strong><strong> </strong><strong><em>features"</em></strong><strong> por segundo!</strong>:</h3>
+<div><br /><a href="https://github.com/henriquefernandez/phoenix_up"><strong><em>phoenix_up</em></strong></a><em>a</em>diciona mais <em>generators</em> para desenvolver projetos <em>Phoenix</em>, basicamente, com essa biblioteca não teremos mais o trabalho de escrever arquivo por arquivo e estruturas repetitivas como: "<em>BlaController, BlaView, templates/bla, BlaControllerTest</em>" e etc.. Nos meus projetos, eu sempre uso!</div>
+<div><br /></div>
+<h3>Concluindo..</h3>
+<div><br />Apesar de algumas dicas serem mais "práticas", podemos perceber que outras são pontos onde vale a pena reforçar o estudo! Particularmente, hoje me sinto bastante confortável e produtivo com <em>Elixir e Phoenix, e</em> isso foi graças a esse equilíbrio de buscar ferramentas que me auxiliassem e estudar a fundo pontos fundamentais!
+</div>
+
+
+            <br/>
+            <hr>
+            Ei, o que achou desse <i>artigo</i>?
+            <br/>
+            <br/>
+            Compartilhe e dê sua opinião clicando em uma das redes abaixo:
+            <br/>
+            <br/>
+            <div class="sharethis-inline-share-buttons"></div>
+            <br/>
+            Muito obrigado!
+            <hr>
+            <br/>
+            <div class="fb-comments" data-href="https://truehenrique.com/2020/07/17/elixir-e-phoenix-na-velocidade-da-luz/" data-width="" data-numposts="10"></div>
+          </div>
+      </main>
+
+      <div>
+      <aside>
+        <h3>Artigos Recentes</h3>
+        <ul data-turbolinks="false">
+              <li><a href="/2020/07/17/elixir-e-phoenix-na-velocidade-da-luz/">Elixir + Phoenix, programando na velocidade da luz</a> <span>Jul 17</span></li>
+              <li><a href="/2020/03/04/pwa-com-elixir-e-phoenix-em-5-minutos/">PWA com Elixir e Phoenix em 5 minutos</a> <span>Mar  4</span></li>
+        </ul>
+        <h4><i class="fi-social-medium"></i> Medium:</h4>
+        <ul data-turbolinks="false">
+                <li><a href="https://medium.com/true-henrique/escreva-e-books-com-ruby-e-softcover-a5b361cee765?source=rss-ab53d3682b4d------2" target="_blank">Escreva e-books com Ruby e Softcover</a> <span>Fev 16</span></li>
+                <li><a href="https://medium.com/true-henrique/elixir-exunit-asser%C3%A7%C3%B5es-e-mocks-para-chamadas-de-fun%C3%A7%C3%B5es-f739de6d31a1?source=rss-ab53d3682b4d------2" target="_blank">[Elixir] ExUnit: Asserções e mocks para chamadas de funções</a> <span>Dez 16</span></li>
+                <li><a href="https://medium.com/true-henrique/o-programador-egoc%C3%AAntrico-d19c8fc92245?source=rss-ab53d3682b4d------2" target="_blank">O programador egocêntrico</a> <span>Dez  1</span></li>
+                <li><a href="https://medium.com/true-henrique/elixir-10-motivos-para-aprender-6cd4d6876f05?source=rss-ab53d3682b4d------2" target="_blank">|> Elixir: 10 motivos para aprender</a> <span>Nov 25</span></li>
+                <li><a href="https://medium.com/true-henrique/como-desenvolver-um-front-end-agrad%C3%A1vel-sem-ser-especialista-17681ab50ae2?source=rss-ab53d3682b4d------2" target="_blank">|> Como desenvolver um front-end agradável sem ser especialista.</a> <span>Nov  8</span></li>
+                <li><a href="https://medium.com/true-henrique/teste-suas-features-views-e-requests-bab15be8749d?source=rss-ab53d3682b4d------2" target="_blank">[Ruby] Testando Features, Views e Requests</a> <span>Jul 16</span></li>
+                <li><a href="https://medium.com/true-henrique/programa%C3%A7%C3%A3o-funcional-pura-ruby-e-monads-i-introdu%C3%A7%C3%A3o-b16687db63d?source=rss-ab53d3682b4d------2" target="_blank">Programação Funcional — Guia de Introdução</a> <span>Mar 27</span></li>
+        </ul>
+        <hr>
+
+        <h3>Tags</h3>
+        <ol>
+            <li><a href="/tags/elixir/">#elixir</a></li>
+            <li><a href="/tags/phoenix/">#phoenix</a></li>
+        </ol>
+        <hr/>
+
+        <h3>Por Ano</h3>
+        <ol>
+            <li><a href="/2020/">2020</a></li>
+        </ol>
+        <hr/>
+
+        <h3>Arquivo completo</h3>
+        <a data-turbolinks=false class="pseudo button" href="/arquivo">Abrir</a>
+        <br>
+      </aside>
+      </div>
+    </div>
+    <footer class="social-footer">
+  <div class="wrap">
+    @truehenrique
+  </div>
+</footer>
+
+  </body>
+</html>
