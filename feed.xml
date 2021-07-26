@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Blog Name</title>
-  <subtitle>Blog subtitle</subtitle>
-  <id>http://blog.url.com/</id>
-  <link href="http://blog.url.com/"/>
-  <link href="http://blog.url.com/feed.xml" rel="self"/>
+  <title>Blog - @truehenrique</title>
+  <subtitle>Artigos sobre Elixir, Ruby, carreira e desenvolvimento web. Pode conter uma pitada de filosofia. @TrueHenrique</subtitle>
+  <id>https://truehenrique.com/</id>
+  <link href="https://truehenrique.com/"/>
+  <link href="https://truehenrique.com/feed.xml" rel="self"/>
   <updated>2020-07-17T13:52:00-03:00</updated>
   <author>
-    <name>Blog Author</name>
+    <name>Henrique F. Teixeira</name>
   </author>
   <entry>
     <title>Elixir + Phoenix, programando na velocidade da luz</title>
-    <link rel="alternate" href="http://blog.url.com/2020/07/17/elixir-e-phoenix-na-velocidade-da-luz/"/>
-    <id>http://blog.url.com/2020/07/17/elixir-e-phoenix-na-velocidade-da-luz/</id>
+    <link rel="alternate" href="https://truehenrique.com/2020/07/17/elixir-e-phoenix-na-velocidade-da-luz/"/>
+    <id>https://truehenrique.com/2020/07/17/elixir-e-phoenix-na-velocidade-da-luz/</id>
     <published>2020-07-17T13:52:00-03:00</published>
     <updated>2021-07-24T13:00:11-03:00</updated>
     <author>
@@ -213,8 +213,8 @@ import_if_available(MinhaApp.MeuModulo)
   </entry>
   <entry>
     <title>PWA com Elixir e Phoenix em 5 minutos</title>
-    <link rel="alternate" href="http://blog.url.com/2020/03/04/pwa-com-elixir-e-phoenix-em-5-minutos/"/>
-    <id>http://blog.url.com/2020/03/04/pwa-com-elixir-e-phoenix-em-5-minutos/</id>
+    <link rel="alternate" href="https://truehenrique.com/2020/03/04/pwa-com-elixir-e-phoenix-em-5-minutos/"/>
+    <id>https://truehenrique.com/2020/03/04/pwa-com-elixir-e-phoenix-em-5-minutos/</id>
     <published>2020-03-04T12:51:00-03:00</published>
     <updated>2021-07-24T13:29:50-03:00</updated>
     <author>
