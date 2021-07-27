@@ -16,7 +16,7 @@
     <published>2020-07-17T13:52:00-03:00</published>
     <updated>2021-07-24T13:00:11-03:00</updated>
     <author>
-      <name>Article Author</name>
+      <name>Henrique F. Teixeira</name>
     </author>
     <content type="html">&lt;div&gt;Hoje resolvi trazer alguns "pontos chave" sobre como podemos ser mais produtivos programando com &lt;em&gt;Elixir &lt;/em&gt;e &lt;em&gt;Phoenix&lt;/em&gt;, este post pode ser tanto para quem já tem alguma experiência com a linguagem quanto para quem está iniciando. Talvez você já conheça algumas dessas dicas, outras talvez descubra agora, mas o principal é compartilhar e aprender. vamos lá:&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
 &lt;h3&gt;1. Entenda todos os detalhes de &lt;strong&gt;&lt;em&gt;pattern matching&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;, &lt;/strong&gt;&lt;strong&gt;&lt;em&gt;guards&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;, &lt;/strong&gt;&lt;strong&gt;&lt;em&gt;keyword lists&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt; e &lt;/strong&gt;&lt;strong&gt;&lt;em&gt;structs&lt;/em&gt;&lt;/strong&gt;.&lt;br /&gt;&lt;br /&gt;&lt;/h3&gt;
@@ -218,7 +218,7 @@ import_if_available(MinhaApp.MeuModulo)
     <published>2020-03-04T12:51:00-03:00</published>
     <updated>2021-07-24T13:29:50-03:00</updated>
     <author>
-      <name>Article Author</name>
+      <name>Henrique F. Teixeira</name>
     </author>
     <content type="html">&lt;div&gt;Construir um &lt;em&gt;PWA (Progressive Web App)&lt;/em&gt; é uma maneira de possibilitar que sua aplicação &lt;em&gt;web &lt;/em&gt;escrita em &lt;em&gt;html&lt;/em&gt;, &lt;em&gt;css&lt;/em&gt; e &lt;em&gt;javascript&lt;/em&gt; funcione praticamente como um aplicativo para &lt;em&gt;smartphones&lt;/em&gt;, &lt;em&gt;desktops &lt;/em&gt;e&lt;em&gt; tablets&lt;/em&gt; podendo inclusive ser instalada, ter &lt;em&gt;"push notifications" &lt;/em&gt;e funcionamento completamente &lt;em&gt;offline&lt;/em&gt;. Nesse &lt;em&gt;post&lt;/em&gt; não vou me aprofundar tanto no conceito, mas mostrarei como é simples e rápido transformar um projeto &lt;em&gt;Elixir&lt;/em&gt; e &lt;em&gt;Phoenix&lt;/em&gt; em um &lt;em&gt;PWA.&lt;/em&gt;&amp;nbsp;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
 &lt;div&gt;Vamos aos passos para criar o seu &lt;em&gt;PWA&lt;/em&gt; com &lt;em&gt;Elixir e Phoenix&lt;/em&gt;:&lt;/div&gt;
