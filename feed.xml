@@ -5,10 +5,301 @@
   <id>https://truehenrique.com/</id>
   <link href="https://truehenrique.com/"/>
   <link href="https://truehenrique.com/feed.xml" rel="self"/>
-  <updated>2020-07-17T13:52:00-03:00</updated>
+  <updated>2021-10-27T14:23:00-03:00</updated>
   <author>
     <name>Henrique F. Teixeira</name>
   </author>
+  <entry>
+    <title>Single responsibility, o princípio deturpado</title>
+    <link rel="alternate" href="https://truehenrique.com/2021/10/27/single-responsibility-o-principio-deturpado/"/>
+    <id>https://truehenrique.com/2021/10/27/single-responsibility-o-principio-deturpado/</id>
+    <published>2021-10-27T14:23:00-03:00</published>
+    <updated>2021-11-02T18:28:01-03:00</updated>
+    <author>
+      <name>Henrique F. Teixeira</name>
+    </author>
+    <content type="html">&lt;p&gt;Softwares são feitos por humanos, para humanos e máquinas. E humanos erram, consequentemente fazendo a máquina falhar também.&lt;/p&gt;
+
+&lt;p&gt;Dado esse contexto, ao longo do tempo foram desenvolvidos e estabelecidos diversos princípios e padrões de desenvolvimento de software. E todos eles tem uma coisa em comum: &lt;strong&gt;simplificar para que consigamos trabalhar utilizando menos esforço cognitivo&lt;/strong&gt;, dado que a nossa mente é limitada e os problemas que temos que resolver muitas vezes já são complexos o suficiente apenas em seu conceito, sem nenhuma linha de código escrita.&lt;/p&gt;
+
+&lt;p&gt;Isso é um &lt;em&gt;insight&lt;/em&gt; muito importante que tive depois de passar por diversos projetos ao longo de minha carreira, no começo não é fácil entender apesar de parecer simples:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;SOLID&lt;/li&gt;
+  &lt;li&gt;MVC&lt;/li&gt;
+  &lt;li&gt;DDD (Domain driven design)&lt;/li&gt;
+  &lt;li&gt;Clean Architecture&lt;/li&gt;
+  &lt;li&gt;Clean Code&lt;/li&gt;
+  &lt;li&gt;Refactoring / Code Smells&lt;/li&gt;
+  &lt;li&gt;TDD&lt;/li&gt;
+  &lt;li&gt;Redux&lt;/li&gt;
+  &lt;li&gt;Microservices&lt;/li&gt;
+  &lt;li&gt;Microfrontends&lt;/li&gt;
+  &lt;li&gt;Orientação a objetos (Encapsulamento, herança, polimorfismo, modelos anêmicos, sobrecarga …)&lt;/li&gt;
+  &lt;li&gt;Programação funcional (Monads, funtores, closures, currying, teoria das categorias, funções puras …)&lt;/li&gt;
+  &lt;li&gt;Actor Model&lt;/li&gt;
+  &lt;li&gt;Lei de Demeter&lt;/li&gt;
+  &lt;li&gt;Serveless&lt;/li&gt;
+  &lt;li&gt;Web components&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;E além do software:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Agile&lt;/li&gt;
+  &lt;li&gt;Scrum&lt;/li&gt;
+  &lt;li&gt;Kanbam&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Pra que a gente aprende e estuda essa p*** toda?&lt;/p&gt;
+
+&lt;p&gt;A resposta pode parecer óbvia:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;"Aprendemos e estudamos para utilizar no nosso dia a dia, sempre, e essas são as melhores práticas."&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Mas será que essa é a resposta certa mesmo?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Não&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Existem contextos em que não precisamos utilizar nada disso e vários outros que nos beneficiaríamos utilizando apenas alguns desses padrões e práticas, não todos. Dessa forma, a minha resposta hoje em dia, seria:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;"Aprendemos e estudamos para saber onde e quando utilizar no nosso dia a dia"&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Acontece que essa resposta só surge junto com a vivência, a realidade. E muitas vezes no início de carreira e durante muito tempo nos pegamos utilizando padrões apenas por ter estudado recentemente e assumir que é aquilo que devemos fazer, afinal é um padrão! É o correto!&lt;/p&gt;
+
+&lt;p&gt;Essa última frase resulta em dois dos maiores problemas que eu particulamente enfrentei ao longo da minha carreira, vindo de código legado (ou a partir de mim mesmo):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Overengineering&lt;/strong&gt;: Engenharia e padrões demais para um problema simples&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Underengineering&lt;/strong&gt; (acabei de inventar esse termo): Engenharia e padrões de menos para um problema complexo&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;E esses problemas, são coisas que cursos de &lt;em&gt;"javascript full-stack"&lt;/em&gt;, &lt;em&gt;frameworks&lt;/em&gt; ou linguagens geralmente não vão te ensinar.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Todo padrão foi criado a partir de um problema&lt;/strong&gt;. Se não passamos por esse problema, não precisamos do padrão. E reconhecer fortemente o problema é tão ou mais importante do que conhecer os detalhes de um padrão. Nosso trabalho como &lt;em&gt;Software Engineer&lt;/em&gt; é justamente trabalhar sem &lt;em&gt;"over"&lt;/em&gt; e sem &lt;em&gt;"under"&lt;/em&gt; apenas com o &lt;em&gt;"engineer"&lt;/em&gt;. Primeiro reconhecer os problemas, depois encaixar os padrões (e não a ordem inversa).&lt;/p&gt;
+
+&lt;p&gt;Dado essa introdução, gostaria de falar agora sobre um "caso ímpar" e muito curioso:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Um padrão / princípio onde é muito comum a galera não reconhecer o problema que ele soluciona de fato e nem mesmo como ele funciona, mas sai utilizando (e pregando) em todo lugar. Provavelmente isso é resultado de um "telefone sem fio" gigante entre desenvolvedores (um fala para o outro, o outro escuta e fala para mais um seguidamente e nenhum deles busca de fato entender a fundo), outro ponto que pode ter resultado nisso é a simplicidade do seu nome:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="single-responsibility-principle-o-princpio-da-responsabilidade-nica"&gt;Single Responsibility Principle (O princípio da responsabilidade única)&lt;/h2&gt;
+
+&lt;p&gt;Diferente de "Princípio da substituição de Liskov", "Chain of responsibility" ou "Lei de Demeter", é muito fácil lermos "Princípio da responsabilidade única" e pensar:&lt;/p&gt;
+
+&lt;p&gt;"Opa! Princípio da responsabilidade única, essa classe faz mais do que uma coisa! Ela tem mais de uma responsabilidade! Vamos transforma-la em duas"&lt;/p&gt;
+
+&lt;p&gt;É simples. Métodos, classes e todo organismo dentro de um software deve ter "uma única responsabilidade", não é mesmo?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Depende do que entendemos como responsabilidade&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Para exemplificar, gosto muito de utilizar o dicionário:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Responsabilidade: Obrigação de responder pelas ações próprias ou dos outros. Caráter ou estado do que é responsável. &lt;strong&gt;Dever de responder pelo próprio comportamento.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Marquei a última sentença pois será mais simples de utilizar com o exemplo abaixo:&lt;/p&gt;
+
+&lt;p&gt;Imagine que você é um entregador ou uma entregadora de pizza, qual é a sua responsabilidade e qual é o comportamento pelo qual você responde?&lt;/p&gt;
+
+&lt;p&gt;…&lt;/p&gt;
+
+&lt;p&gt;Imaginou?&lt;/p&gt;
+
+&lt;p&gt;Eu diria que:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Responsabilidade: Entregar a pizza&lt;/li&gt;
+  &lt;li&gt;Comportamento pelo qual responde: Guardar a pizza na mochila de forma cuidadosa para que ela chegue inteira, ligar a moto, acelerar a moto, pilotar com segurança se atentando as leis de trânsito, interfonar quando chegar e ser educado/a com o cliente.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Temos mais de uma responsabilidade? Ou temos comportamentos pelos quais respondemos dado a nossa responsabilidade?&lt;/p&gt;
+
+&lt;p&gt;Usando exemplos do mundo real fica mais claro, correto?&lt;/p&gt;
+
+&lt;p&gt;…&lt;/p&gt;
+
+&lt;p&gt;Então vou piorar o exemplo, nosso próprio corpo de entregador/a de pizza tem orgãos, e eles também tem suas responsabilidades:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;O coração bate e responde pela circulação do sangue&lt;/li&gt;
+  &lt;li&gt;O pulmão respira e responde por absorver O2 e eliminar CO2 do ar respirado&lt;/li&gt;
+  &lt;li&gt;Os rins filtram e respondem pela quantidade de detritos no nosso sangue&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sabendo disso, como entregadores/as de pizza temos muito mais responsabilidades do que imaginamos? Também temos que ter nosso corpo funcionando bem para conseguir exercer a profissão correto?&lt;/p&gt;
+
+&lt;p&gt;Como entreagores/as de pizza, respondemos pelo comportamento e responsabilidades do nosso corpo?&lt;/p&gt;
+
+&lt;p&gt;Nessa altura você deve estar bastante confuso ou confusa. As coisas começaram a tomar proporções grandes que provavelmente fizeram você ter um esforço cognitivo muito maior para entender toda a complexidade que envolve o "princípio da responsabilidade única", o significado de responsabilidade e comportamento.&lt;/p&gt;
+
+&lt;p&gt;Olhando o primeiro exemplo parece claro o que é responsabilidade e comportamento, mas quando te trouxe o segundo provavelmente você percebeu que isso pode ser infinito, e tomar proporções gigantes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Poderia finalizar o artigo aqui, para bons entendedores e endendedoras meia palavra basta&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Mas vou continuar. Fazendo uma "analogia da analogia" a nível de &lt;em&gt;software&lt;/em&gt;, essa confusão fica exposta da pior maneira possível e aumenta da mesma forma o nosso esforço cognitivo, indo contra &lt;strong&gt;simplificar para que consigamos trabalhar utilizando menos esforço cognitivo&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Se isso fosse um software, eu não me espantaria de abrir os arquivos e ver coisas como:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;"EntregadorDePizza"&lt;/li&gt;
+  &lt;li&gt;"EntregadorDePizzaBuilder"&lt;/li&gt;
+  &lt;li&gt;"LigadorDeMoto"&lt;/li&gt;
+  &lt;li&gt;"MantemRimFuncionandoService"&lt;/li&gt;
+  &lt;li&gt;"AceleradorDeMoto"&lt;/li&gt;
+  &lt;li&gt;"PilotagemComSegurança"&lt;/li&gt;
+  &lt;li&gt;"CuidadosComAPizza.Cuidar()"&lt;/li&gt;
+  &lt;li&gt;"BatimentosDoCoração.Bater()"&lt;/li&gt;
+  &lt;li&gt;"BatimentosDoCoraçãoFactory.create()"&lt;/li&gt;
+  &lt;li&gt;"EntregarPizzaFacade"&lt;/li&gt;
+  &lt;li&gt;"PizzaServices"&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Aquele "código gostoso" com alta granularidade, várias injeções de dependências e várias classes de apenas um método com "cinco, dez linhas de código", "respeitando a Single Responsibility Principle até o final"!&lt;/p&gt;
+
+&lt;p&gt;Muito fácil de dar manutenção, inclusive &lt;em&gt;(contêm ironia)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;No final das contas, esse tipo de situação causa um software que é "estruturado lateralmente" (não existe mais Orientação a Objetos ou Programação funcional). Ao invés de termos uma leitura de código de cima para baixo, vamos acabar abrindo "20" arquivos na nossa &lt;em&gt;IDE&lt;/em&gt; para entender uma única regra de negócio que muitas vezes pode representar comportamentos de uma única responsabilidade (em "20" arquivos).&lt;/p&gt;
+
+&lt;p&gt;Ao invés de encontrar o que procuramos em um ponto central, em um arquivo único, temos que procurar em vários arquivos e depois ligá-los mentalmente.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;É a mesma coisa que juntar peças de um quebra cabeça gigante.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;E ainda falo sobre o menos pior dos casos! Porque essa granularidade pode acabar partindo para projetos diferentes, microserviços ou microfrontends. Imagina ter que abrir 10 microserviços + 5 microfrontends?&lt;/p&gt;
+
+&lt;p&gt;O que acontece é que muita gente ainda não faz idéia da diferença entre &lt;strong&gt;responsabilidade&lt;/strong&gt; e &lt;strong&gt;comportamento&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;O próprio Uncle Bob (criador do princípio) disse em um de seus livros:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;"De todos os princípios SOLID, o princípio da responsabilidade única provavelmente é o menos compreendido. Isso se deve, possivelmente ao seu nome bastante inadequado. Em geral, ao escutarem esse nome, os programadores imaginam logo que todos os módulos devem fazer apenas uma coisa"&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;Robert C. Martin - Clear Architecture (Arquitetura Limpa) p/ 62&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Voltando ao nosso exemplo, temos apenas &lt;strong&gt;uma&lt;/strong&gt; responsabilidade: &lt;strong&gt;Entregar a pizza.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Porque podemos afirmar isso?&lt;/p&gt;
+
+&lt;p&gt;O método e o comportamento são independentes da responsabilidade. Continuamos sendo apenas &lt;strong&gt;entregadores/as de pizzas&lt;/strong&gt; com a responsabilidade única de &lt;strong&gt;entregar pizzas&lt;/strong&gt; independente de como fazemos isso.&lt;/p&gt;
+
+&lt;p&gt;Posso por exemplo começar a entregar de carro ao invés de moto. E se alguém precisar aprender a entregar pizzas, esse alguém vai me procurar e eu vou ensinar claramente como.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;"Um módulo é apenas um conjunto coeso de funções e estruturas de dados. Esta palavra "coeso" sugere o SRP. Coesão é a força que amarra o código responsável a um único ator"&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;Robert C. Martin - Clean Architecture (Arquitetura Limpa) p/63&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;É completamente &lt;strong&gt;coeso&lt;/strong&gt;, por exemplo, termos uma classe &lt;code&gt;EntregadorDePizza&lt;/code&gt; com um método &lt;code&gt;entregar_pizza&lt;/code&gt; que recebe três objetos: &lt;code&gt;pizza&lt;/code&gt;, &lt;code&gt;cliente&lt;/code&gt; e &lt;code&gt;moto&lt;/code&gt;. E este método ter todo aquele comportamento que listamos. Afinal, não vamos procurar saber como o entregador entrega a pizza em outro ponto do código:
+ // https://github.com/middleman/middleman-syntax&lt;/p&gt;
+
+&lt;p&gt;Apenas um esboço …&lt;/p&gt;
+&lt;pre&gt;
+class EntregadorDePizza
+  def entregar_pizza(pizza, cliente, moto)
+    guardar_na_mochila(pizza)
+    moto.ligar(chave_da_moto)
+    moto.pilotar_com_segurança_até(cliente.endereço)
+    interfonar()
+    ser_educado_com_o(cliente)
+  end
+
+  private
+	
+  def chave_da_moto
+	
+  # ...
+
+  def guardar_na_mochila(pizza)
+	
+  # ...
+end
+&lt;/pre&gt;
+
+&lt;p&gt;Single Responsibility Principle é sobre isso.&lt;/p&gt;
+
+&lt;p&gt;É sobre &lt;strong&gt;responsabilidade&lt;/strong&gt;, &lt;strong&gt;comportamento&lt;/strong&gt; e como os descrevemos de forma &lt;strong&gt;coesa&lt;/strong&gt;. Não sobre "fazer uma coisa só".&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;… "Esse princípio é importante no momento em que há uma alteração em alguma funcionalidade do software. Quando isso ocorre, o programador precisa procurar pelas classes que possuem a responsabilidade a ser modificada. Supondo uma classe que possua mais de uma razão para mudar, isso significa que ela é acessada por duas partes do software que fazem coisas diferentes. Fazer uma alteração em uma das responsabilidades dessa classe pode, de maneira não intencional, quebrar a outra parte de maneira inesperada. Isso torna o projeto de classes frágil"&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;Maurício Aniche - Test-Driven Development p/ 204&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id="quebrando-nosso-single-responsibility-principle-e-os-problemas-que-o-originaram"&gt;Quebrando nosso Single Responsibility Principle e os problemas que o originaram&lt;/h3&gt;
+
+&lt;p&gt;Imagine que você é &lt;em&gt;software engineer&lt;/em&gt; da pizzaria e precisa mudar no sistema a forma como a pizza é entregue (&lt;strong&gt;comportamento&lt;/strong&gt;), em quais classes você procuraria primeiro?:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code&gt;EntregarPizza&lt;/code&gt; ou &lt;code&gt;EntregadorDePizza&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;Cozinha&lt;/code&gt; ou &lt;code&gt;FornoDaCozinha&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;CalcularContabilidade&lt;/code&gt; ou &lt;code&gt;FolhaDePagamento&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Com certeza você escolheu a &lt;strong&gt;opção 1&lt;/strong&gt;, porque é o mais coeso.&lt;/p&gt;
+
+&lt;p&gt;O primeiro problema que o SRP corrige é justamente a &lt;strong&gt;baixa coesão&lt;/strong&gt;. Se tivessemos uma classe chamada &lt;code&gt;CalcularContabilidade&lt;/code&gt; que tivesse o comportamento de "esquentar o forno da cozinha" estaríamos violando o SRP.&lt;/p&gt;
+
+&lt;p&gt;Nenhum programador ou programadora vai pensar em abrir uma classe &lt;code&gt;CalcularContabilidade&lt;/code&gt; para mudar a "temperatura do forno da cozinha". É contra intuitivo. &lt;code&gt;CalcularContabilidade&lt;/code&gt; teria &lt;strong&gt;2 responsabilidades&lt;/strong&gt;: cuidar da cozinha e da contabilidade. &lt;strong&gt;Teria razões diferentes para mudar.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;O segundo maior problema é a complexidade que uma classe com muitas responsabilidades (lembrando que &lt;strong&gt;responsabilidade&lt;/strong&gt; não é &lt;strong&gt;comportamento&lt;/strong&gt;) pode ter. A tendência é a classe ficar difícil de dar manutenção e testar. Além de que dois contextos completamente diferentes podem interferir um no outro.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Obs:.&lt;/em&gt; Repare também  que no exemplo da seção anterior, o método &lt;code&gt;entregar_pizza&lt;/code&gt; da classe &lt;code&gt;EntregadorDePizza&lt;/code&gt; sabe ligar a &lt;code&gt;moto&lt;/code&gt;, mas não sabe como a moto funciona por dentro quando ele liga. O comportamento do maquinário da moto não é responsabilidade do &lt;code&gt;EntregadorDePizza&lt;/code&gt;. Se o comportamento do maquinário tivesse nessa classe também, teríamos algo semelhante a essa imagem:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/motaur.png" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sempre que quiséssemos dar manutenção na moto, teríamos que mexer no &lt;code&gt;EntregadorDePizza&lt;/code&gt;. O que para pessoas sãs não faz o mínimo sentido.&lt;/p&gt;
+
+&lt;h3 id="a-formula-mgica-para-respeitar-o-srp"&gt;A formula mágica para respeitar o SRP&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Evite utilizar nomes genéricos dentro do seu &lt;em&gt;software&lt;/em&gt;, como &lt;em&gt;Services&lt;/em&gt; ou &lt;em&gt;Manager&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;Em caso de dúvidas, pergunte-se:
+    &lt;ul&gt;
+      &lt;li&gt;A classe / módulo Y que tem a responsabilidade X deve responder pelo comportamento Z?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Antes de sair codando, reserve um tempo para pensar em como traduzir sua regra de negócio para estruturas (classes, módulos e funções) com nomenclaturas coesas. Use palavras que são comuns no dia a dia da sua equipe. Gosto de pensar que um software bem escrito é aquele que uma pessoa não técnica (PO, PM e Stakeholders) consegue abrir os arquivos e entender superficialmente o que está acontecendo.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="resumindo"&gt;Resumindo&lt;/h3&gt;
+
+&lt;p&gt;Essas são as 5 principais mensagens que enfatizo com esse artigo:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Responsabilidade não é o comportamento em si. É o dever de responder por um conjunto de comportamentos.&lt;/li&gt;
+  &lt;li&gt;SRP é sobre &lt;strong&gt;responsabilidade&lt;/strong&gt;, &lt;strong&gt;comportamento&lt;/strong&gt; e como os descrevemos de forma &lt;strong&gt;coesa&lt;/strong&gt;. Não sobre fazer uma coisa só.&lt;/li&gt;
+  &lt;li&gt;Coesão, acima de tudo, tem a ver com o nome que damos as variáveis, classes, módulos, funções e métodos em relação a o que eles fazem e/ou são.&lt;/li&gt;
+  &lt;li&gt;Todo e qualquer padrão ou prática serve para &lt;strong&gt;simplificar para que consigamos trabalhar utilizando menos esforço cognitivo&lt;/strong&gt;, caso isso não aconteça, não devemos utilizar o padrão ou prática.&lt;/li&gt;
+  &lt;li&gt;Cabe ao engenheiro de software, dado um determinado contexto, encontrar a solução adequada e ideal para o problema, identificando quais padrões utilizar ou não, dado o prazo, tamanho do projeto e os objetivos de negócio.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id="alguns-links-legais--complementares-sobre-o-assunto"&gt;Alguns links legais / complementares sobre o assunto:&lt;/h5&gt;
+
+&lt;p&gt;&lt;a href="https://hackernoon.com/you-dont-understand-the-single-responsibility-principle-abfdd005b137"&gt;You dont understand the single responsibility principle (Hackernoon)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://softwareengineering.stackexchange.com/questions/150760/single-responsibility-principle-how-can-i-avoid-code-fragmentation"&gt;Single responsibility principle: how can i avoid code fragmentation (Stack Exchange Question)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://www.davidtanzer.net/david%27s%20blog/2017/07/26/the-single-responsibility-principle.html"&gt;The Single Responsibility Principle (David Tanzer)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://blog.cleancoder.com/uncle-bob/2014/05/08/SingleReponsibilityPrinciple.html"&gt;Single reponsibility principle (Blog Clean Coder / Uncle Bob)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://www.amazon.com.br/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164/ref=asc_df_0134494164/?tag=googleshopp00-20&amp;amp;linkCode=df0&amp;amp;hvadid=379726160779&amp;amp;hvpos=&amp;amp;hvnetw=g&amp;amp;hvrand=7253478441797173469&amp;amp;hvpone=&amp;amp;hvptwo=&amp;amp;hvqmt=&amp;amp;hvdev=c&amp;amp;hvdvcmdl=&amp;amp;hvlocint=&amp;amp;hvlocphy=1001766&amp;amp;hvtargid=pla-423658477418&amp;amp;psc=1"&gt;Livro Clean Architecture (Link de compra da Amazon)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Cohesion_(computer_science)"&gt;Cohesion (computer science) (Wikipedia)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://www.casadocodigo.com.br/products/livro-tdd-ruby"&gt;Livro TDD com Ruby (Casa do código)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://www.amazon.com.br/C%C3%B3digo-limpo-Robert-C-Martin/dp/8576082675/ref=asc_df_8576082675/?tag=googleshopp00-20&amp;amp;linkCode=df0&amp;amp;hvadid=379792215563&amp;amp;hvpos=&amp;amp;hvnetw=g&amp;amp;hvrand=4192535749629342066&amp;amp;hvpone=&amp;amp;hvptwo=&amp;amp;hvqmt=&amp;amp;hvdev=c&amp;amp;hvdvcmdl=&amp;amp;hvlocint=&amp;amp;hvlocphy=1001766&amp;amp;hvtargid=pla-398225630878&amp;amp;psc=1"&gt;Livro Clean Code (Link da Amazon)&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Elixir + Phoenix, programando na velocidade da luz</title>
     <link rel="alternate" href="https://truehenrique.com/2020/07/17/elixir-e-phoenix-na-velocidade-da-luz/"/>
