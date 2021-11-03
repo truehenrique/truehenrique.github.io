@@ -14,7 +14,7 @@
     <link rel="alternate" href="https://truehenrique.com/2021/10/27/single-responsibility-o-principio-deturpado/"/>
     <id>https://truehenrique.com/2021/10/27/single-responsibility-o-principio-deturpado/</id>
     <published>2021-10-27T14:23:00-03:00</published>
-    <updated>2021-11-03T12:57:02-03:00</updated>
+    <updated>2021-11-03T17:45:23-03:00</updated>
     <author>
       <name>Henrique F. Teixeira</name>
     </author>
@@ -85,16 +85,16 @@
 &lt;p&gt;Dado essa introdução, gostaria de falar agora sobre um "caso ímpar" e muito curioso:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Um padrão / princípio onde é muito comum a galera não reconhecer o problema que ele soluciona de fato e nem mesmo como ele funciona, mas sai utilizando (e pregando) em todo lugar. Provavelmente isso é resultado de um "telefone sem fio" gigante entre desenvolvedores (um fala para o outro, o outro escuta e fala para mais um seguidamente e nenhum deles busca de fato entender a fundo), outro ponto que pode ter resultado nisso é a simplicidade do seu nome:&lt;/li&gt;
+  &lt;li&gt;Um padrão / princípio onde é muito comum a galera não reconhecer o problema que ele soluciona de fato e nem mesmo como ele funciona, mas sai "utilizando" (e "pregando") em todo lugar. Provavelmente isso é resultado de um "telefone sem fio" gigante entre desenvolvedores (um fala para o outro, o outro escuta e fala para mais um seguidamente e nenhum deles busca de fato entender a fundo), outro ponto que pode ter resultado nisso é a simplicidade do seu nome:&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id="single-responsibility-principle-o-princpio-da-responsabilidade-nica"&gt;Single Responsibility Principle (O princípio da responsabilidade única)&lt;/h2&gt;
 
-&lt;p&gt;Diferente de "Princípio da substituição de Liskov", "Chain of responsibility" ou "Lei de Demeter", é muito fácil lermos "Princípio da responsabilidade única" e pensar:&lt;/p&gt;
+&lt;p&gt;Diferente de "Princípio da substituição de Liskov", "&lt;em&gt;Chain of responsibility&lt;/em&gt;" ou "Lei de Demeter", é muito fácil lermos "Princípio da responsabilidade única" e pensar:&lt;/p&gt;
 
 &lt;p&gt;"Opa! Princípio da responsabilidade única, essa classe faz mais do que uma coisa! Ela tem mais de uma responsabilidade! Vamos transforma-la em duas"&lt;/p&gt;
 
-&lt;p&gt;É simples. Métodos, classes e todo organismo dentro de um software deve ter "uma única responsabilidade", não é mesmo?&lt;/p&gt;
+&lt;p&gt;É simples. Métodos, classes e todo organismo dentro de um &lt;em&gt;software&lt;/em&gt; deve ter "uma única responsabilidade", não é mesmo?&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Depende do que entendemos como responsabilidade&lt;/strong&gt;&lt;/p&gt;
 
@@ -145,7 +145,7 @@
 
 &lt;p&gt;Mas vou continuar. Fazendo uma "analogia da analogia" a nível de &lt;em&gt;software&lt;/em&gt;, essa confusão fica exposta da pior maneira possível e aumenta da mesma forma o nosso esforço cognitivo, indo contra &lt;strong&gt;simplificar para que consigamos trabalhar utilizando menos esforço cognitivo&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Se isso fosse um software, eu não me espantaria de abrir os arquivos e ver coisas como:&lt;/p&gt;
+&lt;p&gt;Se isso fosse um &lt;em&gt;software&lt;/em&gt;, eu não me espantaria de abrir os arquivos e ver coisas como:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;"EntregadorDePizza"&lt;/li&gt;
@@ -161,17 +161,17 @@
   &lt;li&gt;"PizzaServices"&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Aquele "código gostoso" com alta granularidade, várias injeções de dependências e várias classes de apenas um método com "cinco, dez linhas de código", "respeitando a Single Responsibility Principle até o final"!&lt;/p&gt;
+&lt;p&gt;Aquele "código gostoso" com alta granularidade, várias injeções de dependências e várias classes de apenas um método com "cinco, dez linhas de código", "respeitando a &lt;em&gt;Single Responsibility Principle&lt;/em&gt; até o final"!&lt;/p&gt;
 
 &lt;p&gt;Muito fácil de dar manutenção, inclusive &lt;em&gt;(contêm ironia)&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;No final das contas, esse tipo de situação causa um software que é "estruturado lateralmente" (não existe mais Orientação a Objetos ou Programação funcional). Ao invés de termos uma leitura de código de cima para baixo, vamos acabar abrindo "20" arquivos na nossa &lt;em&gt;IDE&lt;/em&gt; para entender uma única regra de negócio que muitas vezes pode representar comportamentos de uma única responsabilidade (em "20" arquivos).&lt;/p&gt;
+&lt;p&gt;No final das contas, esse tipo de situação causa um &lt;em&gt;software&lt;/em&gt; que é "estruturado lateralmente" (não existe mais Orientação a Objetos ou Programação funcional). Ao invés de termos uma leitura de código de cima para baixo, vamos acabar abrindo "20" arquivos na nossa &lt;em&gt;IDE&lt;/em&gt; para entender uma única regra de negócio que muitas vezes pode representar comportamentos de uma única responsabilidade (em "20" arquivos).&lt;/p&gt;
 
 &lt;p&gt;Ao invés de encontrar o que procuramos em um ponto central, em um arquivo único, temos que procurar em vários arquivos e depois ligá-los mentalmente.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;É a mesma coisa que juntar peças de um quebra cabeça gigante.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;E ainda falo sobre o menos pior dos casos! Porque essa granularidade pode acabar partindo para projetos diferentes, microserviços ou microfrontends. Imagina ter que abrir 10 microserviços + 5 microfrontends?&lt;/p&gt;
+&lt;p&gt;E ainda falo sobre o menos pior dos casos! Porque essa granularidade pode acabar partindo para projetos diferentes, &lt;em&gt;microserviços&lt;/em&gt; ou &lt;em&gt;microfrontends&lt;/em&gt;. Imagina ter que abrir 10 &lt;em&gt;microserviços&lt;/em&gt; + 5 &lt;em&gt;microfrontends&lt;/em&gt;?&lt;/p&gt;
 
 &lt;p&gt;O que acontece é que muita gente ainda não faz idéia da diferença entre &lt;strong&gt;responsabilidade&lt;/strong&gt; e &lt;strong&gt;comportamento&lt;/strong&gt;.&lt;/p&gt;
 
@@ -197,8 +197,7 @@
   &lt;p&gt;&lt;em&gt;Robert C. Martin - Clean Architecture (Arquitetura Limpa) p/63&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;É completamente &lt;strong&gt;coeso&lt;/strong&gt;, por exemplo, termos uma classe &lt;code&gt;EntregadorDePizza&lt;/code&gt; com um método &lt;code&gt;entregar_pizza&lt;/code&gt; que recebe três objetos: &lt;code&gt;pizza&lt;/code&gt;, &lt;code&gt;cliente&lt;/code&gt; e &lt;code&gt;moto&lt;/code&gt;. E este método ter todo aquele comportamento que listamos. Afinal, não vamos procurar saber como o entregador entrega a pizza em outro ponto do código:
- // https://github.com/middleman/middleman-syntax&lt;/p&gt;
+&lt;p&gt;É completamente &lt;strong&gt;coeso&lt;/strong&gt;, por exemplo, termos uma classe &lt;code&gt;EntregadorDePizza&lt;/code&gt; com um método &lt;code&gt;entregar_pizza&lt;/code&gt; que recebe três objetos: &lt;code&gt;pizza&lt;/code&gt;, &lt;code&gt;cliente&lt;/code&gt; e &lt;code&gt;moto&lt;/code&gt;. E este método ter todo aquele comportamento que listamos. Afinal, não vamos procurar saber como o entregador entrega a pizza em outro ponto do código:&lt;/p&gt;
 
 &lt;p&gt;Apenas um esboço …&lt;/p&gt;
 &lt;pre&gt;
@@ -223,7 +222,7 @@ class EntregadorDePizza
 end
 &lt;/pre&gt;
 
-&lt;p&gt;Single Responsibility Principle é sobre isso.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Single Responsibility Principle&lt;/em&gt; é sobre isso.&lt;/p&gt;
 
 &lt;p&gt;É sobre &lt;strong&gt;responsabilidade&lt;/strong&gt;, &lt;strong&gt;comportamento&lt;/strong&gt; e como os descrevemos de forma &lt;strong&gt;coesa&lt;/strong&gt;. Não sobre "fazer uma coisa só".&lt;/p&gt;
 
@@ -278,7 +277,7 @@ end
   &lt;li&gt;SRP é sobre &lt;strong&gt;responsabilidade&lt;/strong&gt;, &lt;strong&gt;comportamento&lt;/strong&gt; e como os descrevemos de forma &lt;strong&gt;coesa&lt;/strong&gt;. Não sobre fazer uma coisa só.&lt;/li&gt;
   &lt;li&gt;Coesão, acima de tudo, tem a ver com o nome que damos as variáveis, classes, módulos, funções e métodos em relação a o que eles fazem e/ou são.&lt;/li&gt;
   &lt;li&gt;Todo e qualquer padrão ou prática serve para &lt;strong&gt;simplificar para que consigamos trabalhar utilizando menos esforço cognitivo&lt;/strong&gt;, caso isso não aconteça, não devemos utilizar o padrão ou prática.&lt;/li&gt;
-  &lt;li&gt;Cabe ao engenheiro de software, dado um determinado contexto, encontrar a solução adequada e ideal para o problema, identificando quais padrões utilizar ou não, dado o prazo, tamanho do projeto e os objetivos de negócio.&lt;/li&gt;
+  &lt;li&gt;Cabe ao engenheiro de &lt;em&gt;software&lt;/em&gt;, dado um determinado contexto, encontrar a solução adequada e ideal para o problema, identificando quais padrões utilizar ou não, dado o prazo, tamanho do projeto e os objetivos de negócio.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h5 id="alguns-links-legais--complementares-sobre-o-assunto"&gt;Alguns links legais / complementares sobre o assunto:&lt;/h5&gt;

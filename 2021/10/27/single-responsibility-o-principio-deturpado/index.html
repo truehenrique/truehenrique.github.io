@@ -153,16 +153,16 @@
 <p>Dado essa introdução, gostaria de falar agora sobre um "caso ímpar" e muito curioso:</p>
 
 <ul>
-  <li>Um padrão / princípio onde é muito comum a galera não reconhecer o problema que ele soluciona de fato e nem mesmo como ele funciona, mas sai utilizando (e pregando) em todo lugar. Provavelmente isso é resultado de um "telefone sem fio" gigante entre desenvolvedores (um fala para o outro, o outro escuta e fala para mais um seguidamente e nenhum deles busca de fato entender a fundo), outro ponto que pode ter resultado nisso é a simplicidade do seu nome:</li>
+  <li>Um padrão / princípio onde é muito comum a galera não reconhecer o problema que ele soluciona de fato e nem mesmo como ele funciona, mas sai "utilizando" (e "pregando") em todo lugar. Provavelmente isso é resultado de um "telefone sem fio" gigante entre desenvolvedores (um fala para o outro, o outro escuta e fala para mais um seguidamente e nenhum deles busca de fato entender a fundo), outro ponto que pode ter resultado nisso é a simplicidade do seu nome:</li>
 </ul>
 
 <h2 id="single-responsibility-principle-o-princpio-da-responsabilidade-nica">Single Responsibility Principle (O princípio da responsabilidade única)</h2>
 
-<p>Diferente de "Princípio da substituição de Liskov", "Chain of responsibility" ou "Lei de Demeter", é muito fácil lermos "Princípio da responsabilidade única" e pensar:</p>
+<p>Diferente de "Princípio da substituição de Liskov", "<em>Chain of responsibility</em>" ou "Lei de Demeter", é muito fácil lermos "Princípio da responsabilidade única" e pensar:</p>
 
 <p>"Opa! Princípio da responsabilidade única, essa classe faz mais do que uma coisa! Ela tem mais de uma responsabilidade! Vamos transforma-la em duas"</p>
 
-<p>É simples. Métodos, classes e todo organismo dentro de um software deve ter "uma única responsabilidade", não é mesmo?</p>
+<p>É simples. Métodos, classes e todo organismo dentro de um <em>software</em> deve ter "uma única responsabilidade", não é mesmo?</p>
 
 <p><strong>Depende do que entendemos como responsabilidade</strong></p>
 
@@ -213,7 +213,7 @@
 
 <p>Mas vou continuar. Fazendo uma "analogia da analogia" a nível de <em>software</em>, essa confusão fica exposta da pior maneira possível e aumenta da mesma forma o nosso esforço cognitivo, indo contra <strong>simplificar para que consigamos trabalhar utilizando menos esforço cognitivo</strong>.</p>
 
-<p>Se isso fosse um software, eu não me espantaria de abrir os arquivos e ver coisas como:</p>
+<p>Se isso fosse um <em>software</em>, eu não me espantaria de abrir os arquivos e ver coisas como:</p>
 
 <ul>
   <li>"EntregadorDePizza"</li>
@@ -229,17 +229,17 @@
   <li>"PizzaServices"</li>
 </ul>
 
-<p>Aquele "código gostoso" com alta granularidade, várias injeções de dependências e várias classes de apenas um método com "cinco, dez linhas de código", "respeitando a Single Responsibility Principle até o final"!</p>
+<p>Aquele "código gostoso" com alta granularidade, várias injeções de dependências e várias classes de apenas um método com "cinco, dez linhas de código", "respeitando a <em>Single Responsibility Principle</em> até o final"!</p>
 
 <p>Muito fácil de dar manutenção, inclusive <em>(contêm ironia)</em></p>
 
-<p>No final das contas, esse tipo de situação causa um software que é "estruturado lateralmente" (não existe mais Orientação a Objetos ou Programação funcional). Ao invés de termos uma leitura de código de cima para baixo, vamos acabar abrindo "20" arquivos na nossa <em>IDE</em> para entender uma única regra de negócio que muitas vezes pode representar comportamentos de uma única responsabilidade (em "20" arquivos).</p>
+<p>No final das contas, esse tipo de situação causa um <em>software</em> que é "estruturado lateralmente" (não existe mais Orientação a Objetos ou Programação funcional). Ao invés de termos uma leitura de código de cima para baixo, vamos acabar abrindo "20" arquivos na nossa <em>IDE</em> para entender uma única regra de negócio que muitas vezes pode representar comportamentos de uma única responsabilidade (em "20" arquivos).</p>
 
 <p>Ao invés de encontrar o que procuramos em um ponto central, em um arquivo único, temos que procurar em vários arquivos e depois ligá-los mentalmente.</p>
 
 <p><strong>É a mesma coisa que juntar peças de um quebra cabeça gigante.</strong></p>
 
-<p>E ainda falo sobre o menos pior dos casos! Porque essa granularidade pode acabar partindo para projetos diferentes, microserviços ou microfrontends. Imagina ter que abrir 10 microserviços + 5 microfrontends?</p>
+<p>E ainda falo sobre o menos pior dos casos! Porque essa granularidade pode acabar partindo para projetos diferentes, <em>microserviços</em> ou <em>microfrontends</em>. Imagina ter que abrir 10 <em>microserviços</em> + 5 <em>microfrontends</em>?</p>
 
 <p>O que acontece é que muita gente ainda não faz idéia da diferença entre <strong>responsabilidade</strong> e <strong>comportamento</strong>.</p>
 
@@ -265,8 +265,7 @@
   <p><em>Robert C. Martin - Clean Architecture (Arquitetura Limpa) p/63</em></p>
 </blockquote>
 
-<p>É completamente <strong>coeso</strong>, por exemplo, termos uma classe <code>EntregadorDePizza</code> com um método <code>entregar_pizza</code> que recebe três objetos: <code>pizza</code>, <code>cliente</code> e <code>moto</code>. E este método ter todo aquele comportamento que listamos. Afinal, não vamos procurar saber como o entregador entrega a pizza em outro ponto do código:
- // https://github.com/middleman/middleman-syntax</p>
+<p>É completamente <strong>coeso</strong>, por exemplo, termos uma classe <code>EntregadorDePizza</code> com um método <code>entregar_pizza</code> que recebe três objetos: <code>pizza</code>, <code>cliente</code> e <code>moto</code>. E este método ter todo aquele comportamento que listamos. Afinal, não vamos procurar saber como o entregador entrega a pizza em outro ponto do código:</p>
 
 <p>Apenas um esboço …</p>
 <pre>
@@ -291,7 +290,7 @@ class EntregadorDePizza
 end
 </pre>
 
-<p>Single Responsibility Principle é sobre isso.</p>
+<p><em>Single Responsibility Principle</em> é sobre isso.</p>
 
 <p>É sobre <strong>responsabilidade</strong>, <strong>comportamento</strong> e como os descrevemos de forma <strong>coesa</strong>. Não sobre "fazer uma coisa só".</p>
 
@@ -346,7 +345,7 @@ end
   <li>SRP é sobre <strong>responsabilidade</strong>, <strong>comportamento</strong> e como os descrevemos de forma <strong>coesa</strong>. Não sobre fazer uma coisa só.</li>
   <li>Coesão, acima de tudo, tem a ver com o nome que damos as variáveis, classes, módulos, funções e métodos em relação a o que eles fazem e/ou são.</li>
   <li>Todo e qualquer padrão ou prática serve para <strong>simplificar para que consigamos trabalhar utilizando menos esforço cognitivo</strong>, caso isso não aconteça, não devemos utilizar o padrão ou prática.</li>
-  <li>Cabe ao engenheiro de software, dado um determinado contexto, encontrar a solução adequada e ideal para o problema, identificando quais padrões utilizar ou não, dado o prazo, tamanho do projeto e os objetivos de negócio.</li>
+  <li>Cabe ao engenheiro de <em>software</em>, dado um determinado contexto, encontrar a solução adequada e ideal para o problema, identificando quais padrões utilizar ou não, dado o prazo, tamanho do projeto e os objetivos de negócio.</li>
 </ul>
 
 <h5 id="alguns-links-legais--complementares-sobre-o-assunto">Alguns links legais / complementares sobre o assunto:</h5>
