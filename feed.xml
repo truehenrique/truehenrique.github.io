@@ -5,10 +5,312 @@
   <id>https://truehenrique.com/</id>
   <link href="https://truehenrique.com/"/>
   <link href="https://truehenrique.com/feed.xml" rel="self"/>
-  <updated>2021-10-27T14:23:00-03:00</updated>
+  <updated>2022-02-17T19:17:00-03:00</updated>
   <author>
     <name>Henrique F. Teixeira</name>
   </author>
+  <entry>
+    <title>A linguagem de programação bala de prata?!</title>
+    <link rel="alternate" href="https://truehenrique.com/2022/02/17/a-linguagem-de-programacao-bala-de-prata/"/>
+    <id>https://truehenrique.com/2022/02/17/a-linguagem-de-programacao-bala-de-prata/</id>
+    <published>2022-02-17T19:17:00-03:00</published>
+    <updated>2022-02-18T14:42:33-03:00</updated>
+    <author>
+      <name>Henrique F. Teixeira</name>
+    </author>
+    <content type="html">&lt;p&gt;Neste artigo irei mostrar a conclusão de uma pesquisa feita por mim onde comparei algumas linguages de programação e seus possíveis casos de uso, elencando as que conseguem ser efetivas em mais nichos possíveis em relação a aquelas que atingem apenas nichos específicos. Ah, não existe "bala de prata" de fato. Mas aqui pode haver "insights" para empresas sobre qual tecnologia pode se adaptar melhor dado cada contexto.&lt;/p&gt;
+
+&lt;p&gt;Para a pesquisa selecionei as linguagens "mais populares" atualmente segundo estatísticas do &lt;em&gt;StackOverflow&lt;/em&gt; e &lt;em&gt;GitHub&lt;/em&gt; junto com algumas em crescimento no mercado:&lt;/p&gt;
+
+&lt;p&gt;Populares:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Python, Javascript&lt;/em&gt; (e derivadas), &lt;em&gt;Go, Ruby, C++, C#&lt;/em&gt; e &lt;em&gt;Java&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Tendências:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Kotlin, Elixir, Rust&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Para elencar as linguagens selecionei alguns nichos:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Mobile (iOS / Android)&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Aplicações &lt;em&gt;Web&lt;/em&gt; / Micro Serviços&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;OS&lt;/em&gt; / Programação de aplicativos desktop (&lt;em&gt;GUI&lt;/em&gt;)&lt;/li&gt;
+  &lt;li&gt;Baixo nível&lt;/li&gt;
+  &lt;li&gt;Alta performance &lt;em&gt;CPU-bound&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Concorrência / Paralelismo&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;CLI (command line interface)&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Ciência de dados&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Machine Learn&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Jogos&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;IOT&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para cada um deles pontuei de &lt;strong&gt;0&lt;/strong&gt; a &lt;strong&gt;3&lt;/strong&gt;, sendo:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;0&lt;/strong&gt;, não atende de nenhuma maneira:
+Não encontrei nenhum suporte para tal nicho, isso inclui ausência de frameworks, bibliotecas, recursos próprios e arquitetura da linguagem ou até limitações impostas por algum outro motivo.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt;, atende de forma bem escassa:
+Encontrei algum suporte mas bem escasso, como: frameworks ou bibliotecas imaturas ou obsoletas e sua comunidade também não dá muita atenção para o determinado nicho.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2&lt;/strong&gt;, atende:
+Encontrei bibliotecas e frameworks maduros e estáveis para determinado nicho, possui uma arquitetura favorável, mas claramente não é o foco da comunidade ou o principal uso da linguagem.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3&lt;/strong&gt;, atende muito bem:
+Encontrei foco da comunidade, arquitetura, bibliotecas e frameworks maduros, estáveis e populares. Além de várias pessoas recomendando a linguagem como sendo a mais adequada para o nicho.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;obs:. Não estou considerando pontos como "qualidade de código" ou "sintaxe", esses que de fato podem ser muito importantes na hora de considerar uma tecnologia ou outra. Também levando em conta que eles são bem mais complexos de medir e podem variar de time para time.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Como fiz a pesquisa&lt;/p&gt;
+
+&lt;h4 id="parte-1---entendendo-o-consenso-geral-da-comunidade"&gt;Parte 1 - Entendendo o consenso geral da comunidade.&lt;/h4&gt;
+
+&lt;p&gt;Sendo X a linguagem, primeiro pesquisei "X main usage", depois, para cada nicho pesquisei "X for Y", "Y X library" e "X Y framework" sendo Y o nicho.&lt;/p&gt;
+
+&lt;p&gt;A partir daí colhi informações e opiniões gerais de sites como Quora, Reddit, fóruns espalhados pela internet e cheguei a bibliotecas e frameworks no GitHub.&lt;/p&gt;
+
+&lt;h4 id="parte-2---analisando-projetos-no-github"&gt;Parte 2 - Analisando projetos no GitHub.&lt;/h4&gt;
+
+&lt;p&gt;Após chegar a páginas de projetos open source / bibliotecas e frameworks no GitHub, elenquei entre imaturo, maduro e estável da seguinte maneira:&lt;/p&gt;
+
+&lt;p&gt;imaturo:
+Projetos com pouca ou nenhuma atualização, muitas issues e poucos contribuidores.&lt;/p&gt;
+
+&lt;p&gt;maduro e estável:
+Projetos com atualização constante, populares, que existem a um tempo considerável e tem uma relação entre issues e contribuidores (issues / contributors) saudável.&lt;/p&gt;
+
+&lt;h2 id="resultados"&gt;Resultados&lt;/h2&gt;
+
+&lt;p&gt;Abaixo estão os resultados de cada linguagem de acordo com a minha percepção após fazer a pesquisa:&lt;/p&gt;
+
+&lt;h4 id="python"&gt;Python&lt;/h4&gt;
+&lt;p&gt;﻿
+&lt;img src="/images/silver-bullet/python.png" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sem nenhuma dúvida &lt;em&gt;Python&lt;/em&gt; é a "bola da vez" quando o assunto é ciência de dados e &lt;em&gt;IOT&lt;/em&gt;, no &lt;em&gt;GitHub&lt;/em&gt; é a linguagem com mais issues e repositórios relacionados aos temas (lado a lado com &lt;em&gt;Javascript&lt;/em&gt; para &lt;em&gt;IOT&lt;/em&gt;). Com a "simplicidade" no "core" de sua ideologia &lt;em&gt;Python&lt;/em&gt; é adotado de forma abrangente no meio acadêmico e por quem deseja se mais tornar produtivo com códigos extremamente legíveis.&lt;/p&gt;
+
+&lt;p&gt;Fora de &lt;em&gt;IOT&lt;/em&gt; e &lt;em&gt;data science Python&lt;/em&gt; ainda é uma excelente aliada se precisarmos construir aplicações &lt;em&gt;web&lt;/em&gt;, &lt;em&gt;desktop, CLI&lt;/em&gt; e jogos simples com uma "enxurrada" de bibliotecas excelentes como:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt; &lt;em&gt;(&lt;a href="https://github.com/django/django"&gt;https://github.com/django/django&lt;/a&gt;)&lt;/em&gt;. Com 54.8k de stars e 2082 contribuidores coloco lado a lado com Ruby on Rails como uma das mais maduras e robustas ferramentas para desenvolvimento web.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Kivy&lt;/strong&gt; &lt;em&gt;(&lt;a href="https://kivy.org/"&gt;https://kivy.org/&lt;/a&gt;)&lt;/em&gt;. Uma biblioteca incrível para construção de aplicativos multi-plataforma, conseguimos compilar um projeto inteiramente escrito em Python para IOS, Android ou Desktop.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Para programas CLI: &lt;strong&gt;Alive progress, asciimatics e python-prompt-toolkit&lt;/strong&gt; &lt;em&gt;(&lt;a href="https://github.com/rsalmei/alive-progress"&gt;https://github.com/rsalmei/alive-progress&lt;/a&gt;, &lt;a href="https://github.com/peterbrittain/asciimatics"&gt;https://github.com/peterbrittain/asciimatics&lt;/a&gt;, &lt;a href="https://github.com/prompt-toolkit/python-prompt-toolkit"&gt;https://github.com/prompt-toolkit/python-prompt-toolkit&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Pygame&lt;/strong&gt; &lt;em&gt;(&lt;a href="https://www.pygame.org/news"&gt;https://www.pygame.org/news&lt;/a&gt;)&lt;/em&gt;. Uma biblioteca com mais de 20 anos de estrada, com todos os recursos necessários para criar os mais diversos jogos.&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;&lt;em&gt;"A Free and Open Source python programming language library for making multimedia applications like games built on top of the excellent SDL library. C, Python, Native, OpenGL. "&lt;/em&gt;&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Numpy&lt;/strong&gt; &lt;em&gt;(&lt;a href="https://numpy.org/devdocs/user/whatisnumpy.html"&gt;https://numpy.org/devdocs/user/whatisnumpy.html&lt;/a&gt;)&lt;/em&gt; Biblioteca escrita em &lt;em&gt;C&lt;/em&gt; muito utilizada em ciência de dados:&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;Numpy is a Python library that provides a multidimensional array object, various derived objects (such as masked arrays and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para concorrência e &lt;em&gt;CPU-bound Python&lt;/em&gt; parece não ser uma das melhores alternativas mas ainda sim há algo que possa se fazer para otimiza-lo nessas tarefas, como por exemplo, podemos criar processos evitando o &lt;em&gt;GIL (Global Interpreter Lock)&lt;/em&gt;:
+&lt;em&gt;&lt;a href="https://docs.python.org/3/library/multiprocessing.html"&gt;https://docs.python.org/3/library/multiprocessing.html&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id="javascript-e-derivadas"&gt;Javascript (e derivadas)&lt;/h4&gt;
+&lt;p&gt;﻿
+﻿&lt;img src="/images/silver-bullet/javascript.png" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Quando dizem que &lt;em&gt;Javascript&lt;/em&gt; vai dominar o mundo pode haver um pouco de verdade. Junto com suas derivadas (&lt;em&gt;Typescript, Node, Deno&lt;/em&gt; e etc…) a linguagem consegue ter ferramentas para os mais diversos nichos, muitas que dispensam apresentação e comentários como: &lt;em&gt;Vue, React, Angular, Express, Nest, Next, Nuxt, Electron&lt;/em&gt; ou &lt;em&gt;React Native&lt;/em&gt;. Com Javascript conseguimos atingir a maioria das plataformas (&lt;em&gt;IOS, Android, Desktop, Debian, Windows&lt;/em&gt;), produzir aplicativos &lt;em&gt;CLI&lt;/em&gt; e desenvolver jogos com ferramentas maduras como &lt;a href="https://phaser.io/"&gt;https://phaser.io/&lt;/a&gt;, &lt;a href="https://github.com/pixijs/pixi.js"&gt;https://github.com/pixijs/pixi.js&lt;/a&gt; e &lt;a href="https://gdevelop-app.com/"&gt;https://gdevelop-app.com/&lt;/a&gt; não deixando a desejar em quase nada. A linguagem ainda é a que têm mais repositórios e issues relacionados a &lt;em&gt;IOT&lt;/em&gt; no GitHub.&lt;/p&gt;
+
+&lt;p&gt;Para ciência de dados senti que podem faltar algumas ferramentas, apesar disso há bibliotecas bem legais para &lt;em&gt;machine learning&lt;/em&gt; como &lt;a href="https://github.com/BrainJS/brain.js#brainjs"&gt;https://github.com/BrainJS/brain.js#brainjs&lt;/a&gt;. Dependendo do projeto, consideraria dar uma comparada lado a lado com &lt;em&gt;Python&lt;/em&gt;, que provê um "arsenal" mais completo para o nicho. Muitas vezes podemos até acabar usando &lt;em&gt;Node&lt;/em&gt; e &lt;em&gt;Javascript&lt;/em&gt; em conjunto com &lt;em&gt;Python&lt;/em&gt;. Olha só que bacana esse site: &lt;a href="https://js4ds.org/"&gt;https://js4ds.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Ainda sim, quando o assunto se torna alta performance, concorrência e baixo nível esta não parece ser a melhor escolha. Mas aí seria exigir demais, não é?&lt;/p&gt;
+
+&lt;h4 id="ruby"&gt;Ruby&lt;/h4&gt;
+
+&lt;p&gt;﻿&lt;img src="/images/silver-bullet/ruby.png" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;O nicho mais forte da linguagem &lt;em&gt;Ruby&lt;/em&gt; é web. O &lt;em&gt;framework Ruby on Rails&lt;/em&gt; com 47,5k de &lt;em&gt;stars&lt;/em&gt;, 4260 contribuidores e apenas 340 &lt;em&gt;issues&lt;/em&gt; (o que da em média , 0.07 &lt;em&gt;issues&lt;/em&gt; por pessoas que já contribuiram) sem dúvida é uma das peças de &lt;em&gt;software&lt;/em&gt; mais robustas e maduras do mercado, fortemente utilizado por &lt;em&gt;GitHub, Shopify, Gitlab, Airbnb&lt;/em&gt; e por aí vai, a experiência se traduz em 15 anos de um projeto que inspirou o resto da web inteira em 2005 e até hoje continua inovando e se colocando no nível ou até a frente de suas "cópias" em outras linguagens. Além do &lt;em&gt;Ruby on Rails&lt;/em&gt;, a linguagem ainda conta com inúmeras bibliotecas que deixam a produtividade alta para quem quer desenvolver para Web, como: &lt;em&gt;Devise, Jekyll, Hotwire, Sinatra, Roda, Hanami&lt;/em&gt; e etc…&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Ruby&lt;/em&gt; também apresenta ótimos recursos para construção de CLI. Além da sintaxe focada em produtividade e no bem estar do programador, temos bibliotecas maduras como &lt;a href="https://github.com/piotrmurach/tty"&gt;https://github.com/piotrmurach/tty&lt;/a&gt;, &lt;a href="https://github.com/fazibear/colorize"&gt;https://github.com/fazibear/colorize&lt;/a&gt; e &lt;a href="https://github.com/jfelchner/ruby-progressbar"&gt;https://github.com/jfelchner/ruby-progressbar&lt;/a&gt;. Alguns programas &lt;em&gt;CLI&lt;/em&gt; notórios são escritos com a linguagem, como: &lt;em&gt;Homebrew, Vagrant e Chef&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Tirando esses dois nichos, há projetos bem legais como &lt;a href="https://github.com/hybridgroup/artoo"&gt;https://github.com/hybridgroup/artoo&lt;/a&gt; para &lt;em&gt;IOT&lt;/em&gt;, &lt;a href="https://github.com/shoes/shoes4"&gt;https://github.com/shoes/shoes4&lt;/a&gt; e &lt;a href="https://github.com/AndyObtiva/glimmer"&gt;https://github.com/AndyObtiva/glimmer&lt;/a&gt; para construção de &lt;em&gt;GUI&lt;/em&gt;, Inclusive fiquei surpreso com a quantidade de bibliotecas para &lt;em&gt;Machine Learning&lt;/em&gt;: &lt;a href="https://github.com/arbox/machine-learning-with-ruby"&gt;https://github.com/arbox/machine-learning-with-ruby&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Na sua versão 3 lançada no final de 2020 a linguagem ganhou suporte a concorrência, um início de tipagem estática e um &lt;em&gt;boost&lt;/em&gt; de performance &lt;em&gt;CPU-Bound&lt;/em&gt;, que podem trazer, quem sabe, mais recursos e atenção para outros nichos.&lt;/p&gt;
+
+&lt;h4 id="c"&gt;C++&lt;/h4&gt;
+&lt;p&gt;﻿
+﻿&lt;img src="/images/silver-bullet/cplusplus.png" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;C++&lt;/em&gt; Apesar de ser uma das mais antigas da lista, ainda é largamente utilizada e cumpre muito bem o seu papel, sendo uma das principais quando lidamos com questões de baixo nível, alta performance e jogos. Sem dúvidas podemos fazer qualquer coisa com &lt;em&gt;C++&lt;/em&gt; e muito bem, mas entendi que uma das barreiras de sua escolha em determinados nichos é a complexidade e a preferência geral por linguagens mais simples, isso acaba acarretando em menos &lt;em&gt;frameworks&lt;/em&gt; e &lt;em&gt;bibliotecas&lt;/em&gt;, como no caso de &lt;em&gt;web, microserviços&lt;/em&gt; e até ciência de dados e &lt;em&gt;machine learn&lt;/em&gt; onde a maior parte da comunidade é acadêmica. Para jogos &lt;em&gt;C++&lt;/em&gt; é uma escolha notória, veja alguns dos títulos escritos com a linguagem:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Battlefield&lt;/em&gt;
+&lt;em&gt;Word of Warcraft&lt;/em&gt;
+&lt;em&gt;League of Legends&lt;/em&gt;
+&lt;em&gt;GTA San Andreas&lt;/em&gt;
+&lt;em&gt;DOOM&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Também encontrei um projeto bem legal para criação de aplicações mobile multi plataforma: &lt;a href="https://www.boden.io/"&gt;https://www.boden.io/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id="c-1"&gt;C#&lt;/h4&gt;
+&lt;p&gt;﻿
+﻿&lt;img src="/images/silver-bullet/csharp.png" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sem me prolongar muito, &lt;em&gt;C#&lt;/em&gt; provavelmente é uma ótima escolha para atacar a grande maioria dos nichos, principalmente se o foco é &lt;em&gt;Windows&lt;/em&gt;. A linguagem tem grande flexibilidade, &lt;em&gt;frameworks&lt;/em&gt; ótimos e performance invejável. Veja algumas das ferramentas que teremos no nosso "arsenal" ao escolhermos utilizar &lt;em&gt;C#&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p&gt;.NET core: &lt;em&gt;Framework&lt;/em&gt; multiplataforma extramemente robusto, focado em performance e alta escalabilidade para desenvolvimento de aplicações &lt;em&gt;Web, Desktop&lt;/em&gt; e &lt;em&gt;CLI&lt;/em&gt;. É utilizado por empresas como &lt;em&gt;Stack Overflow&lt;/em&gt; e &lt;em&gt;Godaddy&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Xamarin: &lt;em&gt;Framework&lt;/em&gt; extremamente maduro e robusto para desenvolvimento de aplicações &lt;em&gt;mobile&lt;/em&gt; nativas e multiplataforma, pode ser considerado por muitos como a melhor opção para o nicho! O Xamarin é de fato uma ferramente fantástica, veja mais em:
+&lt;a href="https://docs.microsoft.com/pt-br/xamarin/get-started/what-is-xamarin"&gt;https://docs.microsoft.com/pt-br/xamarin/get-started/what-is-xamarin&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Unity: C# é a linguagem principal de uma das principais e mais populares ferramentas para criação de jogos.
+&lt;a href="https://unity.com/pt"&gt;https://unity.com/pt&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Não há dúvidas que &lt;em&gt;C#&lt;/em&gt; se daria muito bem para tarefas de &lt;em&gt;Data Science&lt;/em&gt;, mas claramente não há vontade dos cientistas de dados em sair do Python! Utilizando C# para algum projeto de Data Science com certeza teríamos que "re-inventar a roda" em algum momento. Ainda sim há projetos maravilhosos para o Nicho, veja: &lt;a href="https://github.com/SciSharp"&gt;https://github.com/SciSharp&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Em &lt;em&gt;IOT&lt;/em&gt; também temos uma atenção interessante por parte da &lt;em&gt;Microsoft&lt;/em&gt;: &lt;a href="https://dotnet.microsoft.com/apps/iot"&gt;https://dotnet.microsoft.com/apps/iot&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id="java--kotlin"&gt;Java / Kotlin&lt;/h4&gt;
+&lt;p&gt;﻿
+﻿&lt;img src="/images/silver-bullet/java.png" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Outra grande escolha para atacar a maioria dos nichos são as linguagens da &lt;em&gt;JVM&lt;/em&gt;. O ecossitema de ferramentas, bibliotecas e &lt;em&gt;frameworks&lt;/em&gt; feitos é gigante. Vale ressaltar que adicionei &lt;em&gt;Java&lt;/em&gt; e &lt;em&gt;Kotlin&lt;/em&gt; juntos porque &lt;em&gt;Kotlin&lt;/em&gt; é 100% compatível com &lt;em&gt;Java&lt;/em&gt; e a maioria das ferramentas servem para as ambas igualmente.&lt;/p&gt;
+
+&lt;p&gt;Mobile:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Java&lt;/em&gt; é a linguagem principal dentro de desenvolvimento &lt;em&gt;Android&lt;/em&gt; e &lt;em&gt;Kotlin&lt;/em&gt; nos trás possibilidades para desenvolver também para &lt;em&gt;IOS&lt;/em&gt; (&lt;a href="https://kotlinlang.org/lp/mobile/"&gt;https://kotlinlang.org/lp/mobile/&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Machine Learn / Ciência de dados:&lt;/p&gt;
+
+&lt;p&gt;Graças a sua performance, muitos podem indica-la como sendo a escolha perfeita para tarefas mais intensivas de &lt;em&gt;ML&lt;/em&gt;, depois de Python, é uma das linguagens mais populares no nicho.
+&lt;em&gt;Fink, Hadoop, Hive&lt;/em&gt; e &lt;em&gt;Spark&lt;/em&gt; são algumas das principais ferramentas para &lt;em&gt;Big Data&lt;/em&gt;, que anda lado a lado com Ciência de dados.&lt;/p&gt;
+
+&lt;p&gt;Jogos:&lt;/p&gt;
+
+&lt;p&gt;Diversos títulos foram escritos com a linguagem, como: &lt;em&gt;Minecraft, Runescape&lt;/em&gt; e &lt;em&gt;FIFA 11&lt;/em&gt;. Além de ser uma escolhe versátil para o nicho, &lt;em&gt;Java&lt;/em&gt; é predominante no desenvolvimento de jogos para &lt;em&gt;Android&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;CLI:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://picocli.info/"&gt;https://picocli.info/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Web:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Java&lt;/em&gt; está na &lt;em&gt;web&lt;/em&gt; desde os primórdios dos anos 2000. Sempre evoluindo, não deixa nada a desejar hoje em dia com &lt;em&gt;frameworks&lt;/em&gt; mega-robustos como &lt;em&gt;Spring&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;IOT:&lt;/p&gt;
+
+&lt;p&gt;Aplicativos Desktop:&lt;/p&gt;
+
+&lt;h4 id="elixir"&gt;Elixir&lt;/h4&gt;
+&lt;p&gt;﻿
+﻿﻿&lt;img src="/images/silver-bullet/elixir.png" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Elixir&lt;/em&gt; tem todos os requisitos para ser considerada a mais robusta ferramenta quando o assunto é concorrência e paralelismo: A linguagem tem total compatibilidade com &lt;em&gt;Erlang/OTP&lt;/em&gt; e é escrita em cima da &lt;em&gt;Erlang VM&lt;/em&gt; (tecnologia por trás do &lt;em&gt;Whatsapp, Facebook messenger&lt;/em&gt;), além de adotar o paradigma funcional, imutabilidade e vários conceitos que ajudam a escrever códigos extremamente assertivos e eficientes para esse nicho, como o &lt;em&gt;Actor Model&lt;/em&gt;. O resultado disso é que a linguagem tem se tornado a escolha definitiva para empresas como &lt;em&gt;Discord, Stone, MasterCard, Sumup, Square Enix&lt;/em&gt; entre outras.&lt;/p&gt;
+
+&lt;p&gt;Sua maturidade com concorrência e paralelismo também a tornam uma das melhores tecnologias para aplicações &lt;em&gt;web&lt;/em&gt; e microserviços. A escalabilidade que ganhamos utilizando o &lt;em&gt;framework Phoenix&lt;/em&gt; (&lt;a href="https://www.phoenixframework.org"&gt;https://www.phoenixframework.org&lt;/a&gt;) é em todos os sentidos: desde qualidade de código até alta performance, escalando verticalmente ou horizontamente, executando milhões de conexões &lt;em&gt;websocket&lt;/em&gt; simultâneas e etc… &lt;em&gt;Elixir&lt;/em&gt; e &lt;em&gt;Phoenix&lt;/em&gt; utilizam os recursos da máquina como CPU's e memória de forma extremamente eficiente.&lt;/p&gt;
+
+&lt;p&gt;Para &lt;em&gt;IOT&lt;/em&gt; também existem projetos que atingiram uma boa maturidade como o &lt;em&gt;Nerves&lt;/em&gt; (&lt;a href="https://github.com/nerves-project/nerves"&gt;https://github.com/nerves-project/nerves&lt;/a&gt;) e o &lt;em&gt;Scenic&lt;/em&gt; (&lt;a href="https://github.com/nerves-project/nerves"&gt;https://github.com/boydm/scenic&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Em Ciência de dados e &lt;em&gt;Machine Learning&lt;/em&gt; há uma crescente movimentação da comunidade para explorar o potencial da linguagem, veja:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=ZgPwqN38xaA&amp;amp;feature=emb_logo"&gt;https://www.youtube.com/watch?v=ZgPwqN38xaA&amp;amp;feature=emb_logo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.erlang-solutions.com/blog/how-to-build-a-machine-learning-project-in-elixir/"&gt;https://www.erlang-solutions.com/blog/how-to-build-a-machine-learning-project-in-elixir/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://towardsdatascience.com/tagged/elixir"&gt;https://towardsdatascience.com/tagged/elixir&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Recentemente foi criada a biblioteca Nx, por José Valim: &lt;a href="https://dashbit.co/blog/elixir-and-machine-learning-nx-v0.1"&gt;https://dashbit.co/blog/elixir-and-machine-learning-nx-v0.1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Fora esses nichos, é bem difícil encontrar alguma atenção da comunidade, no máximo uma ou outra biblioteca em estágio bem inicial.&lt;/p&gt;
+
+&lt;h4 id="rust"&gt;Rust&lt;/h4&gt;
+&lt;p&gt;﻿
+﻿﻿&lt;img src="/images/silver-bullet/rust.png" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Rust&lt;/em&gt; é uma linguagem que pode receber o título de "C moderna". Foi criada justamente para facilitar a criação de tasks "baixo nível" com uma sintaxe bem próxima a linguagens de "alto nível", o que a torna uma das linguagens mais amadas por desenvolvedores segundo pesquisas do &lt;em&gt;StackOverflow&lt;/em&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Rust held the top spot for most loved technology for the fifth year in a row&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Seu ecossistema ainda é um tanto "enxuto", mas há um potencial para &lt;em&gt;Rust&lt;/em&gt; se tornar uma das linguagens mais importantes dos próximos tempos. Suas características permitem que ela tenha todos os recursos necessários para atingir com extrema excelencia todos os nichos:&lt;/p&gt;
+
+&lt;p&gt;Performance extrema
+Sintaxe moderna
+Gerenciamento de memória eficiente&lt;/p&gt;
+
+&lt;p&gt;Em relação a comunidade, encontrei maior maturidade nos seguintes nichos:&lt;/p&gt;
+
+&lt;p&gt;Aplicações Web / Microserviços
+&lt;a href="https://rocket.rs/"&gt;https://rocket.rs/&lt;/a&gt;
+&lt;a href="https://actix.rs/"&gt;https://actix.rs/&lt;/a&gt;
+&lt;a href="https://github.com/koute/stdweb"&gt;https://github.com/koute/stdweb&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Jogos
+&lt;a href="https://amethyst.rs/"&gt;https://amethyst.rs/&lt;/a&gt;
+&lt;a href="https://ggez.rs/"&gt;https://ggez.rs/&lt;/a&gt;
+&lt;a href="https://bevyengine.org/"&gt;https://bevyengine.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;CLI
+&lt;a href="https://github.com/clap-rs/clap"&gt;https://github.com/clap-rs/clap&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Para &lt;em&gt;Machine Learning&lt;/em&gt; e &lt;em&gt;Data Science&lt;/em&gt; enxerguei bastante potencial, mas sinto que ainda falta engajamento da comunidade.&lt;/p&gt;
+
+&lt;h4 id="go"&gt;Go&lt;/h4&gt;
+&lt;p&gt;﻿
+﻿﻿&lt;img src="/images/silver-bullet/go.png" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Go&lt;/em&gt; vem em grande ascenção no mercado desde a sua criação nos escritórios da gigante &lt;em&gt;Google&lt;/em&gt;, e por vários motivos:&lt;/p&gt;
+
+&lt;p&gt;Compila em qualquer plataforma e para qualquer plataforma (de forma extremamente rápida), o que é uma grande vantagem em comparação a grande maioria das linguagens e a torna uma escolha excelente para aplicações multiplataforma. Em nenhuma outra linguagem que pesquisei encontrei bibliotecas tão maduras para &lt;em&gt;CLI's&lt;/em&gt; como &lt;a href="https://github.com/spf13/cobra"&gt;https://github.com/spf13/cobra&lt;/a&gt; ou &lt;a href="https://github.com/urfave/cli"&gt;https://github.com/urfave/cli&lt;/a&gt;. Não é "a toa" que aplicações como &lt;em&gt;Docker&lt;/em&gt; foram escritas com &lt;em&gt;Go&lt;/em&gt;. Também temos ótimas bibliotecas para &lt;em&gt;GUI's&lt;/em&gt; como &lt;a href="https://github.com/fyne-io/fyne"&gt;https://github.com/fyne-io/fyne&lt;/a&gt; e &lt;a href="https://github.com/andlabs/ui"&gt;https://github.com/andlabs/ui&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;É rápida e performática, tornando-a excelente para qualquer aplicação que pode necessitar de alto desempenho: &lt;em&gt;web, microserviços críticos&lt;/em&gt; e &lt;em&gt;jogos&lt;/em&gt;, por exemplo. Para &lt;em&gt;web&lt;/em&gt; e microserviços temos uma cartela cheia de ótimas opções: &lt;em&gt;Gin, Beego, Revel, Martini, Buffalo&lt;/em&gt; e por aí vai. Para jogos temos com maior destaque as bibliotecas &lt;a href="https://github.com/faiface/pixel"&gt;https://github.com/faiface/pixel&lt;/a&gt; e &lt;a href="https://ebiten.org/"&gt;https://ebiten.org/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;É muito simples e fácil de aprender, o que facilita para novos desenvolvedores.&lt;/p&gt;
+
+&lt;p&gt;Tem suporte nativo, fácil e muito eficiente para lidarmos com concorrência e paralelismo, com os "&lt;em&gt;go channels&lt;/em&gt; e &lt;em&gt;routines&lt;/em&gt;" é sem dúvida uma das melhores escolhas para escrever aplicações que tenham esses requisitos como fundamentais (apesar de considerar &lt;em&gt;Elixir&lt;/em&gt; como superior nesse quesito, graças suas características funcionais a excelente &lt;em&gt;Erlang VM&lt;/em&gt; e &lt;em&gt;OTP&lt;/em&gt;, ainda pretendo escrever um artigo sobre isso).&lt;/p&gt;
+
+&lt;p&gt;Na minha opinião muitas bibliotecas tendem a surgir nos próximos anos com sua popularidade crescendo e não consigo enxergar uma limitação que faça Go não se tornar uma escolha totalmente viável para quase todos os nichos em um futuro não muito distante! (deixando a parte de baixo nível e gerenciamento de memória um pouco de lado).&lt;/p&gt;
+
+&lt;h2 id="concluso"&gt;Conclusão&lt;/h2&gt;
+
+&lt;p&gt;Atualmente é impossível atingir todos o nichos com excelência utilizando uma linguagem só, de fato. Apesar da maioria delas serem de propósito geral, a influência e direcionamento das comunidades é evidente. &lt;em&gt;Ruby&lt;/em&gt; poderia ser uma excelente escolha para &lt;em&gt;Data Science&lt;/em&gt; se no meio acadêmico fosse popular e a comunidade trabalhasse em ferramentas assim como aconteceu com &lt;em&gt;Python&lt;/em&gt;…&lt;/p&gt;
+
+&lt;p&gt;Aqui vai o nosso ranking de "linguagem bala de prata" pela soma de pontos:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Java / Kotlin: 28&lt;/li&gt;
+  &lt;li&gt;C#: 26&lt;/li&gt;
+  &lt;li&gt;C++: 25&lt;/li&gt;
+  &lt;li&gt;Python, Go, Rust e Javascript: 23&lt;/li&gt;
+  &lt;li&gt;Elixir: 18&lt;/li&gt;
+  &lt;li&gt;Ruby: 17&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;E aqui pela quantidade de nichos com 2 pontos ou mais:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Java / Kotlin, C# e C++: 10&lt;/li&gt;
+  &lt;li&gt;Python, Go e Javascript: 8&lt;/li&gt;
+  &lt;li&gt;Rust: 7&lt;/li&gt;
+  &lt;li&gt;Ruby e Elixir: 6&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Devo querer que minha empresa tenha uma &lt;em&gt;stack&lt;/em&gt; mais homogênea, com menos linguagens possíveis?&lt;/p&gt;
+
+&lt;p&gt;Depende, se tratando da maioria das empresas, não. É literalmente impossível e até ruim querer manter uma linguagem só dentro de uma empresa. Não há nenhuma vantagem: Um desenvolvedor que coda &lt;em&gt;Web e Mobile&lt;/em&gt; muito provavelmente não será o mesmo que irá codar a parte de &lt;em&gt;Data Science&lt;/em&gt; ou &lt;em&gt;Devops&lt;/em&gt;. O "homogêneo" deve partir de um nicho e não de uma &lt;em&gt;stack&lt;/em&gt;. E um nicho é naturalmente separado, "não homogêneo" em relação as suas comunidades e tecnologias. Resumindo:&lt;/p&gt;
+
+&lt;p&gt;Se você é dono de uma empresa procure escolher a linguagem ideal para cada nicho e não uma linguagem que cubra todos ou a maioria dos nichos.
+Porém, se você é um desenvolvedor solo "full-mega-blaster-stack" que tem novas idéias para &lt;em&gt;startups&lt;/em&gt; ou pega "freelas" dos mais variados e precisa codar tudo sozinho pode ser interessante e produtivo escolher fazer mais com menos linguagens possíveis.&lt;/p&gt;
+
+</content>
+  </entry>
   <entry>
     <title>Single responsibility, o princípio deturpado</title>
     <link rel="alternate" href="https://truehenrique.com/2021/10/27/single-responsibility-o-principio-deturpado/"/>
