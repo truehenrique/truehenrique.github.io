@@ -14,7 +14,7 @@
     <link rel="alternate" href="https://truehenrique.com/2022/02/17/a-linguagem-de-programacao-bala-de-prata/"/>
     <id>https://truehenrique.com/2022/02/17/a-linguagem-de-programacao-bala-de-prata/</id>
     <published>2022-02-17T19:17:00-03:00</published>
-    <updated>2022-02-18T15:15:18-03:00</updated>
+    <updated>2022-02-18T15:21:50-03:00</updated>
     <author>
       <name>Henrique F. Teixeira</name>
     </author>
@@ -129,7 +129,7 @@ Projetos com atualização constante, populares, que existem a um tempo consider
 
 &lt;p&gt;Quando dizem que &lt;em&gt;Javascript&lt;/em&gt; vai dominar o mundo pode haver um pouco de verdade. Junto com suas derivadas (&lt;em&gt;Typescript, Node, Deno&lt;/em&gt; e etc…) a linguagem consegue ter ferramentas para os mais diversos nichos, muitas que dispensam apresentação e comentários como: &lt;em&gt;Vue, React, Angular, Express, Nest, Next, Nuxt, Electron&lt;/em&gt; ou &lt;em&gt;React Native&lt;/em&gt;. Com Javascript conseguimos atingir a maioria das plataformas (&lt;em&gt;IOS, Android, Desktop, Debian, Windows&lt;/em&gt;), produzir aplicativos &lt;em&gt;CLI&lt;/em&gt; e desenvolver jogos com ferramentas maduras como &lt;a href="https://phaser.io/"&gt;https://phaser.io/&lt;/a&gt;, &lt;a href="https://github.com/pixijs/pixi.js"&gt;https://github.com/pixijs/pixi.js&lt;/a&gt; e &lt;a href="https://gdevelop-app.com/"&gt;https://gdevelop-app.com/&lt;/a&gt; não deixando a desejar em quase nada. A linguagem ainda é a que têm mais repositórios e issues relacionados a &lt;em&gt;IOT&lt;/em&gt; no GitHub.&lt;/p&gt;
 
-&lt;p&gt;Para ciência de dados senti que podem faltar algumas ferramentas, apesar disso há bibliotecas bem legais para &lt;em&gt;machine learning&lt;/em&gt; como &lt;a href="https://github.com/BrainJS/brain.js#brainjs"&gt;https://github.com/BrainJS/brain.js#brainjs&lt;/a&gt;. Dependendo do projeto, consideraria dar uma comparada lado a lado com &lt;em&gt;Python&lt;/em&gt;, que provê um "arsenal" mais completo para o nicho. Muitas vezes podemos até acabar usando &lt;em&gt;Node&lt;/em&gt; e &lt;em&gt;Javascript&lt;/em&gt; em conjunto com &lt;em&gt;Python&lt;/em&gt;. Olha só que bacana esse site: &lt;a href="https://js4ds.org/"&gt;https://js4ds.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Para ciência de dados senti que podem faltar algumas ferramentas, apesar disso há bibliotecas bem legais para &lt;em&gt;machine learning&lt;/em&gt; como &lt;a href="https://github.com/BrainJS/brain.js#brainjs"&gt;https://github.com/BrainJS/brain.js#brainjs&lt;/a&gt; e &lt;a href="https://js.tensorflow.org/"&gt;https://js.tensorflow.org/&lt;/a&gt;. Dependendo do projeto, consideraria dar uma comparada lado a lado com &lt;em&gt;Python&lt;/em&gt;, que provê um "arsenal" mais completo para o nicho. Muitas vezes podemos até acabar usando &lt;em&gt;Node&lt;/em&gt; e &lt;em&gt;Javascript&lt;/em&gt; em conjunto com &lt;em&gt;Python&lt;/em&gt;. Olha só que bacana esse site: &lt;a href="https://js4ds.org/"&gt;https://js4ds.org/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Ainda sim, quando o assunto se torna alta performance, concorrência e baixo nível esta não parece ser a melhor escolha. Mas aí seria exigir demais, não é?&lt;/p&gt;
 
