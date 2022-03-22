@@ -14,7 +14,7 @@
     <link rel="alternate" href="https://truehenrique.com/2022/02/17/a-linguagem-de-programacao-bala-de-prata/"/>
     <id>https://truehenrique.com/2022/02/17/a-linguagem-de-programacao-bala-de-prata/</id>
     <published>2022-02-17T19:17:00-03:00</published>
-    <updated>2022-02-18T15:21:50-03:00</updated>
+    <updated>2022-03-22T09:42:13-03:00</updated>
     <author>
       <name>Henrique F. Teixeira</name>
     </author>
@@ -210,7 +210,7 @@ Projetos com atualização constante, populares, que existem a um tempo consider
 
 &lt;h4 id="elixir"&gt;Elixir&lt;/h4&gt;
 &lt;p&gt;﻿
-﻿﻿&lt;img src="/images/silver-bullet/elixir.png" alt="" /&gt;&lt;/p&gt;
+﻿﻿&lt;img src="/images/silver-bullet/elixir_.png" alt="" /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Elixir&lt;/em&gt; tem todos os requisitos para ser considerada a mais robusta ferramenta quando o assunto é concorrência e paralelismo: A linguagem tem total compatibilidade com &lt;em&gt;Erlang/OTP&lt;/em&gt; e é escrita em cima da &lt;em&gt;Erlang VM&lt;/em&gt; (tecnologia por trás do &lt;em&gt;Whatsapp, Facebook messenger&lt;/em&gt;), além de adotar o paradigma funcional, imutabilidade e vários conceitos que ajudam a escrever códigos extremamente assertivos e eficientes para esse nicho, como o &lt;em&gt;Actor Model&lt;/em&gt;. O resultado disso é que a linguagem tem se tornado a escolha definitiva para empresas como &lt;em&gt;Discord, Stone, MasterCard, Sumup, Square Enix&lt;/em&gt; entre outras.&lt;/p&gt;
 
@@ -224,7 +224,7 @@ Projetos com atualização constante, populares, que existem a um tempo consider
   &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=ZgPwqN38xaA&amp;amp;feature=emb_logo"&gt;https://www.youtube.com/watch?v=ZgPwqN38xaA&amp;amp;feature=emb_logo&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://www.erlang-solutions.com/blog/how-to-build-a-machine-learning-project-in-elixir/"&gt;https://www.erlang-solutions.com/blog/how-to-build-a-machine-learning-project-in-elixir/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://towardsdatascience.com/tagged/elixir"&gt;https://towardsdatascience.com/tagged/elixir&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Recentemente foi criada a biblioteca Nx, por José Valim: &lt;a href="https://dashbit.co/blog/elixir-and-machine-learning-nx-v0.1"&gt;https://dashbit.co/blog/elixir-and-machine-learning-nx-v0.1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Recentemente foi criada a biblioteca &lt;em&gt;Nx&lt;/em&gt;, por José Valim: &lt;a href="https://dashbit.co/blog/elixir-and-machine-learning-nx-v0.1"&gt;https://dashbit.co/blog/elixir-and-machine-learning-nx-v0.1&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Fora esses nichos, é bem difícil encontrar alguma atenção da comunidade, no máximo uma ou outra biblioteca em estágio bem inicial.&lt;/p&gt;
