@@ -603,7 +603,7 @@ end
     <link rel="alternate" href="https://truehenrique.com/2020/07/17/elixir-e-phoenix-na-velocidade-da-luz/"/>
     <id>https://truehenrique.com/2020/07/17/elixir-e-phoenix-na-velocidade-da-luz/</id>
     <published>2020-07-17T13:52:00-03:00</published>
-    <updated>2021-07-29T21:49:29-03:00</updated>
+    <updated>2022-09-10T13:34:58-03:00</updated>
     <author>
       <name>Henrique F. Teixeira</name>
     </author>
@@ -792,11 +792,12 @@ import_if_available(MinhaApp.MeuModulo)
 &lt;div&gt;&lt;br /&gt;Os exemplos foram retirados da documentação do &lt;strong&gt;IEx&lt;/strong&gt;: &lt;a href="https://hexdocs.pm/iex/IEx.html#module-the-iex-exs-file"&gt;https://hexdocs.pm/iex/IEx.html#module-the-iex-exs-file&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
 &lt;h3&gt;6. Conheça e utilize os diversos plugins para &lt;em&gt;Elixir&lt;/em&gt; e &lt;em&gt;Phoenix&lt;/em&gt; na sua &lt;em&gt;IDE&lt;/em&gt;&lt;/h3&gt;
 &lt;div&gt;&lt;br /&gt;Não se limite ao básico! Os plugins existem para serem utilizados, abuse deles!&lt;br /&gt;&lt;br /&gt;Se você é usuário do &lt;em&gt;VSCode&lt;/em&gt;, este artigo tem dicas muito boas: &lt;a href="https://thinkingelixir.com/elixir-in-vs-code/"&gt;https://thinkingelixir.com/elixir-in-vs-code/&lt;/a&gt;&lt;br /&gt;Para o &lt;em&gt;VIM, de uma lida aqui&lt;/em&gt;: &lt;a href="https://medium.com/@siever/setup-vim-for-elixir-development-280a01150152"&gt;https://medium.com/@siever/setup-vim-for-elixir-development-280a01150152&lt;/a&gt;&lt;br /&gt;Para o Atom: &lt;a href="https://atom.io/packages/atom-elixir"&gt;https://atom.io/packages/atom-elixir&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
-&lt;h3&gt;7. Seguindo as dicas acima e utilizando a biblioteca &lt;a href="https://github.com/henriquefernandez/phoenix_up"&gt;&lt;strong&gt;&lt;em&gt;phoenix_up&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;, chegaremos a&lt;em&gt; &lt;/em&gt;&lt;strong&gt;&lt;em&gt;"299.792.458&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;&lt;em&gt;features"&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt; por segundo!&lt;/strong&gt;:&lt;/h3&gt;
-&lt;div&gt;&lt;br /&gt;&lt;a href="https://github.com/henriquefernandez/phoenix_up"&gt;&lt;strong&gt;&lt;em&gt;phoenix_up&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;&lt;em&gt;a&lt;/em&gt;diciona mais &lt;em&gt;generators&lt;/em&gt; para desenvolver projetos &lt;em&gt;Phoenix&lt;/em&gt;, basicamente, com essa biblioteca não teremos mais o trabalho de escrever arquivo por arquivo e estruturas repetitivas como: "&lt;em&gt;BlaController, BlaView, templates/bla, BlaControllerTest&lt;/em&gt;" e etc.. Nos meus projetos, eu sempre uso!&lt;/div&gt;
+&lt;h3&gt;7. Seguindo as dicas acima e utilizando a biblioteca &lt;a href="https://github.com/henrique-ft/phoenix_up"&gt;&lt;strong&gt;&lt;em&gt;phoenix_up&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;, chegaremos a&lt;em&gt; &lt;/em&gt;&lt;strong&gt;&lt;em&gt;"299.792.458&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;&lt;em&gt;features"&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt; por segundo!&lt;/strong&gt;:&lt;/h3&gt;
+&lt;div&gt;&lt;br /&gt;&lt;a href="https://github.com/henrique-ft/phoenix_up"&gt;&lt;strong&gt;&lt;em&gt;phoenix_up&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;&lt;em&gt;a&lt;/em&gt;diciona mais &lt;em&gt;generators&lt;/em&gt; para desenvolver projetos &lt;em&gt;Phoenix&lt;/em&gt;, basicamente, com essa biblioteca não teremos mais o trabalho de escrever arquivo por arquivo e estruturas repetitivas como: "&lt;em&gt;BlaController, BlaView, templates/bla, BlaControllerTest&lt;/em&gt;" e etc.. Nos meus projetos, eu sempre uso!&lt;/div&gt;
 &lt;div&gt;&lt;br /&gt;&lt;/div&gt;
 &lt;h3&gt;Concluindo..&lt;/h3&gt;
 &lt;div&gt;&lt;br /&gt;Apesar de algumas dicas serem mais "práticas", podemos perceber que outras são pontos onde vale a pena reforçar o estudo! Particularmente, hoje me sinto bastante confortável e produtivo com &lt;em&gt;Elixir e Phoenix, e&lt;/em&gt; isso foi graças a esse equilíbrio de buscar ferramentas que me auxiliassem e estudar a fundo pontos fundamentais!
+
 &lt;/div&gt;
 </content>
   </entry>
