@@ -14,7 +14,7 @@
     <link rel="alternate" href="https://truehenrique.com/2024/04/22/clean-agile-xp-e-scrum-evitando-a-ressaca/"/>
     <id>https://truehenrique.com/2024/04/22/clean-agile-xp-e-scrum-evitando-a-ressaca/</id>
     <published>2024-04-21T21:26:00-03:00</published>
-    <updated>2024-04-22T12:13:48-03:00</updated>
+    <updated>2024-04-22T12:46:43-03:00</updated>
     <author>
       <name>Henrique F. Teixeira</name>
     </author>
@@ -85,7 +85,7 @@ Dificilmente alguém que trabalha com &lt;em&gt;software&lt;/em&gt; nunca passou
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Integração contínua&lt;/strong&gt;: o ato de integrar as mudanças feitas ao código principal (produção) constantemente, uma por uma. (Não acumular sequências de mudanças integrando todas de uma vez só)&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Uso de metáforas&lt;/strong&gt;: similar a linguagem ubiqua do &lt;em&gt;DDD&lt;/em&gt; (&lt;em&gt;Domain Driven Design&lt;/em&gt;), todos da equipe devem falar a mesma lingua, inclusive, o código deve refletir essa lingua na forma que é escrito. Particularmente, gosto de dizer que um código legível é aquele em que uma pessoa não técnica conseguiria entrar, ler e pressupor o que está acontecendo com facilidade.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Ritmo sustentável&lt;/strong&gt;: devemos desenvolver em um rítmo previsível. O objetivo não é finalizar rápido, é a equipe ter um ritmo constante e saudável (saúde mental conta também, tá?).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Ritmo sustentável&lt;/strong&gt;: devemos desenvolver em um rítmo previsível. O objetivo não é finalizar rápido, é a equipe ter um ritmo constante e saudável.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Propriedade coletiva&lt;/strong&gt;: qualquer membro da equipe pode verificar e melhorar qualquer módulo do projeto a qualquer momento. O conhecimento deve ser distribuído entre todos.&lt;/li&gt;
 &lt;/ul&gt;
 
