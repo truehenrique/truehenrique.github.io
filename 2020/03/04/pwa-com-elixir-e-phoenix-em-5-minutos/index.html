@@ -93,35 +93,20 @@
 <div><br />Adicione um arquivo chamado <strong><em>manifest.json</em></strong> no seu<em> priv/static </em>contendo o seguinte conteúdo:</div>
 <div><br /></div>
 <pre><code class="javascript">{
-
   "short_name": "My App", // Nome em que aparecerá junto ao ícone
-
   "name": "My Very Progressive Web App @PWA", // Descrição que aparecerá enquanto o aplicativo é carregado
-
   "icons": [ // Coloque aqui a localização dos ícones do seu aplicativo
-
     {
-
       "src": "/images/logo.png",  
-
       "type": "image/png"
-
     }
-
   ],
-
   "start_url": "/", // Aqui vai o endereço principal do seu aplicativo (o que irá ser acessado primeiro quando abrirmos o app)
-
   "background_color": "#fff", // Definimos uma cor de fundo enquanto ao aplicativo é carregado.
-
   "display": "standalone", // Definimos o modo primário que o navegador deve considerar para exibir o aplicativo.
-
   "scope": "/", // Definimos o escopo, limite, das páginas a serem consideradas como PWA
-
   "theme_color": "#000"   // Definimos uma cor para personalizar a interface do dispositivo em uso
-
 } 
-
             <em>                                 </em></code></pre>
 <div><br />Este arquivo é o responsável por personalizar a aparência do nosso <em>PWA</em> e um pouco da experiência de uso. Além das configurações setadas acima, também podemos adicionar as seguintes:<br /><br /></div>
 <ul><li><em>lang</em>: Definimos o idioma utilizado (ex: <em>pt-BR</em>).</li><li><em>orientation</em>: Definimos a orientação de como exibir o aplicativo (ex: <em>any, natural, landscape, landscape-primary, landscape-secondary, portrait, portrait-primary, portrait-secondary</em>).</li><li><em>prefer_related_applications</em>: Informa se há uma outra aplicação complementar (<em>Boolean</em>).</li><li><em>related_applications</em>: Definimos as aplicações complementares (<em>Array</em> de objetos de aplicações com os possíveis valores: <em>platform, url e id</em>).</li><li><em>dir</em>: Definimos a direção do texto nas especifcações do manifesto.</li></ul>
@@ -130,63 +115,34 @@
 <h3>Passo 2:</h3>
 <div><br />Adicione um arquivo chamado <strong><em>service_worker.js</em></strong> no seu <em>priv/static</em> contendo o seguinte conteúdo:<br /><br /></div>
 <pre><code class="javascript">self.addEventListener('install', function(e) {
-
   e.waitUntil(
-
     fetch('/cache_manifest.json')
-
     .then(function(response) {
-
       return response.json()
-
     })  
-
     .then(function(cacheManifest) {
-
       var cacheName = 'cache:static:' + cacheManifest.version
-
       var all = Object.values(cacheManifest.latest).filter(
-
         function(fn) { return fn.match(/^(images|css|js|fonts)/);
-
         })
-
       caches.open(cacheName).then(function(cache) {
-
         return cache.addAll(all).then(function() {
-
           self.skipWaiting();
-
         });
-
       })
-
     })
-
   );
-
 });
 
-
-
 self.addEventListener('fetch', function(event) {
-
   event.respondWith(
-
     caches.match(event.request).then(function(response) {
-
       if (response) {
-
         return response;
-
       }
-
       return fetch(event.request);
-
     })
-
   );
-
 });</code></pre>
 <div><br /></div>
 <blockquote>Essencialmente, um <em>service worker</em> se comporta como um servidor <em>proxy</em> situado entre uma aplicação web, o navegador e a rede (quando esta estiver disponível). Eles servem, dentre outras coisas, para possibilitar a criação de experiências <em>offline</em> eficientes, interceptar requisições de rede – agindo adequadamente de acordo com o <em>status</em> atual da conexão – e atualizar os <em>assets</em> que residem no servidor. Service workers também permitem o acesso às APIs de <em>push notification</em> e <em>background sync</em>.<br /><br />- <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Service_Worker_API">https://developer.mozilla.org/pt-BR/docs/Web/API/Service_Worker_API</a></blockquote>
@@ -196,33 +152,21 @@ self.addEventListener('fetch', function(event) {
 <h3>Passo 3:</h3>
 <div><br />Permita que os arquivos <strong><em>service_worker.js</em></strong>, <strong><em>cache_manifest.json </em></strong>e <strong><em>manifest.json</em></strong> sejam acessados de forma estática, adicionando nas configurações de <strong><em>Plug.Static</em></strong>, encontradas no módulo <strong><em>Endpoint</em></strong> do seu projeto encontrado em<em> (lib/seu_projeto_web/endpoint.ex):</em><br /><br /></div>
 <pre><code class="elixir">plug Plug.Static,
-
   at: "/",
-
   from: :seu_projeto,
-
   gzip: false,
-
   only: ~w(css fonts images js favicon.ico robots.txt service_worker.js cache_manifest.json manifest.json) # aqui</code></pre>
 <div><br /><br /></div>
 <h3>Passo 4:</h3>
 <div><br />Adicione um link para o seu <strong><em>manifest.json</em></strong> e o seguinte script no layout principal do seu projeto:<br /><br /></div>
 <pre><code class="html">&lt;link rel="manifest" href="/manifest.json"&gt;
-
 &lt;script&gt;
-
   if (navigator.serviceWorker) {
-
     navigator.serviceWorker.register('/service_worker.js', { scope: './' })
-
       .then(function(reg) {
-
         console.log('[ServiceWorker]', 'Service worker registered!');
-
         console.log(reg);
-
       });
-
   }
 
 &lt;/script&gt;</code></pre>
@@ -252,6 +196,7 @@ self.addEventListener('fetch', function(event) {
       <aside>
           <h3 class="no-padding-top">Artigos Recentes</h3>
         <ul>
+              <li><a href="/2024/04/22/clean-agile-xp-e-scrum-evitando-a-ressaca/">Clean Agile, XP e Scrum - Evitando a "ressaca"</a> <span>Abr 22 <i>(pt)</i></span></li>
               <li><a href="/2024/01/27/encontrei-meu-ikigai-e-ganhei-uma-crise-de-ansiedade/">Encontrei meu ikigai e ganhei uma crise de ansiedade</a> <span>Jan 27 <i>(pt)</i></span></li>
               <li><a href="/2022/02/17/a-linguagem-de-programacao-bala-de-prata/">A linguagem de programação "bala de prata"</a> <span>Fev 17 <i>(pt)</i></span></li>
               <li><a href="/2021/10/27/single-responsibility-o-principio-deturpado/">Single responsibility, o princípio deturpado</a> <span>Out 27 <i>(pt)</i></span></li>
@@ -273,6 +218,10 @@ self.addEventListener('fetch', function(event) {
         <h3>Tags</h3>
         <ol>
 
+            <li><a href="/tags/elixir/">#elixir</a></li>
+
+            <li><a href="/tags/phoenix/">#phoenix</a></li>
+
             <li><a href="/tags/ikigai/">#ikigai</a></li>
 
             <li><a href="/tags/linguagem-de-programacao/">#linguagem de programação</a></li>
@@ -286,8 +235,6 @@ self.addEventListener('fetch', function(event) {
             <li><a href="/tags/java/">#java</a></li>
 
             <li><a href="/tags/ruby/">#ruby</a></li>
-
-            <li><a href="/tags/elixir/">#elixir</a></li>
 
             <li><a href="/tags/python/">#python</a></li>
 
@@ -310,8 +257,6 @@ self.addEventListener('fetch', function(event) {
             <li><a href="/tags/engenharia-de-software/">#engenharia de software</a></li>
 
             <li><a href="/tags/single-responsability/">#single responsability</a></li>
-
-            <li><a href="/tags/phoenix/">#phoenix</a></li>
         </ol>
         <hr/>
 

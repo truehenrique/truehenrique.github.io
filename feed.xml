@@ -5,10 +5,320 @@
   <id>https://truehenrique.com/</id>
   <link href="https://truehenrique.com/"/>
   <link href="https://truehenrique.com/feed.xml" rel="self"/>
-  <updated>2024-01-27T12:00:00-03:00</updated>
+  <updated>2024-04-21T21:26:00-03:00</updated>
   <author>
     <name>Henrique F. Teixeira</name>
   </author>
+  <entry>
+    <title>Clean Agile, XP e Scrum - Evitando a "ressaca"</title>
+    <link rel="alternate" href="https://truehenrique.com/2024/04/22/clean-agile-xp-e-scrum-evitando-a-ressaca/"/>
+    <id>https://truehenrique.com/2024/04/22/clean-agile-xp-e-scrum-evitando-a-ressaca/</id>
+    <published>2024-04-21T21:26:00-03:00</published>
+    <updated>2024-04-22T12:13:48-03:00</updated>
+    <author>
+      <name>Henrique F. Teixeira</name>
+    </author>
+    <content type="html">&lt;p&gt;O &lt;em&gt;board&lt;/em&gt; ágil do seu time está com diversos &lt;em&gt;cards&lt;/em&gt; estacionados na mesma coluna durante dias e nada é entregue?&lt;/p&gt;
+
+&lt;p&gt;O pessoal de negócios está frustrado tendo constantemente que redefinir prazos e estratégias?&lt;/p&gt;
+
+&lt;p&gt;Sensação de muito trabalho e pouco resultado?&lt;/p&gt;
+
+&lt;p&gt;Se comprometeram com algo e descobriram só depois que não conseguiam cumprir?&lt;/p&gt;
+
+&lt;p&gt;O clima está ruim e a situação só parece piorar?&lt;/p&gt;
+
+&lt;p&gt;Você pode estar vivendo o que &lt;em&gt;Robert C. Martin&lt;/em&gt; (&lt;em&gt;Uncle Bob&lt;/em&gt;) nomeou em seu livro &lt;em&gt;Clean Agile&lt;/em&gt; como "ressaca ágil".
+Dificilmente alguém que trabalha com &lt;em&gt;software&lt;/em&gt; nunca passou por isso. Principalmente quando há a ausência de pessoas sêniores no time ou estamos lidando com &lt;em&gt;softwares&lt;/em&gt; complexos: O código-fonte está espalhado por diversos projetos, é extensivo demais, mal documentado ou mal escrito.&lt;/p&gt;
+
+&lt;p&gt;A ideia do ágil é abrangente, complexa (apesar de não parecer) e com vários "&lt;em&gt;frameworks&lt;/em&gt;  ágeis" diferentes espalhados por aí. Similarmente, &lt;em&gt;softwares&lt;/em&gt; também. E quanto mais complexo é um problema, mais difícil é de explicar e entendê-lo. Além disso, nossa transmissão de conhecimento muitas vezes é falha (viés de confirmação, excessos e lacunas de informação), cada ouvinte pode interpretar e replicar a mesma informação de maneiras diferentes, isso pode acabar moldando uma realidade, uma verdade ou um comportamento social.&lt;/p&gt;
+
+&lt;p&gt;Voltando ao tema principal, é possível enxergar no mercado uma mistura de interpretações do "&lt;em&gt;ágil&lt;/em&gt;" sendo aplicadas ao mesmo tempo, em busca de um resultado idealizado e "teórico" que muitas vezes não se comprova na prática. Essas interpretações podem estar longe do manifesto principal e seus princípios, gerando muita expectativa frustrada, apontar de dedos e poucos resultados.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;"A metodologia ágil tomou a indústria de software de assalto, Mas, como um telefone sem fio, as ideais originais da agilidade foram distorcidas e simplificadas, chegando às empresas como uma promessa de "um processo para entregar o software mais rápido"&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;– Robert C. Martin, Clean Agile, p. 170&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id="quem--robert-cmartin"&gt;Quem é Robert C. Martin&lt;/h3&gt;
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/T4Td2vgrgsM?si=cYFDhRj_JmMN9Orn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Mais conhecido como &lt;em&gt;Uncle Bob&lt;/em&gt;, Robert C. Martin é engenheiro de software desde 1970, consultor internacional, palestrante, autor de vários livros sobre &lt;em&gt;TI&lt;/em&gt; e &lt;strong&gt;um dos 17 signatários originais do manifesto àgil em 2001.&lt;/strong&gt; &lt;/p&gt;
+
+&lt;p&gt;Recentemente, ele resolveu voltar ao tema "agilidade" e lançar o livro &lt;em&gt;Clean Agile&lt;/em&gt;, onde explica sobre ideias originais do manifesto e faz algumas críticas a como o mercado as absorveu.&lt;/p&gt;
+
+&lt;h3 id="o-desenvolvimento-gil-limpo"&gt;O desenvolvimento "ágil limpo"&lt;/h3&gt;
+
+&lt;p&gt;Segundo o livro, a definição de ágil em sua forma "limpa" (a ideia original, sem ruídos) é:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;"Um processo em que um projeto é subdividido em iterações. A saída de cada iteração é calculada e usada para avaliar continuamente o planejamento. As funcionalidades são implementadas de acordo com o valor de negócio agregado, de modo que as coisas mais valiosas sejam implementadas primeiro. O nível de qualidade é mantido o mais alto possível. O cronograma é principalmente gerenciado conforme a manipulação do escopo"&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;– Robert C. Martin, Clean Agile, p. 32&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;O resto (&lt;em&gt;Scrum, XP, Kanban&lt;/em&gt;) são apenas ferramentas ou &lt;em&gt;frameworks&lt;/em&gt; para facilitar e/ou guiar a utilização do ágil.&lt;/p&gt;
+
+&lt;p&gt;Além disso, o livro comenta sobre os doze princípios ágeis que &lt;strong&gt;devem ser seguidos&lt;/strong&gt; (podemos conferir aqui &lt;a href="http://agilemanifesto.org/iso/ptbr/principles.html"&gt;http://agilemanifesto.org/iso/ptbr/principles.html&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Uncle bob também cita que o &lt;em&gt;framework XP&lt;/em&gt; (&lt;em&gt;Extreme Programming&lt;/em&gt;) é o &lt;em&gt;"mais bem definido, completo, menos confuso e o melhor representante do cerne essencial da agilidade"&lt;/em&gt;, e o utiliza para explicar conceitos do ágil.&lt;/p&gt;
+
+&lt;h3 id="xp-um-breve-resumo"&gt;XP, um breve resumo&lt;/h3&gt;
+
+&lt;p&gt;O &lt;em&gt;XP&lt;/em&gt; (&lt;em&gt;Extreme Programming&lt;/em&gt;) é um &lt;em&gt;framework&lt;/em&gt; àgil criado por &lt;em&gt;Kent Beck&lt;/em&gt; que nos traz práticas para desenvolvimento de software, representadas no modelo abaixo:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/agil/xp.png" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;No círculo externo (Roxo), temos 📊 &lt;strong&gt;práticas de negócio&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Testes de aceitação&lt;/strong&gt;: basicamente significa que cada demanda (histórias, tarefas e &lt;em&gt;spikes&lt;/em&gt;, por exemplo) devem ter seus critérios de aceitação, critérios necessários para termos a conclusão e aceitação de uma demanda. Esses critérios podem ser validados através de testes de aceitação e estão bem alinhados com o conceito de &lt;em&gt;Definition of Done&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Pequenas versões&lt;/strong&gt;: devemos planejar a entrega de &lt;em&gt;software&lt;/em&gt; aos poucos, funcionalidade por funcionalidade, de forma gradativa.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Planejamento (Planning)&lt;/strong&gt;: o ato de planejar a iteração, definindo como podemos dividir um projeto em funcionalidades, épicos, histórias, tarefas e &lt;em&gt;spikes&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Equipe como um todo&lt;/strong&gt;: a equipe (&lt;em&gt;P.O, P.M, Devs, QA&lt;/em&gt;, Gerentes) deve trabalhar em conjunto do início ao fim do projeto, a comunicação deve ser fácil entre as partes. O resultado é de todos.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;No círculo do meio (Azul-escuro), temos 👥 &lt;strong&gt;práticas da equipe&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Integração contínua&lt;/strong&gt;: o ato de integrar as mudanças feitas ao código principal (produção) constantemente, uma por uma. (Não acumular sequências de mudanças integrando todas de uma vez só)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Uso de metáforas&lt;/strong&gt;: similar a linguagem ubiqua do &lt;em&gt;DDD&lt;/em&gt; (&lt;em&gt;Domain Driven Design&lt;/em&gt;), todos da equipe devem falar a mesma lingua, inclusive, o código deve refletir essa lingua na forma que é escrito. Particularmente, gosto de dizer que um código legível é aquele em que uma pessoa não técnica conseguiria entrar, ler e pressupor o que está acontecendo com facilidade.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Ritmo sustentável&lt;/strong&gt;: devemos desenvolver em um rítmo previsível. O objetivo não é finalizar rápido, é a equipe ter um ritmo constante e saudável (saúde mental conta também, tá?).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Propriedade coletiva&lt;/strong&gt;: qualquer membro da equipe pode verificar e melhorar qualquer módulo do projeto a qualquer momento. O conhecimento deve ser distribuído entre todos.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;No círculo interno (Azul-claro), temos 💻 &lt;strong&gt;práticas técnicas&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;TDD (Test Driven Developent)&lt;/strong&gt;: devemos escrever testes automatizados  e se possível praticar TDD.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Pair programming&lt;/strong&gt;: devemos estimular a programação em pares, principalmente em cenários em que há a necessidade de troca de conhecimento, mentorias e atenção a demandas muito críticas. É uma escolha que cabe as pessoas programadoras e a equipe (não é algo obrigatório).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Refatoração&lt;/strong&gt;: Temos que entregar um código melhor do que encontramos. Caso haja a necessidade ou oportunidade de refatoração, refatore.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Design Simples&lt;/strong&gt;: &lt;em&gt;"É a prática de escrever apenas o código necessário com uma estrutura que o deixe mais simples, menor e mais expressivo"&lt;/em&gt;: &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Execute todos os testes&lt;/li&gt;
+  &lt;li&gt;Expresse a intenção&lt;/li&gt;
+  &lt;li&gt;Elimine a duplicação &lt;/li&gt;
+  &lt;li&gt;Reduza os elementos.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id="falando-um-pouco-mais-sobre-a-planning-noxp"&gt;Falando um pouco mais sobre a Planning no XP&lt;/h3&gt;
+
+&lt;p&gt;Esta é a &lt;strong&gt;prática central&lt;/strong&gt; de todo o &lt;em&gt;framework&lt;/em&gt;, o planejamento ocorre em uma reunião chamada &lt;em&gt;Iteration Planning&lt;/em&gt; onde:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Verificamos os dados gerados pela última iteração.&lt;/li&gt;
+  &lt;li&gt;Histórias (escritas préviamente pelas pessoas de negócio) são apresentadas e validadas pelos critérios de &lt;em&gt;DoR&lt;/em&gt; (&lt;em&gt;Definition of Ready&lt;/em&gt;). O livro &lt;em&gt;Clean Agile&lt;/em&gt; cita a utilização do acrônimo &lt;a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"&gt;&lt;em&gt;INVEST&lt;/em&gt;&lt;/a&gt; (Independente, negociável, valiosa, estimável, pequena (small) e testável) como um exemplo de &lt;em&gt;Definition of Ready&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Histórias são estimadas pelas pessoas técnicas. A estimativa pode ser feita em pontos de 1 a 6, tamanho de camisa (p, m, g) ou &lt;em&gt;fibonacci&lt;/em&gt; para medir esforço ou estimativa de três pontos caso queiramos estimar tempo.&lt;/li&gt;
+  &lt;li&gt;Histórias &lt;em&gt;Spike&lt;/em&gt; são criadas caso alguma história ainda não seja estimável: Não há informação ou conhecimento técnico suficiente para que consigamos entrega-la ou não conseguimos garantir que ela é &lt;a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"&gt;&lt;em&gt;INVEST&lt;/em&gt;&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;DoD&lt;/em&gt; (&lt;em&gt;Definition of Done&lt;/em&gt; / &lt;strong&gt;testes de aceitação&lt;/strong&gt;) das histórias são escritos.&lt;/li&gt;
+  &lt;li&gt;O que faremos na próxima iteração é definido pela &lt;strong&gt;equipe como um todo&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Podemos também ter uma segunda reunião de &lt;em&gt;Iteration Planning&lt;/em&gt; após a primeira, apenas com o time técnico, para a quebra das histórias em tarefas &lt;a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"&gt;&lt;em&gt;SMART&lt;/em&gt;&lt;/a&gt;  (&lt;em&gt;Definition of Ready&lt;/em&gt; para tarefas), em um &lt;em&gt;board&lt;/em&gt; específico "&lt;em&gt;linkado&lt;/em&gt;" com o &lt;em&gt;board&lt;/em&gt; de histórias.&lt;/p&gt;
+
+&lt;p&gt;Segundo o livro, a &lt;em&gt;Iteration Planning&lt;/em&gt; é naturalmente bem extensa:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;"A reunião deve ser programada para ter um vigésimo da duração da iteração. A IPM (Iteration Planning Meeting) para uma iteração de duas semanas deve exigir cerca de metade de um dia."&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;– Robert C. Martin, Clean Agile, p. 70&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Em uma iteração zero de um projeto, temos um planejamento diferente, em uma reunião chamada &lt;em&gt;Release Planning&lt;/em&gt;. Basicamente é a mesma coisa da &lt;em&gt;Iteration Planning&lt;/em&gt;, com a diferença de  que não definiremos o que faremos para uma única iteração e ainda não temos dados gerados. Focamos em questões globais (em alto nível, sem muitos detalhes) para o projeto como um todo (todas as iterações).&lt;/p&gt;
+
+&lt;p&gt;Resumindo os fluxos de um projeto &lt;em&gt;XP&lt;/em&gt; tendo o planejamento como a prática central, temos:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/agil/xp-flow.png" alt="" /&gt;&lt;/p&gt;
+
+&lt;h3 id="scrum-vs-xp"&gt;Scrum vs XP&lt;/h3&gt;
+
+&lt;p&gt;Diferente do &lt;em&gt;Scrum&lt;/em&gt;, o &lt;em&gt;XP&lt;/em&gt; considera práticas técnicas, o que o torna alinhado com o princípio &lt;em&gt;"Continuous attention to technical excellence and good design enhances agility"&lt;/em&gt;. Inclusive, &lt;strong&gt;frameworks como o &lt;em&gt;Scrum&lt;/em&gt; necessitam de completementação técnica para funcionar&lt;/strong&gt; no ambito de desenvolvimento. No &lt;em&gt;Scrum Guide&lt;/em&gt;, por exemplo, não temos nenhuma citação clara e explícita sobre práticas técnicas, dando margem a diversas interpretações…&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Quando damos atenção para as etapas de &lt;em&gt;design&lt;/em&gt; de &lt;em&gt;software&lt;/em&gt;?&lt;/li&gt;
+  &lt;li&gt;Quando uma demanda de negócio está preparada para ser implementada?&lt;/li&gt;
+  &lt;li&gt;O que fazemos quando não sabemos como implementar determinada demanda de negócio?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Uma má interpretação do &lt;em&gt;Scrum&lt;/em&gt;, sem complementação técnica, pode soar como um "Faz aí dentro da sprint o mais rápido possível", o que é um grande problema:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Não existem definições de boas práticas e padrões para desenvolvimento técnico de &lt;em&gt;software&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;O time não tem uma definição formada sobre quando uma demanda está pronta para ser executada (&lt;a href="https://medium.com/@raphavizoni/definition-of-ready-acde0e74ebab"&gt;&lt;em&gt;definition of ready&lt;/em&gt;&lt;/a&gt; / &lt;a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"&gt;&lt;em&gt;INVEST&lt;/em&gt;&lt;/a&gt;) (o &lt;em&gt;Scrum Guide&lt;/em&gt; cita apenas &lt;em&gt;definition of done&lt;/em&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Discoveries&lt;/em&gt; e planejamentos da parte técnica acontecem durante a implementação de uma demanda, e não antes. Causando imprevistos frequentes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Dessa forma, informações técnicas importantes podem surgir em momentos inapropriados, como após prazos, metas e &lt;em&gt;"goals"&lt;/em&gt; já estarem combinados. Portanto, para funcionar em equipes de desenvolvimento o &lt;em&gt;Scrum&lt;/em&gt; precisa ser complementado e uma das formas é utilizar o &lt;em&gt;XP&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id="mesclando-xp-com-scrum"&gt;Mesclando XP com Scrum&lt;/h3&gt;
+
+&lt;p&gt;Particularmente, prefiro evitar reuniões muito longas, entendo que a exaustão mental acumulada pode fazer com que tomemos decisões erradas. Gosto de trabalhar dividindo as atividades da reunião de &lt;em&gt;Iteration / Release Planning&lt;/em&gt; do &lt;em&gt;XP&lt;/em&gt; em reuniões menores:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A parte de estimativa, criação de histórias, tarefas e &lt;em&gt;spikes&lt;/em&gt; / &lt;em&gt;discovery&lt;/em&gt; técnicos ficam em uma reunião denominada &lt;strong&gt;Backlog Refinement&lt;/strong&gt; (que acontece sem formalidade durante a iteração, conforme demanda)&lt;/li&gt;
+  &lt;li&gt;A parte de planejamento da iteração e comprometimento (&lt;em&gt;sprint goal&lt;/em&gt;) fica em uma reunião denominada &lt;strong&gt;Planning&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;A revisão dos resultados e dados gerados pelas iterações ficam em uma reunião denominada &lt;strong&gt;Review&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Além dessas, também gosto de utilizar uma reunião denominada &lt;strong&gt;Retrospectiva&lt;/strong&gt; (geralmente logo após da &lt;strong&gt;Review&lt;/strong&gt;), onde refletimos sobre a iteração e buscamos oportunidades de melhoria, deixando o fluxo mais parecido com o abaixo:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/agil/xp-scrum-flow.png" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Se trocarmos o nome "Iteração" por "Sprint" e adicionarmos a &lt;em&gt;daily&lt;/em&gt; temos todos os &lt;em&gt;Scrum Events&lt;/em&gt; definidos no &lt;em&gt;Scrum Guide&lt;/em&gt; &lt;a href="https://scrumguides.org/scrum-guide.html#scrum-events"&gt;https://scrumguides.org/scrum-guide.html#scrum-events&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Além disso também podemos trabalhar na nossa &lt;strong&gt;Planning&lt;/strong&gt;, as perguntas do &lt;em&gt;Scrum Planning&lt;/em&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Why is this Sprint valuable?&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;What can be Done this Sprint?&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;How will the chosen work get done?&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Utilizando práticas do &lt;em&gt;framework XP&lt;/em&gt; "temperadas" com os eventos do &lt;em&gt;Scrum&lt;/em&gt;, podemos ter um modelo ágil que, respeitando o manifesto e todos os seus princípios, aproveita os benefícios dos dois &lt;em&gt;frameworks&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id="daily-meetings"&gt;Daily Meetings&lt;/h3&gt;
+
+&lt;p&gt;Sobre as famosas &lt;em&gt;"dailys"&lt;/em&gt;, trago uma citação do livro &lt;em&gt;Clean Agile&lt;/em&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;"No decorrer dos anos, tem havido muita confusão sobre "The Daily Scrum" e as "Reuniões diárias (vulgo Standup Meeting). Deixe-me esclarecer essa confusão.
+Segue o que se aplica à Reunião Diária:&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;• Esta reunião é opcional. Muitas equipes seguem com as coisas muito bem sem ter uma.&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;• Pode ter uma frequência menos do que diariamente. Opte pelo cronograma que se adeque à sua realidade.&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;• Deve durar cerca de dez minutos, ainda que a equipe seja grande.&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;• Essa reunião segue uma fóruma simples."&lt;/em&gt;&amp;gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;– Robert C. Martin, Clean Agile, p. 113&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;O autor continua:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;"A ideia básica é que os membros da equipe fiquem de pé em um círculo e respondam as seguintes perguntas:&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;1. O que fiz desde a última reunião?&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;2. O que farei até a próxima reunião?&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;3. Existe algum impedimento em meu caminho?"&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;– Robert C. Martin, Clean Agile, p. 113&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Apesar das ideias do autor serem um pouco diferentes do que está definido no &lt;em&gt;Scrum Guide&lt;/em&gt;, de acordo com minha experiência profissional, apenas tenho que concordar.&lt;/p&gt;
+
+&lt;p&gt;Atualmente as &lt;em&gt;dailys&lt;/em&gt; do meu time são assíncronas (mandamos por texto) é rápido e funciona super bem. Caso seja necessário nos aprofundar em algo entramos em uma &lt;em&gt;call&lt;/em&gt; síncrona e está resolvido.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Entramos em &lt;em&gt;call&lt;/em&gt; ou &lt;em&gt;chat&lt;/em&gt; síncrono conforme necessidade&lt;/li&gt;
+  &lt;li&gt;Economizamos tempo&lt;/li&gt;
+  &lt;li&gt;Nos mantemos focados&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="evitando-a-ressaca"&gt;Evitando a Ressaca&lt;/h2&gt;
+
+&lt;p&gt;Se eu pudesse elencar 3 práticas principais que evitam uma grande "ressaca àgil", mas onde empresas ainda acabam pecando, baseadas no livro "Clean Agile" e minha experiência profissional, seriam:&lt;/p&gt;
+
+&lt;h3 id="ateno-ao-design-desoftware"&gt;1. Atenção ao "design" de software&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Design&lt;/em&gt; é uma etapa essencial no processo de desenvolvimento de &lt;em&gt;software&lt;/em&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;"Toda iteração no projeto, do começo ao fim, terá um pouco de análise, design e implementação.&lt;/em&gt; 
+&lt;em&gt;Em um projeto ágil estamos sempre analisando e projetando"&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;"As atividades de análise, arquitetura, design e implementação de requisitos são constantes durante toda a iteração"&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;– Robert C. Martin, Clean Agile, p. 24/25&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Todas as pessoas que desenvolvem software fazem design, conscientemente ou não.&lt;/p&gt;
+
+&lt;p&gt;Antes de iniciar a escrita do código é necessário um tempo de análise da demanda e do ambiente de desenvolvimento em questão, para entender regras de negócio, esforço e padrões do projeto. Em outras palavras, é necessário entender o que teremos que fazer tecnicamente e quais as melhores práticas a se utilizar. &lt;strong&gt;É necessário planejar a parte técnica&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Imagine que uma pessoa desenvolvedora pegou uma tarefa com o prazo de uma semana para finalizar e depois de 7 dias desenvolvendo descobriu que a tarefa envolve muito mais esforço do que se sabia no início, e pode levar até um mês para ser finalizada. &lt;/p&gt;
+
+&lt;p&gt;Para melhorar a atenção ao &lt;em&gt;design&lt;/em&gt;, podemos criar histórias &lt;em&gt;Spike&lt;/em&gt; no &lt;em&gt;board&lt;/em&gt;, quando necessário ou mesmo criar um board próprio apenas para &lt;em&gt;discovery&lt;/em&gt; técnico de histórias e épicos. &lt;em&gt;Spikes&lt;/em&gt; são fundamentais para definição de estratégias de implementação técnica do código e quebra de tarefas.&lt;/p&gt;
+
+&lt;p&gt;Também é importante adotar práticas como &lt;em&gt;TDD&lt;/em&gt; e Refatorações no cotidiano&lt;/p&gt;
+
+&lt;h3 id="mantenha-o-ritmo-sustentvel"&gt;2. Mantenha o ritmo sustentável&lt;/h3&gt;
+
+&lt;p&gt;Desenvolvimento de software é muito mais como uma "maratona" do que como uma corrida de velocidade. 
+Se mantermos o ritmo, vamos mais longe. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;O importante é sermos previsíveis, mais do que rápidos. Dessa forma, conseguimos métricas e estimativas de prazos mais assertivas.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;"Gerentes dispostos a incentivar os desenvolvedores a trabalharem mais rápido estão usando toda a transparência do processo para microgerenciá-los. Agile coaches, sem um pingo de experiência comercial nem técnica, estão treinando gerentes e dizendo às equipes de desenvolvimento o que fazer. Os gerentes estão definindo as roadmaps, os marcos e os empurrando goela abaixo das equipes de desenvolvimento"&lt;/em&gt;&amp;gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;– Robert C. Martin, Clean Agile, p. 171&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Se tentarmos ir rápido demais, uma hora ficaremos esgotados.&lt;/p&gt;
+
+&lt;p&gt;Por estarmos esgotados estaremos mais propensos a causar &lt;em&gt;bugs&lt;/em&gt; e erros de &lt;em&gt;design&lt;/em&gt; nos sistemas.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Bugs&lt;/em&gt; e erros de design desaceleram entregas,&lt;/p&gt;
+
+&lt;p&gt;Entregas desaceleradas causam problemas na gestão, &lt;/p&gt;
+
+&lt;p&gt;Problemas na gestão aumentam a pressão e o ciclo vicioso da "ressaca ágil" continua.&lt;/p&gt;
+
+&lt;h3 id="dor-definition-of-ready-e-dod-definition-ofdone"&gt;3. DoR (Definition of Ready) e DoD (Definition of Done)&lt;/h3&gt;
+
+&lt;p&gt;A entrada de demandas pouco "refinadas" no &lt;em&gt;"pipeline"&lt;/em&gt; de desenvolvimento causam muitos problemas, dentre eles:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Retrabalho&lt;/li&gt;
+  &lt;li&gt;Sensação de insegurança&lt;/li&gt;
+  &lt;li&gt;Perda de tempo&lt;/li&gt;
+  &lt;li&gt;Expectativas frustradas&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Da mesma forma, "finalizar" uma demanda sem termos uma definição de pronta bem definida pode causar os mesmos problemas se entregarmos algo diferente do que o time de negócio esperava, ou faltando detalhes importantes.&lt;/p&gt;
+
+&lt;p&gt;(obs:. Entenda "demanda" como um card de história escrito pelo pessoal de negócio)&lt;/p&gt;
+
+&lt;p&gt;Antes de se comprometer com uma demanda na iteração, separe um tempo para refiná-la junto com a equipe:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"&gt;&lt;em&gt;Utilize INVEST para histórias e SMART para tarefas&lt;/em&gt;&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Escreva testes de aceitação para a demanda.&lt;/li&gt;
+  &lt;li&gt;Estime a demanda, e caso ainda não haja segurança, crie uma história de &lt;em&gt;Spike&lt;/em&gt; para analisá-la e obter mais detalhes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A etapa de refinamento das demandas pode ocorrer em uma reunião marcada específicamente para isso, no momento da &lt;em&gt;planning&lt;/em&gt; (reunião de planejamento) ou em qualquer outro momento em que o time esteja reunido. &lt;/p&gt;
+
+&lt;p&gt;É importante que todo o time esteja presente no refinamentos de demandas pois assim todas as pessoas envolvidas ganham ciência do que é cada uma delas, têm a oportunidade de discuti-las dando opiniões, e se sentem mais seguras caso elas se responsabilizem futuramente pela entrega de alguma das demandas.&lt;/p&gt;
+
+&lt;h2 id="concluso"&gt;Conclusão&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Clean Agile&lt;/em&gt; é um dos livros mais leves e precisos que li em relação ao tema, o autor realmente capta todo o sentimento envolvendo o ágil nos dias atuais e nos traz "de volta às origens" como prometido. Classifico o livro como necessário para todos que desejam aumentar a performance e melhorar a saúde mental do time em que trabalham mudando perspectivas, quebrando falácias e ruídos em relação ao ágil.&lt;/p&gt;
+
+&lt;p&gt;Sobre o modelo que trouxe, já contribui para aplica-lo em alguns times e trago aqui um gráfico baseado em uma experiência real de "antes e depois" em relação a tempo das tarefas do estado inicial ao concluído.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/agil/lead-time.png" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Por volta de abril e maio, resolvemos mudar o &lt;em&gt;mindset&lt;/em&gt; e a dar mais atenção ao refinamento das tarefas, &lt;em&gt;spikes&lt;/em&gt; e critérios de aceitação além de outras ideias do &lt;em&gt;XP&lt;/em&gt; juntas a um fluxo e eventos baseados no &lt;em&gt;Scrum&lt;/em&gt;, ganhamos em:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Previsibilidade (rítmo sustentável)&lt;/li&gt;
+  &lt;li&gt;Confiança&lt;/li&gt;
+  &lt;li&gt;Saúde mental&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Vale ressaltar que times, projetos e empresas tem suas especificidades e o aprendizado com melhorias contínuas também faz parte do modelo ágil. Portanto não existe um modelo perfeito, mas é sempre bom partir de ideias bem estabelecidas e princípios sólidos para obter o máximo de vantagens.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Encontrei meu ikigai e ganhei uma crise de ansiedade</title>
     <link rel="alternate" href="https://truehenrique.com/2024/01/27/encontrei-meu-ikigai-e-ganhei-uma-crise-de-ansiedade/"/>
@@ -735,7 +1045,7 @@ end
     <link rel="alternate" href="https://truehenrique.com/2020/07/17/elixir-e-phoenix-na-velocidade-da-luz/"/>
     <id>https://truehenrique.com/2020/07/17/elixir-e-phoenix-na-velocidade-da-luz/</id>
     <published>2020-07-17T13:52:00-03:00</published>
-    <updated>2022-09-10T13:56:46-03:00</updated>
+    <updated>2024-04-22T12:13:48-03:00</updated>
     <author>
       <name>Henrique F. Teixeira</name>
     </author>
@@ -744,85 +1054,53 @@ end
 &lt;div&gt;Conhecendo-os temos um grande ganho em produtividade. Diria que &lt;em&gt;60%&lt;/em&gt; do código que lemos e escrevemos com a linguagem envolvem essas estruturas, vale a pena dedicar bastante tempo as explorando e estudando, dessa forma ganhamos muito mais "fluidez" no desenvolvimento das demandas do dia a dia.&lt;br /&gt;&lt;br /&gt;Veja alguns exemplos de detalhes que podem nos pegar de surpresa em determinado momento do nosso desenvolvimento&lt;strong&gt;:&lt;/strong&gt;&lt;/div&gt;
 &lt;div&gt;&lt;br /&gt;&lt;strong&gt;1.1 &lt;/strong&gt;&lt;em&gt;Pattern&lt;/em&gt; ma&lt;em&gt;tching&lt;/em&gt; com &lt;em&gt;structs&lt;/em&gt; funcionam dessa forma:&amp;nbsp;&lt;/div&gt;
 &lt;pre&gt;&lt;code class="html"&gt;iex(1)&amp;gt; %x{} = %MinhaStruct{}
-
 %MinhaStruct{hello: nil}
-
 iex(2)&amp;gt; x
-
 MinhaStruct &lt;/code&gt;&lt;/pre&gt;
 &lt;div&gt;&lt;br /&gt;Porém, não conseguimos criar structs através de variáveis:&lt;/div&gt;
 &lt;pre&gt;&lt;code class="html"&gt;iex(12)&amp;gt; x = MinhaStruct
-
 MinhaStruct
-
 iex(13)&amp;gt; %x{}
 
 ** (CompileError) iex:13: expected struct name to be a compile time atom or alias, got: x&lt;/code&gt;&lt;/pre&gt;
 &lt;div&gt;&lt;br /&gt;Caso isso seja necessário, devemos utilizar a função &lt;strong&gt;&lt;em&gt;struct&lt;/em&gt;&lt;/strong&gt;:&lt;/div&gt;
 &lt;pre&gt;&lt;code class="html"&gt;iex(13)&amp;gt; defmodule User do
-
 ...(13)&amp;gt; defstruct name: "john"
-
-  ...(13)&amp;gt; end
-
-  iex(14)&amp;gt; x = User
-
-  iex(15)&amp;gt; struct(x)
-
-  %User{name: "john"}&lt;/code&gt;&lt;/pre&gt;
+...(13)&amp;gt; end
+iex(14)&amp;gt; x = User
+iex(15)&amp;gt; struct(x)
+%User{name: "john"}&lt;/code&gt;&lt;/pre&gt;
 &lt;div&gt;&lt;br /&gt;&lt;strong&gt;1.2 &lt;/strong&gt;Na definição de &lt;em&gt;guards&lt;/em&gt;, não podemos utilizar funções definidas no módulo:&lt;/div&gt;
 &lt;pre&gt;&lt;code class="html"&gt;iex(4)&amp;gt; defmodule Teste do
-
-  ...(4)&amp;gt; def maiorquequatro(x), do: x &amp;gt; 4
-
-  ...(4)&amp;gt; def verifica(numero) when maiorquequatro(numero), do: IO.puts("é maior que quatro") 
-
-  ...(4)&amp;gt; def verifica(_numero), do: IO.puts("não é maior que quatro")                             
-
-  ...(4)&amp;gt; end
-
-  ** (CompileError) iex:6: cannot find or invoke local maiorquequatro/1 inside guard. Only macros can be invoked in a guard and they must be defined before their invocation. Called as: maiorquequatro(numero)&lt;/code&gt;&lt;/pre&gt;
+...(4)&amp;gt; def maiorquequatro(x), do: x &amp;gt; 4
+...(4)&amp;gt; def verifica(numero) when maiorquequatro(numero), do: IO.puts("é maior que quatro") 
+...(4)&amp;gt; def verifica(_numero), do: IO.puts("não é maior que quatro")                             
+...(4)&amp;gt; end
+** (CompileError) iex:6: cannot find or invoke local maiorquequatro/1 inside guard. Only macros can be invoked in a guard and they must be defined before their invocation. Called as: maiorquequatro(numero)&lt;/code&gt;&lt;/pre&gt;
 &lt;div&gt;&lt;br /&gt;Para utilizar funções customizadas em &lt;em&gt;guards&lt;/em&gt;, utilizamos macros:&lt;/div&gt;
 &lt;pre&gt;&lt;code class="html"&gt; iex(9)&amp;gt; defmodule Teste do                                    
-
-  ...(9)&amp;gt; defmacro maiorquequatro(numero) do
-
-  ...(9)&amp;gt; quote do: unquote(numero) &amp;gt; 4                   
-
-  ...(9)&amp;gt; end
-
-  ...(9)&amp;gt; def verifica(numero) when maiorquequatro(numero), do: IO.puts("é maior que quatro")
-
-  ...(9)&amp;gt; def verifica(_numero), do: IO.puts("não é maior que quatro")
-
-  ...(9)&amp;gt; end
-
-  iex(10)&amp;gt; Teste.verifica(2)
-
-  não é maior que quatro
-
-  :ok
-
-  iex(11)&amp;gt; Teste.verifica(5)
-
-  é maior que quatro
-
-  :ok&lt;/code&gt;&lt;/pre&gt;
+...(9)&amp;gt; defmacro maiorquequatro(numero) do
+...(9)&amp;gt; quote do: unquote(numero) &amp;gt; 4                   
+...(9)&amp;gt; end
+...(9)&amp;gt; def verifica(numero) when maiorquequatro(numero), do: IO.puts("é maior que quatro")
+...(9)&amp;gt; def verifica(_numero), do: IO.puts("não é maior que quatro")
+...(9)&amp;gt; end
+iex(10)&amp;gt; Teste.verifica(2)
+não é maior que quatro
+:ok
+iex(11)&amp;gt; Teste.verifica(5)
+é maior que quatro
+:ok&lt;/code&gt;&lt;/pre&gt;
 &lt;div&gt;&lt;br /&gt;&lt;strong&gt;1.3&lt;/strong&gt; &lt;em&gt;Pattern matching&lt;/em&gt; em &lt;em&gt;keyword lists&lt;/em&gt; funcionam dessa forma:&amp;nbsp;&lt;/div&gt;
 &lt;pre&gt;&lt;code class="html"&gt;iex(4)&amp;gt; [{:name, nome} | _] = [name: "henrique", id: 3]
-
-  [name: "henrique", id: 3]
-
-  iex(5)&amp;gt; nome
-
-  "henrique"&lt;/code&gt;&lt;/pre&gt;
+[name: "henrique", id: 3]
+iex(5)&amp;gt; nome
+"henrique"&lt;/code&gt;&lt;/pre&gt;
 &lt;div&gt;&lt;br /&gt;Lembrando que &lt;em&gt;keyword lists&lt;/em&gt; são um &lt;em&gt;syntax sugar&lt;/em&gt; para uma lista de tuplas...&lt;/div&gt;
 &lt;pre&gt;&lt;code class="html"&gt;iex(7)&amp;gt; [{:name, nome}, {:id, 3}] == [name: "henrique", id: 3]
-
-  true&lt;/code&gt;&lt;/pre&gt;
+true&lt;/code&gt;&lt;/pre&gt;
 &lt;div&gt;&lt;br /&gt;Se quisessemos extrair somente o nome, por exemplo, não poderiamos fazer dessa maneira:&lt;/div&gt;
 &lt;pre&gt;&lt;code class="html"&gt;iex(6)&amp;gt; [{:name, nome}] = [name: "henrique", id: 3]    
-
   ** (MatchError) no match of right hand side value: [name: "henrique", id: 3]&lt;/code&gt;&lt;/pre&gt;
 &lt;div&gt;&lt;br /&gt;Aqui vão &lt;em&gt;links&lt;/em&gt; de estudo para se aprofundar bastante sobre esses temas:&lt;br /&gt;&lt;a href="https://hexdocs.pm/elixir/Kernel.html#defstruct/1"&gt;https://hexdocs.pm/elixir/Kernel.html#defstruct/1&lt;/a&gt;&lt;br /&gt;&lt;a href="https://hexdocs.pm/elixir/Kernel.html#struct/2"&gt;https://hexdocs.pm/elixir/Kernel.html#struct/2&lt;/a&gt;&lt;br /&gt;&lt;a href="https://www.poeticoding.com/the-beauty-of-pattern-matching-in-elixir/"&gt;https://www.poeticoding.com/the-beauty-of-pattern-matching-in-elixir/&lt;/a&gt;&lt;br /&gt;&lt;a href="https://joyofelixir.com/6-pattern-matching"&gt;https://joyofelixir.com/6-pattern-matching&lt;/a&gt;&lt;br /&gt;&lt;a href="https://elixir-lang.org/getting-started/pattern-matching.html"&gt;https://elixir-lang.org/getting-started/pattern-matching.html&lt;/a&gt;&lt;br /&gt;&lt;a href="https://elixir-lang.org/getting-started/keywords-and-maps.html"&gt;https://elixir-lang.org/getting-started/keywords-and-maps.html&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
 &lt;h3&gt;2. Escreva um alias (autocomplete) na sua &lt;em&gt;IDE&lt;/em&gt; para o require &lt;em&gt;IEx; IEx.pry &lt;/em&gt;&lt;del&gt;por favor&lt;/del&gt;.&lt;/h3&gt;
@@ -846,81 +1124,46 @@ iex(13)&amp;gt; %x{}
 &lt;h3&gt;5. Conheça essas dicas do &lt;strong&gt;IEx&lt;/strong&gt;:&lt;/h3&gt;
 &lt;div&gt;&lt;br /&gt;&lt;strong&gt;5.1&lt;/strong&gt; É possível escrever um arquivo de ajuda para iniciar automaticamente variáveis e tudo o que queremos quando abrirmos o terminal do &lt;strong&gt;IEx &lt;/strong&gt;em um projeto. Basta criar um arquivo chamado &lt;strong&gt;&lt;em&gt;.iex.exs &lt;/em&gt;&lt;/strong&gt;na raiz do projeto, exemplo:&lt;/div&gt;
 &lt;pre&gt;&lt;code class="elixir"&gt;# Importe funções e módulos
-
 import_if_available(MinhaApp.MeuModulo)
 
-
-
 # De print em algo antes do terminal iniciar
-
-  IO.puts("hello world")
-
-
+IO.puts("hello world")
 
 # Faça o bind de variáveis que ficarão disponíveis no terminal
-
-  value = 13&lt;/code&gt;&lt;/pre&gt;
+value = 13&lt;/code&gt;&lt;/pre&gt;
 &lt;div&gt;&lt;br /&gt;&lt;strong&gt;5.2&lt;/strong&gt; Existem diversas funções disponíveis no &lt;strong&gt;IEx&lt;/strong&gt; que podem nos deixar mais produtivos, veja alguma delas:&lt;/div&gt;
-&lt;pre&gt;&lt;code class="html"&gt;  • b/1            - prints callbacks info and docs for a given module
-
-  • c/1            - compiles a file into the current directory
-
-  • c/2            - compiles a file to the given path
-
-  • cd/1           - changes the current directory
-
-  • clear/0        - clears the screen
-
-  • exports/1      - shows all exports (functions + macros) in a module
-
-  • flush/0        - flushes all messages sent to the shell
-
-  • h/0            - prints this help message
-
-  • h/1            - prints help for the given module, function or macro
-
-  • i/0            - prints information about the last value
-
-  • i/1            - prints information about the given term
-
-  • ls/0           - lists the contents of the current directory
-
-  • ls/1           - lists the contents of the specified directory
-
-  • open/1         - opens the source for the given module or function in
-
-  your editor
-
-  • pid/1          - creates a PID from a string
-
-  • pid/3          - creates a PID with the 3 integer arguments passed
-
-  • ref/1          - creates a Reference from a string
-
-  • ref/4          - creates a Reference with the 4 integer arguments
-
-  passed
-
-  • pwd/0          - prints the current working directory
-
-  • r/1            - recompiles the given module's source file
-
-  • recompile/0    - recompiles the current project
-
+&lt;pre&gt;&lt;code class="html"&gt;• b/1            - prints callbacks info and docs for a given module
+• c/1            - compiles a file into the current directory
+• c/2            - compiles a file to the given path
+• cd/1           - changes the current directory
+• clear/0        - clears the screen
+• exports/1      - shows all exports (functions + macros) in a module
+• flush/0        - flushes all messages sent to the shell
+• h/0            - prints this help message
+• h/1            - prints help for the given module, function or macro
+• i/0            - prints information about the last value
+• i/1            - prints information about the given term
+• ls/0           - lists the contents of the current directory
+• ls/1           - lists the contents of the specified directory
+• open/1         - opens the source for the given module or function in
+your editor
+• pid/1          - creates a PID from a string
+• pid/3          - creates a PID with the 3 integer arguments passed
+• ref/1          - creates a Reference from a string
+• ref/4          - creates a Reference with the 4 integer arguments
+passed
+• pwd/0          - prints the current working directory
+• r/1            - recompiles the given module's source file
+• recompile/0    - recompiles the current project
 • runtime_info/0 - prints runtime info (versions, memory usage, stats)
-
-  • v/0            - retrieves the last value from the history
-
-  • v/1            - retrieves the nth value from the history&lt;/code&gt;&lt;/pre&gt;
+• v/0            - retrieves the last value from the history
+• v/1            - retrieves the nth value from the history&lt;/code&gt;&lt;/pre&gt;
 &lt;div&gt;&lt;br /&gt;&lt;/div&gt;
 &lt;div&gt;&lt;strong&gt;5.3&lt;/strong&gt; &lt;strong&gt;&lt;em&gt;Tab&lt;/em&gt;&lt;/strong&gt; completa o nome de módulos, funções e também mostra os métodos quando finalizamos um nome com ".":&lt;/div&gt;
 &lt;pre&gt;&lt;code class="html"&gt; iex(9)&amp;gt; Enum.
-
-  EmptyError           OutOfBoundsError     all?/1               
-
-  all?/2               any?/1               any?/2                   
-
-  ...&lt;/code&gt;&lt;/pre&gt;
+EmptyError           OutOfBoundsError     all?/1               
+all?/2               any?/1               any?/2                   
+...&lt;/code&gt;&lt;/pre&gt;
 &lt;div&gt;&lt;br /&gt;Os exemplos foram retirados da documentação do &lt;strong&gt;IEx&lt;/strong&gt;: &lt;a href="https://hexdocs.pm/iex/IEx.html#module-the-iex-exs-file"&gt;https://hexdocs.pm/iex/IEx.html#module-the-iex-exs-file&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
 &lt;h3&gt;6. Conheça e utilize os diversos plugins para &lt;em&gt;Elixir&lt;/em&gt; e &lt;em&gt;Phoenix&lt;/em&gt; na sua &lt;em&gt;IDE&lt;/em&gt;&lt;/h3&gt;
 &lt;div&gt;&lt;br /&gt;Não se limite ao básico! Os plugins existem para serem utilizados, abuse deles!&lt;br /&gt;&lt;br /&gt;Se você é usuário do &lt;em&gt;VSCode&lt;/em&gt;, este artigo tem dicas muito boas: &lt;a href="https://thinkingelixir.com/elixir-in-vs-code/"&gt;https://thinkingelixir.com/elixir-in-vs-code/&lt;/a&gt;&lt;br /&gt;Para o &lt;em&gt;VIM, de uma lida aqui&lt;/em&gt;: &lt;a href="https://medium.com/@siever/setup-vim-for-elixir-development-280a01150152"&gt;https://medium.com/@siever/setup-vim-for-elixir-development-280a01150152&lt;/a&gt;&lt;br /&gt;Para o Atom: &lt;a href="https://atom.io/packages/atom-elixir"&gt;https://atom.io/packages/atom-elixir&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
@@ -938,7 +1181,7 @@ import_if_available(MinhaApp.MeuModulo)
     <link rel="alternate" href="https://truehenrique.com/2020/03/04/pwa-com-elixir-e-phoenix-em-5-minutos/"/>
     <id>https://truehenrique.com/2020/03/04/pwa-com-elixir-e-phoenix-em-5-minutos/</id>
     <published>2020-03-04T12:51:00-03:00</published>
-    <updated>2021-07-29T21:49:32-03:00</updated>
+    <updated>2024-04-22T12:13:48-03:00</updated>
     <author>
       <name>Henrique F. Teixeira</name>
     </author>
@@ -949,35 +1192,20 @@ import_if_available(MinhaApp.MeuModulo)
 &lt;div&gt;&lt;br /&gt;Adicione um arquivo chamado &lt;strong&gt;&lt;em&gt;manifest.json&lt;/em&gt;&lt;/strong&gt; no seu&lt;em&gt; priv/static &lt;/em&gt;contendo o seguinte conteúdo:&lt;/div&gt;
 &lt;div&gt;&lt;br /&gt;&lt;/div&gt;
 &lt;pre&gt;&lt;code class="javascript"&gt;{
-
   "short_name": "My App", // Nome em que aparecerá junto ao ícone
-
   "name": "My Very Progressive Web App @PWA", // Descrição que aparecerá enquanto o aplicativo é carregado
-
   "icons": [ // Coloque aqui a localização dos ícones do seu aplicativo
-
     {
-
       "src": "/images/logo.png",  
-
       "type": "image/png"
-
     }
-
   ],
-
   "start_url": "/", // Aqui vai o endereço principal do seu aplicativo (o que irá ser acessado primeiro quando abrirmos o app)
-
   "background_color": "#fff", // Definimos uma cor de fundo enquanto ao aplicativo é carregado.
-
   "display": "standalone", // Definimos o modo primário que o navegador deve considerar para exibir o aplicativo.
-
   "scope": "/", // Definimos o escopo, limite, das páginas a serem consideradas como PWA
-
   "theme_color": "#000"   // Definimos uma cor para personalizar a interface do dispositivo em uso
-
 } 
-
             &lt;em&gt;                                 &lt;/em&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;div&gt;&lt;br /&gt;Este arquivo é o responsável por personalizar a aparência do nosso &lt;em&gt;PWA&lt;/em&gt; e um pouco da experiência de uso. Além das configurações setadas acima, também podemos adicionar as seguintes:&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
 &lt;ul&gt;&lt;li&gt;&lt;em&gt;lang&lt;/em&gt;: Definimos o idioma utilizado (ex: &lt;em&gt;pt-BR&lt;/em&gt;).&lt;/li&gt;&lt;li&gt;&lt;em&gt;orientation&lt;/em&gt;: Definimos a orientação de como exibir o aplicativo (ex: &lt;em&gt;any, natural, landscape, landscape-primary, landscape-secondary, portrait, portrait-primary, portrait-secondary&lt;/em&gt;).&lt;/li&gt;&lt;li&gt;&lt;em&gt;prefer_related_applications&lt;/em&gt;: Informa se há uma outra aplicação complementar (&lt;em&gt;Boolean&lt;/em&gt;).&lt;/li&gt;&lt;li&gt;&lt;em&gt;related_applications&lt;/em&gt;: Definimos as aplicações complementares (&lt;em&gt;Array&lt;/em&gt; de objetos de aplicações com os possíveis valores: &lt;em&gt;platform, url e id&lt;/em&gt;).&lt;/li&gt;&lt;li&gt;&lt;em&gt;dir&lt;/em&gt;: Definimos a direção do texto nas especifcações do manifesto.&lt;/li&gt;&lt;/ul&gt;
@@ -986,63 +1214,34 @@ import_if_available(MinhaApp.MeuModulo)
 &lt;h3&gt;Passo 2:&lt;/h3&gt;
 &lt;div&gt;&lt;br /&gt;Adicione um arquivo chamado &lt;strong&gt;&lt;em&gt;service_worker.js&lt;/em&gt;&lt;/strong&gt; no seu &lt;em&gt;priv/static&lt;/em&gt; contendo o seguinte conteúdo:&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
 &lt;pre&gt;&lt;code class="javascript"&gt;self.addEventListener('install', function(e) {
-
   e.waitUntil(
-
     fetch('/cache_manifest.json')
-
     .then(function(response) {
-
       return response.json()
-
     })  
-
     .then(function(cacheManifest) {
-
       var cacheName = 'cache:static:' + cacheManifest.version
-
       var all = Object.values(cacheManifest.latest).filter(
-
         function(fn) { return fn.match(/^(images|css|js|fonts)/);
-
         })
-
       caches.open(cacheName).then(function(cache) {
-
         return cache.addAll(all).then(function() {
-
           self.skipWaiting();
-
         });
-
       })
-
     })
-
   );
-
 });
 
-
-
 self.addEventListener('fetch', function(event) {
-
   event.respondWith(
-
     caches.match(event.request).then(function(response) {
-
       if (response) {
-
         return response;
-
       }
-
       return fetch(event.request);
-
     })
-
   );
-
 });&lt;/code&gt;&lt;/pre&gt;
 &lt;div&gt;&lt;br /&gt;&lt;/div&gt;
 &lt;blockquote&gt;Essencialmente, um &lt;em&gt;service worker&lt;/em&gt; se comporta como um servidor &lt;em&gt;proxy&lt;/em&gt; situado entre uma aplicação web, o navegador e a rede (quando esta estiver disponível). Eles servem, dentre outras coisas, para possibilitar a criação de experiências &lt;em&gt;offline&lt;/em&gt; eficientes, interceptar requisições de rede – agindo adequadamente de acordo com o &lt;em&gt;status&lt;/em&gt; atual da conexão – e atualizar os &lt;em&gt;assets&lt;/em&gt; que residem no servidor. Service workers também permitem o acesso às APIs de &lt;em&gt;push notification&lt;/em&gt; e &lt;em&gt;background sync&lt;/em&gt;.&lt;br /&gt;&lt;br /&gt;- &lt;a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Service_Worker_API"&gt;https://developer.mozilla.org/pt-BR/docs/Web/API/Service_Worker_API&lt;/a&gt;&lt;/blockquote&gt;
@@ -1052,33 +1251,21 @@ self.addEventListener('fetch', function(event) {
 &lt;h3&gt;Passo 3:&lt;/h3&gt;
 &lt;div&gt;&lt;br /&gt;Permita que os arquivos &lt;strong&gt;&lt;em&gt;service_worker.js&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;cache_manifest.json &lt;/em&gt;&lt;/strong&gt;e &lt;strong&gt;&lt;em&gt;manifest.json&lt;/em&gt;&lt;/strong&gt; sejam acessados de forma estática, adicionando nas configurações de &lt;strong&gt;&lt;em&gt;Plug.Static&lt;/em&gt;&lt;/strong&gt;, encontradas no módulo &lt;strong&gt;&lt;em&gt;Endpoint&lt;/em&gt;&lt;/strong&gt; do seu projeto encontrado em&lt;em&gt; (lib/seu_projeto_web/endpoint.ex):&lt;/em&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
 &lt;pre&gt;&lt;code class="elixir"&gt;plug Plug.Static,
-
   at: "/",
-
   from: :seu_projeto,
-
   gzip: false,
-
   only: ~w(css fonts images js favicon.ico robots.txt service_worker.js cache_manifest.json manifest.json) # aqui&lt;/code&gt;&lt;/pre&gt;
 &lt;div&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
 &lt;h3&gt;Passo 4:&lt;/h3&gt;
 &lt;div&gt;&lt;br /&gt;Adicione um link para o seu &lt;strong&gt;&lt;em&gt;manifest.json&lt;/em&gt;&lt;/strong&gt; e o seguinte script no layout principal do seu projeto:&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
 &lt;pre&gt;&lt;code class="html"&gt;&amp;lt;link rel="manifest" href="/manifest.json"&amp;gt;
-
 &amp;lt;script&amp;gt;
-
   if (navigator.serviceWorker) {
-
     navigator.serviceWorker.register('/service_worker.js', { scope: './' })
-
       .then(function(reg) {
-
         console.log('[ServiceWorker]', 'Service worker registered!');
-
         console.log(reg);
-
       });
-
   }
 
 &amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;

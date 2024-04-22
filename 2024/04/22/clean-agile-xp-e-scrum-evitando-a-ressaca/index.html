@@ -1,0 +1,497 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='ie=edge' />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="Henrique Fernandez Teixeira">
+    <link rel="icon" type="image/ico" href="/images/icon-16x16.png">
+
+        <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=60bc2b44a75109001138d6ff&product=sticky-share-buttons' async='async'></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161733672-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-161733672-1');
+        </script>
+      <title>@truehenrique - Clean Agile, XP e Scrum - Evitando a "ressaca"</title>
+        <meta property="og:image" content="https://truehenrique.com/images/agil/banner.png">
+        <meta name="twitter:image:src" content="https://truehenrique.com/images/agil/banner.png">
+      <meta property="og:type" content="article" />
+      <meta property="article:author" content="https://www.truehenrique.com/sobre">
+      <meta property="og:site_name" content="@truehenrique" />
+      <meta property="og:description" content="" />
+      <meta property="twitter:description" content="">
+      <meta name="description" content="">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="robots" content="index,follow">
+      <meta name="keywords" content="elixir,phoenix">
+      <meta property="og:title" content='Clean Agile, XP e Scrum - Evitando a "ressaca"' />
+      <meta property="twitter:title" content='Clean Agile, XP e Scrum - Evitando a "ressaca"'>
+      <meta name="title" content ='Clean Agile, XP e Scrum - Evitando a "ressaca"'>
+      <meta property="og:url" content="https://www.truehenrique.com/2024/04/22/clean-agile-xp-e-scrum-evitando-a-ressaca/">
+      <link rel="canonical" href="https://www.truehenrique.com/2024/04/22/clean-agile-xp-e-scrum-evitando-a-ressaca/"/>
+      <link rel="author" href="https://www.truehenrique.com/sobre">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
+
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <link href="/stylesheets/picnic.css" rel="stylesheet" /><link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+  <h1>@truehenrique</h1>
+  <div class="wrap">
+    <a href="/"><img src="/images/logo-white.png" alt="" /></a>
+  </div>
+</header>
+<div class="nav">
+  <nav class="wrap">
+    <a href="/" class="brand">
+      <img src="/images/logo-white.png" alt="" />
+    </a>
+    <!-- responsive-->
+    <input id="bmenub" type="checkbox" class="show">
+    <label for="bmenub" class="burger pseudo button large"><i class="fi-list"></i> </label>
+
+    <div class="menu wrap">
+      <a href="/" class="pseudo button icon-puzzle active"><i class="fi-page-multiple"></i> Blog</a>
+      <a href="/sobre" class="pseudo button icon-picture "><i class="fi-torso-business"></i> Sobre</a>
+      <a href="https://github.com/henrique-ft" class="pseudo button icon-picture" target="_blank"><i class="fi-social-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/henrique-fernandez-teixeira-93a4a3127/" class="pseudo button icon-picture" target="_blank"><i class="fi-social-linkedin"></i> Linkedin</a>
+      <a href="/arquivo" class="pseudo button icon-picture "><i class="fi-list-bullet"></i> Arquivo</a>
+    </div>
+  </nav>
+</div>
+<div class="langs-container">
+  <div class="wrap">
+    <a href="/"><span class="flag-icon flag-icon-br"></span></a>
+    <a href="/en"><span class="flag-icon flag-icon-us"></span></a>
+    <a href="/es"><span class="flag-icon flag-icon-es"></span></a>
+  </div>
+</div>
+
+
+    <div class="flex one three-800 wrap">
+      <main role="main" class="two-third-800">
+          <div id="fb-root"></div>
+          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v6.0"></script>
+
+          <div class="wwrap">
+            <h2>Clean Agile, XP e Scrum - Evitando a "ressaca"</h2>
+            <small class="color-lite">Abr 22 <i> (pt)</i></small>
+            <div class="article-image" style="background-image: url(/images/agil/banner.png)" alt="Clean Agile, XP e Scrum - Evitando a "ressaca""></div>
+
+        <p>O <em>board</em> ágil do seu time está com diversos <em>cards</em> estacionados na mesma coluna durante dias e nada é entregue?</p>
+
+<p>O pessoal de negócios está frustrado tendo constantemente que redefinir prazos e estratégias?</p>
+
+<p>Sensação de muito trabalho e pouco resultado?</p>
+
+<p>Se comprometeram com algo e descobriram só depois que não conseguiam cumprir?</p>
+
+<p>O clima está ruim e a situação só parece piorar?</p>
+
+<p>Você pode estar vivendo o que <em>Robert C. Martin</em> (<em>Uncle Bob</em>) nomeou em seu livro <em>Clean Agile</em> como "ressaca ágil".
+Dificilmente alguém que trabalha com <em>software</em> nunca passou por isso. Principalmente quando há a ausência de pessoas sêniores no time ou estamos lidando com <em>softwares</em> complexos: O código-fonte está espalhado por diversos projetos, é extensivo demais, mal documentado ou mal escrito.</p>
+
+<p>A ideia do ágil é abrangente, complexa (apesar de não parecer) e com vários "<em>frameworks</em>  ágeis" diferentes espalhados por aí. Similarmente, <em>softwares</em> também. E quanto mais complexo é um problema, mais difícil é de explicar e entendê-lo. Além disso, nossa transmissão de conhecimento muitas vezes é falha (viés de confirmação, excessos e lacunas de informação), cada ouvinte pode interpretar e replicar a mesma informação de maneiras diferentes, isso pode acabar moldando uma realidade, uma verdade ou um comportamento social.</p>
+
+<p>Voltando ao tema principal, é possível enxergar no mercado uma mistura de interpretações do "<em>ágil</em>" sendo aplicadas ao mesmo tempo, em busca de um resultado idealizado e "teórico" que muitas vezes não se comprova na prática. Essas interpretações podem estar longe do manifesto principal e seus princípios, gerando muita expectativa frustrada, apontar de dedos e poucos resultados.</p>
+
+<blockquote>
+  <p><em>"A metodologia ágil tomou a indústria de software de assalto, Mas, como um telefone sem fio, as ideais originais da agilidade foram distorcidas e simplificadas, chegando às empresas como uma promessa de "um processo para entregar o software mais rápido"</em></p>
+
+  <p><em>– Robert C. Martin, Clean Agile, p. 170</em></p>
+</blockquote>
+
+<h3 id="quem--robert-cmartin">Quem é Robert C. Martin</h3>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/T4Td2vgrgsM?si=cYFDhRj_JmMN9Orn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+
+<p>Mais conhecido como <em>Uncle Bob</em>, Robert C. Martin é engenheiro de software desde 1970, consultor internacional, palestrante, autor de vários livros sobre <em>TI</em> e <strong>um dos 17 signatários originais do manifesto àgil em 2001.</strong> </p>
+
+<p>Recentemente, ele resolveu voltar ao tema "agilidade" e lançar o livro <em>Clean Agile</em>, onde explica sobre ideias originais do manifesto e faz algumas críticas a como o mercado as absorveu.</p>
+
+<h3 id="o-desenvolvimento-gil-limpo">O desenvolvimento "ágil limpo"</h3>
+
+<p>Segundo o livro, a definição de ágil em sua forma "limpa" (a ideia original, sem ruídos) é:</p>
+
+<blockquote>
+  <p><em>"Um processo em que um projeto é subdividido em iterações. A saída de cada iteração é calculada e usada para avaliar continuamente o planejamento. As funcionalidades são implementadas de acordo com o valor de negócio agregado, de modo que as coisas mais valiosas sejam implementadas primeiro. O nível de qualidade é mantido o mais alto possível. O cronograma é principalmente gerenciado conforme a manipulação do escopo"</em></p>
+
+  <p><em>– Robert C. Martin, Clean Agile, p. 32</em></p>
+</blockquote>
+
+<p>O resto (<em>Scrum, XP, Kanban</em>) são apenas ferramentas ou <em>frameworks</em> para facilitar e/ou guiar a utilização do ágil.</p>
+
+<p>Além disso, o livro comenta sobre os doze princípios ágeis que <strong>devem ser seguidos</strong> (podemos conferir aqui <a href="http://agilemanifesto.org/iso/ptbr/principles.html">http://agilemanifesto.org/iso/ptbr/principles.html</a>)</p>
+
+<p>Uncle bob também cita que o <em>framework XP</em> (<em>Extreme Programming</em>) é o <em>"mais bem definido, completo, menos confuso e o melhor representante do cerne essencial da agilidade"</em>, e o utiliza para explicar conceitos do ágil.</p>
+
+<h3 id="xp-um-breve-resumo">XP, um breve resumo</h3>
+
+<p>O <em>XP</em> (<em>Extreme Programming</em>) é um <em>framework</em> àgil criado por <em>Kent Beck</em> que nos traz práticas para desenvolvimento de software, representadas no modelo abaixo:</p>
+
+<p><img src="/images/agil/xp.png" alt="" /></p>
+
+<p>No círculo externo (Roxo), temos 📊 <strong>práticas de negócio</strong>.</p>
+
+<ul>
+  <li><strong>Testes de aceitação</strong>: basicamente significa que cada demanda (histórias, tarefas e <em>spikes</em>, por exemplo) devem ter seus critérios de aceitação, critérios necessários para termos a conclusão e aceitação de uma demanda. Esses critérios podem ser validados através de testes de aceitação e estão bem alinhados com o conceito de <em>Definition of Done</em>.</li>
+  <li><strong>Pequenas versões</strong>: devemos planejar a entrega de <em>software</em> aos poucos, funcionalidade por funcionalidade, de forma gradativa.</li>
+  <li><strong>Planejamento (Planning)</strong>: o ato de planejar a iteração, definindo como podemos dividir um projeto em funcionalidades, épicos, histórias, tarefas e <em>spikes</em>.</li>
+  <li><strong>Equipe como um todo</strong>: a equipe (<em>P.O, P.M, Devs, QA</em>, Gerentes) deve trabalhar em conjunto do início ao fim do projeto, a comunicação deve ser fácil entre as partes. O resultado é de todos.</li>
+</ul>
+
+<p>No círculo do meio (Azul-escuro), temos 👥 <strong>práticas da equipe</strong>.</p>
+
+<ul>
+  <li><strong>Integração contínua</strong>: o ato de integrar as mudanças feitas ao código principal (produção) constantemente, uma por uma. (Não acumular sequências de mudanças integrando todas de uma vez só)</li>
+  <li><strong>Uso de metáforas</strong>: similar a linguagem ubiqua do <em>DDD</em> (<em>Domain Driven Design</em>), todos da equipe devem falar a mesma lingua, inclusive, o código deve refletir essa lingua na forma que é escrito. Particularmente, gosto de dizer que um código legível é aquele em que uma pessoa não técnica conseguiria entrar, ler e pressupor o que está acontecendo com facilidade.</li>
+  <li><strong>Ritmo sustentável</strong>: devemos desenvolver em um rítmo previsível. O objetivo não é finalizar rápido, é a equipe ter um ritmo constante e saudável (saúde mental conta também, tá?).</li>
+  <li><strong>Propriedade coletiva</strong>: qualquer membro da equipe pode verificar e melhorar qualquer módulo do projeto a qualquer momento. O conhecimento deve ser distribuído entre todos.</li>
+</ul>
+
+<p>No círculo interno (Azul-claro), temos 💻 <strong>práticas técnicas</strong>.</p>
+
+<ul>
+  <li><strong>TDD (Test Driven Developent)</strong>: devemos escrever testes automatizados  e se possível praticar TDD.</li>
+  <li><strong>Pair programming</strong>: devemos estimular a programação em pares, principalmente em cenários em que há a necessidade de troca de conhecimento, mentorias e atenção a demandas muito críticas. É uma escolha que cabe as pessoas programadoras e a equipe (não é algo obrigatório).</li>
+  <li><strong>Refatoração</strong>: Temos que entregar um código melhor do que encontramos. Caso haja a necessidade ou oportunidade de refatoração, refatore.</li>
+  <li><strong>Design Simples</strong>: <em>"É a prática de escrever apenas o código necessário com uma estrutura que o deixe mais simples, menor e mais expressivo"</em>: </li>
+</ul>
+
+<ol>
+  <li>Execute todos os testes</li>
+  <li>Expresse a intenção</li>
+  <li>Elimine a duplicação </li>
+  <li>Reduza os elementos.</li>
+</ol>
+
+<h3 id="falando-um-pouco-mais-sobre-a-planning-noxp">Falando um pouco mais sobre a Planning no XP</h3>
+
+<p>Esta é a <strong>prática central</strong> de todo o <em>framework</em>, o planejamento ocorre em uma reunião chamada <em>Iteration Planning</em> onde:</p>
+
+<ol>
+  <li>Verificamos os dados gerados pela última iteração.</li>
+  <li>Histórias (escritas préviamente pelas pessoas de negócio) são apresentadas e validadas pelos critérios de <em>DoR</em> (<em>Definition of Ready</em>). O livro <em>Clean Agile</em> cita a utilização do acrônimo <a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"><em>INVEST</em></a> (Independente, negociável, valiosa, estimável, pequena (small) e testável) como um exemplo de <em>Definition of Ready</em></li>
+  <li>Histórias são estimadas pelas pessoas técnicas. A estimativa pode ser feita em pontos de 1 a 6, tamanho de camisa (p, m, g) ou <em>fibonacci</em> para medir esforço ou estimativa de três pontos caso queiramos estimar tempo.</li>
+  <li>Histórias <em>Spike</em> são criadas caso alguma história ainda não seja estimável: Não há informação ou conhecimento técnico suficiente para que consigamos entrega-la ou não conseguimos garantir que ela é <a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"><em>INVEST</em></a>.</li>
+  <li><em>DoD</em> (<em>Definition of Done</em> / <strong>testes de aceitação</strong>) das histórias são escritos.</li>
+  <li>O que faremos na próxima iteração é definido pela <strong>equipe como um todo</strong>.</li>
+</ol>
+
+<p>Podemos também ter uma segunda reunião de <em>Iteration Planning</em> após a primeira, apenas com o time técnico, para a quebra das histórias em tarefas <a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"><em>SMART</em></a>  (<em>Definition of Ready</em> para tarefas), em um <em>board</em> específico "<em>linkado</em>" com o <em>board</em> de histórias.</p>
+
+<p>Segundo o livro, a <em>Iteration Planning</em> é naturalmente bem extensa:</p>
+
+<blockquote>
+  <p><em>"A reunião deve ser programada para ter um vigésimo da duração da iteração. A IPM (Iteration Planning Meeting) para uma iteração de duas semanas deve exigir cerca de metade de um dia."</em></p>
+
+  <p><em>– Robert C. Martin, Clean Agile, p. 70</em></p>
+</blockquote>
+
+<p>Em uma iteração zero de um projeto, temos um planejamento diferente, em uma reunião chamada <em>Release Planning</em>. Basicamente é a mesma coisa da <em>Iteration Planning</em>, com a diferença de  que não definiremos o que faremos para uma única iteração e ainda não temos dados gerados. Focamos em questões globais (em alto nível, sem muitos detalhes) para o projeto como um todo (todas as iterações).</p>
+
+<p>Resumindo os fluxos de um projeto <em>XP</em> tendo o planejamento como a prática central, temos:</p>
+
+<p><img src="/images/agil/xp-flow.png" alt="" /></p>
+
+<h3 id="scrum-vs-xp">Scrum vs XP</h3>
+
+<p>Diferente do <em>Scrum</em>, o <em>XP</em> considera práticas técnicas, o que o torna alinhado com o princípio <em>"Continuous attention to technical excellence and good design enhances agility"</em>. Inclusive, <strong>frameworks como o <em>Scrum</em> necessitam de completementação técnica para funcionar</strong> no ambito de desenvolvimento. No <em>Scrum Guide</em>, por exemplo, não temos nenhuma citação clara e explícita sobre práticas técnicas, dando margem a diversas interpretações…</p>
+
+<ul>
+  <li>Quando damos atenção para as etapas de <em>design</em> de <em>software</em>?</li>
+  <li>Quando uma demanda de negócio está preparada para ser implementada?</li>
+  <li>O que fazemos quando não sabemos como implementar determinada demanda de negócio?</li>
+</ul>
+
+<p>Uma má interpretação do <em>Scrum</em>, sem complementação técnica, pode soar como um "Faz aí dentro da sprint o mais rápido possível", o que é um grande problema:</p>
+
+<ul>
+  <li>Não existem definições de boas práticas e padrões para desenvolvimento técnico de <em>software</em>.</li>
+  <li>O time não tem uma definição formada sobre quando uma demanda está pronta para ser executada (<a href="https://medium.com/@raphavizoni/definition-of-ready-acde0e74ebab"><em>definition of ready</em></a> / <a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"><em>INVEST</em></a>) (o <em>Scrum Guide</em> cita apenas <em>definition of done</em>)</li>
+  <li><em>Discoveries</em> e planejamentos da parte técnica acontecem durante a implementação de uma demanda, e não antes. Causando imprevistos frequentes.</li>
+</ul>
+
+<p>Dessa forma, informações técnicas importantes podem surgir em momentos inapropriados, como após prazos, metas e <em>"goals"</em> já estarem combinados. Portanto, para funcionar em equipes de desenvolvimento o <em>Scrum</em> precisa ser complementado e uma das formas é utilizar o <em>XP</em>.</p>
+
+<h3 id="mesclando-xp-com-scrum">Mesclando XP com Scrum</h3>
+
+<p>Particularmente, prefiro evitar reuniões muito longas, entendo que a exaustão mental acumulada pode fazer com que tomemos decisões erradas. Gosto de trabalhar dividindo as atividades da reunião de <em>Iteration / Release Planning</em> do <em>XP</em> em reuniões menores:</p>
+
+<ul>
+  <li>A parte de estimativa, criação de histórias, tarefas e <em>spikes</em> / <em>discovery</em> técnicos ficam em uma reunião denominada <strong>Backlog Refinement</strong> (que acontece sem formalidade durante a iteração, conforme demanda)</li>
+  <li>A parte de planejamento da iteração e comprometimento (<em>sprint goal</em>) fica em uma reunião denominada <strong>Planning</strong></li>
+  <li>A revisão dos resultados e dados gerados pelas iterações ficam em uma reunião denominada <strong>Review</strong></li>
+</ul>
+
+<p>Além dessas, também gosto de utilizar uma reunião denominada <strong>Retrospectiva</strong> (geralmente logo após da <strong>Review</strong>), onde refletimos sobre a iteração e buscamos oportunidades de melhoria, deixando o fluxo mais parecido com o abaixo:</p>
+
+<p><img src="/images/agil/xp-scrum-flow.png" alt="" /></p>
+
+<p>Se trocarmos o nome "Iteração" por "Sprint" e adicionarmos a <em>daily</em> temos todos os <em>Scrum Events</em> definidos no <em>Scrum Guide</em> <a href="https://scrumguides.org/scrum-guide.html#scrum-events">https://scrumguides.org/scrum-guide.html#scrum-events</a>.</p>
+
+<p>Além disso também podemos trabalhar na nossa <strong>Planning</strong>, as perguntas do <em>Scrum Planning</em>:</p>
+
+<ul>
+  <li><em>Why is this Sprint valuable?</em></li>
+  <li><em>What can be Done this Sprint?</em></li>
+  <li><em>How will the chosen work get done?</em></li>
+</ul>
+
+<p>Utilizando práticas do <em>framework XP</em> "temperadas" com os eventos do <em>Scrum</em>, podemos ter um modelo ágil que, respeitando o manifesto e todos os seus princípios, aproveita os benefícios dos dois <em>frameworks</em>.</p>
+
+<h3 id="daily-meetings">Daily Meetings</h3>
+
+<p>Sobre as famosas <em>"dailys"</em>, trago uma citação do livro <em>Clean Agile</em>:</p>
+
+<blockquote>
+  <p><em>"No decorrer dos anos, tem havido muita confusão sobre "The Daily Scrum" e as "Reuniões diárias (vulgo Standup Meeting). Deixe-me esclarecer essa confusão.
+Segue o que se aplica à Reunião Diária:</em></p>
+
+  <p><em>• Esta reunião é opcional. Muitas equipes seguem com as coisas muito bem sem ter uma.</em></p>
+
+  <p><em>• Pode ter uma frequência menos do que diariamente. Opte pelo cronograma que se adeque à sua realidade.</em></p>
+
+  <p><em>• Deve durar cerca de dez minutos, ainda que a equipe seja grande.</em></p>
+
+  <p><em>• Essa reunião segue uma fóruma simples."</em>&gt;</p>
+
+  <p><em>– Robert C. Martin, Clean Agile, p. 113</em></p>
+</blockquote>
+
+<p>O autor continua:</p>
+
+<blockquote>
+  <p><em>"A ideia básica é que os membros da equipe fiquem de pé em um círculo e respondam as seguintes perguntas:</em></p>
+
+  <p><em>1. O que fiz desde a última reunião?</em></p>
+
+  <p><em>2. O que farei até a próxima reunião?</em></p>
+
+  <p><em>3. Existe algum impedimento em meu caminho?"</em></p>
+
+  <p><em>– Robert C. Martin, Clean Agile, p. 113</em></p>
+</blockquote>
+
+<p>Apesar das ideias do autor serem um pouco diferentes do que está definido no <em>Scrum Guide</em>, de acordo com minha experiência profissional, apenas tenho que concordar.</p>
+
+<p>Atualmente as <em>dailys</em> do meu time são assíncronas (mandamos por texto) é rápido e funciona super bem. Caso seja necessário nos aprofundar em algo entramos em uma <em>call</em> síncrona e está resolvido.</p>
+
+<ul>
+  <li>Entramos em <em>call</em> ou <em>chat</em> síncrono conforme necessidade</li>
+  <li>Economizamos tempo</li>
+  <li>Nos mantemos focados</li>
+</ul>
+
+<h2 id="evitando-a-ressaca">Evitando a Ressaca</h2>
+
+<p>Se eu pudesse elencar 3 práticas principais que evitam uma grande "ressaca àgil", mas onde empresas ainda acabam pecando, baseadas no livro "Clean Agile" e minha experiência profissional, seriam:</p>
+
+<h3 id="ateno-ao-design-desoftware">1. Atenção ao "design" de software</h3>
+
+<p><em>Design</em> é uma etapa essencial no processo de desenvolvimento de <em>software</em>.</p>
+
+<blockquote>
+  <p><em>"Toda iteração no projeto, do começo ao fim, terá um pouco de análise, design e implementação.</em> 
+<em>Em um projeto ágil estamos sempre analisando e projetando"</em></p>
+
+  <p><em>"As atividades de análise, arquitetura, design e implementação de requisitos são constantes durante toda a iteração"</em></p>
+
+  <p><em>– Robert C. Martin, Clean Agile, p. 24/25</em></p>
+</blockquote>
+
+<p>Todas as pessoas que desenvolvem software fazem design, conscientemente ou não.</p>
+
+<p>Antes de iniciar a escrita do código é necessário um tempo de análise da demanda e do ambiente de desenvolvimento em questão, para entender regras de negócio, esforço e padrões do projeto. Em outras palavras, é necessário entender o que teremos que fazer tecnicamente e quais as melhores práticas a se utilizar. <strong>É necessário planejar a parte técnica</strong>.</p>
+
+<p>Imagine que uma pessoa desenvolvedora pegou uma tarefa com o prazo de uma semana para finalizar e depois de 7 dias desenvolvendo descobriu que a tarefa envolve muito mais esforço do que se sabia no início, e pode levar até um mês para ser finalizada. </p>
+
+<p>Para melhorar a atenção ao <em>design</em>, podemos criar histórias <em>Spike</em> no <em>board</em>, quando necessário ou mesmo criar um board próprio apenas para <em>discovery</em> técnico de histórias e épicos. <em>Spikes</em> são fundamentais para definição de estratégias de implementação técnica do código e quebra de tarefas.</p>
+
+<p>Também é importante adotar práticas como <em>TDD</em> e Refatorações no cotidiano</p>
+
+<h3 id="mantenha-o-ritmo-sustentvel">2. Mantenha o ritmo sustentável</h3>
+
+<p>Desenvolvimento de software é muito mais como uma "maratona" do que como uma corrida de velocidade. 
+Se mantermos o ritmo, vamos mais longe. </p>
+
+<p><strong>O importante é sermos previsíveis, mais do que rápidos. Dessa forma, conseguimos métricas e estimativas de prazos mais assertivas.</strong></p>
+
+<blockquote>
+  <p><em>"Gerentes dispostos a incentivar os desenvolvedores a trabalharem mais rápido estão usando toda a transparência do processo para microgerenciá-los. Agile coaches, sem um pingo de experiência comercial nem técnica, estão treinando gerentes e dizendo às equipes de desenvolvimento o que fazer. Os gerentes estão definindo as roadmaps, os marcos e os empurrando goela abaixo das equipes de desenvolvimento"</em>&gt;</p>
+
+  <p><em>– Robert C. Martin, Clean Agile, p. 171</em></p>
+</blockquote>
+
+<p>Se tentarmos ir rápido demais, uma hora ficaremos esgotados.</p>
+
+<p>Por estarmos esgotados estaremos mais propensos a causar <em>bugs</em> e erros de <em>design</em> nos sistemas.</p>
+
+<p><em>Bugs</em> e erros de design desaceleram entregas,</p>
+
+<p>Entregas desaceleradas causam problemas na gestão, </p>
+
+<p>Problemas na gestão aumentam a pressão e o ciclo vicioso da "ressaca ágil" continua.</p>
+
+<h3 id="dor-definition-of-ready-e-dod-definition-ofdone">3. DoR (Definition of Ready) e DoD (Definition of Done)</h3>
+
+<p>A entrada de demandas pouco "refinadas" no <em>"pipeline"</em> de desenvolvimento causam muitos problemas, dentre eles:</p>
+
+<ul>
+  <li>Retrabalho</li>
+  <li>Sensação de insegurança</li>
+  <li>Perda de tempo</li>
+  <li>Expectativas frustradas</li>
+</ul>
+
+<p>Da mesma forma, "finalizar" uma demanda sem termos uma definição de pronta bem definida pode causar os mesmos problemas se entregarmos algo diferente do que o time de negócio esperava, ou faltando detalhes importantes.</p>
+
+<p>(obs:. Entenda "demanda" como um card de história escrito pelo pessoal de negócio)</p>
+
+<p>Antes de se comprometer com uma demanda na iteração, separe um tempo para refiná-la junto com a equipe:</p>
+
+<ul>
+  <li><a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"><em>Utilize INVEST para histórias e SMART para tarefas</em></a>.</li>
+  <li>Escreva testes de aceitação para a demanda.</li>
+  <li>Estime a demanda, e caso ainda não haja segurança, crie uma história de <em>Spike</em> para analisá-la e obter mais detalhes.</li>
+</ul>
+
+<p>A etapa de refinamento das demandas pode ocorrer em uma reunião marcada específicamente para isso, no momento da <em>planning</em> (reunião de planejamento) ou em qualquer outro momento em que o time esteja reunido. </p>
+
+<p>É importante que todo o time esteja presente no refinamentos de demandas pois assim todas as pessoas envolvidas ganham ciência do que é cada uma delas, têm a oportunidade de discuti-las dando opiniões, e se sentem mais seguras caso elas se responsabilizem futuramente pela entrega de alguma das demandas.</p>
+
+<h2 id="concluso">Conclusão</h2>
+
+<p><em>Clean Agile</em> é um dos livros mais leves e precisos que li em relação ao tema, o autor realmente capta todo o sentimento envolvendo o ágil nos dias atuais e nos traz "de volta às origens" como prometido. Classifico o livro como necessário para todos que desejam aumentar a performance e melhorar a saúde mental do time em que trabalham mudando perspectivas, quebrando falácias e ruídos em relação ao ágil.</p>
+
+<p>Sobre o modelo que trouxe, já contribui para aplica-lo em alguns times e trago aqui um gráfico baseado em uma experiência real de "antes e depois" em relação a tempo das tarefas do estado inicial ao concluído.</p>
+
+<p><img src="/images/agil/lead-time.png" alt="" /></p>
+
+<p>Por volta de abril e maio, resolvemos mudar o <em>mindset</em> e a dar mais atenção ao refinamento das tarefas, <em>spikes</em> e critérios de aceitação além de outras ideias do <em>XP</em> juntas a um fluxo e eventos baseados no <em>Scrum</em>, ganhamos em:</p>
+
+<ul>
+  <li>Previsibilidade (rítmo sustentável)</li>
+  <li>Confiança</li>
+  <li>Saúde mental</li>
+</ul>
+
+<p>Vale ressaltar que times, projetos e empresas tem suas especificidades e o aprendizado com melhorias contínuas também faz parte do modelo ágil. Portanto não existe um modelo perfeito, mas é sempre bom partir de ideias bem estabelecidas e princípios sólidos para obter o máximo de vantagens.</p>
+
+
+            <br/>
+            <hr>
+            Ei, o que achou desse <i>artigo</i>?
+            <br/>
+            <br/>
+            Compartilhe e dê sua opinião clicando em uma das redes abaixo:
+            <br/>
+            <br/>
+            <div class="sharethis-inline-share-buttons"></div>
+            <br/>
+            Muito obrigado!
+            <hr>
+            <br/>
+            <div class="fb-comments" data-href="https://truehenrique.com/2024/04/22/clean-agile-xp-e-scrum-evitando-a-ressaca/" data-width="" data-numposts="10"></div>
+          </div>
+      </main>
+
+      <div>
+      <aside>
+          <h3 class="no-padding-top">Artigos Recentes</h3>
+        <ul>
+              <li><a href="/2024/04/22/clean-agile-xp-e-scrum-evitando-a-ressaca/">Clean Agile, XP e Scrum - Evitando a "ressaca"</a> <span>Abr 22 <i>(pt)</i></span></li>
+              <li><a href="/2024/01/27/encontrei-meu-ikigai-e-ganhei-uma-crise-de-ansiedade/">Encontrei meu ikigai e ganhei uma crise de ansiedade</a> <span>Jan 27 <i>(pt)</i></span></li>
+              <li><a href="/2022/02/17/a-linguagem-de-programacao-bala-de-prata/">A linguagem de programação "bala de prata"</a> <span>Fev 17 <i>(pt)</i></span></li>
+              <li><a href="/2021/10/27/single-responsibility-o-principio-deturpado/">Single responsibility, o princípio deturpado</a> <span>Out 27 <i>(pt)</i></span></li>
+              <li><a href="/2020/07/17/elixir-e-phoenix-na-velocidade-da-luz/">Elixir + Phoenix, programando na velocidade da luz</a> <span>Jul 17 <i>(pt)</i></span></li>
+              <li><a href="/2020/03/04/pwa-com-elixir-e-phoenix-em-5-minutos/">PWA com Elixir e Phoenix em 5 minutos</a> <span>Mar  4 <i>(pt)</i></span></li>
+        </ul>
+        <h4><i class="fi-social-medium"></i> Medium:</h4>
+        <ul>
+                <li><a href="https://medium.com/rd-shipit/os-3-melhores-feedbacks-que-recebi-como-engenheiro-de-software-e-que-mudaram-a-minha-carreira-de8f96851737?source=rss-ab53d3682b4d------2" target="_blank">Os 3 melhores feedbacks que recebi como engenheiro de software e que mudaram a minha carreira.</a> <span>Jan 16 </span></li>
+                <li><a href="https://medium.com/rd-shipit/how-to-set-up-a-rails-7-project-with-react-and-jest-f2e016bfbdf3?source=rss-ab53d3682b4d------2" target="_blank">How to set up a Rails 7 project with React and Jest</a> <span>Fev  1 </span></li>
+                <li><a href="https://medium.com/true-henrique/escreva-e-books-com-ruby-e-softcover-a5b361cee765?source=rss-ab53d3682b4d------2" target="_blank">Escreva e-books com Ruby e Softcover</a> <span>Fev 16 </span></li>
+                <li><a href="https://medium.com/true-henrique/elixir-exunit-asser%C3%A7%C3%B5es-e-mocks-para-chamadas-de-fun%C3%A7%C3%B5es-f739de6d31a1?source=rss-ab53d3682b4d------2" target="_blank">[Elixir] ExUnit: Asserções e mocks para chamadas de funções</a> <span>Dez 16 </span></li>
+                <li><a href="https://medium.com/true-henrique/o-programador-egoc%C3%AAntrico-d19c8fc92245?source=rss-ab53d3682b4d------2" target="_blank">O programador egocêntrico</a> <span>Dez  1 </span></li>
+                <li><a href="https://medium.com/true-henrique/elixir-10-motivos-para-aprender-6cd4d6876f05?source=rss-ab53d3682b4d------2" target="_blank">|> Elixir: 10 motivos para aprender</a> <span>Nov 25 </span></li>
+                <li><a href="https://medium.com/true-henrique/como-desenvolver-um-front-end-agrad%C3%A1vel-sem-ser-especialista-17681ab50ae2?source=rss-ab53d3682b4d------2" target="_blank">|> Como desenvolver um front-end agradável sem ser especialista.</a> <span>Nov  8 </span></li>
+        </ul>
+        <hr>
+
+        <h3>Tags</h3>
+        <ol>
+
+            <li><a href="/tags/elixir/">#elixir</a></li>
+
+            <li><a href="/tags/phoenix/">#phoenix</a></li>
+
+            <li><a href="/tags/ikigai/">#ikigai</a></li>
+
+            <li><a href="/tags/linguagem-de-programacao/">#linguagem de programação</a></li>
+
+            <li><a href="/tags/nichos/">#nichos</a></li>
+
+            <li><a href="/tags/programacao/">#programação</a></li>
+
+            <li><a href="/tags/linguagem/">#linguagem</a></li>
+
+            <li><a href="/tags/java/">#java</a></li>
+
+            <li><a href="/tags/ruby/">#ruby</a></li>
+
+            <li><a href="/tags/python/">#python</a></li>
+
+            <li><a href="/tags/rust/">#rust</a></li>
+
+            <li><a href="/tags/kotlin/">#kotlin</a></li>
+
+            <li><a href="/tags/javascript/">#javascript</a></li>
+
+            <li><a href="/tags/go/">#go</a></li>
+
+            <li><a href="/tags/c/">#c</a></li>
+
+            <li><a href="/tags/padroes/">#padrões</a></li>
+
+            <li><a href="/tags/solid/">#SOLID</a></li>
+
+            <li><a href="/tags/boas-praticas/">#boas práticas</a></li>
+
+            <li><a href="/tags/engenharia-de-software/">#engenharia de software</a></li>
+
+            <li><a href="/tags/single-responsability/">#single responsability</a></li>
+        </ol>
+        <hr/>
+
+        <h3>Por Ano</h3>
+        <ol>
+            <li><a href="/2024/">2024</a></li>
+            <li><a href="/2022/">2022</a></li>
+            <li><a href="/2021/">2021</a></li>
+            <li><a href="/2020/">2020</a></li>
+        </ol>
+        <hr/>
+
+        <h3>Arquivo completo</h3>
+        <a class="pseudo button" href="/arquivo">Abrir</a>
+        <br>
+      </aside>
+      </div>
+    </div>
+    <footer class="social-footer">
+  <div class="wrap">
+    @truehenrique
+  </div>
+</footer>
+
+  </body>
+</html>
