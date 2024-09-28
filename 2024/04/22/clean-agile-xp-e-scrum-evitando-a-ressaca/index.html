@@ -180,16 +180,15 @@ Dificilmente alguém que trabalha com <em>software</em> nunca passou por isso. P
 
 <ol>
   <li>Verificamos os dados gerados pela última iteração.</li>
-  <li>Histórias (escritas préviamente pelas pessoas de negócio) são apresentadas e validadas pelos critérios de <em>DoR</em> (<em>Definition of Ready</em>). O livro <em>Clean Agile</em> cita a utilização do acrônimo <a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"><em>INVEST</em></a> (Independente, negociável, valiosa, estimável, pequena (small) e testável) como um exemplo de <em>Definition of Ready</em></li>
-  <li>Histórias são estimadas pelas pessoas técnicas. A estimativa pode ser feita em pontos de 1 a 6, tamanho de camisa (p, m, g) ou <em>fibonacci</em> para medir esforço ou estimativa de três pontos caso queiramos estimar tempo.</li>
-  <li>Histórias <em>Spike</em> são criadas caso alguma história ainda não seja estimável: Não há informação ou conhecimento técnico suficiente para que consigamos entrega-la ou não conseguimos garantir que ela é <a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"><em>INVEST</em></a>.</li>
-  <li><em>DoD</em> (<em>Definition of Done</em> / <strong>testes de aceitação</strong>) das histórias são escritos.</li>
-  <li>O que faremos na próxima iteração é definido pela <strong>equipe como um todo</strong>.</li>
+  <li>Histórias são apresentadas pelas pessoas de negócio e validadas pelos critérios de <em>DoR</em> (<em>Definition of Ready</em>). O livro <em>Clean Agile</em> cita a utilização do acrônimo <a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"><em>INVEST</em></a> (Independente, negociável, valiosa, estimável, pequena (small) e testável) como um exemplo de <em>Definition of Ready</em></li>
+  <li>Histórias são quebradas em tarefas técnicas <a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"><em>SMART</em></a> (pelo time técnico) e estimadas. A estimativa das tarefas pode ser feita de diversas maneiras: em pontos de 1 a 6, tamanho de camisa (p, m, g), <em>fibonacci</em> para medir esforço ou estimativa de três pontos caso queiramos estimar tempo.</li>
+  <li>Histórias <em>Spike</em> (ou de discovery) são criadas caso não haja informação ou conhecimento técnico suficiente para que consigamos entregar determinada história, ou não conseguimos garantir que ela é <a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"><em>INVEST</em></a>.</li>
+  <li>O que faremos na próxima iteração é definido pela <strong>equipe como um todo</strong>, utilizamos os dados gerados nas últimas iterações para nos apoiar (como a velocidade do time).</li>
 </ol>
 
-<p>Podemos também ter uma segunda reunião de <em>Iteration Planning</em> após a primeira, apenas com o time técnico, para a quebra das histórias em tarefas <a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"><em>SMART</em></a>  (<em>Definition of Ready</em> para tarefas), em um <em>board</em> específico "<em>linkado</em>" com o <em>board</em> de histórias.</p>
+<p>obs:. Podemos ter uma segunda reunião de <em>Iteration Planning</em> após a primeira, apenas com o time técnico, para a quebra das histórias em tarefas <a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"><em>SMART</em></a> ao invés de realizar a quebra em uma reunião só.</p>
 
-<p>Segundo o livro, a <em>Iteration Planning</em> é naturalmente bem extensa:</p>
+<p>Vale ressaltar: O ideal é que tarefas técnicas e histórias estejam separadas em boards específicos (Dessa forma obtemos métricas separadas e temos uma melhor visibilidade do fluxo de trabalho e fluxo de entrega de valor)</p>
 
 <blockquote>
   <p><em>"A reunião deve ser programada para ter um vigésimo da duração da iteração. A IPM (Iteration Planning Meeting) para uma iteração de duas semanas deve exigir cerca de metade de um dia."</em></p>
@@ -213,19 +212,19 @@ Dificilmente alguém que trabalha com <em>software</em> nunca passou por isso. P
   <li>O que fazemos quando não sabemos como implementar determinada demanda de negócio?</li>
 </ul>
 
-<p>Uma má interpretação do <em>Scrum</em>, sem complementação técnica, pode soar como um "Faz aí dentro da sprint o mais rápido possível", o que é um grande problema:</p>
+<p>Uma má interpretação do <em>Scrum</em>, sem complementação técnica, pode soar como um "Faz aí o mais rápido possível, precisamos entregar valor ao cliente até o final da sprint", o que é um grande problema:</p>
 
 <ul>
   <li>Não existem definições de boas práticas e padrões para desenvolvimento técnico de <em>software</em>.</li>
+  <li>Pode gerar pressão e cobranças desnecessárias.</li>
   <li>O time não tem uma definição formada sobre quando uma demanda está pronta para ser executada (<a href="https://medium.com/@raphavizoni/definition-of-ready-acde0e74ebab"><em>definition of ready</em></a> / <a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"><em>INVEST</em></a>) (o <em>Scrum Guide</em> cita apenas <em>definition of done</em>)</li>
-  <li><em>Discoveries</em> e planejamentos da parte técnica acontecem durante a implementação de uma demanda, e não antes. Causando imprevistos frequentes.</li>
 </ul>
 
-<p>Dessa forma, informações técnicas importantes podem surgir em momentos inapropriados, como após prazos, metas e <em>"goals"</em> já estarem combinados. Portanto, para funcionar em equipes de desenvolvimento o <em>Scrum</em> precisa ser complementado e uma das formas é utilizar o <em>XP</em>.</p>
+<p>Dessa forma, informações técnicas importantes podem surgir em momentos inapropriados, como após prazos, metas e <em>"goals"</em> já estarem combinados. Portanto, para funcionar em equipes de desenvolvimento o ideal é que o <em>Scrum</em> seja complementado, e uma das formas é utilizar o <em>XP</em>.</p>
 
 <h3 id="mesclando-xp-com-scrum">Mesclando XP com Scrum</h3>
 
-<p>Particularmente, prefiro evitar reuniões muito longas, entendo que a exaustão mental acumulada pode fazer com que tomemos decisões erradas. Gosto de trabalhar dividindo as atividades da reunião de <em>Iteration / Release Planning</em> do <em>XP</em> em reuniões menores:</p>
+<p>Particularmente, prefiro evitar reuniões muito longas, entendo que a exaustão mental acumulada pode fazer com que tomemos decisões erradas. Gosto de trabalhar dividindo as atividades da reunião de <em>Iteration / Release Planning</em> do <em>XP</em> em reuniões menores seguindo a ideia dos <em>Scrum Events</em>:</p>
 
 <ul>
   <li>A parte de estimativa, criação de histórias, tarefas e <em>spikes</em> / <em>discovery</em> técnicos ficam em uma reunião denominada <strong>Backlog Refinement</strong> (que acontece sem formalidade durante a iteração, conforme demanda)</li>
@@ -233,7 +232,7 @@ Dificilmente alguém que trabalha com <em>software</em> nunca passou por isso. P
   <li>A revisão dos resultados e dados gerados pelas iterações ficam em uma reunião denominada <strong>Review</strong></li>
 </ul>
 
-<p>Além dessas, também gosto de utilizar uma reunião denominada <strong>Retrospectiva</strong> (geralmente logo após da <strong>Review</strong>), onde refletimos sobre a iteração e buscamos oportunidades de melhoria, deixando o fluxo mais parecido com o abaixo:</p>
+<p>Além dessas, também podemos ter uma reunião denominada <strong>Retrospectiva</strong> (geralmente logo após da <strong>Review</strong>), onde refletimos sobre a iteração e buscamos oportunidades de melhoria, deixando o fluxo mais parecido com o abaixo:</p>
 
 <p><img src="/images/agil/xp-scrum-flow.png" alt="" /></p>
 
@@ -294,7 +293,7 @@ Segue o que se aplica à Reunião Diária:</em></p>
 
 <h2 id="evitando-a-ressaca">Evitando a Ressaca</h2>
 
-<p>Se eu pudesse elencar 3 práticas principais que evitam uma grande "ressaca àgil", mas onde empresas ainda acabam pecando, baseadas no livro "Clean Agile" e minha experiência profissional, seriam:</p>
+<p>Se eu pudesse elencar 3 práticas principais que aumentam a previsibilidade e a produtividade de um time, evitando uma grande "ressaca ágil", baseadas no livro "Clean Agile" e minha experiência profissional, seriam:</p>
 
 <h3 id="ateno-ao-design-desoftware">1. Atenção ao "design" de software</h3>
 
