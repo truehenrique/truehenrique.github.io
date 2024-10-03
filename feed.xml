@@ -14,7 +14,7 @@
     <link rel="alternate" href="https://truehenrique.com/2024/04/22/clean-agile-xp-e-scrum-evitando-a-ressaca/"/>
     <id>https://truehenrique.com/2024/04/22/clean-agile-xp-e-scrum-evitando-a-ressaca/</id>
     <published>2024-04-21T21:26:00-03:00</published>
-    <updated>2024-10-01T21:47:01-03:00</updated>
+    <updated>2024-10-03T12:17:51-03:00</updated>
     <author>
       <name>Henrique F. Teixeira</name>
     </author>
@@ -125,7 +125,7 @@ Dificilmente alguém que trabalha com &lt;em&gt;software&lt;/em&gt; nunca passou
 
 &lt;p&gt;obs:. Podemos ter uma segunda reunião de &lt;em&gt;Iteration Planning&lt;/em&gt; após a primeira, apenas com o time técnico, para quebrar histórias em tarefas &lt;a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"&gt;&lt;em&gt;SMART&lt;/em&gt;&lt;/a&gt; ao invés de realizar a quebra em uma reunião só.&lt;/p&gt;
 
-&lt;h5 id="planning-em-uma-iterao-zero"&gt;Planning em uma iteração zero&lt;/h5&gt;
+&lt;h3 id="planning-em-uma-iterao-zero"&gt;Planning em uma iteração zero&lt;/h3&gt;
 
 &lt;p&gt;Em uma iteração zero de um projeto, temos um planejamento diferente, em uma reunião chamada &lt;em&gt;Release Planning&lt;/em&gt;. Basicamente é a mesma coisa da &lt;em&gt;Iteration Planning&lt;/em&gt;, com a diferença de  que não definiremos o que faremos para uma única iteração e ainda não temos dados gerados. Focamos em questões globais (em alto nível, sem muitos detalhes) para o projeto como um todo (todas as iterações).&lt;/p&gt;
 
