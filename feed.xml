@@ -14,24 +14,16 @@
     <link rel="alternate" href="https://truehenrique.com/2024/04/22/clean-agile-xp-e-scrum-evitando-a-ressaca/"/>
     <id>https://truehenrique.com/2024/04/22/clean-agile-xp-e-scrum-evitando-a-ressaca/</id>
     <published>2024-04-21T21:26:00-03:00</published>
-    <updated>2024-10-03T12:17:51-03:00</updated>
+    <updated>2024-10-20T01:20:20-03:00</updated>
     <author>
       <name>Henrique F. Teixeira</name>
     </author>
-    <content type="html">&lt;p&gt;O &lt;em&gt;board&lt;/em&gt; ágil do seu time está com diversos &lt;em&gt;cards&lt;/em&gt; estacionados na mesma coluna durante dias e nada é entregue?&lt;/p&gt;
-
-&lt;p&gt;O pessoal de negócios está frustrado tendo constantemente que redefinir prazos e estratégias?&lt;/p&gt;
-
-&lt;p&gt;Sensação de muito trabalho e pouco resultado?&lt;/p&gt;
-
-&lt;p&gt;Se comprometeram com algo e descobriram só depois que não conseguiam cumprir?&lt;/p&gt;
-
-&lt;p&gt;O clima está ruim e a situação só parece piorar?&lt;/p&gt;
+    <content type="html">&lt;p&gt;O &lt;em&gt;board&lt;/em&gt; do seu time está com diversos &lt;em&gt;cards&lt;/em&gt; estacionados na mesma coluna durante dias e nada é entregue? O pessoal de negócios está frustrado tendo constantemente que redefinir prazos e estratégias? Sensação de muito trabalho e pouco resultado? O clima está ruim e a situação só parece piorar?&lt;/p&gt;
 
 &lt;p&gt;Você pode estar vivendo o que &lt;em&gt;Robert C. Martin&lt;/em&gt; (&lt;em&gt;Uncle Bob&lt;/em&gt;) nomeou em seu livro &lt;em&gt;Clean Agile&lt;/em&gt; como "ressaca ágil".
-Dificilmente alguém que trabalha com &lt;em&gt;software&lt;/em&gt; nunca passou por isso. Principalmente quando há a ausência de pessoas sêniores no time ou estamos lidando com &lt;em&gt;softwares&lt;/em&gt; complexos: O código-fonte está espalhado por diversos projetos, é extensivo demais, mal documentado ou mal escrito.&lt;/p&gt;
+Dificilmente alguém que trabalha com &lt;em&gt;software&lt;/em&gt; nunca passou por isso. Principalmente quando há a ausência de pessoas sêniores no time e/ou estamos lidando com &lt;em&gt;softwares&lt;/em&gt; complexos: O código-fonte está espalhado por diversos projetos, é extensivo demais, mal documentado ou mal escrito.&lt;/p&gt;
 
-&lt;p&gt;A ideia do ágil é abrangente, complexa (apesar de não parecer) e com vários "&lt;em&gt;frameworks&lt;/em&gt;  ágeis" diferentes espalhados por aí. Similarmente, &lt;em&gt;softwares&lt;/em&gt; também. E quanto mais complexo é um problema, mais difícil é de explicar e entendê-lo. Além disso, nossa transmissão de conhecimento muitas vezes é falha (viés de confirmação, excessos e lacunas de informação), cada ouvinte pode interpretar e replicar a mesma informação de maneiras diferentes, isso pode acabar moldando uma realidade, uma verdade ou um comportamento social.&lt;/p&gt;
+&lt;p&gt;A ideia do movimento ágil é abrangente, complexa (apesar de não parecer) e com vários "&lt;em&gt;métodos&lt;/em&gt;  ágeis" diferentes espalhados por aí. Similarmente, &lt;em&gt;softwares&lt;/em&gt; também. E quanto mais complexo é um problema, mais difícil é de explicar e entendê-lo. Além disso, nossa transmissão de conhecimento muitas vezes é falha (viés de confirmação, excessos e lacunas de informação), cada ouvinte pode interpretar e replicar a mesma informação de maneiras diferentes, isso pode acabar moldando uma realidade, uma verdade ou um comportamento social.&lt;/p&gt;
 
 &lt;p&gt;Voltando ao tema principal, é possível enxergar no mercado uma mistura de interpretações do "&lt;em&gt;ágil&lt;/em&gt;" sendo aplicadas ao mesmo tempo, em busca de um resultado idealizado e "teórico" que muitas vezes não se comprova na prática. Essas interpretações podem estar longe do manifesto principal e seus princípios, gerando muita expectativa frustrada, apontar de dedos e poucos resultados.&lt;/p&gt;
 
@@ -59,11 +51,68 @@ Dificilmente alguém que trabalha com &lt;em&gt;software&lt;/em&gt; nunca passou
   &lt;p&gt;&lt;em&gt;– Robert C. Martin, Clean Agile, p. 32&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;O resto (&lt;em&gt;Scrum, XP, Kanban&lt;/em&gt;) são apenas ferramentas ou &lt;em&gt;frameworks&lt;/em&gt; para facilitar e/ou guiar a utilização do ágil.&lt;/p&gt;
+&lt;p&gt;O resto (&lt;em&gt;Scrum, XP, Kanban&lt;/em&gt;) são apenas ferramentas, métodos ou &lt;em&gt;frameworks&lt;/em&gt; para facilitar e/ou guiar a utilização do ágil. Além dessa definição, os doze princípios da agilidade &lt;strong&gt;devem ser seguidos&lt;/strong&gt;:&lt;/p&gt;
 
-&lt;p&gt;Além disso, o livro comenta sobre os doze princípios ágeis que &lt;strong&gt;devem ser seguidos&lt;/strong&gt; (podemos conferir aqui &lt;a href="http://agilemanifesto.org/iso/ptbr/principles.html"&gt;http://agilemanifesto.org/iso/ptbr/principles.html&lt;/a&gt;)&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Nossa maior prioridade é satisfazer o cliente
+através da entrega contínua e adiantada
+de software com valor agregado.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Mudanças nos requisitos são bem-vindas,
+mesmo tardiamente no desenvolvimento.
+Processos ágeis tiram vantagem das
+mudanças visando vantagem competitiva para o cliente.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Entregar frequentemente software funcionando,
+de poucas semanas a poucos meses,
+com preferência à menor escala de tempo.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Pessoas de negócio e desenvolvedores devem trabalhar
+diariamente em conjunto por todo o projeto.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Construa projetos em torno de indivíduos motivados.
+Dê a eles o ambiente e o suporte necessário
+e confie neles para fazer o trabalho.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;O método mais eficiente e eficaz de transmitir
+informações para e entre uma equipe de desenvolvimento
+é através de conversa face a face.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Software funcionando é a medida primária de progresso.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Os processos ágeis promovem desenvolvimento
+sustentável. Os patrocinadores, desenvolvedores e
+usuários devem ser capazes de manter um ritmo
+constante indefinidamente.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Contínua atenção à excelência técnica e bom design
+aumenta a agilidade.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Simplicidade–a arte de maximizar a quantidade de
+trabalho não realizado–é essencial.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;As melhores arquiteturas, requisitos e designs
+emergem de equipes auto-organizáveis.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Em intervalos regulares, a equipe reflete sobre como
+se tornar mais eficaz e então refina e ajusta seu
+comportamento de acordo.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;p&gt;Uncle bob também cita que o &lt;em&gt;framework XP&lt;/em&gt; (&lt;em&gt;Extreme Programming&lt;/em&gt;) é o &lt;em&gt;"mais bem definido, completo, menos confuso e o melhor representante do cerne essencial da agilidade"&lt;/em&gt;, e o utiliza para explicar conceitos do ágil.&lt;/p&gt;
+&lt;p&gt;Uncle bob também cita que o &lt;em&gt;framework XP&lt;/em&gt; (&lt;em&gt;Extreme Programming&lt;/em&gt;) é o &lt;em&gt;"mais bem definido, completo, menos confuso e o melhor representante do cerne essencial da agilidade"&lt;/em&gt;, e o utiliza como uma base ideal para explicar conceitos do ágil.&lt;/p&gt;
 
 &lt;h3 id="xp-um-breve-resumo"&gt;XP, um breve resumo&lt;/h3&gt;
 
@@ -135,39 +184,46 @@ Dificilmente alguém que trabalha com &lt;em&gt;software&lt;/em&gt; nunca passou
 
 &lt;h3 id="scrum-vs-xp"&gt;Scrum vs XP&lt;/h3&gt;
 
-&lt;p&gt;Diferente do &lt;em&gt;Scrum&lt;/em&gt;, o &lt;em&gt;XP&lt;/em&gt; considera práticas técnicas, o que o torna alinhado com o princípio &lt;em&gt;"Continuous attention to technical excellence and good design enhances agility"&lt;/em&gt;. Inclusive, &lt;strong&gt;frameworks como o &lt;em&gt;Scrum&lt;/em&gt; necessitam de completementação técnica para funcionar&lt;/strong&gt; no ambito de desenvolvimento. No &lt;em&gt;Scrum Guide&lt;/em&gt;, por exemplo, não temos nenhuma citação clara e explícita sobre práticas técnicas, dando margem a diversas interpretações…&lt;/p&gt;
+&lt;p&gt;Scrum é um framework ágil desenvolvido para ser utilizado em ambientes complexos e com mudanças frequêntes, ele define papéis com responsabilidades (scrum master, developers, product owner), eventos (sprint, planning, daily, retrospectiva, review), artefatos (backlog de produto, backlog da sprint, incremento) e a relação entre eles. &lt;strong&gt;O Scrum é propositalmente incompleto&lt;/strong&gt; e o ideal é que ele seja complementado com outras práticas, por exemplo, o scrum guide não define que devemos fazer TDD ou refatorações no código do sistema, mas define que "durante a sprint, a qualidade não deve diminuir", logo, adicionar essas práticas técnicas do XP em um Scrum é algo que enriquece ainda mais o projeto e alinha com o princípio ágil &lt;em&gt;"Contínua atenção à excelência técnica e bom design
+aumenta a agilidade."&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h4 id="pontos-similares-entre-scrum-e-xp"&gt;Pontos similares entre Scrum e XP:&lt;/h4&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Quando damos atenção para as etapas de &lt;em&gt;design&lt;/em&gt; de &lt;em&gt;software&lt;/em&gt;?&lt;/li&gt;
-  &lt;li&gt;Quando uma demanda de negócio está preparada para ser implementada?&lt;/li&gt;
-  &lt;li&gt;O que fazemos quando não sabemos como implementar determinada demanda de negócio e/ou não temos ensumo para estima-la?&lt;/li&gt;
+  &lt;li&gt;Os dois definem um evento denominado &lt;em&gt;planning&lt;/em&gt; para planejar a iteração.&lt;/li&gt;
+  &lt;li&gt;A iteração no XP, é análoga a &lt;em&gt;Sprint&lt;/em&gt; do Scrum.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Product Backlog items&lt;/em&gt; são similares as &lt;em&gt;User Histories&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Stand Up Meetings&lt;/em&gt; são similares as &lt;em&gt;Dailys&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Uma má interpretação do &lt;em&gt;Scrum&lt;/em&gt;, sem complementação técnica, pode soar como um "Faz aí o mais rápido possível, precisamos entregar valor ao cliente até o final da sprint", o que é um grande problema:&lt;/p&gt;
+&lt;h4 id="pontos-do-xp-que-agregam-ao-scrum"&gt;Pontos do XP que agregam ao Scrum:&lt;/h4&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Não existem definições de boas práticas e padrões para desenvolvimento técnico de &lt;em&gt;software&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;Pode gerar pressão e cobranças desnecessárias.&lt;/li&gt;
-  &lt;li&gt;O time não tem uma definição formada sobre quando uma demanda está pronta para ser executada (&lt;a href="https://medium.com/@raphavizoni/definition-of-ready-acde0e74ebab"&gt;&lt;em&gt;definition of ready&lt;/em&gt;&lt;/a&gt; / &lt;a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"&gt;&lt;em&gt;INVEST&lt;/em&gt;&lt;/a&gt;) (o &lt;em&gt;Scrum Guide&lt;/em&gt; cita apenas &lt;em&gt;definition of done&lt;/em&gt;)&lt;/li&gt;
+  &lt;li&gt;Apesar do Scrum citar que devemos escolher itens que estejam &lt;em&gt;Ready&lt;/em&gt; para trabalharmos na iteração, não existe o conceito de &lt;em&gt;Definition of Ready&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;Histórias &lt;em&gt;Spike&lt;/em&gt; são fundamentais para trabalharmos tarefas de discovery dentro da sprint.&lt;/li&gt;
+  &lt;li&gt;As práticas técnicas, de equipe e de negócio podem incrementar ainda mais a qualidade das entregas&lt;/li&gt;
+  &lt;li&gt;Podemos adicionar critérios de aceitação nas &lt;em&gt;User Histories&lt;/em&gt; / &lt;em&gt;Product Backlog Items&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Dessa forma, informações técnicas importantes podem surgir em momentos inapropriados, como após prazos, metas e &lt;em&gt;"goals"&lt;/em&gt; já estarem combinados. Portanto, para funcionar em equipes de desenvolvimento o ideal é que o &lt;em&gt;Scrum&lt;/em&gt; seja complementado, e uma das formas é utilizar o &lt;em&gt;XP&lt;/em&gt;.&lt;/p&gt;
+&lt;h4 id="definition-of-done-x-critrio-de-aceitao"&gt;Definition of Done x Critério de aceitação&lt;/h4&gt;
+
+&lt;p&gt;Esses 2 conceitos confundem muita gente, apesar de parecerem a mesma coisa, &lt;em&gt;Defition of Done&lt;/em&gt; (do &lt;em&gt;Scrum&lt;/em&gt;) é uma definição indepentende de item, enquando o critério de aceitação (do &lt;em&gt;XP&lt;/em&gt;) e dependente de um item, exemplo de DoD: "Qualquer item do backlog, para ser considerado pronto, deve ter uma cobertura de testes de 95% ou mais". Exemplo de critério de aceitação: "O usuário deve conseguir clicar no item do menu e ver a página do carrinho de compras".&lt;/p&gt;
 
 &lt;h3 id="mesclando-xp-com-scrum"&gt;Mesclando XP com Scrum&lt;/h3&gt;
 
-&lt;p&gt;Particularmente, prefiro evitar reuniões muito longas, entendo que a exaustão mental acumulada pode fazer com que tomemos decisões erradas. Gosto de trabalhar dividindo as atividades da reunião de &lt;em&gt;Iteration / Release Planning&lt;/em&gt; do &lt;em&gt;XP&lt;/em&gt; em reuniões menores seguindo a ideia dos &lt;em&gt;Scrum Events&lt;/em&gt;:&lt;/p&gt;
+&lt;p&gt;Particularmente, prefiro evitar reuniões muito longas, entendo que a exaustão mental acumulada pode fazer com que tomemos decisões erradas, no XP concentramos muita responsabilidade em uma só reunião (&lt;em&gt;Planning&lt;/em&gt;), mas seguindo a ideia dos &lt;em&gt;Scrum Events&lt;/em&gt;, podemos separar essas reponsabilidades em reuniões mais curtas:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;A parte de estimativa, criação de histórias, tarefas e &lt;em&gt;spikes&lt;/em&gt; / &lt;em&gt;discovery&lt;/em&gt; técnicos ficam em uma reunião denominada &lt;strong&gt;Backlog Refinement&lt;/strong&gt; (que acontece sem formalidade durante a iteração, conforme demanda)&lt;/li&gt;
-  &lt;li&gt;A parte de planejamento da iteração e comprometimento (&lt;em&gt;sprint goal&lt;/em&gt;) fica em uma reunião denominada &lt;strong&gt;Planning&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;A parte de planejamento da iteração e comprometimento (&lt;em&gt;Sprint goal&lt;/em&gt;) continua em uma reunião denominada &lt;strong&gt;Planning&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;A parte de estimativa, criação de histórias, tarefas e &lt;em&gt;spikes&lt;/em&gt; / &lt;em&gt;discovery&lt;/em&gt; técnicos ficam em uma reunião denominada &lt;strong&gt;Backlog Refinement&lt;/strong&gt; (que acontece sem formalidade durante a iteração, conforme demanda e necessidade). O ideal é que essa reunião aconteça antes da planning para termos items &lt;em&gt;Ready&lt;/em&gt; para a iteração.&lt;/li&gt;
   &lt;li&gt;A revisão dos resultados e dados gerados pelas iterações ficam em uma reunião denominada &lt;strong&gt;Review&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Além dessas, também podemos ter uma reunião denominada &lt;strong&gt;Retrospectiva&lt;/strong&gt; (geralmente logo após da &lt;strong&gt;Review&lt;/strong&gt;), onde refletimos sobre a iteração e buscamos oportunidades de melhoria, deixando o fluxo mais parecido com o abaixo:&lt;/p&gt;
+&lt;p&gt;Além dessas, também podemos ter uma reunião especifica para refletirmos sobre a iteração e buscarmos oportunidades de melhoria, a &lt;strong&gt;Retrospectiva&lt;/strong&gt; (geralmente logo após da &lt;strong&gt;Review&lt;/strong&gt;), deixando o fluxo mais parecido com o abaixo:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="/images/agil/xp-scrum-flow.png" alt="" /&gt;&lt;/p&gt;
 
-&lt;p&gt;Se trocarmos o nome "Iteração" por "Sprint" e adicionarmos a &lt;em&gt;daily&lt;/em&gt; temos todos os &lt;em&gt;Scrum Events&lt;/em&gt; definidos no &lt;em&gt;Scrum Guide&lt;/em&gt; &lt;a href="https://scrumguides.org/scrum-guide.html#scrum-events"&gt;https://scrumguides.org/scrum-guide.html#scrum-events&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Se trocarmos o nome "Iteração" por "Sprint" e adicionarmos a &lt;em&gt;Daily&lt;/em&gt; temos todos os &lt;em&gt;Scrum Events&lt;/em&gt; definidos no &lt;em&gt;Scrum Guide&lt;/em&gt; (&lt;a href="https://scrumguides.org/scrum-guide.html#scrum-events"&gt;https://scrumguides.org/scrum-guide.html#scrum-events&lt;/a&gt;).&lt;/p&gt;
 
 &lt;p&gt;Além disso também podemos trabalhar na nossa &lt;strong&gt;Planning&lt;/strong&gt;, as perguntas do &lt;em&gt;Scrum Planning&lt;/em&gt;:&lt;/p&gt;
 
@@ -177,7 +233,7 @@ Dificilmente alguém que trabalha com &lt;em&gt;software&lt;/em&gt; nunca passou
   &lt;li&gt;&lt;em&gt;How will the chosen work get done?&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Utilizando práticas do &lt;em&gt;framework XP&lt;/em&gt; "temperadas" com os eventos do &lt;em&gt;Scrum&lt;/em&gt;, podemos ter um modelo ágil que, respeitando o manifesto e todos os seus princípios, aproveita os benefícios dos dois &lt;em&gt;frameworks&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Utilizando práticas do &lt;em&gt;framework XP&lt;/em&gt; "temperadas" com os eventos do &lt;em&gt;Scrum&lt;/em&gt;, podemos ter um modelo ágil que, respeitando o manifesto e todos os seus princípios, aproveita os benefícios das duas ferramentas.&lt;/p&gt;
 
 &lt;h3 id="daily-meetings"&gt;Daily Meetings&lt;/h3&gt;
 
@@ -291,7 +347,7 @@ Se mantermos o ritmo, vamos mais longe. &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"&gt;&lt;em&gt;Utilize INVEST para histórias e SMART para tarefas&lt;/em&gt;&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Escreva testes de aceitação para a demanda.&lt;/li&gt;
+  &lt;li&gt;Escreva critérios de aceitação para a demanda.&lt;/li&gt;
   &lt;li&gt;Estime a demanda, e caso ainda não haja segurança, crie uma história de &lt;em&gt;Spike&lt;/em&gt; para analisá-la e obter mais detalhes.&lt;/li&gt;
 &lt;/ul&gt;
 
