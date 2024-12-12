@@ -8,6 +8,18 @@
     <meta name="author" content="Henrique Fernandez Teixeira">
     <link rel="icon" type="image/ico" href="/images/icon-16x16.png">
 
+    <link rel="manifest" href="manifest.json">
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register('/javascripts/service_worker.js').then(function(registration) {
+            console.log('ServiceWorker registered');
+          }).catch(function(err) {
+            console.log('ServiceWorker error: ', err);
+          });
+        })
+      }
+    </script>
       <title>Blog - @truehenrique</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.css" />
