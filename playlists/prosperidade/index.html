@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='ie=edge' />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="Henrique Fernandez Teixeira">
+    <link rel="icon" type="image/ico" href="/images/icon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+            console.log('ServiceWorker registered');
+          }).catch(function(err) {
+            console.log('ServiceWorker error: ', err);
+          });
+        })
+      }
+    </script>
+
+      <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=60bc2b44a75109001138d6ff&product=sticky-share-buttons' async='async'></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161733672-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-161733672-1');
+      </script>
+    <link href="/stylesheets/grid.css" rel="stylesheet" /><link href="/stylesheets/beautify.css" rel="stylesheet" />
+    <title>Playlists - @truehenrique</title>
+
+    <style>
+        body {
+          margin-top: 0;
+          color: white;
+          background-color:black
+        }
+        .iframe-container {
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          padding-top: 56.25%;
+          background: black;
+          border-radius: 8px;
+        }
+
+        .iframe-responsive {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+        }
+
+        .content-wrap {
+          padding: 0.01em 1em;
+          background-color: #232323;
+          border-radius: 8px;
+        }
+
+        #course-title {
+          background: #232323;
+          width: fit-content;
+          padding: 0.5em;
+          border-radius: 8px;
+          margin: 0.5em 0em 0.3em;
+        }
+
+        iframe {
+          border: 0px;
+        }
+
+        img {
+          width: 100%;
+          padding: 0.5em;
+          border-radius: 8px;
+          margin: 0.5em 0em 0.3em;
+        }
+        .progress-container {
+          width: 100%;
+          background-color: #232323;
+          border-radius: 8px;
+        }
+
+        .progress-bar {
+          width: 0;
+          height: 30px;
+          background-color: #6e6e6e;
+          text-align: center;
+          line-height: 30px;
+          color: white;
+          border-radius: 8px;
+          margin-top:1em;
+          transition: 0.5s;
+          font-size: 0.7em;
+        }
+
+        @media only screen and (min-width: 65em) {  /* 720px */
+          .scroll-unless-sm {
+            height: 595px;
+            overflow: auto;
+          }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="c2 display-none-sm">
+          <img src="/images/logo-white.png" alt="" />
+        </div>
+        <div class="c10">
+          <h2 id="course-title"></h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c8">
+          <div class="iframe-container">
+            <iframe name="iframe_a"
+                    class="iframe-responsive"
+                    frameBorder="0"
+                    title="Iframe Example"
+                    allowfullscreen="allowfullscreen"
+                    mozallowfullscreen="mozallowfullscreen"
+                    msallowfullscreen="msallowfullscreen"
+                    oallowfullscreen="oallowfullscreen"
+                    webkitallowfullscreen="webkitallowfullscreen"
+                    ></iframe>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
+        </div>
+
+        <div class="c4 scroll-unless-sm">
+          <div class="content-wrap">
+            <script>
+  const COURSE_NAME = 'prosperidade'
+  const COURSE_TITLE = 'Prosperidade'
+</script>
+
+<h4 id="introdução">1. Disciplina & Motivação</h4>
+<ol>
+  <li><input type="checkbox"> <a target="iframe_a" href="https://www.youtube.com/embed/TtPKNNpYti8">A vida é um videogame (Aqui está como vencer)</a></li>
+</ol>
+
+<h4 id="introdução">2. Saúde</h4>
+<ol>
+  <li><input type="checkbox"> <a target="iframe_a" href="https://www.youtube.com/embed/Hvte3XpPceQ">Sedentarismo: o pai de todos os males | Coluna #107</a></li>
+  <li><input type="checkbox"> <a target="iframe_a" href="https://www.youtube.com/embed/Gh0kiCrckr8">COMO PERDER A BARRIGUINHA EM 21 DIAS | Lutz Podcast</a></li>
+</ol>
+
+<h4 id="introdução">3. Mentalidade</h4>
+<ol>
+  <li><input type="checkbox"> <a target="iframe_a" href="https://www.youtube.com/embed/do4CfvJOado">[COMPLETO] Os Segredos da Mente Milionária | ENRIQUEÇA ADOTANDO OS HÁBITOS DOS MILIONÁRIOS</a></li>
+  <li><input type="checkbox"> <a target="iframe_a" href="https://www.youtube.com/embed/5s8YvipW34o">AYRTON SENNA SOBRE O MEDO | Reflexões Transcendentais</a></li>
+  <li><input type="checkbox"> <a target="iframe_a" href="https://www.youtube.com/embed/ldV9CgDttto">COMO O CELULAR ACABOU COM SUA POSSIBILIDADE DE SER FELIZ</a></li>
+</ol>
+
+<h4 id="introdução">4. Estudos</h4>
+<ol>
+  <li><input type="checkbox"> <a target="iframe_a" href="https://www.youtube.com/embed/03QqrP_24LE">Como ter MAIS PERFORMANCE nos ESTUDOS (sem cafeína) | Eslen Delanogare</a></li>
+  <li><input type="checkbox"> <a target="iframe_a" href="https://www.youtube.com/embed/upMrjrq_53g">COMO ESTUDAR MELHOR (Segundo a Neurociência)</a></li>
+</ol>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="c12">
+          <footer class="social-footer">
+  <div class="wrap">
+    @truehenrique
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+    <script>
+      const storage = {
+        checkboxes: {
+          setStates: (checkboxStates) => {
+            return localStorage.setItem(`${COURSE_NAME}-checkboxStates`, JSON.stringify(checkboxStates))
+          },
+          getStates: () => {
+            return JSON.parse(localStorage.getItem(`${COURSE_NAME}-checkboxStates`))
+          },
+        },
+      }
+
+      const checkboxes = (() => { return document.querySelectorAll('input[type="checkbox"]') })()
+
+      // Conteúdo do título
+      function setTitle() {
+        document.querySelector('h2').textContent = COURSE_TITLE
+      }
+
+      //Barra de progresso
+      const progressBar = document.getElementById('progress-bar');
+
+      function updateProgressBar() {
+        const checkedCount = document.querySelectorAll('input[type="checkbox"]:checked').length;
+        const totalCount = checkboxes.length;
+        const progressPercentage = (checkedCount / totalCount) * 100;
+        progressBar.style.width = progressPercentage + '%';
+        progressBar.textContent = Math.round(progressPercentage) + '%';
+      }
+
+      checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', updateProgressBar);
+      });
+
+      // Link click to checkbox
+      function checkClosestCheckbox(event) {
+        const checkbox = event.target.closest('li').querySelector('input[type="checkbox"]')
+
+        if (checkbox && !checkbox.checked) {
+          checkbox.checked = true
+          saveCheckboxState();
+          updateProgressBar()
+        }
+      }
+      const links = document.querySelectorAll('a')
+      links.forEach(link => {
+        link.addEventListener('click', checkClosestCheckbox)
+      });
+
+      // Checkboxes save
+      function saveCheckboxState() {
+        const checkboxStates = {}
+
+        checkboxes.forEach((checkbox, i) => {
+          checkboxStates[i] = checkbox.checked
+        });
+
+        storage.checkboxes.setStates(checkboxStates)
+      }
+      function loadCheckboxState() {
+        const savedStates = storage.checkboxes.getStates()
+
+        if (savedStates) {
+
+          checkboxes.forEach((checkbox, i) => {
+            if (savedStates.hasOwnProperty(i)) {
+              checkbox.checked = savedStates[i]
+            }
+          })
+        }
+      }
+
+      // Eventos
+      window.addEventListener('load', () => {
+        loadCheckboxState()
+        let firstLink = document.querySelector("a");
+        firstLink.click();
+        setTitle()
+        updateProgressBar();
+      })
+
+      document.addEventListener('change', function(event) {
+        saveCheckboxState();
+      })
+
+      // Scroll to top
+      const anchorElements = document.querySelectorAll('a');
+      anchorElements.forEach(anchor => {
+        anchor.addEventListener('click', function(event) {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      });
+    </script>
+    </body>
+</html>

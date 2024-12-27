@@ -5,6 +5,18 @@
     <meta http-equiv='X-UA-Compatible' content='ie=edge' />
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="manifest" href="manifest.json">
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+            console.log('ServiceWorker registered');
+          }).catch(function(err) {
+            console.log('ServiceWorker error: ', err);
+          });
+        })
+      }
+    </script>
     <meta name="author" content="Henrique Fernandez Teixeira">
     <link rel="icon" type="image/ico" href="/images/icon-16x16.png">
 
@@ -37,9 +49,9 @@
         <a href="/" class="pseudo button icon-puzzle"><i class="fi-page-multiple"></i> Blog</a>
       <a href="/sobre" class="pseudo button icon-picture "><i class="fi-torso-business"></i> Sobre</a>
       <a href="/arquivo" class="pseudo button icon-picture "><i class="fi-list-bullet"></i> Arquivo</a>
+      <a href="/playlists" class="pseudo button icon-picture active"><i class="fi-play"></i> Playlists</a>
       <a href="https://github.com/henrique-ft" class="pseudo button icon-picture" target="_blank"><i class="fi-social-github"></i> GitHub</a>
       <a href="https://www.linkedin.com/in/henrique-fernandez-teixeira-93a4a3127/" class="pseudo button icon-picture" target="_blank"><i class="fi-social-linkedin"></i> Linkedin</a>
-      <!-- <a href="/aprenda-de-graca" class="pseudo button icon-picture active"><i class="fi-book-bookmark"></i> Aprenda de graça</a> -->
     </div>
   </nav>
 </div>
@@ -53,10 +65,12 @@
 
     <div class="flex one three-800 wrap">
   <main role="main" class="two-third-800 wwrap">
+    <h1><i class="fi-play"></i> Playlists</h1>
     <p>Quer aprender ou estudar algo e não sabe por onde começar?</p>
     <p>Quer revisar algum conteúdo?</p>
     <p>Selecionei, organizei e estruturei <b>informação gratuíta</b> disponibilizada na internet (youtube, blogs e etc...) para imersão em assuntos diversos. Clique em um dos temas abaixo e comece a estudar:</p>
-    <a href="/aprenda-de-graca/musculacao" target="_blank" class="pseudo button icon-puzzle"><i class="fi-book-bookmark"></i> Musculação</a>
+    <a href="/playlists/musculacao" target="_blank" class="pseudo button icon-puzzle"><i class="fi-play"></i> Musculação</a>
+    <a href="/playlists/prosperidade" target="_blank" class="pseudo button icon-puzzle"><i class="fi-play"></i> Prosperidade</a>
   </main>
 </div>
 
