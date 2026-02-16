@@ -810,7 +810,7 @@ Porém, se você é um desenvolvedor solo "full-mega-blaster-stack" que tem nova
     <link rel="alternate" href="https://truehenrique.com/2021/10/27/single-responsibility-o-principio-deturpado/"/>
     <id>https://truehenrique.com/2021/10/27/single-responsibility-o-principio-deturpado/</id>
     <published>2021-10-27T14:23:00-03:00</published>
-    <updated>2025-10-19T08:43:22-03:00</updated>
+    <updated>2026-02-16T19:45:02-03:00</updated>
     <author>
       <name>Henrique F. Teixeira</name>
     </author>
@@ -847,7 +847,7 @@ Porém, se você é um desenvolvedor solo "full-mega-blaster-stack" que tem nova
   &lt;li&gt;Kanbam&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Pra que a gente aprende e estuda essa p*** toda?&lt;/p&gt;
+&lt;p&gt;Pra que a gente aprende e estuda isso tudo?&lt;/p&gt;
 
 &lt;p&gt;A resposta pode parecer óbvia:&lt;/p&gt;
 
@@ -856,8 +856,6 @@ Porém, se você é um desenvolvedor solo "full-mega-blaster-stack" que tem nova
 &lt;/ul&gt;
 
 &lt;p&gt;Mas será que essa é a resposta certa mesmo?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Não&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Existem contextos em que não precisamos utilizar nada disso e vários outros que nos beneficiaríamos utilizando apenas alguns desses padrões e práticas, não todos. Dessa forma, a minha resposta hoje em dia, seria:&lt;/p&gt;
 
