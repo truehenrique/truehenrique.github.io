@@ -1,15 +1,16 @@
 <!doctype html>
-<html>
+<html lang="pt-br">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='ie=edge' />
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Informações sobre o autor do blog truehenrique.com (Henrique Fernandez Teixeira)">
     <link rel="manifest" href="manifest.json">
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener("load", () => {
-          navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+          navigator.serviceWorker.register('/javascripts/service_worker.js').then(function(registration) {
             console.log('ServiceWorker registered');
           }).catch(function(err) {
             console.log('ServiceWorker error: ', err);
@@ -54,13 +55,6 @@
       <a href="https://www.linkedin.com/in/henrique-fernandez-teixeira-93a4a3127/" class="pseudo button icon-picture" target="_blank"><i class="fi-social-linkedin"></i> Linkedin</a>
     </div>
   </nav>
-</div>
-<div class="langs-container">
-  <div class="wrap">
-    <a href="/"><span class="flag-icon flag-icon-br"></span></a>
-    <a href="/en"><span class="flag-icon flag-icon-us"></span></a>
-    <a href="/es"><span class="flag-icon flag-icon-es"></span></a>
-  </div>
 </div>
 
     <main role="main" class="flex one three-800 wrap about">
