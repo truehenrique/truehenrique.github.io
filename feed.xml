@@ -511,7 +511,7 @@ Se mantermos o ritmo, vamos mais longe. &lt;/p&gt;
     <link rel="alternate" href="https://truehenrique.com/2022/02/17/a-linguagem-de-programacao-bala-de-prata/"/>
     <id>https://truehenrique.com/2022/02/17/a-linguagem-de-programacao-bala-de-prata/</id>
     <published>2022-02-17T19:17:00-03:00</published>
-    <updated>2026-04-02T13:32:03-03:00</updated>
+    <updated>2026-04-04T21:16:44-03:00</updated>
     <author>
       <name>Henrique F. Teixeira</name>
     </author>
@@ -746,7 +746,6 @@ Gerenciamento de memória eficiente&lt;/p&gt;
 &lt;a href="https://github.com/koute/stdweb"&gt;https://github.com/koute/stdweb&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Jogos
-&lt;a href="https://amethyst.rs/"&gt;https://amethyst.rs/&lt;/a&gt;
 &lt;a href="https://ggez.rs/"&gt;https://ggez.rs/&lt;/a&gt;
 &lt;a href="https://bevyengine.org/"&gt;https://bevyengine.org/&lt;/a&gt;&lt;/p&gt;
 
@@ -1098,7 +1097,7 @@ end
     <link rel="alternate" href="https://truehenrique.com/2020/07/17/elixir-e-phoenix-na-velocidade-da-luz/"/>
     <id>https://truehenrique.com/2020/07/17/elixir-e-phoenix-na-velocidade-da-luz/</id>
     <published>2020-07-17T13:52:00-03:00</published>
-    <updated>2026-04-02T13:29:36-03:00</updated>
+    <updated>2026-04-04T21:18:04-03:00</updated>
     <author>
       <name>Henrique F. Teixeira</name>
     </author>
@@ -1155,7 +1154,7 @@ true&lt;/code&gt;&lt;/pre&gt;
 &lt;div&gt;&lt;br /&gt;Se quisessemos extrair somente o nome, por exemplo, não poderiamos fazer dessa maneira:&lt;/div&gt;
 &lt;pre&gt;&lt;code class="html"&gt;iex(6)&amp;gt; [{:name, nome}] = [name: "henrique", id: 3]    
   ** (MatchError) no match of right hand side value: [name: "henrique", id: 3]&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;&lt;br /&gt;Aqui vão &lt;em&gt;links&lt;/em&gt; de estudo para se aprofundar bastante sobre esses temas:&lt;br /&gt;&lt;a href="https://hexdocs.pm/elixir/Kernel.html#defstruct/1"&gt;https://hexdocs.pm/elixir/Kernel.html#defstruct/1&lt;/a&gt;&lt;br /&gt;&lt;a href="https://hexdocs.pm/elixir/Kernel.html#struct/2"&gt;https://hexdocs.pm/elixir/Kernel.html#struct/2&lt;/a&gt;&lt;br /&gt;&lt;a href="https://www.poeticoding.com/the-beauty-of-pattern-matching-in-elixir/"&gt;https://www.poeticoding.com/the-beauty-of-pattern-matching-in-elixir/&lt;/a&gt;&lt;br /&gt;&lt;a href="https://joyofelixir.com/6-pattern-matching"&gt;https://joyofelixir.com/6-pattern-matching&lt;/a&gt;&lt;br /&gt;&lt;a href="https://elixir-lang.org/getting-started/pattern-matching.html"&gt;https://elixir-lang.org/getting-started/pattern-matching.html&lt;/a&gt;&lt;br /&gt;&lt;a href="https://elixir-lang.org/getting-started/keywords-and-maps.html"&gt;https://elixir-lang.org/getting-started/keywords-and-maps.html&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;br /&gt;Aqui vão &lt;em&gt;links&lt;/em&gt; de estudo para se aprofundar bastante sobre esses temas:&lt;br /&gt;&lt;a href="https://hexdocs.pm/elixir/Kernel.html#defstruct/1"&gt;https://hexdocs.pm/elixir/Kernel.html#defstruct/1&lt;/a&gt;&lt;br /&gt;&lt;a href="https://hexdocs.pm/elixir/Kernel.html#struct/2"&gt;https://hexdocs.pm/elixir/Kernel.html#struct/2&lt;/a&gt;&lt;br /&gt;&lt;a href="https://joyofelixir.com/6-pattern-matching"&gt;https://joyofelixir.com/6-pattern-matching&lt;/a&gt;&lt;br /&gt;&lt;a href="https://elixir-lang.org/getting-started/pattern-matching.html"&gt;https://elixir-lang.org/getting-started/pattern-matching.html&lt;/a&gt;&lt;br /&gt;&lt;a href="https://elixir-lang.org/getting-started/keywords-and-maps.html"&gt;https://elixir-lang.org/getting-started/keywords-and-maps.html&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
 &lt;h3&gt;2. Escreva um alias (autocomplete) na sua &lt;em&gt;IDE&lt;/em&gt; para o require &lt;em&gt;IEx; IEx.pry &lt;/em&gt;&lt;del&gt;por favor&lt;/del&gt;.&lt;/h3&gt;
 &lt;div&gt;&lt;br /&gt;Passamos bastante tempo "debugando" código nas aplicações, em qualquer linguagem. Felizmente o &lt;em&gt;Elixir&lt;/em&gt; conta com ferramentas muito boas para nos auxiliar. Uma das mais usadas requer o módulo &lt;strong&gt;IEx&lt;/strong&gt;:&lt;/div&gt;
 &lt;pre&gt;&lt;code class="elixir"&gt;require IEx&lt;/code&gt;&lt;/pre&gt;
@@ -1234,7 +1233,7 @@ all?/2               any?/1               any?/2
     <link rel="alternate" href="https://truehenrique.com/2020/03/04/pwa-com-elixir-e-phoenix-em-5-minutos/"/>
     <id>https://truehenrique.com/2020/03/04/pwa-com-elixir-e-phoenix-em-5-minutos/</id>
     <published>2020-03-04T12:51:00-03:00</published>
-    <updated>2026-04-02T13:29:33-03:00</updated>
+    <updated>2026-04-04T21:21:24-03:00</updated>
     <author>
       <name>Henrique F. Teixeira</name>
     </author>
@@ -1322,9 +1321,9 @@ self.addEventListener('fetch', function(event) {
   }
 
 &amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;&lt;br /&gt;Este &lt;em&gt;script&lt;/em&gt; basicamente registra o nosso &lt;em&gt;service worker &lt;/em&gt;no navegador.&lt;br /&gt;&lt;br /&gt;É isso! nossa &lt;em&gt;PWA&lt;/em&gt; está pronta. &lt;br /&gt;&lt;br /&gt; fontes:&lt;br /&gt;&lt;em&gt;&lt;br /&gt;&lt;/em&gt;&lt;a href="https://www.botsquad.com/2018/03/07/phoenix-sw/"&gt;&lt;em&gt;https://www.botsquad.com/2018/03/07/phoenix-sw/&lt;/em&gt;&lt;/a&gt;&lt;em&gt;&lt;br /&gt;&lt;/em&gt;&lt;a href="https://blog.apiki.com/web-app-manifest/"&gt;&lt;em&gt;https://blog.apiki.com/web-app-manifest/&lt;/em&gt;&lt;/a&gt;&lt;a href="https://gobacklog.com/blog/progressive-web-apps/"&gt;&lt;em&gt;&lt;br /&gt;https://gobacklog.com/blog/progressive-web-apps/&lt;/em&gt;&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;a href="https://vizir.com.br/2017/08/o-que-e-pwa-progressive-web-app-porque-isso-pode-aumentar-seus-resultados-mobile/"&gt;&lt;em&gt;https://vizir.com.br/2017/08/o-que-e-pwa-progressive-web-app-porque-isso-pode-aumentar-seus-resultados-mobile/&lt;/em&gt;&lt;/a&gt;&lt;em&gt;&lt;br /&gt;&lt;/em&gt;&lt;a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Service_Worker_API"&gt;&lt;em&gt;https://developer.mozilla.org/pt-BR/docs/Web/API/Service_Worker_API&lt;/em&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;br /&gt;Este &lt;em&gt;script&lt;/em&gt; basicamente registra o nosso &lt;em&gt;service worker &lt;/em&gt;no navegador.&lt;br /&gt;&lt;br /&gt;É isso! nossa &lt;em&gt;PWA&lt;/em&gt; está pronta. &lt;br /&gt;&lt;br /&gt;
 
+&lt;/div&gt;
 </content>
   </entry>
 </feed>
