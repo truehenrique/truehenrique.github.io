@@ -5,10 +5,136 @@
   <id>https://truehenrique.com/</id>
   <link href="https://truehenrique.com/"/>
   <link href="https://truehenrique.com/feed.xml" rel="self"/>
-  <updated>2024-04-21T21:26:00-03:00</updated>
+  <updated>2026-04-06T10:24:00-03:00</updated>
   <author>
     <name>Henrique F. Teixeira</name>
   </author>
+  <entry>
+    <title>Os 3 melhores feedbacks que recebi como engenheiro de software e que mudaram a minha carreira</title>
+    <link rel="alternate" href="https://truehenrique.com/2026/04/06/os-3-melhores-feedbacks-que-recebi-como-engenheiro-de-software/"/>
+    <id>https://truehenrique.com/2026/04/06/os-3-melhores-feedbacks-que-recebi-como-engenheiro-de-software/</id>
+    <published>2026-04-06T10:24:00-03:00</published>
+    <updated>2026-04-06T10:46:10-03:00</updated>
+    <author>
+      <name>Henrique F. Teixeira</name>
+    </author>
+    <content type="html">&lt;p&gt;Ser uma pessoa engenheira de &lt;em&gt;software&lt;/em&gt; não é fácil, o mercado é aquecido e os salários enchem os olhos, mas não é por acaso. Assim como nem todos nasceram para a medicina, nem todos nasceram para a engenharia de &lt;em&gt;software&lt;/em&gt;. Não basta pensar em trabalhar na área apenas olhando o mercado e o salário. A profissão é difícil, e mesmo quando temos um perfil ideal ainda enfrentamos muitas dificuldades, precisamos de bastante resiliência e prática:&lt;/p&gt;
+
+&lt;p&gt;Existem mais de 700 linguagens de programação no mundo, e o mercado requer o conhecimento de algumas delas, não todas, mas de forma aleatória, que geram várias combinações diferentes para cada empresa.&lt;/p&gt;
+
+&lt;p&gt;Cada uma das linguagens tem várias ferramentas e bibliotecas diferentes, às vezes até 2, 3 ou 4 que fazem a mesma coisa. O mercado também requer o conhecimento dessas ferramentas de forma aleatória.&lt;/p&gt;
+
+&lt;p&gt;Além disso, sistemas muitas vezes são como um livro de 2000 páginas, escrito por diversas pessoas diferentes e em tempos diferentes. Fazendo uma analogia, nosso trabalho muitas vezes é como alterar uma página específica desse livro, tomando cuidado para que ele como um todo continue coeso e faça sentido. E em alguns casos, bugs e erros no código podem nos custar de finais de semana trabalhando a bilhões de reais e até vidas. Afinal, o &lt;em&gt;software&lt;/em&gt; está em tudo.&lt;/p&gt;
+
+&lt;p&gt;Fora as habilidades técnicas (&lt;em&gt;hard skills&lt;/em&gt;), também precisamos de &lt;em&gt;soft skills&lt;/em&gt;. Se não tivermos uma boa comunicação, por exemplo, há chances de aceitarmos prazos impossíveis, ou não entregar uma funcionalidade conforme especificada pelo nosso cliente, por falta de escuta e compreensão de suas necessidades.&lt;/p&gt;
+
+&lt;p&gt;Podemos facilmente cair em &lt;em&gt;burnout&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Nunca sabemos o que virá pela frente, podemos ficar obsoletos em um período de 2 a 3 anos.&lt;/p&gt;
+
+&lt;p&gt;Nesse cenário, uma das coisas mais preciosas que podemos ter é o apoio mútuo da comunidade de engenheiros e engenheiras de &lt;em&gt;software&lt;/em&gt; na web e de colegas de trabalho, fazendo com que tenhamos diversas bibliotecas open-source, fóruns onde podemos procurar ajuda, parcerias e algumas vezes &lt;em&gt;feedbacks&lt;/em&gt; valiosos.&lt;/p&gt;
+
+&lt;p&gt;Em minha experiência, tive a sorte de trabalhar com excelentes profissionais que me deram mentoria e me passaram &lt;em&gt;feedbacks&lt;/em&gt;. Dar &lt;em&gt;feedbacks&lt;/em&gt;, inclusive, é algo bem desafiador. Não falo do tapinha nas costas de “muito bem” ou “você faz um ótimo trabalho”. Falo de &lt;em&gt;feedbacks&lt;/em&gt; construtivos.&lt;/p&gt;
+
+&lt;p&gt;Segundo meu entendimento do clássico livro “Como fazer amigos e influenciar pessoas” de Dale Carnegie, a tendência das pessoas quando recebem um &lt;em&gt;feedback&lt;/em&gt; construtivo (em outras palavras, negativo) é de se justificar. Não importa o quão errado a pessoa esteja, ela vai tentar se justificar, e se o &lt;em&gt;feedback&lt;/em&gt; não for dado de uma maneira cautelosa, ainda criará um clima ruim entre às duas partes. Raramente pessoas aceitam as próprias falhas.&lt;/p&gt;
+
+&lt;p&gt;Inclusive, acredito que saber ouvir e dar &lt;em&gt;feedback&lt;/em&gt; são dois &lt;em&gt;soft skills&lt;/em&gt; raros.&lt;/p&gt;
+
+&lt;p&gt;Então me considero sortudo de ter sabido ouvir, e de ter tido alguém que sabia dar &lt;em&gt;feedbacks&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Na época que recebi os 3 &lt;em&gt;feedbacks&lt;/em&gt; que mudaram minha carreira, estava trabalhando em par com um engenheiro de &lt;em&gt;software&lt;/em&gt; que era bem mais experiente do que eu (até hoje o considero um dos melhores engenheiros com quem tive a oportunidade de trabalhar, o admiro muito) e ele estava prestes a mudar de empresa.&lt;/p&gt;
+
+&lt;p&gt;No seu último dia, fizemos um 1:1 (uma reunião, apenas eu e ele) onde pedi que ele me mostrasse pontos a melhorar, e para a minha surpresa, ele já havia preparado esses pontos antes mesmo de eu indagar.&lt;/p&gt;
+
+&lt;p&gt;Os &lt;em&gt;feedbacks&lt;/em&gt; que recebi foram completamente diferentes do que eu esperava, muito precisos e não imaginava que seguindo apenas eles, geraria esse impacto todo, colocando apenas esses 3 pontos em prática fui de junior a sênior em muito pouco tempo, aqui vão eles:&lt;/p&gt;
+
+&lt;h2 id="termine-as-tarefas-chatas-o-mais-rpido-possvel"&gt;1. Termine as tarefas chatas o mais rápido possível.&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Segundo o escritor americano Michael Stanier, a maioria das nossas tarefas diárias são classificadas em “Bad Work” e “Good Work”. “Bad Work”é todo aquele trabalho burocrátivo e mecânico, como preencher planilhas, ir ao banco e fazer reuniões que não levam a nada. “Good Work” é aquele tipo de trabalho que você sabe fazer muito bem e resolve sem muitas complicações. É a descrição do seu cargo.&lt;/p&gt;
+
+  &lt;p&gt;— Luciano Braga em “O poder do tempo livre” p/ 72&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;No nosso dia a dia, algumas vezes temos que executar tarefas que não são exatamente aquilo que mais gostamos de fazer. Eu, por exemplo, amo tarefas de refatoração, arquitetura e novos projetos, mas o fato de eu gostar dessas tarefas não evita que surjam outras que eu não goste no meu dia a dia. E provavelmente essa é a situação da maioria das pessoas.&lt;/p&gt;
+
+&lt;p&gt;O maior aprendizado que obtive desse &lt;em&gt;feedback&lt;/em&gt; foi de não deixar para depois ou levar “com a barriga” tarefas que não gosto de realizar. Afinal, elas terão que ser feitas de qualquer forma, e quanto mais tempo passarmos com elas, mais tempo passamos com algo que não gostamos.&lt;/p&gt;
+
+&lt;p&gt;Isso é até algo lógico. Quanto mais rápido finalizarmos a parte chata, mais tempo sobra para a parte legal, ou seja, nos mantemos com mais motivação.&lt;/p&gt;
+
+&lt;p&gt;Não deixe as tarefas chatas para depois, tenta finalizá-las o mais rápido que conseguir!&lt;/p&gt;
+
+&lt;h2 id="tenha-na-ponta-da-lngua-toda-a-arquitetura-de-software-da-sua-empresa-saiba-de-cabea-exatamente-como-as-coisas-funcionam"&gt;2. Tenha “na ponta da língua” toda a arquitetura de &lt;em&gt;software&lt;/em&gt; da sua empresa, saiba “de cabeça” exatamente como as coisas funcionam.&lt;/h2&gt;
+&lt;p&gt;Naquela época eu trabalhava em uma empresa que tinha uma arquitetura de &lt;em&gt;software&lt;/em&gt; com fluxos complexos: diversos micro-serviços, bibliotecas internas, filas, bancos de dados relacionais, não relacionais, &lt;em&gt;daemon workers&lt;/em&gt;, &lt;em&gt;cron jobs&lt;/em&gt; e sistemas legados (os famosos monolitos gigantes e desorganizados). E para piorar o sistema era de alta escala, com muitas requisições por minuto.&lt;/p&gt;
+
+&lt;p&gt;As regras de negócio estavam todas implícitas no código, mas parecia extremamente desafiador entender todo o ecossistema, e de fato poucos entendiam.&lt;/p&gt;
+
+&lt;p&gt;Algumas pessoas podem nos falar como algo funciona, quais são as regras do negócio, mas apenas teremos certeza se entendermos a fonte, analisarmos o código. Afinal, lá está escrito o que realmente vai acontecer.&lt;/p&gt;
+
+&lt;p&gt;Para mim, na época e no cenário em questão, era muito difícil de realizar qualquer entrega mais complexa. Porque para saber onde eu tinha que mexer, toda vez precisava ler muito código, entender como diversos sistemas se integravam, se comportavam e qual era a responsabilidade de cada um deles. Também era muito difícil opinar em reuniões, ter ideias, criar soluções e muito fácil tomar decisões técnicas erradas.&lt;/p&gt;
+
+&lt;p&gt;Para lidar com isso, este era o segredo do meu colega e que hoje se tornou o meu também: voluntariamente decore toda a arquitetura dos sistemas da sua empresa (dentro do domínio da sua equipe) ao ponto que você consiga desenhá-lo a mão sem precisar consultar nenhuma fonte. Por exemplo: Imagine que sua equipe mexa com a parte de pagamentos da empresa, tire um, dois ou três dias para ler código, documentação, conversar com colegas que estão há mais tempo na empresa até você conseguir desenhar (em alto nível) tudo em um papel sem precisar consultar nada. Decore tudo.&lt;/p&gt;
+
+&lt;p&gt;Faça formas, setas, descreva as responsabilidades, processos e regras de negócio principais de cada serviço (ou componente / classe / biblioteca) e deixe claro como tudo funciona e se conecta. Não precisa ser nos mínimos detalhes, mas em um detalhamento suficiente para ter um bom entendimento geral.&lt;/p&gt;
+
+&lt;p&gt;Become a Medium member
+Por mais que possa ser muita coisa, não é impossível, e as vantagens são muito relevantes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Agilidade na tomada de decisões em reuniões&lt;/li&gt;
+  &lt;li&gt;Facilidade na hora de propor e pensar soluções&lt;/li&gt;
+  &lt;li&gt;Extrema confiança&lt;/li&gt;
+  &lt;li&gt;Assertividade&lt;/li&gt;
+  &lt;li&gt;Maior qualidade no código escrito&lt;/li&gt;
+  &lt;li&gt;Reconhecimento (das pessoas)&lt;/li&gt;
+  &lt;li&gt;Valorização do seu trabalho&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Além disso, estude todas as linguagens e ferramentas envolvidas na arquitetura que você ainda não conhece, para não perder nenhum detalhe.&lt;/p&gt;
+
+&lt;h2 id="esteja-perto-participe-de-todos-os-eventos-que-puder-e-crie-boas-relaes-com-o-seu-seu-time"&gt;3. Esteja perto, participe de todos os eventos (que puder), e crie boas relações com o seu seu time.&lt;/h2&gt;
+&lt;p&gt;Sabe quando te chamam para uma cervejinha depois do “trampo”? Ou aquele almoço especial em que todos vão juntos? Ou algum evento no aniversário de alguém? Aquele papo/cafezinho descontraído na copa?&lt;/p&gt;
+
+&lt;p&gt;Atualmente com o Home Office isso parece até estranho e distante. Mas se sua empresa promove algum evento presencial ou uma call com um tema fora do trabalho, não deixe de ir. Se o seu time combina algo fora do trabalho, vá! Participe!&lt;/p&gt;
+
+&lt;p&gt;Ligue a câmera.&lt;/p&gt;
+
+&lt;p&gt;No final, todos nós somos pessoas. Muitos dizem que é preciso separar a “vida profissional” da “vida pessoal”. Mas pera lá, não existem dois Henriques. Particularmente entendo que existe apenas uma vida e nosso corpo não vai deixar de se estressar magicamente porque saímos ou entramos no trabalho.&lt;/p&gt;
+
+&lt;p&gt;Para pessoas que tem relações muito frágeis ou superficiais com colegas de trabalho, um pequeno mal-entendido pode se tornar um problemão, &lt;em&gt;feedbacks&lt;/em&gt; se dificultam e há pouca transparência. Não quero dizer que devemos trabalhar apenas com nossos melhores amigos e amigas, mas que também faz parte entender a outra pessoa, quais são suas motivações, o que ela faz nas horas vagas, o que ela curte, qual é o jeito dela e estabelecer uma relação de confiança.&lt;/p&gt;
+
+&lt;p&gt;Isso faz toda a diferença no ambiente de trabalho, um ambiente confortável e seguro proporciona:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Descontração&lt;/li&gt;
+  &lt;li&gt;Melhores ideias&lt;/li&gt;
+  &lt;li&gt;Transparência&lt;/li&gt;
+  &lt;li&gt;Tranquilidade&lt;/li&gt;
+  &lt;li&gt;Assertividade no trato com o próximo.&lt;/li&gt;
+  &lt;li&gt;Bons &lt;em&gt;feedbacks&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Laços com pessoas (até mesmo de outras áreas)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Por mais que possa não parecer para pessoas que estão iniciando na área, esses pontos são fundamentais no processo de engenharia de &lt;em&gt;software&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Naquela época, eu tinha uma relação frágil com a maioria da equipe com quem trabalhava. Tratávamos apenas de trabalho, e isso gerava problemas para mim:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Dúvidas sobre como as outras pessoas enxergavam meu trabalho&lt;/li&gt;
+  &lt;li&gt;Desconforto&lt;/li&gt;
+  &lt;li&gt;Falta de segurança para pedir ajuda quando não sabia algo&lt;/li&gt;
+  &lt;li&gt;Síndrome do impostor&lt;/li&gt;
+  &lt;li&gt;Medo de ser mandado embora&lt;/li&gt;
+  &lt;li&gt;Ansiedade e entendimento precipitado de algumas situações&lt;/li&gt;
+  &lt;li&gt;Evitava falar em reuniões&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="concluso"&gt;Conclusão&lt;/h2&gt;
+
+&lt;p&gt;Esses são os 3 melhores &lt;em&gt;feedbacks&lt;/em&gt; que recebi. Percebe-se que eles permeiam entre &lt;em&gt;hard skills&lt;/em&gt; e &lt;em&gt;soft skills&lt;/em&gt;. Para mim, lembrar deles diariamente foi uma forma simples de fazer com que minha carreira desse certo, como uma fórmula mágica.&lt;/p&gt;
+
+&lt;p&gt;Acho incrível, até hoje, como foi forte o efeito deles, e por serem apenas 3.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Clean Agile, XP e Scrum - Evitando a "ressaca"</title>
     <link rel="alternate" href="https://truehenrique.com/2024/04/22/clean-agile-xp-e-scrum-evitando-a-ressaca/"/>
@@ -1224,104 +1350,6 @@ all?/2               any?/1               any?/2
 &lt;div&gt;&lt;br /&gt;&lt;/div&gt;
 &lt;h3&gt;Concluindo..&lt;/h3&gt;
 &lt;div&gt;&lt;br /&gt;Apesar de algumas dicas serem mais "práticas", podemos perceber que outras são pontos onde vale a pena reforçar o estudo! Particularmente, hoje me sinto bastante confortável e produtivo com &lt;em&gt;Elixir e Phoenix, e&lt;/em&gt; isso foi graças a esse equilíbrio de buscar ferramentas que me auxiliassem e estudar a fundo pontos fundamentais!
-
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry>
-    <title>PWA com Elixir e Phoenix em 5 minutos</title>
-    <link rel="alternate" href="https://truehenrique.com/2020/03/04/pwa-com-elixir-e-phoenix-em-5-minutos/"/>
-    <id>https://truehenrique.com/2020/03/04/pwa-com-elixir-e-phoenix-em-5-minutos/</id>
-    <published>2020-03-04T12:51:00-03:00</published>
-    <updated>2026-04-04T21:21:24-03:00</updated>
-    <author>
-      <name>Henrique F. Teixeira</name>
-    </author>
-    <content type="html">&lt;div&gt;Construir um &lt;em&gt;PWA (Progressive Web App)&lt;/em&gt; é uma maneira de possibilitar que sua aplicação &lt;em&gt;web &lt;/em&gt;escrita em &lt;em&gt;html&lt;/em&gt;, &lt;em&gt;css&lt;/em&gt; e &lt;em&gt;javascript&lt;/em&gt; funcione praticamente como um aplicativo para &lt;em&gt;smartphones&lt;/em&gt;, &lt;em&gt;desktops &lt;/em&gt;e&lt;em&gt; tablets&lt;/em&gt; podendo inclusive ser instalada, ter &lt;em&gt;"push notifications" &lt;/em&gt;e funcionamento completamente &lt;em&gt;offline&lt;/em&gt;. Nesse &lt;em&gt;post&lt;/em&gt; não vou me aprofundar tanto no conceito, mas mostrarei como é simples e rápido transformar um projeto &lt;em&gt;Elixir&lt;/em&gt; e &lt;em&gt;Phoenix&lt;/em&gt; em um &lt;em&gt;PWA.&lt;/em&gt;&amp;nbsp;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
-&lt;div&gt;Vamos aos passos para criar o seu &lt;em&gt;PWA&lt;/em&gt; com &lt;em&gt;Elixir e Phoenix&lt;/em&gt;:&lt;/div&gt;
-&lt;h3&gt;&lt;br /&gt;&lt;/h3&gt;
-&lt;h3&gt;Passo 1:&lt;/h3&gt;
-&lt;div&gt;&lt;br /&gt;Adicione um arquivo chamado &lt;strong&gt;&lt;em&gt;manifest.json&lt;/em&gt;&lt;/strong&gt; no seu&lt;em&gt; priv/static &lt;/em&gt;contendo o seguinte conteúdo:&lt;/div&gt;
-&lt;div&gt;&lt;br /&gt;&lt;/div&gt;
-&lt;pre&gt;&lt;code class="javascript"&gt;{
-  "short_name": "My App", // Nome em que aparecerá junto ao ícone
-  "name": "My Very Progressive Web App @PWA", // Descrição que aparecerá enquanto o aplicativo é carregado
-  "icons": [ // Coloque aqui a localização dos ícones do seu aplicativo
-    {
-      "src": "/images/logo.png",  
-      "type": "image/png"
-    }
-  ],
-  "start_url": "/", // Aqui vai o endereço principal do seu aplicativo (o que irá ser acessado primeiro quando abrirmos o app)
-  "background_color": "#fff", // Definimos uma cor de fundo enquanto ao aplicativo é carregado.
-  "display": "standalone", // Definimos o modo primário que o navegador deve considerar para exibir o aplicativo.
-  "scope": "/", // Definimos o escopo, limite, das páginas a serem consideradas como PWA
-  "theme_color": "#000"   // Definimos uma cor para personalizar a interface do dispositivo em uso
-} 
-            &lt;em&gt;                                 &lt;/em&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;&lt;br /&gt;Este arquivo é o responsável por personalizar a aparência do nosso &lt;em&gt;PWA&lt;/em&gt; e um pouco da experiência de uso. Além das configurações setadas acima, também podemos adicionar as seguintes:&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
-&lt;ul&gt;&lt;li&gt;&lt;em&gt;lang&lt;/em&gt;: Definimos o idioma utilizado (ex: &lt;em&gt;pt-BR&lt;/em&gt;).&lt;/li&gt;&lt;li&gt;&lt;em&gt;orientation&lt;/em&gt;: Definimos a orientação de como exibir o aplicativo (ex: &lt;em&gt;any, natural, landscape, landscape-primary, landscape-secondary, portrait, portrait-primary, portrait-secondary&lt;/em&gt;).&lt;/li&gt;&lt;li&gt;&lt;em&gt;prefer_related_applications&lt;/em&gt;: Informa se há uma outra aplicação complementar (&lt;em&gt;Boolean&lt;/em&gt;).&lt;/li&gt;&lt;li&gt;&lt;em&gt;related_applications&lt;/em&gt;: Definimos as aplicações complementares (&lt;em&gt;Array&lt;/em&gt; de objetos de aplicações com os possíveis valores: &lt;em&gt;platform, url e id&lt;/em&gt;).&lt;/li&gt;&lt;li&gt;&lt;em&gt;dir&lt;/em&gt;: Definimos a direção do texto nas especifcações do manifesto.&lt;/li&gt;&lt;/ul&gt;
-&lt;div&gt;&lt;br /&gt;Para agilizar o processo de criação do nosso &lt;strong&gt;&lt;em&gt;manifest.json&lt;/em&gt;&lt;/strong&gt; podemos recorrer a ferramentas de automatização. Esse site é bem eficiente e também nos ajuda a gerar os ícones formatados:&lt;br /&gt;&lt;br /&gt;&lt;a href="https://app-manifest.firebaseapp.com/"&gt;https://app-manifest.firebaseapp.com/&lt;/a&gt;&lt;/div&gt;
-&lt;div&gt;&lt;br /&gt;&lt;/div&gt;
-&lt;h3&gt;Passo 2:&lt;/h3&gt;
-&lt;div&gt;&lt;br /&gt;Adicione um arquivo chamado &lt;strong&gt;&lt;em&gt;service_worker.js&lt;/em&gt;&lt;/strong&gt; no seu &lt;em&gt;priv/static&lt;/em&gt; contendo o seguinte conteúdo:&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
-&lt;pre&gt;&lt;code class="javascript"&gt;self.addEventListener('install', function(e) {
-  e.waitUntil(
-    fetch('/cache_manifest.json')
-    .then(function(response) {
-      return response.json()
-    })  
-    .then(function(cacheManifest) {
-      var cacheName = 'cache:static:' + cacheManifest.version
-      var all = Object.values(cacheManifest.latest).filter(
-        function(fn) { return fn.match(/^(images|css|js|fonts)/);
-        })
-      caches.open(cacheName).then(function(cache) {
-        return cache.addAll(all).then(function() {
-          self.skipWaiting();
-        });
-      })
-    })
-  );
-});
-
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request).then(function(response) {
-      if (response) {
-        return response;
-      }
-      return fetch(event.request);
-    })
-  );
-});&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;&lt;br /&gt;&lt;/div&gt;
-&lt;blockquote&gt;Essencialmente, um &lt;em&gt;service worker&lt;/em&gt; se comporta como um servidor &lt;em&gt;proxy&lt;/em&gt; situado entre uma aplicação web, o navegador e a rede (quando esta estiver disponível). Eles servem, dentre outras coisas, para possibilitar a criação de experiências &lt;em&gt;offline&lt;/em&gt; eficientes, interceptar requisições de rede – agindo adequadamente de acordo com o &lt;em&gt;status&lt;/em&gt; atual da conexão – e atualizar os &lt;em&gt;assets&lt;/em&gt; que residem no servidor. Service workers também permitem o acesso às APIs de &lt;em&gt;push notification&lt;/em&gt; e &lt;em&gt;background sync&lt;/em&gt;.&lt;br /&gt;&lt;br /&gt;- &lt;a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Service_Worker_API"&gt;https://developer.mozilla.org/pt-BR/docs/Web/API/Service_Worker_API&lt;/a&gt;&lt;/blockquote&gt;
-&lt;div&gt;&lt;br /&gt;No nosso caso, estamos escutando a dois eventos &lt;em&gt;"install" e "fetch"&lt;/em&gt;.&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
-&lt;ul&gt;&lt;li&gt;&lt;em&gt;install&lt;/em&gt;: Na hora da instalação do aplicativo informamos a localização do nosso&lt;strong&gt;&lt;em&gt; cache_manifest.json. &lt;/em&gt;&lt;/strong&gt;Uma vantagem de utilizar o&lt;em&gt; framework Phoenix &lt;/em&gt;para &lt;em&gt;PWA's &lt;/em&gt;é que ele gera automaticamente este arquivo quando rodamos a &lt;em&gt;task &lt;/em&gt;&lt;strong&gt;&lt;em&gt;mix phx.digest&lt;/em&gt;&lt;/strong&gt;! Este arquivo é responsável por informar dados de &lt;em&gt;cache&lt;/em&gt; que são utilizados para o aplicativo funcionar de forma mais rápida, econômica e até de maneira &lt;em&gt;offline &lt;/em&gt;dependendo do caso.&lt;/li&gt;&lt;li&gt;&lt;em&gt;fetch&lt;/em&gt;: É disparado quando houver uma visita a uma &lt;em&gt;url&lt;/em&gt;, se já tivermos cache, responde com o cache, se não executamos o fluxo normal.&lt;/li&gt;&lt;/ul&gt;
-&lt;div&gt;&lt;br /&gt;&lt;/div&gt;
-&lt;h3&gt;Passo 3:&lt;/h3&gt;
-&lt;div&gt;&lt;br /&gt;Permita que os arquivos &lt;strong&gt;&lt;em&gt;service_worker.js&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;cache_manifest.json &lt;/em&gt;&lt;/strong&gt;e &lt;strong&gt;&lt;em&gt;manifest.json&lt;/em&gt;&lt;/strong&gt; sejam acessados de forma estática, adicionando nas configurações de &lt;strong&gt;&lt;em&gt;Plug.Static&lt;/em&gt;&lt;/strong&gt;, encontradas no módulo &lt;strong&gt;&lt;em&gt;Endpoint&lt;/em&gt;&lt;/strong&gt; do seu projeto encontrado em&lt;em&gt; (lib/seu_projeto_web/endpoint.ex):&lt;/em&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
-&lt;pre&gt;&lt;code class="elixir"&gt;plug Plug.Static,
-  at: "/",
-  from: :seu_projeto,
-  gzip: false,
-  only: ~w(css fonts images js favicon.ico robots.txt service_worker.js cache_manifest.json manifest.json) # aqui&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
-&lt;h3&gt;Passo 4:&lt;/h3&gt;
-&lt;div&gt;&lt;br /&gt;Adicione um link para o seu &lt;strong&gt;&lt;em&gt;manifest.json&lt;/em&gt;&lt;/strong&gt; e o seguinte script no layout principal do seu projeto:&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
-&lt;pre&gt;&lt;code class="html"&gt;&amp;lt;link rel="manifest" href="/manifest.json"&amp;gt;
-&amp;lt;script&amp;gt;
-  if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('/service_worker.js', { scope: './' })
-      .then(function(reg) {
-        console.log('[ServiceWorker]', 'Service worker registered!');
-        console.log(reg);
-      });
-  }
-
-&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;&lt;br /&gt;Este &lt;em&gt;script&lt;/em&gt; basicamente registra o nosso &lt;em&gt;service worker &lt;/em&gt;no navegador.&lt;br /&gt;&lt;br /&gt;É isso! nossa &lt;em&gt;PWA&lt;/em&gt; está pronta. &lt;br /&gt;&lt;br /&gt;
 
 &lt;/div&gt;
 </content>
