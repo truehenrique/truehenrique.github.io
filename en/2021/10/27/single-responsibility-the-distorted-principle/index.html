@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1640512874906863" crossorigin="anonymous"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='ie=edge' />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="Henrique Fernandez Teixeira">
+    <link rel="icon" type="image/ico" href="/images/icon-16x16.png">
+
+    <link rel="manifest" href="/manifest.json">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1640512874906863"
+     crossorigin="anonymous"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register('/javascripts/service_worker.js').then(function(registration) {
+            console.log('ServiceWorker registered');
+          }).catch(function(err) {
+            console.log('ServiceWorker error: ', err);
+          });
+        })
+      }
+    </script>
+        <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=60bc2b44a75109001138d6ff&product=sticky-share-buttons' async='async'></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161733672-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-161733672-1');
+        </script>
+      <title>@truehenrique | Single responsibility, the distorted principle</title>
+        <meta property="og:image" content="https://www.truehenrique.com/images/single-responsibility-o-principio-deturpado.jpg">
+        <meta name="twitter:image:src" content="https://www.truehenrique.com/images/single-responsibility-o-principio-deturpado.jpg">
+        <link rel="alternate" hreflang="pt" href="/pt/2021/10/27/single-responsibility-o-principio-deturpado/" />
+      <link rel="alternate" hreflang="x-default" href="/en/2021/10/27/single-responsibility-the-distorted-principle/" />
+
+      <meta property="og:type" content="article" />
+      <meta property="article:author" content="https://www.truehenrique.com/en/sobre">
+      <meta property="og:site_name" content="@truehenrique" />
+      <meta property="og:description" content="Unravel the Single Responsibility Principle (SRP)! This article explores how SRP is often misinterpreted and how to apply it correctly to avoid overengineering and underengineering, ensuring cohesion and maintainability in your code." />
+      <meta property="twitter:description" content="Unravel the Single Responsibility Principle (SRP)! This article explores how SRP is often misinterpreted and how to apply it correctly to avoid overengineering and underengineering, ensuring cohesion and maintainability in your code.">
+      <meta name="description" content='Unravel the Single Responsibility Principle (SRP)! This article explores how SRP is often misinterpreted and how to apply it correctly to avoid overengineering and underengineering, ensuring cohesion and maintainability in your code.'>
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="robots" content="index,follow">
+      <meta name="keywords" content="patterns,SOLID,best practices,software engineering,single responsibility,programming">
+      <meta property="og:title" content='Single responsibility, the distorted principle' />
+      <meta property="twitter:title" content='Single responsibility, the distorted principle'>
+      <meta name="title" content ='Single responsibility, the distorted principle'>
+      <meta property="og:url" content="https://www.truehenrique.com/en/2021/10/27/single-responsibility-the-distorted-principle/">
+      <link rel="canonical" href="https://www.truehenrique.com/en/2021/10/27/single-responsibility-the-distorted-principle/"/>
+      <link rel="author" href="https://www.truehenrique.com/en/sobre">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
+
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <link href="/stylesheets/picnic.css" rel="stylesheet" /><link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+  <h1>@truehenrique | Blog about software engineering & agile</h1>
+  <div class="wrap">
+    <a href="/en/"><img src="/images/logo-white.png" alt="" /></a>
+  </div>
+</header>
+<div class="nav">
+  <nav class="wrap">
+    <a href="/en/" class="brand">
+      <img src="/images/logo-white.png" alt="" />
+    </a>
+    <!-- responsive-->
+    <input id="bmenub" type="checkbox" class="show">
+    <label for="bmenub" class="burger pseudo button large"><i class="fi-list"></i> </label>
+
+    <div class="menu wrap">
+        <a href="/en/" class="pseudo button icon-puzzle active"><i class="fi-page-multiple"></i> Blog</a>
+      <a href="/en/about/" class="pseudo button icon-picture "><i class="fi-torso-business"></i> About</a>
+      <a href="/en/archive/" class="pseudo button icon-picture "><i class="fi-list-bullet"></i> Archive</a>
+      <a href="https://github.com/henrique-ft" class="pseudo button icon-picture" target="_blank"><i class="fi-social-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/henrique-fernandez-teixeira-93a4a3127/" class="pseudo button icon-picture" target="_blank"><i class="fi-social-linkedin"></i> Linkedin</a>
+    </div>
+  </nav>
+</div>
+<div class="langs-container">
+  <div class="wrap">
+    <a href="/"><span class="flag-icon flag-icon-br"></span></a>
+    <a href="/en"><span class="flag-icon flag-icon-us"></span></a>
+  </div>
+</div>
+
+
+    <div class="flex one three-800 wrap">
+      <main role="main" class="two-third-800">
+          <div id="fb-root"></div>
+          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v6.0"></script>
+
+          <div class="wwrap">
+            <h2>Single responsibility, the distorted principle</h2>
+            <small class="color-lite">Oct 27 | Henrique F. Teixeira</small>
+            <div class="article-image" style="background-image: url(/images/single-responsibility-o-principio-deturpado.jpg)" alt='Single responsibility, the distorted principle'></div>
+
+        <p>Software is made by humans, for humans and machines. And humans make mistakes, consequently causing the machine to fail too.</p>
+
+<p>Given this context, over time, various principles and patterns of software development have been developed and established. And they all have one thing in common: <strong>to simplify so that we can work using less cognitive effort</strong>, given that our minds are limited and the problems we have to solve are often complex enough just in their concept, without a single line of code written.</p>
+
+<p>This is a very important insight I had after going through several projects throughout my career; at first, it's not easy to understand despite seeming simple:</p>
+
+<ul>
+  <li>SOLID</li>
+  <li>MVC</li>
+  <li>DDD (Domain-driven design)</li>
+  <li>Clean Architecture</li>
+  <li>Clean Code</li>
+  <li>Refactoring / Code Smells</li>
+  <li>TDD</li>
+  <li>Redux</li>
+  <li>Microservices</li>
+  <li>Microfrontends</li>
+  <li>Object-Oriented Programming (Encapsulation, inheritance, polymorphism, anemic models, overloading…)</li>
+  <li>Functional Programming (Monads, functors, closures, currying, category theory, pure functions…)</li>
+  <li>Actor Model</li>
+  <li>Law of Demeter</li>
+  <li>Serverless</li>
+  <li>Web components</li>
+</ul>
+
+<p>And beyond software:</p>
+
+<ul>
+  <li>Agile</li>
+  <li>Scrum</li>
+  <li>Kanban</li>
+</ul>
+
+<p>Why do we learn and study all this?</p>
+
+<p>The answer might seem obvious:</p>
+
+<ul>
+  <li>"We learn and study to use it in our daily lives, always, and these are the best practices."</li>
+</ul>
+
+<p>But is that really the right answer?</p>
+
+<p>There are contexts where we don't need to use any of this, and many others where we would benefit from using only some of these patterns and practices, not all. Thus, my answer today would be:</p>
+
+<ul>
+  <li>"We learn and study to know where and when to use it in our daily lives."</li>
+</ul>
+
+<p>The thing is, this answer only comes with experience, with reality. And often at the beginning of a career and for a long time, we find ourselves using patterns just because we recently studied them and assume that's what we should do, after all, it's a pattern! It's the right thing to do!</p>
+
+<p>This last sentence results in two of the biggest problems I particularly faced throughout my career, coming from legacy code (or from myself):</p>
+
+<ul>
+  <li><strong>Overengineering</strong>: Too much engineering and too many patterns for a simple problem.</li>
+  <li><strong>Underengineering</strong> (I just invented this term): Too little engineering and too few patterns for a complex problem.</li>
+</ul>
+
+<p>And these problems are things that "full-stack JavaScript" courses, frameworks, or languages generally won't teach us.</p>
+
+<p><strong>Every pattern was created from a problem.</strong> If we haven't experienced that problem, we don't need the pattern. And strongly recognizing the problem is as important, if not more important, than knowing the details of a pattern. Our job as a <em>Software Engineer</em> is precisely to work without "over" and without "under," just with the "engineer." First, recognize the problems, then fit the patterns (and not the other way around).</p>
+
+<p>Given this introduction, I would now like to talk about a "unique case" and a very curious one:</p>
+
+<ul>
+  <li>A pattern/principle where it's very common for people not to recognize the problem it actually solves, nor even how it works, but they go around "using" (and "preaching") it everywhere. This is probably the result of a giant "game of telephone" among developers (one tells another, the other listens and tells another, and none of them actually seeks to understand it deeply). Another point that may have led to this is the simplicity of its name:</li>
+</ul>
+
+<h2 id="single-responsibility-principle">Single Responsibility Principle</h2>
+
+<p>Unlike "Liskov Substitution Principle," "Chain of Responsibility," or "Law of Demeter," it's very easy to read "Single Responsibility Principle" and think:</p>
+
+<p>"Oh! Single Responsibility Principle, this class does more than one thing! It has more than one responsibility! Let's split it into two."</p>
+
+<p>It's simple. Methods, classes, and every organism within a <em>software</em> should have "a single responsibility," right?</p>
+
+<p><strong>It depends on what we understand as responsibility.</strong></p>
+
+<p>To illustrate, I really like to use the dictionary:</p>
+
+<ul>
+  <li>Responsibility: Obligation to answer for one's own actions or those of others. Character or state of being responsible. <strong>Duty to answer for one's own behavior.</strong></li>
+</ul>
+
+<p>I highlighted the last sentence because it will be simpler to use with the example below:</p>
+
+<p>Imagine you are a pizza delivery person; what is your responsibility, and what behavior are you accountable for?</p>
+
+<p>…</p>
+
+<p>Imagined it?</p>
+
+<p>I would say that:</p>
+
+<ul>
+  <li>Responsibility: Deliver the pizza</li>
+  <li>Behavior you are accountable for: Carefully storing the pizza in the bag so it arrives intact, starting the motorcycle, accelerating the motorcycle, riding safely while observing traffic laws, ringing the doorbell upon arrival, and being polite to the customer.</li>
+</ul>
+
+<p>Do we have more than one responsibility? Or do we have behaviors we are accountable for given our responsibility?</p>
+
+<p>Using real-world examples makes it clearer, right?</p>
+
+<p>…</p>
+
+<p>So I'm going to make the example worse; our own pizza delivery body has organs, and they also have their responsibilities:</p>
+
+<ul>
+  <li>The heart beats and is responsible for blood circulation.</li>
+  <li>The lungs breathe and are responsible for absorbing O2 and eliminating CO2 from inhaled air.</li>
+  <li>The kidneys filter and are responsible for the amount of waste in our blood.</li>
+</ul>
+
+<p>Knowing this, as pizza delivery people, do we have many more responsibilities than we imagine? We also need our bodies to function well to perform the profession, right?</p>
+
+<p>As pizza delivery people, are we accountable for the behavior and responsibilities of our bodies?</p>
+
+<p>By now, you must be quite confused. Things have started to take on large proportions that probably made you exert much more cognitive effort to understand all the complexity involved in the "single responsibility principle," the meaning of responsibility, and behavior.</p>
+
+<p>Looking at the first example, it seems clear what responsibility and behavior are, but when I brought up the second, you probably realized that this can be infinite and take on gigantic proportions.</p>
+
+<p><strong>I could end the article here, for those who understand, a hint is enough.</strong></p>
+
+<p>But I will continue. Making an "analogy of the analogy" at the <em>software</em> level, this confusion is exposed in the worst possible way and similarly increases our cognitive effort, going against <strong>simplifying so that we can work using less cognitive effort</strong>.</p>
+
+<p>If this were <em>software</em>, I wouldn't be surprised to open the files and see things like:</p>
+
+<ul>
+  <li>"PizzaDeliveryPerson"</li>
+  <li>"PizzaDeliveryPersonBuilder"</li>
+  <li>"MotorcycleStarter"</li>
+  <li>"KidneyMaintainerService"</li>
+  <li>"MotorcycleAccelerator"</li>
+  <li>"SafeRiding"</li>
+  <li>"PizzaCare.Care()"</li>
+  <li>"Heartbeats.Beat()"</li>
+  <li>"HeartbeatsFactory.create()"</li>
+  <li>"DeliverPizzaFacade"</li>
+  <li>"PizzaServices"</li>
+</ul>
+
+<p>That "delicious code" with high granularity, several dependency injections, and several classes with only one method with "five, ten lines of code," "respecting the <em>Single Responsibility Principle</em> to the end"!</p>
+
+<p>Very easy to maintain, by the way <em>(contains irony)</em></p>
+
+<p>Ultimately, this type of situation causes <em>software</em> that is "structured sideways" (Object-Oriented Programming or Functional Programming no longer exists). Instead of reading code from top to bottom, we end up opening "20" files in our <em>IDE</em> to understand a single business rule that can often represent behaviors of a single responsibility (in "20" files).</p>
+
+<p>Instead of finding what we are looking for in a central point, in a single file, we have to look in several files and then mentally connect them.</p>
+
+<p><strong>It's like putting together pieces of a giant puzzle.</strong></p>
+
+<p>And I'm talking about the least bad case! Because this granularity can end up spreading to different projects, <em>microservices</em>, or <em>microfrontends</em>. Imagine having to open 10 <em>microservices</em> + 5 <em>microfrontends</em>?</p>
+
+<p>What happens is that many people still have no idea of the difference between <strong>responsibility</strong> and <strong>behavior</strong>.</p>
+
+<p>Uncle Bob himself (the creator of the principle) said in one of his books:</p>
+
+<blockquote>
+  <p><em>"Of all the SOLID principles, the Single Responsibility Principle is probably the least understood. This is possibly due to its rather inadequate name. In general, upon hearing this name, programmers immediately imagine that all modules should do only one thing."</em></p>
+
+  <p><em>Robert C. Martin - Clean Architecture p/ 62</em></p>
+</blockquote>
+
+<p>Returning to our example, we have only <strong>one</strong> responsibility: <strong>Deliver the pizza.</strong></p>
+
+<p>Why can we affirm this?</p>
+
+<p>The method and behavior are independent of the responsibility. We continue to be just <strong>pizza delivery people</strong> with the single responsibility of <strong>delivering pizzas</strong> regardless of how we do it.</p>
+
+<p>For example, I can start delivering by car instead of by motorcycle. And if someone needs to learn how to deliver pizzas, that person will look for me, and I will clearly teach them how.</p>
+
+<blockquote>
+  <p><em>"A module is just a cohesive set of functions and data structures. This word "cohesive" suggests the SRP. Cohesion is the force that binds the code responsible to a single actor."</em></p>
+
+  <p><em>Robert C. Martin - Clean Architecture p/63</em></p>
+</blockquote>
+
+<p>It is completely <strong>cohesive</strong>, for example, to have a <code>PizzaDeliveryPerson</code> class with a <code>deliver_pizza</code> method that receives three objects: <code>pizza</code>, <code>customer</code>, and <code>motorcycle</code>. And this method has all the behavior we listed. After all, we won't look for how the delivery person delivers the pizza in another part of the code:</p>
+
+<p>Just a sketch…</p>
+<pre>
+class PizzaDeliveryPerson
+  def deliver_pizza(pizza, customer, motorcycle)
+    store_in_bag(pizza)
+    motorcycle.start(motorcycle_key)
+    motorcycle.ride_safely_to(customer.address)
+    ring_doorbell()
+    be_polite_to(customer)
+  end
+
+  private
+	
+  def motorcycle_key
+	
+  # ...
+
+  def store_in_bag(pizza)
+	
+  # ...
+end
+</pre>
+
+<p><em>Single Responsibility Principle</em> is about that.</p>
+
+<p>It's about <strong>responsibility</strong>, <strong>behavior</strong>, and how we describe them <strong>cohesively</strong>. Not about "doing only one thing."</p>
+
+<blockquote>
+  <p><em>… "This principle is important when there is a change in some software functionality. When this occurs, the programmer needs to look for the classes that have the responsibility to be modified. Assuming a class has more than one reason to change, this means it is accessed by two parts of the software that do different things. Making a change in one of the responsibilities of this class can, unintentionally, break the other part unexpectedly. This makes the class design fragile."</em></p>
+
+  <p><em>Maurício Aniche - Test-Driven Development p/ 204</em></p>
+</blockquote>
+
+<h3 id="breaking-our-single-responsibility-principle-and-the-problems-that-originated-it">Breaking our Single Responsibility Principle and the problems that originated it</h3>
+
+<p>Imagine you are a <em>software engineer</em> at the pizzeria and need to change how the pizza is delivered (<strong>behavior</strong>) in the system. Which classes would you look for first?</p>
+
+<ol>
+  <li><code>DeliverPizza</code> or <code>PizzaDeliveryPerson</code></li>
+  <li><code>Kitchen</code> or <code>KitchenOven</code></li>
+  <li><code>CalculateAccounting</code> or <code>Payroll</code></li>
+</ol>
+
+<p>You surely chose <strong>option 1</strong>, because it is the most cohesive.</p>
+
+<p>The first problem that SRP corrects is precisely <strong>low cohesion</strong>. If we had a class called <code>CalculateAccounting</code> that had the behavior of "heating the kitchen oven," we would be violating SRP.</p>
+
+<p>No programmer will think of opening a <code>CalculateAccounting</code> class to change the "kitchen oven temperature." It's counterintuitive. <code>CalculateAccounting</code> would have <strong>2 responsibilities</strong>: taking care of the kitchen and accounting. <strong>It would have different reasons to change.</strong></p>
+
+<p>The second biggest problem is the complexity that a class with many responsibilities (remembering that <strong>responsibility</strong> is not <strong>behavior</strong>) can have. The tendency is for the class to become difficult to maintain and test. Besides, two completely different contexts can interfere with each other.</p>
+
+<p><em>Note:</em>. Also note that in the example in the previous section, the <code>deliver_pizza</code> method of the <code>PizzaDeliveryPerson</code> class knows how to start the <code>motorcycle</code>, but doesn't know how the motorcycle works internally when it starts. The behavior of the motorcycle's machinery is not the <code>PizzaDeliveryPerson</code>'s responsibility. If the machinery's behavior were also in this class, we would have something similar to this image:</p>
+
+<p><img src="/images/motaur.png" alt="" /></p>
+
+<p>Whenever we wanted to maintain the motorcycle, we would have to mess with the <code>PizzaDeliveryPerson</code>. Which, for sane people, makes no sense at all.</p>
+
+<h3 id="the-magic-formula-to-respect-srp">The magic formula to respect SRP</h3>
+
+<ul>
+  <li>Avoid using generic names within your <em>software</em>, such as <em>Services</em> or <em>Manager</em>.</li>
+  <li>If in doubt, ask yourself:
+    <ul>
+      <li>Should class/module Y, which has responsibility X, be accountable for behavior Z?</li>
+    </ul>
+  </li>
+  <li>Before you start coding, take some time to think about how to translate your business rule into structures (classes, modules, and functions) with cohesive names. Use words that are common in your team's daily life. I like to think that well-written software is one that a non-technical person (PO, PM, and Stakeholders) can open the files and superficially understand what is happening.</li>
+</ul>
+
+<h3 id="summary">Summary</h3>
+
+<p>These are the 5 main messages I emphasize with this article:</p>
+
+<ul>
+  <li>Responsibility is not behavior itself. It is the duty to answer for a set of behaviors.</li>
+  <li>SRP is about <strong>responsibility</strong>, <strong>behavior</strong>, and how we describe them <strong>cohesively</strong>. Not about doing only one thing.</li>
+  <li>Cohesion, above all, has to do with the names we give to variables, classes, modules, functions, and methods in relation to what they do and/or are.</li>
+  <li>Every and any pattern or practice serves to <strong>simplify so that we can work using less cognitive effort</strong>; if this does not happen, we should not use the pattern or practice.</li>
+  <li>It is up to the <em>software engineer</em>, given a certain context, to find the adequate and ideal solution to the problem, identifying which patterns to use or not, given the deadline, project size, and business objectives.</li>
+</ul>
+
+<h5 id="some-cool--complementary-links-on-the-subject">Some cool / complementary links on the subject:</h5>
+
+<p><a href="https://hackernoon.com/you-dont-understand-the-single-responsibility-principle-abfdd005b137">You dont understand the single responsibility principle (Hackernoon)</a></p>
+
+<p><a href="https://softwareengineering.stackexchange.com/questions/150760/single-responsibility-principle-how-can-i-avoid-code-fragmentation">Single responsibility principle: how can i avoid code fragmentation (Stack Exchange Question)</a></p>
+
+<p><a href="https://www.davidtanzer.net/david%27s%20blog/2017/07/26/the-single-responsibility-principle.html">The Single Responsibility Principle (David Tanzer)</a></p>
+
+<p><a href="https://blog.cleancoder.com/uncle-bob/2014/05/08/SingleReponsibilityPrinciple.html">Single reponsibility principle (Blog Clean Coder / Uncle Bob)</a></p>
+
+<p><a href="https://www.amazon.com.br/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164/ref=asc_df_0134494164/?tag=googleshopp00-20&amp;linkCode=df0&amp;hvadid=379726160779&amp;hvpos=&amp;hvnetw=g&amp;hvrand=7253478441797173469&amp;hvpone=&amp;hvptwo=&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=1001766&amp;hvtargid=pla-423658477418&amp;psc=1">Book Clean Architecture (Amazon purchase link)</a></p>
+
+<p><a href="https://en.wikipedia.org/wiki/Cohesion_(computer_science)">Cohesion (computer science) (Wikipedia)</a></p>
+
+<p><a href="https://www.casadocodigo.com.br/products/livro-tdd-ruby">Book TDD with Ruby (Casa do código)</a></p>
+
+<p><a href="https://www.amazon.com.br/C%C3%B3digo-limpo-Robert-C-Martin/dp/8576082675/ref=asc_df_8576082675/?tag=googleshopp00-20&amp;linkCode=df0&amp;hvadid=379792215563&amp;hvpos=&amp;hvnetw=g&amp;hvrand=4192535749629342066&amp;hvpone=&amp;hvptwo=&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=1001766&amp;hvtargid=pla-398225630878&amp;psc=1">Book Clean Code (Amazon link)</a></p>
+
+
+          Hey, what did you think of this article??
+            <br/>
+            <br/>
+            Share and give your opinion by clicking on one of the networks below:
+            <br/>
+            <br/>
+            <div class="sharethis-inline-share-buttons"></div>
+            <br/>
+            Thank you very much!
+            <br/>
+            <div class="fb-comments" data-href="https://www.truehenrique.com/en/2021/10/27/single-responsibility-the-distorted-principle/" data-width="" data-numposts="10"></div>
+          </div>
+      </main>
+
+      <div>
+      <aside class='z-index-1'>
+        <div class='ads-div'>
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1640512874906863"
+                        crossorigin="anonymous"></script>
+          <!-- truehenrique -->
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-1640512874906863"
+               data-ad-slot="5386842633"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+        <h3 class="no-padding-top">Tags</h3>
+        <ul style="list-style-type: circle;">
+              <li><a href="/tags/thoughts/">#thoughts</a></li>
+              <li><a href="/tags/agile-methods/">#agile methods</a></li>
+              <li><a href="/tags/programming/">#programming</a></li>
+        </ul>
+        <hr/>
+
+        <h3>Recent Articles</h3>
+        <ul>
+              <li><a href="/en/2026/04/06/the-3-best-feedbacks-i-received-as-a-software-engineer/">The 3 best feedbacks I received as a software engineer that changed my career</a> <span>Apr  6</i></span></li>
+              <li><a href="/en/2024/04/22/clean-agile-xp-and-scrum-avoiding-the-hangover/">Clean Agile, XP, and Scrum - Avoiding the "Hangover"</a> <span>Apr 22</i></span></li>
+        </ul>
+
+
+
+        <h3>Full Archive</h3>
+        <a class="pseudo button" href="/en/archive/">Open</a>
+        <hr>
+        <br>
+      </aside>
+      <div class='ads-div'>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1640512874906863"
+                      crossorigin="anonymous"></script>
+        <!-- truehenrique - aside -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1640512874906863"
+             data-ad-slot="9257601626"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      </div>
+    </div>
+    <footer class="social-footer">
+  <div class="wrap">
+    @truehenrique | <a href="/privacy-policy">Privacy</a> | <a href="/terms-of-use">Terms of Use</a>
+  </div>
+</footer>
+
+  </body>
+</html>

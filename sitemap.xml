@@ -1,368 +1,476 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.truehenrique.com/</loc>
-    <lastmod>2026-04-07T10:24:09-03:00</lastmod>
+    <loc>https://www.truehenrique.com/privacy-policy/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.truehenrique.com/2021/10/27/single-responsibility-o-principio-deturpado/</loc>
-    <lastmod>2026-04-02T13:29:40-03:00</lastmod>
+    <loc>https://www.truehenrique.com/terms-of-use/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.truehenrique.com/2020/07/17/elixir-e-phoenix-na-velocidade-da-luz/</loc>
-    <lastmod>2026-04-04T21:18:04-03:00</lastmod>
+    <loc>https://www.truehenrique.com/en/2021/10/27/single-responsibility-the-distorted-principle/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.truehenrique.com/2026/04/06/os-3-melhores-feedbacks-que-recebi-como-engenheiro-de-software/</loc>
-    <lastmod>2026-04-06T10:46:10-03:00</lastmod>
+    <loc>https://www.truehenrique.com/en/2026/04/06/the-3-best-feedbacks-i-received-as-a-software-engineer/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.truehenrique.com/2020/03/04/pwa-com-elixir-e-phoenix-em-5-minutos/</loc>
-    <lastmod>2026-04-04T21:21:24-03:00</lastmod>
+    <loc>https://www.truehenrique.com/en/2024/04/22/clean-agile-xp-and-scrum-avoiding-the-hangover/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.truehenrique.com/2024/01/27/o-real-significado-de-ikigai/</loc>
-    <lastmod>2026-04-02T13:29:59-03:00</lastmod>
+    <loc>https://www.truehenrique.com/pt/2021/10/27/single-responsibility-o-principio-deturpado/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.truehenrique.com/2022/02/17/a-linguagem-de-programacao-bala-de-prata/</loc>
-    <lastmod>2026-04-04T21:16:44-03:00</lastmod>
+    <loc>https://www.truehenrique.com/pt/2020/07/17/elixir-e-phoenix-na-velocidade-da-luz/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.truehenrique.com/2024/04/22/clean-agile-xp-e-scrum-evitando-a-ressaca/</loc>
-    <lastmod>2026-04-02T13:30:03-03:00</lastmod>
+    <loc>https://www.truehenrique.com/pt/2026/04/06/os-3-melhores-feedbacks-que-recebi-como-engenheiro-de-software/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/pt/2020/03/04/pwa-com-elixir-e-phoenix-em-5-minutos/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/pt/2024/01/27/o-real-significado-de-ikigai/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/pt/2022/02/17/a-linguagem-de-programacao-bala-de-prata/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/pt/2024/04/22/clean-agile-xp-e-scrum-evitando-a-ressaca/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/playlists/musculacao/</loc>
-    <lastmod>2025-10-19T08:43:22-03:00</lastmod>
+    <lastmod>2026-05-07T09:38:08-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/playlists/prosperidade/</loc>
-    <lastmod>2025-10-19T08:43:22-03:00</lastmod>
+    <lastmod>2026-05-07T09:38:08-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/playlists/</loc>
-    <lastmod>2026-04-07T13:28:11-03:00</lastmod>
+    <lastmod>2026-05-07T09:43:01-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/playlists/docker-containers/</loc>
-    <lastmod>2025-10-19T08:43:22-03:00</lastmod>
+    <lastmod>2026-05-07T09:38:08-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/playlists/agile/</loc>
-    <lastmod>2025-10-19T22:55:54-03:00</lastmod>
+    <lastmod>2026-05-07T09:38:08-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/privacidade/</loc>
-    <lastmod>2026-04-04T21:51:10-03:00</lastmod>
+    <lastmod>2026-05-07T15:23:16-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/sobre/</loc>
-    <lastmod>2026-04-02T14:07:01-03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.truehenrique.com/arquivo/</loc>
-    <lastmod>2026-04-04T21:32:04-03:00</lastmod>
+    <lastmod>2026-05-07T09:43:01-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/termos-de-uso/</loc>
-    <lastmod>2026-04-06T09:29:45-03:00</lastmod>
+    <lastmod>2026-05-07T09:43:01-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/en/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/en/about/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/sobre/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/en/archive/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/arquivo/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/en/archive/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/en/about/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/reflexoes/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/tags/thoughts/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/agile/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/xp/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/scrum/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/clean-agile/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/tags/agile-methods/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/ikigai/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/linguagem-de-programacao/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/nichos/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/programacao/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/linguagem/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/java/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/ruby/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/elixir/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/python/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/rust/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/kotlin/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/javascript/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/go/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/c/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/padroes/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/solid/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/boas-praticas/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/engenharia-de-software/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/single-responsabilit/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/tags/patterns/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/tags/best-practices/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/tags/software-engineering/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/tags/single-responsibility/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/tags/programming/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/phoenix/</loc>
-    <lastmod>2026-04-06T11:05:23-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/2026/</loc>
-    <lastmod>2025-10-19T08:43:22-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/2026/04/</loc>
-    <lastmod>2025-10-19T08:43:22-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/2026/04/06/</loc>
-    <lastmod>2025-10-19T08:43:22-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/2024/</loc>
-    <lastmod>2025-10-19T08:43:22-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/2024/04/</loc>
-    <lastmod>2025-10-19T08:43:22-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/2024/04/22/</loc>
-    <lastmod>2025-10-19T08:43:22-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/2024/01/</loc>
-    <lastmod>2025-10-19T08:43:22-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/2024/01/27/</loc>
-    <lastmod>2025-10-19T08:43:22-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/2022/</loc>
-    <lastmod>2025-10-19T08:43:22-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/2022/02/</loc>
-    <lastmod>2025-10-19T08:43:22-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/2022/02/17/</loc>
-    <lastmod>2025-10-19T08:43:22-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/2021/</loc>
-    <lastmod>2025-10-19T08:43:22-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/2021/10/</loc>
-    <lastmod>2025-10-19T08:43:22-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/2021/10/27/</loc>
-    <lastmod>2025-10-19T08:43:22-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/2020/</loc>
-    <lastmod>2025-10-19T08:43:22-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/2020/07/</loc>
-    <lastmod>2025-10-19T08:43:22-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/2020/07/17/</loc>
-    <lastmod>2025-10-19T08:43:22-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/2020/03/</loc>
-    <lastmod>2025-10-19T08:43:22-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/2020/03/04/</loc>
-    <lastmod>2025-10-19T08:43:22-03:00</lastmod>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

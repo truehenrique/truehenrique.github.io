@@ -11,10 +11,10 @@
   </author>
   <entry>
     <title>Os 3 melhores feedbacks que recebi como engenheiro de software e que mudaram a minha carreira</title>
-    <link rel="alternate" href="https://truehenrique.com/2026/04/06/os-3-melhores-feedbacks-que-recebi-como-engenheiro-de-software/"/>
-    <id>https://truehenrique.com/2026/04/06/os-3-melhores-feedbacks-que-recebi-como-engenheiro-de-software/</id>
+    <link rel="alternate" href="https://truehenrique.com/pt/2026/04/06/os-3-melhores-feedbacks-que-recebi-como-engenheiro-de-software/"/>
+    <id>https://truehenrique.com/pt/2026/04/06/os-3-melhores-feedbacks-que-recebi-como-engenheiro-de-software/</id>
     <published>2026-04-06T10:24:00-03:00</published>
-    <updated>2026-04-06T10:46:10-03:00</updated>
+    <updated>2026-05-07T15:30:33-03:00</updated>
     <author>
       <name>Henrique F. Teixeira</name>
     </author>
@@ -136,11 +136,137 @@ Por mais que possa ser muita coisa, não é impossível, e as vantagens são mui
 </content>
   </entry>
   <entry>
+    <title>The 3 best feedbacks I received as a software engineer that changed my career</title>
+    <link rel="alternate" href="https://truehenrique.com/en/2026/04/06/the-3-best-feedbacks-i-received-as-a-software-engineer/"/>
+    <id>https://truehenrique.com/en/2026/04/06/the-3-best-feedbacks-i-received-as-a-software-engineer/</id>
+    <published>2026-04-06T10:24:00-03:00</published>
+    <updated>2026-05-07T15:30:33-03:00</updated>
+    <author>
+      <name>Henrique F. Teixeira</name>
+    </author>
+    <content type="html">&lt;p&gt;Being a software engineer is not easy. The market is hot, and salaries are attractive, but not without reason. Just as not everyone is born to be a doctor, not everyone is born to be a software engineer. It's not enough to consider working in the field solely based on market demand and salary. The profession is challenging, and even with an ideal profile, we still face many difficulties, requiring significant resilience and practice:&lt;/p&gt;
+
+&lt;p&gt;There are over 700 programming languages in the world, and the market requires knowledge of some of them—not all, but a random selection that creates various combinations for each company.&lt;/p&gt;
+
+&lt;p&gt;Each language has multiple different tools and libraries, sometimes even 2, 3, or 4 that do the same thing. The market also randomly requires knowledge of these tools.&lt;/p&gt;
+
+&lt;p&gt;Furthermore, systems are often like a 2000-page book, written by many different people at different times. Analogously, our job is often to modify a specific page of this book, being careful that the whole remains cohesive and makes sense. In some cases, bugs and code errors can cost us anything from working weekends to billions of dollars and and even lives. After all, software is everywhere.&lt;/p&gt;
+
+&lt;p&gt;Beyond technical skills (hard skills), we also need soft skills. If we lack good communication, for example, we might accept impossible deadlines or fail to deliver a feature as specified by our client due to a lack of listening and understanding their needs.&lt;/p&gt;
+
+&lt;p&gt;We can easily fall into burnout.&lt;/p&gt;
+
+&lt;p&gt;We never know what's coming next; we can become obsolete within 2 to 3 years.&lt;/p&gt;
+
+&lt;p&gt;In this scenario, one of the most valuable things we can have is the mutual support of the software engineering community online and from colleagues, leading to numerous open-source libraries, forums where we can seek help, partnerships, and sometimes invaluable feedback.&lt;/p&gt;
+
+&lt;p&gt;In my experience, I was fortunate to work with excellent professionals who mentored me and provided feedback. Giving feedback, in particular, is quite challenging. I'm not talking about a pat on the back like 'well done' or 'you do great work.' I'm talking about constructive feedback.&lt;/p&gt;
+
+&lt;p&gt;According to my understanding of Dale Carnegie's classic book 'How to Win Friends and Influence People,' people's tendency when receiving constructive (in other words, negative) feedback is to justify themselves. No matter how wrong the person may be, they will try to justify themselves, and if the feedback isn't delivered cautiously, it can create a bad atmosphere between both parties. People rarely accept their own flaws.&lt;/p&gt;
+
+&lt;p&gt;Indeed, I believe that knowing how to listen and give feedback are two rare soft skills.&lt;/p&gt;
+
+&lt;p&gt;So, I consider myself lucky to have known how to listen and to have had someone who knew how to give feedback.&lt;/p&gt;
+
+&lt;p&gt;At the time I received the three pieces of feedback that changed my career, I was working alongside a software engineer who was much more experienced than me (to this day, I consider him one of the best engineers I've had the opportunity to work with; I admire him greatly), and he was about to change companies.&lt;/p&gt;
+
+&lt;p&gt;On his last day, we had a 1:1 (a meeting, just him and me) where I asked him to point out areas for improvement. To my surprise, he had already prepared these points even before I asked.&lt;/p&gt;
+
+&lt;p&gt;The feedback I received was completely different from what I expected, very precise, and I never imagined that simply following it would create such an impact. By putting just these three points into practice, I went from junior to senior in a very short time. Here they are:&lt;/p&gt;
+
+&lt;h2 id="finish-tedious-tasks-as-quickly-as-possible"&gt;1. Finish tedious tasks as quickly as possible.&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;According to American writer Michael Stanier, most of our daily tasks are classified as 'Bad Work' and 'Good Work.' 'Bad Work' is all bureaucratic and mechanical tasks, such as filling out spreadsheets, going to the bank, and attending unproductive meetings. 'Good Work' is the type of work you do very well and resolve without much complication. It's the description of your job.&lt;/p&gt;
+
+  &lt;p&gt;— Luciano Braga in 'The Power of Free Time' p/ 72&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In our daily lives, we sometimes have to perform tasks that aren't exactly what we enjoy most. I, for example, love refactoring, architecture, and new project tasks, but my enjoyment of these doesn't prevent other tasks I dislike from appearing in my day-to-day. This is likely the situation for most people.&lt;/p&gt;
+
+&lt;p&gt;The biggest lesson I learned from this feedback was not to procrastinate or 'drag my feet' on tasks I don't enjoy. After all, they will have to be done anyway, and the more time we spend on them, the more time we spend on something we dislike.&lt;/p&gt;
+
+&lt;p&gt;This is even logical. The faster we finish the tedious part, the more time remains for the enjoyable part, meaning we stay more motivated.&lt;/p&gt;
+
+&lt;p&gt;Don't put off boring tasks; try to finish them as quickly as you can!&lt;/p&gt;
+
+&lt;h2 id="know-your-companys-entire-software-architecture-by-heart-understand-exactly-how-things-work-off-the-top-of-your-head"&gt;2. Know your company's entire software architecture 'by heart'; understand exactly how things work 'off the top of your head.'&lt;/h2&gt;
+&lt;p&gt;At that time, I worked at a company with a complex software architecture: various microservices, internal libraries, queues, relational and non-relational databases, daemon workers, cron jobs, and legacy systems (the famous giant, disorganized monoliths). To make matters worse, the system was high-scale, handling many requests per minute.&lt;/p&gt;
+
+&lt;p&gt;The business rules were all implicit in the code, but understanding the entire ecosystem seemed extremely challenging, and indeed, few people did.&lt;/p&gt;
+
+&lt;p&gt;Some people might tell us how something works or what the business rules are, but we can only be sure if we understand the source and analyze the code. After all, that's where what will actually happen is written.&lt;/p&gt;
+
+&lt;p&gt;For me, at the time and in that scenario, it was very difficult to deliver any more complex tasks. To know where to make changes, I constantly had to read a lot of code, understand how various systems integrated, behaved, and what each one's responsibility was. It was also very difficult to contribute opinions in meetings, generate ideas, create solutions, and very easy to make wrong technical decisions.&lt;/p&gt;
+
+&lt;p&gt;To deal with this, this was my colleague's secret, and it has now become mine too: voluntarily memorize the entire architecture of your company's systems (within your team's domain) to the point where you can draw it by hand without needing to consult any source. For example: Imagine your team handles the company's payment section. Take one, two, or three days to read code, documentation, talk to longer-tenured colleagues until you can draw (at a high level) everything on paper without needing to consult anything. Memorize everything.&lt;/p&gt;
+
+&lt;p&gt;Draw shapes, arrows, describe the responsibilities, processes, and main business rules of each service (or component/class/library), and make it clear how everything works and connects. It doesn't need to be in minute detail, but with enough detail for a good general understanding.&lt;/p&gt;
+
+&lt;p&gt;Become a Medium member
+As much as it might seem like a lot, it's not impossible, and the advantages are highly significant:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Agility in decision-making during meetings&lt;/li&gt;
+  &lt;li&gt;Ease in proposing and conceptualizing solutions&lt;/li&gt;
+  &lt;li&gt;Extreme confidence&lt;/li&gt;
+  &lt;li&gt;Assertiveness&lt;/li&gt;
+  &lt;li&gt;Higher quality in written code&lt;/li&gt;
+  &lt;li&gt;Recognition (from peers)&lt;/li&gt;
+  &lt;li&gt;Appreciation for your work&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Furthermore, study all the languages and tools involved in the architecture that you don't yet know, so you don't miss any details.&lt;/p&gt;
+
+&lt;h2 id="be-present-participate-in-all-events-that-you-can-and-build-good-relationships-with-your-team"&gt;3. Be present, participate in all events (that you can), and build good relationships with your team.&lt;/h2&gt;
+&lt;p&gt;You know when they invite you for a beer after work? Or that special lunch where everyone goes together? Or an event for someone's birthday? That casual chat/coffee break in the pantry?&lt;/p&gt;
+
+&lt;p&gt;Currently, with remote work, this might seem strange and distant. But if your company promotes an in-person event or a call with a non-work-related theme, don't miss it. If your team plans something outside of work, go! Participate!&lt;/p&gt;
+
+&lt;p&gt;Turn on your camera.&lt;/p&gt;
+
+&lt;p&gt;Ultimately, we are all people. Many say it's necessary to separate 'professional life' from 'personal life.' But hold on, there aren't two Henriques. I personally believe there's only one life, and our bodies won't magically stop stressing just because we leave or enter work.&lt;/p&gt;
+
+&lt;p&gt;For people with very fragile or superficial relationships with colleagues, a small misunderstanding can become a big problem, feedback becomes difficult, and there's little transparency. I'm not saying we should only work with our best friends, but it's also important to understand the other person—their motivations, what they do in their free time, what they enjoy, their personality—and establish a relationship of trust.&lt;/p&gt;
+
+&lt;p&gt;This makes all the difference in the work environment; a comfortable and safe environment provides:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Relaxation&lt;/li&gt;
+  &lt;li&gt;Better ideas&lt;/li&gt;
+  &lt;li&gt;Transparency&lt;/li&gt;
+  &lt;li&gt;Peace of mind&lt;/li&gt;
+  &lt;li&gt;Assertiveness in dealing with others&lt;/li&gt;
+  &lt;li&gt;Good feedback&lt;/li&gt;
+  &lt;li&gt;Connections with people (even from other areas)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As much as it might not seem so to people starting in the field, these points are fundamental in the software engineering process.&lt;/p&gt;
+
+&lt;p&gt;At that time, I had a fragile relationship with most of the team I worked with. We only discussed work, and this created problems for me:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Doubts about how others perceived my work&lt;/li&gt;
+  &lt;li&gt;Discomfort&lt;/li&gt;
+  &lt;li&gt;Lack of security to ask for help when I didn't know something&lt;/li&gt;
+  &lt;li&gt;Imposter syndrome&lt;/li&gt;
+  &lt;li&gt;Fear of being laid off&lt;/li&gt;
+  &lt;li&gt;Anxiety and premature understanding of some situations&lt;/li&gt;
+  &lt;li&gt;Avoiding speaking in meetings&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;These are the three best pieces of feedback I've received. It's clear they span both hard and soft skills. For me, remembering them daily was a simple way to make my career successful, like a magic formula.&lt;/p&gt;
+
+&lt;p&gt;Even today, I find it incredible how powerful their effect was, especially for being just three points.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
     <title>Clean Agile, XP e Scrum - Evitando a "ressaca"</title>
-    <link rel="alternate" href="https://truehenrique.com/2024/04/22/clean-agile-xp-e-scrum-evitando-a-ressaca/"/>
-    <id>https://truehenrique.com/2024/04/22/clean-agile-xp-e-scrum-evitando-a-ressaca/</id>
+    <link rel="alternate" href="https://truehenrique.com/pt/2024/04/22/clean-agile-xp-e-scrum-evitando-a-ressaca/"/>
+    <id>https://truehenrique.com/pt/2024/04/22/clean-agile-xp-e-scrum-evitando-a-ressaca/</id>
     <published>2024-04-21T21:26:00-03:00</published>
-    <updated>2026-04-02T13:30:03-03:00</updated>
+    <updated>2026-05-07T15:30:33-03:00</updated>
     <author>
       <name>Henrique F. Teixeira</name>
     </author>
@@ -501,11 +627,375 @@ Se mantermos o ritmo, vamos mais longe. &lt;/p&gt;
 </content>
   </entry>
   <entry>
+    <title>Clean Agile, XP, and Scrum - Avoiding the "Hangover"</title>
+    <link rel="alternate" href="https://truehenrique.com/en/2024/04/22/clean-agile-xp-and-scrum-avoiding-the-hangover/"/>
+    <id>https://truehenrique.com/en/2024/04/22/clean-agile-xp-and-scrum-avoiding-the-hangover/</id>
+    <published>2024-04-21T21:26:00-03:00</published>
+    <updated>2026-05-07T15:30:33-03:00</updated>
+    <author>
+      <name>Henrique F. Teixeira</name>
+    </author>
+    <content type="html">&lt;p&gt;Is your team's board showing several cards stuck in the same column for days with nothing being delivered? Are business stakeholders frustrated, constantly having to redefine deadlines and strategies? Do you feel like there's a lot of work but little result? Is the atmosphere tense, and the situation only seems to be getting worse?&lt;/p&gt;
+
+&lt;p&gt;You might be experiencing what Robert C. Martin (Uncle Bob) named in his book &lt;em&gt;Clean Agile&lt;/em&gt; as the 'agile hangover.'
+It's rare for anyone working with software not to have gone through this, especially when there's a lack of senior people on the team and/or we're dealing with complex software: The source code is spread across various projects, it's too extensive, poorly documented, or badly written.&lt;/p&gt;
+
+&lt;p&gt;The idea behind the agile movement is comprehensive, complex (despite appearances), and encompasses various different 'agile methods' scattered around. Similarly, so is software. And the more complex a problem, the harder it is to explain and understand. Furthermore, our knowledge transmission is often flawed (confirmation bias, information overload, and gaps), and each listener can interpret and replicate the same information in different ways, which can end up shaping a reality, a truth, or a social behavior.&lt;/p&gt;
+
+&lt;p&gt;Returning to the main topic, it's possible to observe in the market a mix of interpretations of 'agile' being applied simultaneously, in pursuit of an idealized and 'theoretical' result that often doesn't prove true in practice. These interpretations can stray far from the main manifesto and its principles, leading to much frustrated expectation, finger-pointing, and few results.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;"The agile methodology took the software industry by storm. But, like a game of telephone, the original ideas of agility were distorted and simplified, arriving at companies as a promise of 'a process to deliver software faster.'&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;– Robert C. Martin, Clean Agile, p. 170"&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id="who-is-robert-c-martin"&gt;Who is Robert C. Martin&lt;/h3&gt;
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/PnwhBP_Lmow" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Better known as &lt;em&gt;Uncle Bob&lt;/em&gt;, Robert C. Martin has been a software engineer since 1970, an international consultant, speaker, author of several IT books, and &lt;strong&gt;one of the 17 original signatories of the Agile Manifesto in 2001.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Recently, he decided to revisit the topic of 'agility' and release the book &lt;em&gt;Clean Agile&lt;/em&gt;, where he explains the original ideas of the manifesto and offers some critiques on how the market has absorbed them.&lt;/p&gt;
+
+&lt;h3 id="clean-agile-development"&gt;Clean Agile Development&lt;/h3&gt;
+
+&lt;p&gt;According to the book, the definition of agile in its 'clean' form (the original idea, without noise) is:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;"A process in which a project is subdivided into iterations. The output of each iteration is calculated and used to continuously evaluate planning. Features are implemented according to the added business value, so that the most valuable things are implemented first. The quality level is kept as high as possible. The schedule is primarily managed by manipulating scope."&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;– Robert C. Martin, Clean Agile, p. 32&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The rest (&lt;em&gt;Scrum, XP, Kanban&lt;/em&gt;) are merely tools, methods, or frameworks to facilitate and/or guide the use of agile. Beyond this definition, the twelve principles of agility &lt;strong&gt;must be followed&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Our highest priority is to satisfy the customer
+through early and continuous delivery
+of valuable software.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Welcome changing requirements,
+even late in development.
+Agile processes harness change for
+the customer's competitive advantage.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Deliver working software frequently,
+from a couple of weeks to a couple of months,
+with a preference to the shorter timescale.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Business people and developers must work
+together daily throughout the project.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Build projects around motivated individuals.
+Give them the environment and support they need,
+and trust them to get the job done.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The most efficient and effective method of
+conveying information to and within a development
+team is face-to-face conversation.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Working software is the primary measure of progress.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Agile processes promote sustainable
+development. The sponsors, developers, and
+users should be able to maintain a constant
+pace indefinitely.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Continuous attention to technical excellence
+and good design enhances agility.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Simplicity—the art of maximizing the amount
+of work not done—is essential.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The best architectures, requirements, and designs
+emerge from self-organizing teams.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;At regular intervals, the team reflects on how
+to become more effective, then tunes and adjusts
+its behavior accordingly.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Uncle Bob also states that the &lt;em&gt;XP&lt;/em&gt; (&lt;em&gt;Extreme Programming&lt;/em&gt;) framework is the &lt;em&gt;"most well-defined, complete, least confusing, and best representative of the essential core of agility,"&lt;/em&gt; and he uses it as an ideal basis to explain agile concepts.&lt;/p&gt;
+
+&lt;h3 id="xp-a-brief-summary"&gt;XP, a brief summary&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;XP&lt;/em&gt; (&lt;em&gt;Extreme Programming&lt;/em&gt;) is an agile framework created by &lt;em&gt;Kent Beck&lt;/em&gt; that provides practices for software development, represented in the model below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/agil/xp.png" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the outer circle (Purple), we have 📊 &lt;strong&gt;business practices&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Acceptance tests&lt;/strong&gt;: basically means that each demand (stories, tasks, and spikes, for example) must have its acceptance criteria, which are necessary for the completion and acceptance of a demand. These criteria can be validated through acceptance tests and are well-aligned with the concept of &lt;em&gt;Definition of Done&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Small releases&lt;/strong&gt;: we should plan to deliver software incrementally, feature by feature, in a gradual manner.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Planning&lt;/strong&gt;: the act of planning the iteration, defining how we can divide a project into features, epics, stories, tasks, and spikes.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Whole team&lt;/strong&gt;: the team (&lt;em&gt;P.O, P.M, Devs, QA&lt;/em&gt;, Managers) must work together from the beginning to the end of the project; communication should be easy between all parties. The result belongs to everyone.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the middle circle (Dark Blue), we have 👥 &lt;strong&gt;team practices&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Continuous integration&lt;/strong&gt;: the act of constantly integrating changes made to the main code (production), one by one. (Do not accumulate sequences of changes by integrating them all at once).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Metaphor&lt;/strong&gt;: similar to the ubiquitous language of &lt;em&gt;DDD&lt;/em&gt; (&lt;em&gt;Domain Driven Design&lt;/em&gt;), everyone on the team should speak the same language, and the code should reflect this language in how it's written. Personally, I like to say that readable code is one where a non-technical person could easily step in, read, and infer what's happening.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Sustainable pace&lt;/strong&gt;: we should develop at a predictable rhythm. The goal is not to finish quickly, but for the team to maintain a constant and healthy pace.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Collective ownership&lt;/strong&gt;: any team member can check and improve any module of the project at any time. Knowledge should be distributed among everyone.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the inner circle (Light Blue), we have 💻 &lt;strong&gt;technical practices&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;TDD (Test Driven Development)&lt;/strong&gt;: we should write automated tests and, if possible, practice TDD.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Pair programming&lt;/strong&gt;: we should encourage pair programming, especially in scenarios where there's a need for knowledge exchange, mentoring, and attention to very critical demands. It's a choice for programmers and the team (it's not mandatory).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Refactoring&lt;/strong&gt;: We must deliver code better than we found it. If there's a need or opportunity for refactoring, refactor.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Simple Design&lt;/strong&gt;: &lt;em&gt;"It's the practice of writing only the necessary code with a structure that makes it simpler, smaller, and more expressive"&lt;/em&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Run all tests&lt;/li&gt;
+  &lt;li&gt;Express intent&lt;/li&gt;
+  &lt;li&gt;Eliminate duplication&lt;/li&gt;
+  &lt;li&gt;Reduce elements.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id="a-little-more-about-planning-in-xp"&gt;A little more about Planning in XP&lt;/h3&gt;
+
+&lt;p&gt;This is the &lt;strong&gt;central practice&lt;/strong&gt; of the entire framework; planning occurs in a meeting called &lt;em&gt;Iteration Planning&lt;/em&gt; where:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;We verify the data generated by the last iteration.&lt;/li&gt;
+  &lt;li&gt;Stories are presented by business stakeholders and validated by &lt;em&gt;DoR&lt;/em&gt; (&lt;em&gt;Definition of Ready&lt;/em&gt;) criteria. The book &lt;em&gt;Clean Agile&lt;/em&gt; cites the use of the acronym &lt;a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"&gt;&lt;em&gt;INVEST&lt;/em&gt;&lt;/a&gt; (Independent, Negotiable, Valuable, Estimable, Small, and Testable) as an example of &lt;em&gt;Definition of Ready&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;Stories can be broken down into technical &lt;a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"&gt;&lt;em&gt;SMART&lt;/em&gt;&lt;/a&gt; tasks and estimated by the technical team. Estimates can be made in various ways: in points from 1 to 6, t-shirt sizes (s, m, l), &lt;em&gt;Fibonacci&lt;/em&gt; for measuring effort, or a three-point estimate if we want to estimate time.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Spike&lt;/em&gt; (or discovery) stories are created if there isn't enough information or technical knowledge to deliver a certain story, or if we can't ensure it is &lt;a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"&gt;&lt;em&gt;INVEST&lt;/em&gt;&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;What we will do in the next iteration is defined by the &lt;strong&gt;whole team&lt;/strong&gt;; we use the data generated in previous iterations to support us (such as team velocity).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;"The meeting should be scheduled to be one-twentieth the length of the iteration. The IPM (Iteration Planning Meeting) for a two-week iteration should take about half a day."&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;– Robert C. Martin, Clean Agile, p. 70&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Note: We can have a second &lt;em&gt;Iteration Planning&lt;/em&gt; meeting after the first, only with the technical team, to break down stories into &lt;a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"&gt;&lt;em&gt;SMART&lt;/em&gt;&lt;/a&gt; tasks instead of doing the breakdown in a single meeting.&lt;/p&gt;
+
+&lt;h3 id="planning-in-a-zero-iteration"&gt;Planning in a Zero Iteration&lt;/h3&gt;
+
+&lt;p&gt;In a project's zero iteration, we have a different planning approach, in a meeting called &lt;em&gt;Release Planning&lt;/em&gt;. It's essentially the same as &lt;em&gt;Iteration Planning&lt;/em&gt;, with the difference that we won't define what we'll do for a single iteration, and we don't yet have generated data. We focus on global issues (at a high level, without much detail) for the project as a whole (all iterations).&lt;/p&gt;
+
+&lt;p&gt;Summarizing the flows of an &lt;em&gt;XP&lt;/em&gt; project with planning as the central practice, we have:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/agil/xp-flow.png" alt="" /&gt;&lt;/p&gt;
+
+&lt;h3 id="scrum-vs-xp"&gt;Scrum vs XP&lt;/h3&gt;
+
+&lt;p&gt;Scrum is an agile framework developed for use in complex and frequently changing environments. It defines roles with responsibilities (Scrum Master, Developers, Product Owner), events (Sprint, Planning, Daily, Retrospective, Review), artifacts (Product Backlog, Sprint Backlog, Increment), and the relationships between them. &lt;strong&gt;Scrum is intentionally incomplete&lt;/strong&gt;, and ideally, it should be complemented with other practices. For example, the Scrum Guide doesn't define that we must do TDD or refactoring in the system's code, but it does state that 'during the Sprint, quality must not decrease.' Therefore, adding these technical practices from XP to Scrum further enriches the project and aligns with the agile principle: 'Continuous attention to technical excellence and good design enhances agility.'&lt;/p&gt;
+
+&lt;h4 id="similarities-between-scrum-and-xp"&gt;Similarities between Scrum and XP:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Both define an event called &lt;em&gt;planning&lt;/em&gt; to plan the iteration.&lt;/li&gt;
+  &lt;li&gt;The iteration in XP is analogous to the &lt;em&gt;Sprint&lt;/em&gt; in Scrum.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Product Backlog items&lt;/em&gt; are similar to &lt;em&gt;User Stories&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Stand-Up Meetings&lt;/em&gt; are similar to &lt;em&gt;Dailies&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id="xp-points-that-add-value-to-scrum"&gt;XP points that add value to Scrum:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Although Scrum mentions that we should choose items that are &lt;em&gt;Ready&lt;/em&gt; to work on in the iteration, the concept of &lt;em&gt;Definition of Ready&lt;/em&gt; is not explicitly defined.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Spike&lt;/em&gt; stories are fundamental for working on discovery tasks within the sprint.&lt;/li&gt;
+  &lt;li&gt;Technical, team, and business practices can further enhance the quality of deliverables.&lt;/li&gt;
+  &lt;li&gt;We can add acceptance criteria to &lt;em&gt;User Stories&lt;/em&gt; / &lt;em&gt;Product Backlog Items&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id="definition-of-done-vs-acceptance-criteria"&gt;Definition of Done vs. Acceptance Criteria&lt;/h4&gt;
+
+&lt;p&gt;These two concepts confuse many people. Although they seem similar, &lt;em&gt;Definition of Done&lt;/em&gt; (from &lt;em&gt;Scrum&lt;/em&gt;) is an item-independent definition, while acceptance criteria (from &lt;em&gt;XP&lt;/em&gt;) are item-dependent. Example of DoD: 'Any backlog item, to be considered done, must have test coverage of 95% or more.' Example of acceptance criteria: 'The user must be able to click on the menu item and view the shopping cart page.'&lt;/p&gt;
+
+&lt;h3 id="blending-xp-with-scrum"&gt;Blending XP with Scrum&lt;/h3&gt;
+
+&lt;p&gt;Personally, I prefer to avoid very long meetings. I understand that accumulated mental exhaustion can lead to poor decisions. In XP, a lot of responsibility is concentrated in a single meeting (&lt;em&gt;Planning&lt;/em&gt;), but following the idea of &lt;em&gt;Scrum Events&lt;/em&gt;, we can separate these responsibilities into shorter meetings:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The iteration planning and commitment (&lt;em&gt;Sprint goal&lt;/em&gt;) part continues in a meeting called &lt;strong&gt;Planning&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;The estimation, creation of stories, tasks, and technical &lt;em&gt;spikes&lt;/em&gt; / &lt;em&gt;discovery&lt;/em&gt; are handled in a meeting called &lt;strong&gt;Backlog Refinement&lt;/strong&gt; (which happens informally during the iteration, as needed). Ideally, this meeting should occur before planning to have &lt;em&gt;Ready&lt;/em&gt; items for the iteration.&lt;/li&gt;
+  &lt;li&gt;The review of results and data generated by the iterations takes place in a meeting called &lt;strong&gt;Review&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In addition to these, we can also have a specific meeting to reflect on the iteration and seek opportunities for improvement, the &lt;strong&gt;Retrospective&lt;/strong&gt; (usually right after the &lt;strong&gt;Review&lt;/strong&gt;), making the flow more similar to the one below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/agil/xp-scrum-flow.png" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;If we replace 'Iteration' with 'Sprint' and add the &lt;em&gt;Daily&lt;/em&gt;, we have all the &lt;em&gt;Scrum Events&lt;/em&gt; defined in the &lt;em&gt;Scrum Guide&lt;/em&gt; (&lt;a href="https://scrumguides.org/scrum-guide.html#scrum-events"&gt;https://scrumguides.org/scrum-guide.html#scrum-events&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Furthermore, we can also address the &lt;em&gt;Scrum Planning&lt;/em&gt; questions in our &lt;strong&gt;Planning&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Why is this Sprint valuable?&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;What can be Done this Sprint?&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;How will the chosen work get done?&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By using &lt;em&gt;XP framework&lt;/em&gt; practices 'seasoned' with &lt;em&gt;Scrum&lt;/em&gt; events, we can have an agile model that, respecting the manifesto and all its principles, leverages the benefits of both tools.&lt;/p&gt;
+
+&lt;h3 id="daily-meetings"&gt;Daily Meetings&lt;/h3&gt;
+
+&lt;p&gt;Regarding the famous 'dailies,' I bring a quote from the book &lt;em&gt;Clean Agile&lt;/em&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;"Over the years, there has been much confusion about 'The Daily Scrum' and 'Daily Meetings' (aka Standup Meeting). Let me clarify this confusion.
+Here's what applies to the Daily Meeting:&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;• This meeting is optional. Many teams get along just fine without having one.&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;• It can be less frequent than daily. Choose the schedule that suits your reality.&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;• It should last about ten minutes, even if the team is large.&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;• This meeting follows a simple formula."&lt;/em&gt;&amp;gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;– Robert C. Martin, Clean Agile, p. 113&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The author continues:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;"The basic idea is for team members to stand in a circle and answer the following questions:&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;1. What did I do since the last meeting?&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;2. What will I do until the next meeting?&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;3. Are there any impediments in my way?"&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;– Robert C. Martin, Clean Agile, p. 113&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Although the author's ideas are slightly different from what is defined in the &lt;em&gt;Scrum Guide&lt;/em&gt;, based on my professional experience, I can only agree.&lt;/p&gt;
+
+&lt;p&gt;Currently, my team's dailies are asynchronous (we send updates via text); it's fast and works very well. If we need to delve deeper into something, we jump on a synchronous call, and it's resolved.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We join synchronous calls or chats as needed&lt;/li&gt;
+  &lt;li&gt;We save time&lt;/li&gt;
+  &lt;li&gt;We stay focused&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="avoiding-the-hangover"&gt;Avoiding the Hangover&lt;/h2&gt;
+
+&lt;p&gt;If I could list three main practices that increase a team's predictability and productivity, avoiding a major 'agile hangover,' based on the book 'Clean Agile' and my professional experience, they would be:&lt;/p&gt;
+
+&lt;h3 id="attention-to-software-design"&gt;1. Attention to software 'design'&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;Design&lt;/em&gt; is an essential stage in the software development process.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;"Every iteration in the project, from beginning to end, will have a bit of analysis, design, and implementation.&lt;/em&gt;
+&lt;em&gt;In an agile project, we are always analyzing and designing."&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;"The activities of analysis, architecture, design, and requirements implementation are constant throughout the iteration."&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;– Robert C. Martin, Clean Agile, p. 24/25&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Everyone who develops software does design, consciously or not.&lt;/p&gt;
+
+&lt;p&gt;Before starting to write code, it's necessary to spend time analyzing the demand and the development environment in question to understand business rules, effort, and project patterns. In other words, it's necessary to understand what we will technically need to do and what the best practices to use are. &lt;strong&gt;It's necessary to plan the technical part.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Imagine a developer picked up a task with a one-week deadline and after 7 days of development discovered that the task involves much more effort than initially known, and could take up to a month to complete.&lt;/p&gt;
+
+&lt;p&gt;To improve attention to &lt;em&gt;design&lt;/em&gt;, we can create &lt;em&gt;Spike&lt;/em&gt; stories on the &lt;em&gt;board&lt;/em&gt; when necessary, or even create a dedicated board just for technical &lt;em&gt;discovery&lt;/em&gt; of stories and epics. &lt;em&gt;Spikes&lt;/em&gt; are fundamental for defining technical code implementation strategies and breaking down tasks.&lt;/p&gt;
+
+&lt;p&gt;It's also important to adopt practices like &lt;em&gt;TDD&lt;/em&gt; and Refactoring in daily work.&lt;/p&gt;
+
+&lt;h3 id="maintain-a-sustainable-pace"&gt;2. Maintain a sustainable pace&lt;/h3&gt;
+
+&lt;p&gt;Software development is much more like a 'marathon' than a sprint.
+If we maintain the pace, we go further.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The important thing is to be predictable, more than fast. This way, we achieve more accurate metrics and deadline estimates.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;"Managers willing to encourage developers to work faster are using all the transparency of the process to micromanage them. Agile coaches, without a shred of commercial or technical experience, are training managers and telling development teams what to do. Managers are setting roadmaps, milestones, and shoving them down the throats of development teams."&lt;/em&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;em&gt;– Robert C. Martin, Clean Agile, p. 171&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;If we try to go too fast, we'll eventually burn out.&lt;/p&gt;
+
+&lt;p&gt;Being burnt out makes us more prone to causing &lt;em&gt;bugs&lt;/em&gt; and &lt;em&gt;design&lt;/em&gt; errors in systems.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Bugs&lt;/em&gt; and design errors slow down deliveries.&lt;/p&gt;
+
+&lt;p&gt;Slowed deliveries cause management problems.&lt;/p&gt;
+
+&lt;p&gt;Management problems increase pressure, and the vicious cycle of the 'agile hangover' continues.&lt;/p&gt;
+
+&lt;h3 id="dor-definition-of-ready-and-dod-definition-of-done"&gt;3. DoR (Definition of Ready) and DoD (Definition of Done)&lt;/h3&gt;
+
+&lt;p&gt;The entry of poorly 'refined' demands into the development &lt;em&gt;pipeline&lt;/em&gt; causes many problems, including:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Rework&lt;/li&gt;
+  &lt;li&gt;Feeling of insecurity&lt;/li&gt;
+  &lt;li&gt;Waste of time&lt;/li&gt;
+  &lt;li&gt;Frustrated expectations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Similarly, 'finishing' a demand without a well-defined 'done' definition can cause the same problems if we deliver something different from what the business team expected, or if important details are missing.&lt;/p&gt;
+
+&lt;p&gt;(Note: Understand 'demand' as a story card written by business stakeholders.)&lt;/p&gt;
+
+&lt;p&gt;Before committing to a demand in the iteration, set aside time to refine it with the team:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"&gt;&lt;em&gt;Use INVEST for stories and SMART for tasks&lt;/em&gt;&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Write acceptance criteria for the demand.&lt;/li&gt;
+  &lt;li&gt;Estimate the demand, and if there's still uncertainty, create a &lt;em&gt;Spike&lt;/em&gt; story to analyze it and gather more details.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The demand refinement stage can occur in a meeting specifically scheduled for it, during the &lt;em&gt;planning&lt;/em&gt; meeting, or at any other time when the team is gathered.&lt;/p&gt;
+
+&lt;p&gt;It's important that the entire team is present during demand refinements because this way, everyone involved gains awareness of each demand, has the opportunity to discuss them, offer opinions, and feels more secure if they are later responsible for delivering any of the demands.&lt;/p&gt;
+
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Clean Agile&lt;/em&gt; is one of the most accessible and precise books I've read on the subject. The author truly captures the current sentiment surrounding agile and brings us 'back to basics' as promised. I classify the book as essential for anyone looking to boost performance and improve the mental health of their team by shifting perspectives, breaking fallacies, and reducing noise related to agile.&lt;/p&gt;
+
+&lt;p&gt;Regarding the model I presented, I have contributed to applying it in some teams, and here I offer a graph based on a real 'before and after' experience concerning task lead time from initial to completed state.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/agil/lead-time.png" alt="" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Around April and May, we decided to change our &lt;em&gt;mindset&lt;/em&gt; and pay more attention to task refinement, &lt;em&gt;spikes&lt;/em&gt;, and acceptance criteria, along with other &lt;em&gt;XP&lt;/em&gt; ideas combined with a flow and events based on &lt;em&gt;Scrum&lt;/em&gt;. We gained in:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Predictability (sustainable pace)&lt;/li&gt;
+  &lt;li&gt;Trust&lt;/li&gt;
+  &lt;li&gt;Mental health&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It's worth noting that teams, projects, and companies have their specificities, and continuous improvement learning is also part of the agile model. Therefore, there is no perfect model, but it's always good to start from well-established ideas and solid principles to gain maximum advantages.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
     <title>O real significado de ikigai</title>
-    <link rel="alternate" href="https://truehenrique.com/2024/01/27/o-real-significado-de-ikigai/"/>
-    <id>https://truehenrique.com/2024/01/27/o-real-significado-de-ikigai/</id>
+    <link rel="alternate" href="https://truehenrique.com/pt/2024/01/27/o-real-significado-de-ikigai/"/>
+    <id>https://truehenrique.com/pt/2024/01/27/o-real-significado-de-ikigai/</id>
     <published>2024-01-27T12:00:00-03:00</published>
-    <updated>2026-04-02T13:29:59-03:00</updated>
+    <updated>2026-05-07T15:30:33-03:00</updated>
     <author>
       <name>Henrique F. Teixeira</name>
     </author>
@@ -634,10 +1124,10 @@ Se mantermos o ritmo, vamos mais longe. &lt;/p&gt;
   </entry>
   <entry>
     <title>A linguagem de programação "bala de prata"</title>
-    <link rel="alternate" href="https://truehenrique.com/2022/02/17/a-linguagem-de-programacao-bala-de-prata/"/>
-    <id>https://truehenrique.com/2022/02/17/a-linguagem-de-programacao-bala-de-prata/</id>
+    <link rel="alternate" href="https://truehenrique.com/pt/2022/02/17/a-linguagem-de-programacao-bala-de-prata/"/>
+    <id>https://truehenrique.com/pt/2022/02/17/a-linguagem-de-programacao-bala-de-prata/</id>
     <published>2022-02-17T19:17:00-03:00</published>
-    <updated>2026-04-04T21:16:44-03:00</updated>
+    <updated>2026-05-07T15:30:33-03:00</updated>
     <author>
       <name>Henrique F. Teixeira</name>
     </author>
@@ -928,430 +1418,6 @@ Gerenciamento de memória eficiente&lt;/p&gt;
 &lt;p&gt;Se você é dono de uma empresa procure escolher a linguagem ideal para cada nicho e não uma linguagem que cubra todos ou a maioria dos nichos.
 Porém, se você é um desenvolvedor solo "full-mega-blaster-stack" que tem novas idéias para &lt;em&gt;startups&lt;/em&gt; ou pega "freelas" dos mais variados e precisa codar tudo sozinho pode ser interessante e produtivo escolher fazer mais com menos linguagens possíveis.&lt;/p&gt;
 
-</content>
-  </entry>
-  <entry>
-    <title>Single responsibility, o princípio deturpado</title>
-    <link rel="alternate" href="https://truehenrique.com/2021/10/27/single-responsibility-o-principio-deturpado/"/>
-    <id>https://truehenrique.com/2021/10/27/single-responsibility-o-principio-deturpado/</id>
-    <published>2021-10-27T14:23:00-03:00</published>
-    <updated>2026-04-02T13:29:40-03:00</updated>
-    <author>
-      <name>Henrique F. Teixeira</name>
-    </author>
-    <content type="html">&lt;p&gt;Softwares são feitos por humanos, para humanos e máquinas. E humanos erram, consequentemente fazendo a máquina falhar também.&lt;/p&gt;
-
-&lt;p&gt;Dado esse contexto, ao longo do tempo foram desenvolvidos e estabelecidos diversos princípios e padrões de desenvolvimento de software. E todos eles tem uma coisa em comum: &lt;strong&gt;simplificar para que consigamos trabalhar utilizando menos esforço cognitivo&lt;/strong&gt;, dado que a nossa mente é limitada e os problemas que temos que resolver muitas vezes já são complexos o suficiente apenas em seu conceito, sem nenhuma linha de código escrita.&lt;/p&gt;
-
-&lt;p&gt;Isso é um &lt;em&gt;insight&lt;/em&gt; muito importante que tive depois de passar por diversos projetos ao longo da minha carreira, no começo não é fácil entender apesar de parecer simples:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;SOLID&lt;/li&gt;
-  &lt;li&gt;MVC&lt;/li&gt;
-  &lt;li&gt;DDD (Domain driven design)&lt;/li&gt;
-  &lt;li&gt;Clean Architecture&lt;/li&gt;
-  &lt;li&gt;Clean Code&lt;/li&gt;
-  &lt;li&gt;Refactoring / Code Smells&lt;/li&gt;
-  &lt;li&gt;TDD&lt;/li&gt;
-  &lt;li&gt;Redux&lt;/li&gt;
-  &lt;li&gt;Microservices&lt;/li&gt;
-  &lt;li&gt;Microfrontends&lt;/li&gt;
-  &lt;li&gt;Orientação a objetos (Encapsulamento, herança, polimorfismo, modelos anêmicos, sobrecarga …)&lt;/li&gt;
-  &lt;li&gt;Programação funcional (Monads, funtores, closures, currying, teoria das categorias, funções puras …)&lt;/li&gt;
-  &lt;li&gt;Actor Model&lt;/li&gt;
-  &lt;li&gt;Lei de Demeter&lt;/li&gt;
-  &lt;li&gt;Serveless&lt;/li&gt;
-  &lt;li&gt;Web components&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;E além do software:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Agile&lt;/li&gt;
-  &lt;li&gt;Scrum&lt;/li&gt;
-  &lt;li&gt;Kanbam&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Pra que a gente aprende e estuda isso tudo?&lt;/p&gt;
-
-&lt;p&gt;A resposta pode parecer óbvia:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;"Aprendemos e estudamos para utilizar no nosso dia a dia, sempre, e essas são as melhores práticas."&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Mas será que essa é a resposta certa mesmo?&lt;/p&gt;
-
-&lt;p&gt;Existem contextos em que não precisamos utilizar nada disso e vários outros que nos beneficiaríamos utilizando apenas alguns desses padrões e práticas, não todos. Dessa forma, a minha resposta hoje em dia, seria:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;"Aprendemos e estudamos para saber onde e quando utilizar no nosso dia a dia"&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Acontece que essa resposta só surge junto com a vivência, a realidade. E muitas vezes no início de carreira e durante muito tempo nos pegamos utilizando padrões apenas por ter estudado recentemente e assumir que é aquilo que devemos fazer, afinal é um padrão! É o correto!&lt;/p&gt;
-
-&lt;p&gt;Essa última frase resulta em dois dos maiores problemas que particulamente enfrentei ao longo da carreira, vindo de código legado (ou a partir de mim mesmo):&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Overengineering&lt;/strong&gt;: Engenharia e padrões demais para um problema simples&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Underengineering&lt;/strong&gt; (acabei de inventar esse termo): Engenharia e padrões de menos para um problema complexo&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;E esses problemas, são coisas que cursos de &lt;em&gt;"javascript full-stack"&lt;/em&gt;, &lt;em&gt;frameworks&lt;/em&gt; ou linguagens geralmente não vão nos ensinar.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Todo padrão foi criado a partir de um problema&lt;/strong&gt;. Se não passamos por esse problema, não precisamos do padrão. E reconhecer fortemente o problema é tão ou mais importante do que conhecer os detalhes de um padrão. Nosso trabalho como &lt;em&gt;Software Engineer&lt;/em&gt; é justamente trabalhar sem &lt;em&gt;"over"&lt;/em&gt; e sem &lt;em&gt;"under"&lt;/em&gt; apenas com o &lt;em&gt;"engineer"&lt;/em&gt;. Primeiro reconhecer os problemas, depois encaixar os padrões (e não a ordem inversa).&lt;/p&gt;
-
-&lt;p&gt;Dado essa introdução, gostaria de falar agora sobre um "caso ímpar" e muito curioso:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Um padrão / princípio onde é muito comum a galera não reconhecer o problema que ele soluciona de fato e nem mesmo como ele funciona, mas sai "utilizando" (e "pregando") em todo lugar. Provavelmente isso é resultado de um "telefone sem fio" gigante entre desenvolvedores (um fala para o outro, o outro escuta e fala para mais um seguidamente e nenhum deles busca de fato entender a fundo), outro ponto que pode ter resultado nisso é a simplicidade do seu nome:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id="single-responsibility-principle-o-princpio-da-responsabilidade-nica"&gt;Single Responsibility Principle (O princípio da responsabilidade única)&lt;/h2&gt;
-
-&lt;p&gt;Diferente de "Princípio da substituição de Liskov", "&lt;em&gt;Chain of responsibility&lt;/em&gt;" ou "Lei de Demeter", é muito fácil lermos "Princípio da responsabilidade única" e pensar:&lt;/p&gt;
-
-&lt;p&gt;"Opa! Princípio da responsabilidade única, essa classe faz mais do que uma coisa! Ela tem mais de uma responsabilidade! Vamos transforma-la em duas"&lt;/p&gt;
-
-&lt;p&gt;É simples. Métodos, classes e todo organismo dentro de um &lt;em&gt;software&lt;/em&gt; deve ter "uma única responsabilidade", não é mesmo?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Depende do que entendemos como responsabilidade&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Para exemplificar, gosto muito de utilizar o dicionário:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Responsabilidade: Obrigação de responder pelas ações próprias ou dos outros. Caráter ou estado do que é responsável. &lt;strong&gt;Dever de responder pelo próprio comportamento.&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Marquei a última sentença pois será mais simples de utilizar com o exemplo abaixo:&lt;/p&gt;
-
-&lt;p&gt;Imagine que você é um entregador ou uma entregadora de pizza, qual é a sua responsabilidade e qual é o comportamento pelo qual você responde?&lt;/p&gt;
-
-&lt;p&gt;…&lt;/p&gt;
-
-&lt;p&gt;Imaginou?&lt;/p&gt;
-
-&lt;p&gt;Eu diria que:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Responsabilidade: Entregar a pizza&lt;/li&gt;
-  &lt;li&gt;Comportamento pelo qual responde: Guardar a pizza na mochila de forma cuidadosa para que ela chegue inteira, ligar a moto, acelerar a moto, pilotar com segurança se atentando as leis de trânsito, interfonar quando chegar e ser educado/a com o cliente.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Temos mais de uma responsabilidade? Ou temos comportamentos pelos quais respondemos dado a nossa responsabilidade?&lt;/p&gt;
-
-&lt;p&gt;Usando exemplos do mundo real fica mais claro, correto?&lt;/p&gt;
-
-&lt;p&gt;…&lt;/p&gt;
-
-&lt;p&gt;Então vou piorar o exemplo, nosso próprio corpo de entregador/a de pizza tem orgãos, e eles também tem suas responsabilidades:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;O coração bate e responde pela circulação do sangue&lt;/li&gt;
-  &lt;li&gt;O pulmão respira e responde por absorver O2 e eliminar CO2 do ar respirado&lt;/li&gt;
-  &lt;li&gt;Os rins filtram e respondem pela quantidade de detritos no nosso sangue&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Sabendo disso, como entregadores/as de pizza temos muito mais responsabilidades do que imaginamos? Também temos que ter nosso corpo funcionando bem para conseguir exercer a profissão correto?&lt;/p&gt;
-
-&lt;p&gt;Como entreagores/as de pizza, respondemos pelo comportamento e responsabilidades do nosso corpo?&lt;/p&gt;
-
-&lt;p&gt;Nessa altura você deve estar bastante confuso ou confusa. As coisas começaram a tomar proporções grandes que provavelmente fizeram você ter um esforço cognitivo muito maior para entender toda a complexidade que envolve o "princípio da responsabilidade única", o significado de responsabilidade e comportamento.&lt;/p&gt;
-
-&lt;p&gt;Olhando o primeiro exemplo parece claro o que é responsabilidade e comportamento, mas quando te trouxe o segundo provavelmente você percebeu que isso pode ser infinito, e tomar proporções gigantes.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Poderia finalizar o artigo aqui, para bons entendedores e endendedoras meia palavra basta&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Mas vou continuar. Fazendo uma "analogia da analogia" a nível de &lt;em&gt;software&lt;/em&gt;, essa confusão fica exposta da pior maneira possível e aumenta da mesma forma o nosso esforço cognitivo, indo contra &lt;strong&gt;simplificar para que consigamos trabalhar utilizando menos esforço cognitivo&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Se isso fosse um &lt;em&gt;software&lt;/em&gt;, eu não me espantaria de abrir os arquivos e ver coisas como:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;"EntregadorDePizza"&lt;/li&gt;
-  &lt;li&gt;"EntregadorDePizzaBuilder"&lt;/li&gt;
-  &lt;li&gt;"LigadorDeMoto"&lt;/li&gt;
-  &lt;li&gt;"MantemRimFuncionandoService"&lt;/li&gt;
-  &lt;li&gt;"AceleradorDeMoto"&lt;/li&gt;
-  &lt;li&gt;"PilotagemComSegurança"&lt;/li&gt;
-  &lt;li&gt;"CuidadosComAPizza.Cuidar()"&lt;/li&gt;
-  &lt;li&gt;"BatimentosDoCoração.Bater()"&lt;/li&gt;
-  &lt;li&gt;"BatimentosDoCoraçãoFactory.create()"&lt;/li&gt;
-  &lt;li&gt;"EntregarPizzaFacade"&lt;/li&gt;
-  &lt;li&gt;"PizzaServices"&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Aquele "código gostoso" com alta granularidade, várias injeções de dependências e várias classes de apenas um método com "cinco, dez linhas de código", "respeitando a &lt;em&gt;Single Responsibility Principle&lt;/em&gt; até o final"!&lt;/p&gt;
-
-&lt;p&gt;Muito fácil de dar manutenção, inclusive &lt;em&gt;(contêm ironia)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;No final das contas, esse tipo de situação causa um &lt;em&gt;software&lt;/em&gt; que é "estruturado lateralmente" (não existe mais Orientação a Objetos ou Programação funcional). Ao invés de termos uma leitura de código de cima para baixo, vamos acabar abrindo "20" arquivos na nossa &lt;em&gt;IDE&lt;/em&gt; para entender uma única regra de negócio que muitas vezes pode representar comportamentos de uma única responsabilidade (em "20" arquivos).&lt;/p&gt;
-
-&lt;p&gt;Ao invés de encontrar o que procuramos em um ponto central, em um arquivo único, temos que procurar em vários arquivos e depois ligá-los mentalmente.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;É a mesma coisa que juntar peças de um quebra cabeça gigante.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;E ainda falo sobre o menos pior dos casos! Porque essa granularidade pode acabar partindo para projetos diferentes, &lt;em&gt;microserviços&lt;/em&gt; ou &lt;em&gt;microfrontends&lt;/em&gt;. Imagina ter que abrir 10 &lt;em&gt;microserviços&lt;/em&gt; + 5 &lt;em&gt;microfrontends&lt;/em&gt;?&lt;/p&gt;
-
-&lt;p&gt;O que acontece é que muita gente ainda não faz idéia da diferença entre &lt;strong&gt;responsabilidade&lt;/strong&gt; e &lt;strong&gt;comportamento&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;O próprio Uncle Bob (criador do princípio) disse em um de seus livros:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;"De todos os princípios SOLID, o princípio da responsabilidade única provavelmente é o menos compreendido. Isso se deve, possivelmente ao seu nome bastante inadequado. Em geral, ao escutarem esse nome, os programadores imaginam logo que todos os módulos devem fazer apenas uma coisa"&lt;/em&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;em&gt;Robert C. Martin - Clear Architecture (Arquitetura Limpa) p/ 62&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Voltando ao nosso exemplo, temos apenas &lt;strong&gt;uma&lt;/strong&gt; responsabilidade: &lt;strong&gt;Entregar a pizza.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Porque podemos afirmar isso?&lt;/p&gt;
-
-&lt;p&gt;O método e o comportamento são independentes da responsabilidade. Continuamos sendo apenas &lt;strong&gt;entregadores/as de pizzas&lt;/strong&gt; com a responsabilidade única de &lt;strong&gt;entregar pizzas&lt;/strong&gt; independente de como fazemos isso.&lt;/p&gt;
-
-&lt;p&gt;Posso por exemplo começar a entregar de carro ao invés de moto. E se alguém precisar aprender a entregar pizzas, esse alguém vai me procurar e eu vou ensinar claramente como.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;"Um módulo é apenas um conjunto coeso de funções e estruturas de dados. Esta palavra "coeso" sugere o SRP. Coesão é a força que amarra o código responsável a um único ator"&lt;/em&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;em&gt;Robert C. Martin - Clean Architecture (Arquitetura Limpa) p/63&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;É completamente &lt;strong&gt;coeso&lt;/strong&gt;, por exemplo, termos uma classe &lt;code&gt;EntregadorDePizza&lt;/code&gt; com um método &lt;code&gt;entregar_pizza&lt;/code&gt; que recebe três objetos: &lt;code&gt;pizza&lt;/code&gt;, &lt;code&gt;cliente&lt;/code&gt; e &lt;code&gt;moto&lt;/code&gt;. E este método ter todo aquele comportamento que listamos. Afinal, não vamos procurar saber como o entregador entrega a pizza em outro ponto do código:&lt;/p&gt;
-
-&lt;p&gt;Apenas um esboço …&lt;/p&gt;
-&lt;pre&gt;
-class EntregadorDePizza
-  def entregar_pizza(pizza, cliente, moto)
-    guardar_na_mochila(pizza)
-    moto.ligar(chave_da_moto)
-    moto.pilotar_com_segurança_até(cliente.endereço)
-    interfonar()
-    ser_educado_com_o(cliente)
-  end
-
-  private
-	
-  def chave_da_moto
-	
-  # ...
-
-  def guardar_na_mochila(pizza)
-	
-  # ...
-end
-&lt;/pre&gt;
-
-&lt;p&gt;&lt;em&gt;Single Responsibility Principle&lt;/em&gt; é sobre isso.&lt;/p&gt;
-
-&lt;p&gt;É sobre &lt;strong&gt;responsabilidade&lt;/strong&gt;, &lt;strong&gt;comportamento&lt;/strong&gt; e como os descrevemos de forma &lt;strong&gt;coesa&lt;/strong&gt;. Não sobre "fazer uma coisa só".&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;… "Esse princípio é importante no momento em que há uma alteração em alguma funcionalidade do software. Quando isso ocorre, o programador precisa procurar pelas classes que possuem a responsabilidade a ser modificada. Supondo uma classe que possua mais de uma razão para mudar, isso significa que ela é acessada por duas partes do software que fazem coisas diferentes. Fazer uma alteração em uma das responsabilidades dessa classe pode, de maneira não intencional, quebrar a outra parte de maneira inesperada. Isso torna o projeto de classes frágil"&lt;/em&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;em&gt;Maurício Aniche - Test-Driven Development p/ 204&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id="quebrando-nosso-single-responsibility-principle-e-os-problemas-que-o-originaram"&gt;Quebrando nosso Single Responsibility Principle e os problemas que o originaram&lt;/h3&gt;
-
-&lt;p&gt;Imagine que você é &lt;em&gt;software engineer&lt;/em&gt; da pizzaria e precisa mudar no sistema a forma como a pizza é entregue (&lt;strong&gt;comportamento&lt;/strong&gt;), em quais classes você procuraria primeiro?:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;code&gt;EntregarPizza&lt;/code&gt; ou &lt;code&gt;EntregadorDePizza&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;Cozinha&lt;/code&gt; ou &lt;code&gt;FornoDaCozinha&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;CalcularContabilidade&lt;/code&gt; ou &lt;code&gt;FolhaDePagamento&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Com certeza você escolheu a &lt;strong&gt;opção 1&lt;/strong&gt;, porque é o mais coeso.&lt;/p&gt;
-
-&lt;p&gt;O primeiro problema que o SRP corrige é justamente a &lt;strong&gt;baixa coesão&lt;/strong&gt;. Se tivessemos uma classe chamada &lt;code&gt;CalcularContabilidade&lt;/code&gt; que tivesse o comportamento de "esquentar o forno da cozinha" estaríamos violando o SRP.&lt;/p&gt;
-
-&lt;p&gt;Nenhum programador ou programadora vai pensar em abrir uma classe &lt;code&gt;CalcularContabilidade&lt;/code&gt; para mudar a "temperatura do forno da cozinha". É contra intuitivo. &lt;code&gt;CalcularContabilidade&lt;/code&gt; teria &lt;strong&gt;2 responsabilidades&lt;/strong&gt;: cuidar da cozinha e da contabilidade. &lt;strong&gt;Teria razões diferentes para mudar.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;O segundo maior problema é a complexidade que uma classe com muitas responsabilidades (lembrando que &lt;strong&gt;responsabilidade&lt;/strong&gt; não é &lt;strong&gt;comportamento&lt;/strong&gt;) pode ter. A tendência é a classe ficar difícil de dar manutenção e testar. Além de que dois contextos completamente diferentes podem interferir um no outro.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Obs:.&lt;/em&gt; Repare também  que no exemplo da seção anterior, o método &lt;code&gt;entregar_pizza&lt;/code&gt; da classe &lt;code&gt;EntregadorDePizza&lt;/code&gt; sabe ligar a &lt;code&gt;moto&lt;/code&gt;, mas não sabe como a moto funciona por dentro quando ele liga. O comportamento do maquinário da moto não é responsabilidade do &lt;code&gt;EntregadorDePizza&lt;/code&gt;. Se o comportamento do maquinário tivesse nessa classe também, teríamos algo semelhante a essa imagem:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/images/motaur.png" alt="" /&gt;&lt;/p&gt;
-
-&lt;p&gt;Sempre que quiséssemos dar manutenção na moto, teríamos que mexer no &lt;code&gt;EntregadorDePizza&lt;/code&gt;. O que para pessoas sãs não faz o mínimo sentido.&lt;/p&gt;
-
-&lt;h3 id="a-formula-mgica-para-respeitar-o-srp"&gt;A formula mágica para respeitar o SRP&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Evite utilizar nomes genéricos dentro do seu &lt;em&gt;software&lt;/em&gt;, como &lt;em&gt;Services&lt;/em&gt; ou &lt;em&gt;Manager&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;Em caso de dúvidas, pergunte-se:
-    &lt;ul&gt;
-      &lt;li&gt;A classe / módulo Y que tem a responsabilidade X deve responder pelo comportamento Z?&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Antes de sair codando, reserve um tempo para pensar em como traduzir sua regra de negócio para estruturas (classes, módulos e funções) com nomenclaturas coesas. Use palavras que são comuns no dia a dia da sua equipe. Gosto de pensar que um software bem escrito é aquele que uma pessoa não técnica (PO, PM e Stakeholders) consegue abrir os arquivos e entender superficialmente o que está acontecendo.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id="resumindo"&gt;Resumindo&lt;/h3&gt;
-
-&lt;p&gt;Essas são as 5 principais mensagens que enfatizo com esse artigo:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Responsabilidade não é o comportamento em si. É o dever de responder por um conjunto de comportamentos.&lt;/li&gt;
-  &lt;li&gt;SRP é sobre &lt;strong&gt;responsabilidade&lt;/strong&gt;, &lt;strong&gt;comportamento&lt;/strong&gt; e como os descrevemos de forma &lt;strong&gt;coesa&lt;/strong&gt;. Não sobre fazer uma coisa só.&lt;/li&gt;
-  &lt;li&gt;Coesão, acima de tudo, tem a ver com o nome que damos as variáveis, classes, módulos, funções e métodos em relação a o que eles fazem e/ou são.&lt;/li&gt;
-  &lt;li&gt;Todo e qualquer padrão ou prática serve para &lt;strong&gt;simplificar para que consigamos trabalhar utilizando menos esforço cognitivo&lt;/strong&gt;, caso isso não aconteça, não devemos utilizar o padrão ou prática.&lt;/li&gt;
-  &lt;li&gt;Cabe ao engenheiro de &lt;em&gt;software&lt;/em&gt;, dado um determinado contexto, encontrar a solução adequada e ideal para o problema, identificando quais padrões utilizar ou não, dado o prazo, tamanho do projeto e os objetivos de negócio.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id="alguns-links-legais--complementares-sobre-o-assunto"&gt;Alguns links legais / complementares sobre o assunto:&lt;/h5&gt;
-
-&lt;p&gt;&lt;a href="https://hackernoon.com/you-dont-understand-the-single-responsibility-principle-abfdd005b137"&gt;You dont understand the single responsibility principle (Hackernoon)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://softwareengineering.stackexchange.com/questions/150760/single-responsibility-principle-how-can-i-avoid-code-fragmentation"&gt;Single responsibility principle: how can i avoid code fragmentation (Stack Exchange Question)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://www.davidtanzer.net/david%27s%20blog/2017/07/26/the-single-responsibility-principle.html"&gt;The Single Responsibility Principle (David Tanzer)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://blog.cleancoder.com/uncle-bob/2014/05/08/SingleReponsibilityPrinciple.html"&gt;Single reponsibility principle (Blog Clean Coder / Uncle Bob)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://www.amazon.com.br/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164/ref=asc_df_0134494164/?tag=googleshopp00-20&amp;amp;linkCode=df0&amp;amp;hvadid=379726160779&amp;amp;hvpos=&amp;amp;hvnetw=g&amp;amp;hvrand=7253478441797173469&amp;amp;hvpone=&amp;amp;hvptwo=&amp;amp;hvqmt=&amp;amp;hvdev=c&amp;amp;hvdvcmdl=&amp;amp;hvlocint=&amp;amp;hvlocphy=1001766&amp;amp;hvtargid=pla-423658477418&amp;amp;psc=1"&gt;Livro Clean Architecture (Link de compra da Amazon)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Cohesion_(computer_science)"&gt;Cohesion (computer science) (Wikipedia)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://www.casadocodigo.com.br/products/livro-tdd-ruby"&gt;Livro TDD com Ruby (Casa do código)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://www.amazon.com.br/C%C3%B3digo-limpo-Robert-C-Martin/dp/8576082675/ref=asc_df_8576082675/?tag=googleshopp00-20&amp;amp;linkCode=df0&amp;amp;hvadid=379792215563&amp;amp;hvpos=&amp;amp;hvnetw=g&amp;amp;hvrand=4192535749629342066&amp;amp;hvpone=&amp;amp;hvptwo=&amp;amp;hvqmt=&amp;amp;hvdev=c&amp;amp;hvdvcmdl=&amp;amp;hvlocint=&amp;amp;hvlocphy=1001766&amp;amp;hvtargid=pla-398225630878&amp;amp;psc=1"&gt;Livro Clean Code (Link da Amazon)&lt;/a&gt;&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Elixir + Phoenix, programando na velocidade da luz</title>
-    <link rel="alternate" href="https://truehenrique.com/2020/07/17/elixir-e-phoenix-na-velocidade-da-luz/"/>
-    <id>https://truehenrique.com/2020/07/17/elixir-e-phoenix-na-velocidade-da-luz/</id>
-    <published>2020-07-17T13:52:00-03:00</published>
-    <updated>2026-04-04T21:18:04-03:00</updated>
-    <author>
-      <name>Henrique F. Teixeira</name>
-    </author>
-    <content type="html">&lt;div&gt;Hoje resolvi trazer alguns "pontos chave" sobre como podemos ser mais produtivos programando com &lt;em&gt;Elixir &lt;/em&gt;e &lt;em&gt;Phoenix&lt;/em&gt;, este post pode ser tanto para quem já tem alguma experiência com a linguagem quanto para quem está iniciando. Talvez você já conheça algumas dessas dicas, outras talvez descubra agora, mas o principal é compartilhar e aprender. vamos lá:&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
-&lt;h3&gt;1. Entenda todos os detalhes de &lt;strong&gt;&lt;em&gt;pattern matching&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;, &lt;/strong&gt;&lt;strong&gt;&lt;em&gt;guards&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;, &lt;/strong&gt;&lt;strong&gt;&lt;em&gt;keyword lists&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt; e &lt;/strong&gt;&lt;strong&gt;&lt;em&gt;structs&lt;/em&gt;&lt;/strong&gt;.&lt;br /&gt;&lt;br /&gt;&lt;/h3&gt;
-&lt;div&gt;Conhecendo-os temos um grande ganho em produtividade. Diria que &lt;em&gt;60%&lt;/em&gt; do código que lemos e escrevemos com a linguagem envolvem essas estruturas, vale a pena dedicar bastante tempo as explorando e estudando, dessa forma ganhamos muito mais "fluidez" no desenvolvimento das demandas do dia a dia.&lt;br /&gt;&lt;br /&gt;Veja alguns exemplos de detalhes que podem nos pegar de surpresa em determinado momento do nosso desenvolvimento&lt;strong&gt;:&lt;/strong&gt;&lt;/div&gt;
-&lt;div&gt;&lt;br /&gt;&lt;strong&gt;1.1 &lt;/strong&gt;&lt;em&gt;Pattern&lt;/em&gt; ma&lt;em&gt;tching&lt;/em&gt; com &lt;em&gt;structs&lt;/em&gt; funcionam dessa forma:&amp;nbsp;&lt;/div&gt;
-&lt;pre&gt;&lt;code class="html"&gt;iex(1)&amp;gt; %x{} = %MinhaStruct{}
-%MinhaStruct{hello: nil}
-iex(2)&amp;gt; x
-MinhaStruct &lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;&lt;br /&gt;Porém, não conseguimos criar structs através de variáveis:&lt;/div&gt;
-&lt;pre&gt;&lt;code class="html"&gt;iex(12)&amp;gt; x = MinhaStruct
-MinhaStruct
-iex(13)&amp;gt; %x{}
-
-** (CompileError) iex:13: expected struct name to be a compile time atom or alias, got: x&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;&lt;br /&gt;Caso isso seja necessário, devemos utilizar a função &lt;strong&gt;&lt;em&gt;struct&lt;/em&gt;&lt;/strong&gt;:&lt;/div&gt;
-&lt;pre&gt;&lt;code class="html"&gt;iex(13)&amp;gt; defmodule User do
-...(13)&amp;gt; defstruct name: "john"
-...(13)&amp;gt; end
-iex(14)&amp;gt; x = User
-iex(15)&amp;gt; struct(x)
-%User{name: "john"}&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;&lt;br /&gt;&lt;strong&gt;1.2 &lt;/strong&gt;Na definição de &lt;em&gt;guards&lt;/em&gt;, não podemos utilizar funções definidas no módulo:&lt;/div&gt;
-&lt;pre&gt;&lt;code class="html"&gt;iex(4)&amp;gt; defmodule Teste do
-...(4)&amp;gt; def maiorquequatro(x), do: x &amp;gt; 4
-...(4)&amp;gt; def verifica(numero) when maiorquequatro(numero), do: IO.puts("é maior que quatro") 
-...(4)&amp;gt; def verifica(_numero), do: IO.puts("não é maior que quatro")                             
-...(4)&amp;gt; end
-** (CompileError) iex:6: cannot find or invoke local maiorquequatro/1 inside guard. Only macros can be invoked in a guard and they must be defined before their invocation. Called as: maiorquequatro(numero)&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;&lt;br /&gt;Para utilizar funções customizadas em &lt;em&gt;guards&lt;/em&gt;, utilizamos macros:&lt;/div&gt;
-&lt;pre&gt;&lt;code class="html"&gt; iex(9)&amp;gt; defmodule Teste do                                    
-...(9)&amp;gt; defmacro maiorquequatro(numero) do
-...(9)&amp;gt; quote do: unquote(numero) &amp;gt; 4                   
-...(9)&amp;gt; end
-...(9)&amp;gt; def verifica(numero) when maiorquequatro(numero), do: IO.puts("é maior que quatro")
-...(9)&amp;gt; def verifica(_numero), do: IO.puts("não é maior que quatro")
-...(9)&amp;gt; end
-iex(10)&amp;gt; Teste.verifica(2)
-não é maior que quatro
-:ok
-iex(11)&amp;gt; Teste.verifica(5)
-é maior que quatro
-:ok&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;&lt;br /&gt;&lt;strong&gt;1.3&lt;/strong&gt; &lt;em&gt;Pattern matching&lt;/em&gt; em &lt;em&gt;keyword lists&lt;/em&gt; funcionam dessa forma:&amp;nbsp;&lt;/div&gt;
-&lt;pre&gt;&lt;code class="html"&gt;iex(4)&amp;gt; [{:name, nome} | _] = [name: "henrique", id: 3]
-[name: "henrique", id: 3]
-iex(5)&amp;gt; nome
-"henrique"&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;&lt;br /&gt;Lembrando que &lt;em&gt;keyword lists&lt;/em&gt; são um &lt;em&gt;syntax sugar&lt;/em&gt; para uma lista de tuplas...&lt;/div&gt;
-&lt;pre&gt;&lt;code class="html"&gt;iex(7)&amp;gt; [{:name, nome}, {:id, 3}] == [name: "henrique", id: 3]
-true&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;&lt;br /&gt;Se quisessemos extrair somente o nome, por exemplo, não poderiamos fazer dessa maneira:&lt;/div&gt;
-&lt;pre&gt;&lt;code class="html"&gt;iex(6)&amp;gt; [{:name, nome}] = [name: "henrique", id: 3]    
-  ** (MatchError) no match of right hand side value: [name: "henrique", id: 3]&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;&lt;br /&gt;Aqui vão &lt;em&gt;links&lt;/em&gt; de estudo para se aprofundar bastante sobre esses temas:&lt;br /&gt;&lt;a href="https://hexdocs.pm/elixir/Kernel.html#defstruct/1"&gt;https://hexdocs.pm/elixir/Kernel.html#defstruct/1&lt;/a&gt;&lt;br /&gt;&lt;a href="https://hexdocs.pm/elixir/Kernel.html#struct/2"&gt;https://hexdocs.pm/elixir/Kernel.html#struct/2&lt;/a&gt;&lt;br /&gt;&lt;a href="https://joyofelixir.com/6-pattern-matching"&gt;https://joyofelixir.com/6-pattern-matching&lt;/a&gt;&lt;br /&gt;&lt;a href="https://elixir-lang.org/getting-started/pattern-matching.html"&gt;https://elixir-lang.org/getting-started/pattern-matching.html&lt;/a&gt;&lt;br /&gt;&lt;a href="https://elixir-lang.org/getting-started/keywords-and-maps.html"&gt;https://elixir-lang.org/getting-started/keywords-and-maps.html&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
-&lt;h3&gt;2. Escreva um alias (autocomplete) na sua &lt;em&gt;IDE&lt;/em&gt; para o require &lt;em&gt;IEx; IEx.pry &lt;/em&gt;&lt;del&gt;por favor&lt;/del&gt;.&lt;/h3&gt;
-&lt;div&gt;&lt;br /&gt;Passamos bastante tempo "debugando" código nas aplicações, em qualquer linguagem. Felizmente o &lt;em&gt;Elixir&lt;/em&gt; conta com ferramentas muito boas para nos auxiliar. Uma das mais usadas requer o módulo &lt;strong&gt;IEx&lt;/strong&gt;:&lt;/div&gt;
-&lt;pre&gt;&lt;code class="elixir"&gt;require IEx&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;&lt;br /&gt;Dessa forma podemos criar um breakpoint que irá abrir um terminal quando o código passar por essa linha:&lt;/div&gt;
-&lt;pre&gt;&lt;code class="elixir"&gt;def hello(), do: IEx.pry&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;&lt;br /&gt;Porém, é comum esquecermos o&lt;strong&gt; require IEx &lt;/strong&gt;no início do arquivo, logo passamos a escrever:&lt;/div&gt;
-&lt;pre&gt;&lt;code class="elixir"&gt;require IEx; IEx.pry&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;&lt;br /&gt;&lt;/div&gt;
-&lt;div&gt;Acredite em mim, com o tempo você vai ficar cansado de escrever &lt;strong&gt;require IEx; IEx.pry&lt;/strong&gt; toda hora! Na minha &lt;em&gt;IDE&lt;/em&gt; tenho um alias que funciona da seguinte maneira, quando escrevo "pry" e salvo o arquivo ou dou um espaço ela automaticamente completa com o resto.&lt;br /&gt;&lt;br /&gt;Se a sua &lt;em&gt;IDE&lt;/em&gt; de preferência for o &lt;em&gt;VIM&lt;/em&gt; (assim como a minha), adicione esse trecho de configuração no seu &lt;strong&gt;~/.vimrc:&lt;/strong&gt;&amp;nbsp;&lt;/div&gt;
-&lt;pre&gt;&lt;code class="html"&gt;abbr pry require IEx; IEx.pry&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;&lt;br /&gt;Faça isso e seja feliz!&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
-&lt;h3&gt;3. Rode testes com&lt;strong&gt; iex -S mix test --trace &lt;/strong&gt;para não dar timeout na sessão do &lt;strong&gt;IEx&lt;/strong&gt;&amp;nbsp;&lt;/h3&gt;
-&lt;div&gt;&lt;br /&gt;Quando vamos debugar algum ponto do código por um tempo mais longo (utilizando o&lt;em&gt; &lt;/em&gt;&lt;strong&gt;&lt;em&gt;require IEx; IEx.pry &lt;/em&gt;&lt;/strong&gt;com os testes), o ideal é usar o comando acima ou alterar o tempo limite da sessão, caso contrário sua sessão encerrará em 60 segundos.&lt;/div&gt;
-&lt;pre&gt;&lt;code class="html"&gt;** (ExUnit.TimeoutError) test timed out after 60000ms. You can change the timeout:&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;&lt;br /&gt;Inclusive, também seria interessante criar um alias para esse comando, no seu terminal (&lt;strong&gt;&lt;em&gt;~/.bashrc&lt;/em&gt;&lt;/strong&gt;)&lt;/div&gt;
-&lt;pre&gt;&lt;code class="html"&gt;alias mixtest="iex -S mix test --trace"&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;&lt;br /&gt;4. Domine a biblioteca &lt;strong&gt;&lt;em&gt;Plug&lt;/em&gt;&lt;/strong&gt;&amp;nbsp;&lt;/h3&gt;
-&lt;div&gt;&lt;br /&gt;A biblioteca &lt;em&gt;Plug&lt;/em&gt; é uma das principais "portas de entrada" para o &lt;em&gt;Elixir&lt;/em&gt; na &lt;em&gt;web&lt;/em&gt;, inclusive, o &lt;em&gt;framework Phoenix&lt;/em&gt; foi construído baseado nela. Ter domínio e confiança em sua utilização nos trás mais segurança e assertividade nas decisões tomadas em projetos &lt;em&gt;Phoenix&lt;/em&gt;.&lt;br /&gt;&lt;br /&gt;&lt;em&gt;links&lt;/em&gt; para estudo: &lt;br /&gt;&lt;a href="https://ieftimov.com/post/a-deeper-dive-in-elixir-plug/"&gt;https://ieftimov.com/post/a-deeper-dive-in-elixir-plug/&lt;/a&gt;&lt;br /&gt;&lt;a href="https://elixirschool.com/pt/lessons/specifics/plug/"&gt;https://elixirschool.com/pt/lessons/specifics/plug/&lt;/a&gt;&lt;br /&gt;&lt;a href="https://hexdocs.pm/plug/readme.html"&gt;https://hexdocs.pm/plug/readme.html&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
-&lt;h3&gt;5. Conheça essas dicas do &lt;strong&gt;IEx&lt;/strong&gt;:&lt;/h3&gt;
-&lt;div&gt;&lt;br /&gt;&lt;strong&gt;5.1&lt;/strong&gt; É possível escrever um arquivo de ajuda para iniciar automaticamente variáveis e tudo o que queremos quando abrirmos o terminal do &lt;strong&gt;IEx &lt;/strong&gt;em um projeto. Basta criar um arquivo chamado &lt;strong&gt;&lt;em&gt;.iex.exs &lt;/em&gt;&lt;/strong&gt;na raiz do projeto, exemplo:&lt;/div&gt;
-&lt;pre&gt;&lt;code class="elixir"&gt;# Importe funções e módulos
-import_if_available(MinhaApp.MeuModulo)
-
-# De print em algo antes do terminal iniciar
-IO.puts("hello world")
-
-# Faça o bind de variáveis que ficarão disponíveis no terminal
-value = 13&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;&lt;br /&gt;&lt;strong&gt;5.2&lt;/strong&gt; Existem diversas funções disponíveis no &lt;strong&gt;IEx&lt;/strong&gt; que podem nos deixar mais produtivos, veja alguma delas:&lt;/div&gt;
-&lt;pre&gt;&lt;code class="html"&gt;• b/1            - prints callbacks info and docs for a given module
-• c/1            - compiles a file into the current directory
-• c/2            - compiles a file to the given path
-• cd/1           - changes the current directory
-• clear/0        - clears the screen
-• exports/1      - shows all exports (functions + macros) in a module
-• flush/0        - flushes all messages sent to the shell
-• h/0            - prints this help message
-• h/1            - prints help for the given module, function or macro
-• i/0            - prints information about the last value
-• i/1            - prints information about the given term
-• ls/0           - lists the contents of the current directory
-• ls/1           - lists the contents of the specified directory
-• open/1         - opens the source for the given module or function in
-your editor
-• pid/1          - creates a PID from a string
-• pid/3          - creates a PID with the 3 integer arguments passed
-• ref/1          - creates a Reference from a string
-• ref/4          - creates a Reference with the 4 integer arguments
-passed
-• pwd/0          - prints the current working directory
-• r/1            - recompiles the given module's source file
-• recompile/0    - recompiles the current project
-• runtime_info/0 - prints runtime info (versions, memory usage, stats)
-• v/0            - retrieves the last value from the history
-• v/1            - retrieves the nth value from the history&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;&lt;br /&gt;&lt;/div&gt;
-&lt;div&gt;&lt;strong&gt;5.3&lt;/strong&gt; &lt;strong&gt;&lt;em&gt;Tab&lt;/em&gt;&lt;/strong&gt; completa o nome de módulos, funções e também mostra os métodos quando finalizamos um nome com ".":&lt;/div&gt;
-&lt;pre&gt;&lt;code class="html"&gt; iex(9)&amp;gt; Enum.
-EmptyError           OutOfBoundsError     all?/1               
-all?/2               any?/1               any?/2                   
-...&lt;/code&gt;&lt;/pre&gt;
-&lt;div&gt;&lt;br /&gt;Os exemplos foram retirados da documentação do &lt;strong&gt;IEx&lt;/strong&gt;: &lt;a href="https://hexdocs.pm/iex/IEx.html#module-the-iex-exs-file"&gt;https://hexdocs.pm/iex/IEx.html#module-the-iex-exs-file&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
-&lt;h3&gt;6. Conheça e utilize os diversos plugins para &lt;em&gt;Elixir&lt;/em&gt; e &lt;em&gt;Phoenix&lt;/em&gt; na sua &lt;em&gt;IDE&lt;/em&gt;&lt;/h3&gt;
-&lt;div&gt;&lt;br /&gt;Não se limite ao básico! Os plugins existem para serem utilizados, abuse deles!&lt;br /&gt;&lt;br /&gt;Se você é usuário do &lt;em&gt;VSCode&lt;/em&gt;, este artigo tem dicas muito boas: &lt;a href="https://thinkingelixir.com/elixir-in-vs-code/"&gt;https://thinkingelixir.com/elixir-in-vs-code/&lt;/a&gt;&lt;br /&gt;Para o &lt;em&gt;VIM, de uma lida aqui&lt;/em&gt;: &lt;a href="https://medium.com/@siever/setup-vim-for-elixir-development-280a01150152"&gt;https://medium.com/@siever/setup-vim-for-elixir-development-280a01150152&lt;/a&gt;&lt;br /&gt;Para o Atom: &lt;a href="https://atom.io/packages/atom-elixir"&gt;https://atom.io/packages/atom-elixir&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;
-&lt;h3&gt;7. Seguindo as dicas acima e utilizando a biblioteca &lt;a href="https://github.com/henrique-ft/phoenix_up"&gt;&lt;strong&gt;&lt;em&gt;phoenix_up&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;, chegaremos a&lt;em&gt; &lt;/em&gt;&lt;strong&gt;&lt;em&gt;"299.792.458&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;&lt;em&gt;features"&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt; por segundo!&lt;/strong&gt;:&lt;/h3&gt;
-&lt;div&gt;&lt;br /&gt;&lt;a href="https://github.com/henrique-ft/phoenix_up"&gt;&lt;strong&gt;&lt;em&gt;phoenix_up&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;&lt;em&gt;a&lt;/em&gt;diciona mais &lt;em&gt;generators&lt;/em&gt; para desenvolver projetos &lt;em&gt;Phoenix&lt;/em&gt;, basicamente, com essa biblioteca não teremos mais o trabalho de escrever arquivo por arquivo e estruturas repetitivas como: "&lt;em&gt;BlaController, BlaView, templates/bla, BlaControllerTest&lt;/em&gt;" e etc.. Nos meus projetos, eu sempre uso!&lt;/div&gt;
-&lt;div&gt;&lt;br /&gt;&lt;/div&gt;
-&lt;h3&gt;Concluindo..&lt;/h3&gt;
-&lt;div&gt;&lt;br /&gt;Apesar de algumas dicas serem mais "práticas", podemos perceber que outras são pontos onde vale a pena reforçar o estudo! Particularmente, hoje me sinto bastante confortável e produtivo com &lt;em&gt;Elixir e Phoenix, e&lt;/em&gt; isso foi graças a esse equilíbrio de buscar ferramentas que me auxiliassem e estudar a fundo pontos fundamentais!
-
-&lt;/div&gt;
 </content>
   </entry>
 </feed>

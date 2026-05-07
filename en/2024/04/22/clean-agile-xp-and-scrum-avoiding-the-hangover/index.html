@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1640512874906863" crossorigin="anonymous"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='ie=edge' />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="Henrique Fernandez Teixeira">
+    <link rel="icon" type="image/ico" href="/images/icon-16x16.png">
+
+    <link rel="manifest" href="/manifest.json">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1640512874906863"
+     crossorigin="anonymous"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register('/javascripts/service_worker.js').then(function(registration) {
+            console.log('ServiceWorker registered');
+          }).catch(function(err) {
+            console.log('ServiceWorker error: ', err);
+          });
+        })
+      }
+    </script>
+        <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=60bc2b44a75109001138d6ff&product=sticky-share-buttons' async='async'></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161733672-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-161733672-1');
+        </script>
+      <title>@truehenrique | Clean Agile, XP, and Scrum - Avoiding the "Hangover"</title>
+        <meta property="og:image" content="https://www.truehenrique.com/images/agil/banner.png">
+        <meta name="twitter:image:src" content="https://www.truehenrique.com/images/agil/banner.png">
+        <link rel="alternate" hreflang="pt" href="/pt/2024/04/22/clean-agile-xp-e-scrum-evitando-a-ressaca/" />
+      <link rel="alternate" hreflang="x-default" href="/en/2024/04/22/clean-agile-xp-and-scrum-avoiding-the-hangover/" />
+
+      <meta property="og:type" content="article" />
+      <meta property="article:author" content="https://www.truehenrique.com/en/sobre">
+      <meta property="og:site_name" content="@truehenrique" />
+      <meta property="og:description" content="Explore Robert C. Martin's Clean Agile book and delve into Scrum, XP, and agility. Avoid the "agile hangover" with effective practices for software teams, improving predictability and productivity." />
+      <meta property="twitter:description" content="Explore Robert C. Martin's Clean Agile book and delve into Scrum, XP, and agility. Avoid the "agile hangover" with effective practices for software teams, improving predictability and productivity.">
+      <meta name="description" content='Explore Robert C. Martin's Clean Agile book and delve into Scrum, XP, and agility. Avoid the "agile hangover" with effective practices for software teams, improving predictability and productivity.'>
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="robots" content="index,follow">
+      <meta name="keywords" content="agile methods,xp,scrum,clean agile">
+      <meta property="og:title" content='Clean Agile, XP, and Scrum - Avoiding the "Hangover"' />
+      <meta property="twitter:title" content='Clean Agile, XP, and Scrum - Avoiding the "Hangover"'>
+      <meta name="title" content ='Clean Agile, XP, and Scrum - Avoiding the "Hangover"'>
+      <meta property="og:url" content="https://www.truehenrique.com/en/2024/04/22/clean-agile-xp-and-scrum-avoiding-the-hangover/">
+      <link rel="canonical" href="https://www.truehenrique.com/en/2024/04/22/clean-agile-xp-and-scrum-avoiding-the-hangover/"/>
+      <link rel="author" href="https://www.truehenrique.com/en/sobre">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
+
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <link href="/stylesheets/picnic.css" rel="stylesheet" /><link href="/stylesheets/site.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+  <h1>@truehenrique | Blog about software engineering & agile</h1>
+  <div class="wrap">
+    <a href="/en/"><img src="/images/logo-white.png" alt="" /></a>
+  </div>
+</header>
+<div class="nav">
+  <nav class="wrap">
+    <a href="/en/" class="brand">
+      <img src="/images/logo-white.png" alt="" />
+    </a>
+    <!-- responsive-->
+    <input id="bmenub" type="checkbox" class="show">
+    <label for="bmenub" class="burger pseudo button large"><i class="fi-list"></i> </label>
+
+    <div class="menu wrap">
+        <a href="/en/" class="pseudo button icon-puzzle active"><i class="fi-page-multiple"></i> Blog</a>
+      <a href="/en/about/" class="pseudo button icon-picture "><i class="fi-torso-business"></i> About</a>
+      <a href="/en/archive/" class="pseudo button icon-picture "><i class="fi-list-bullet"></i> Archive</a>
+      <a href="https://github.com/henrique-ft" class="pseudo button icon-picture" target="_blank"><i class="fi-social-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/henrique-fernandez-teixeira-93a4a3127/" class="pseudo button icon-picture" target="_blank"><i class="fi-social-linkedin"></i> Linkedin</a>
+    </div>
+  </nav>
+</div>
+<div class="langs-container">
+  <div class="wrap">
+    <a href="/"><span class="flag-icon flag-icon-br"></span></a>
+    <a href="/en"><span class="flag-icon flag-icon-us"></span></a>
+  </div>
+</div>
+
+
+    <div class="flex one three-800 wrap">
+      <main role="main" class="two-third-800">
+          <div id="fb-root"></div>
+          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v6.0"></script>
+
+          <div class="wwrap">
+            <h2>Clean Agile, XP, and Scrum - Avoiding the "Hangover"</h2>
+            <small class="color-lite">Apr 22 | Henrique F. Teixeira</small>
+            <div class="article-image" style="background-image: url(/images/agil/banner.png)" alt='Clean Agile, XP, and Scrum - Avoiding the "Hangover"'></div>
+
+        <p>Is your team's board showing several cards stuck in the same column for days with nothing being delivered? Are business stakeholders frustrated, constantly having to redefine deadlines and strategies? Do you feel like there's a lot of work but little result? Is the atmosphere tense, and the situation only seems to be getting worse?</p>
+
+<p>You might be experiencing what Robert C. Martin (Uncle Bob) named in his book <em>Clean Agile</em> as the 'agile hangover.'
+It's rare for anyone working with software not to have gone through this, especially when there's a lack of senior people on the team and/or we're dealing with complex software: The source code is spread across various projects, it's too extensive, poorly documented, or badly written.</p>
+
+<p>The idea behind the agile movement is comprehensive, complex (despite appearances), and encompasses various different 'agile methods' scattered around. Similarly, so is software. And the more complex a problem, the harder it is to explain and understand. Furthermore, our knowledge transmission is often flawed (confirmation bias, information overload, and gaps), and each listener can interpret and replicate the same information in different ways, which can end up shaping a reality, a truth, or a social behavior.</p>
+
+<p>Returning to the main topic, it's possible to observe in the market a mix of interpretations of 'agile' being applied simultaneously, in pursuit of an idealized and 'theoretical' result that often doesn't prove true in practice. These interpretations can stray far from the main manifesto and its principles, leading to much frustrated expectation, finger-pointing, and few results.</p>
+
+<blockquote>
+  <p><em>"The agile methodology took the software industry by storm. But, like a game of telephone, the original ideas of agility were distorted and simplified, arriving at companies as a promise of 'a process to deliver software faster.'</em></p>
+
+  <p><em>– Robert C. Martin, Clean Agile, p. 170"</em></p>
+</blockquote>
+
+<h3 id="who-is-robert-c-martin">Who is Robert C. Martin</h3>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PnwhBP_Lmow" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+
+<p>Better known as <em>Uncle Bob</em>, Robert C. Martin has been a software engineer since 1970, an international consultant, speaker, author of several IT books, and <strong>one of the 17 original signatories of the Agile Manifesto in 2001.</strong></p>
+
+<p>Recently, he decided to revisit the topic of 'agility' and release the book <em>Clean Agile</em>, where he explains the original ideas of the manifesto and offers some critiques on how the market has absorbed them.</p>
+
+<h3 id="clean-agile-development">Clean Agile Development</h3>
+
+<p>According to the book, the definition of agile in its 'clean' form (the original idea, without noise) is:</p>
+
+<blockquote>
+  <p><em>"A process in which a project is subdivided into iterations. The output of each iteration is calculated and used to continuously evaluate planning. Features are implemented according to the added business value, so that the most valuable things are implemented first. The quality level is kept as high as possible. The schedule is primarily managed by manipulating scope."</em></p>
+
+  <p><em>– Robert C. Martin, Clean Agile, p. 32</em></p>
+</blockquote>
+
+<p>The rest (<em>Scrum, XP, Kanban</em>) are merely tools, methods, or frameworks to facilitate and/or guide the use of agile. Beyond this definition, the twelve principles of agility <strong>must be followed</strong>:</p>
+
+<ol>
+  <li>
+    <p>Our highest priority is to satisfy the customer
+through early and continuous delivery
+of valuable software.</p>
+  </li>
+  <li>
+    <p>Welcome changing requirements,
+even late in development.
+Agile processes harness change for
+the customer's competitive advantage.</p>
+  </li>
+  <li>
+    <p>Deliver working software frequently,
+from a couple of weeks to a couple of months,
+with a preference to the shorter timescale.</p>
+  </li>
+  <li>
+    <p>Business people and developers must work
+together daily throughout the project.</p>
+  </li>
+  <li>
+    <p>Build projects around motivated individuals.
+Give them the environment and support they need,
+and trust them to get the job done.</p>
+  </li>
+  <li>
+    <p>The most efficient and effective method of
+conveying information to and within a development
+team is face-to-face conversation.</p>
+  </li>
+  <li>
+    <p>Working software is the primary measure of progress.</p>
+  </li>
+  <li>
+    <p>Agile processes promote sustainable
+development. The sponsors, developers, and
+users should be able to maintain a constant
+pace indefinitely.</p>
+  </li>
+  <li>
+    <p>Continuous attention to technical excellence
+and good design enhances agility.</p>
+  </li>
+  <li>
+    <p>Simplicity—the art of maximizing the amount
+of work not done—is essential.</p>
+  </li>
+  <li>
+    <p>The best architectures, requirements, and designs
+emerge from self-organizing teams.</p>
+  </li>
+  <li>
+    <p>At regular intervals, the team reflects on how
+to become more effective, then tunes and adjusts
+its behavior accordingly.</p>
+  </li>
+</ol>
+
+<p>Uncle Bob also states that the <em>XP</em> (<em>Extreme Programming</em>) framework is the <em>"most well-defined, complete, least confusing, and best representative of the essential core of agility,"</em> and he uses it as an ideal basis to explain agile concepts.</p>
+
+<h3 id="xp-a-brief-summary">XP, a brief summary</h3>
+
+<p><em>XP</em> (<em>Extreme Programming</em>) is an agile framework created by <em>Kent Beck</em> that provides practices for software development, represented in the model below:</p>
+
+<p><img src="/images/agil/xp.png" alt="" /></p>
+
+<p>In the outer circle (Purple), we have 📊 <strong>business practices</strong>.</p>
+
+<ul>
+  <li><strong>Acceptance tests</strong>: basically means that each demand (stories, tasks, and spikes, for example) must have its acceptance criteria, which are necessary for the completion and acceptance of a demand. These criteria can be validated through acceptance tests and are well-aligned with the concept of <em>Definition of Done</em>.</li>
+  <li><strong>Small releases</strong>: we should plan to deliver software incrementally, feature by feature, in a gradual manner.</li>
+  <li><strong>Planning</strong>: the act of planning the iteration, defining how we can divide a project into features, epics, stories, tasks, and spikes.</li>
+  <li><strong>Whole team</strong>: the team (<em>P.O, P.M, Devs, QA</em>, Managers) must work together from the beginning to the end of the project; communication should be easy between all parties. The result belongs to everyone.</li>
+</ul>
+
+<p>In the middle circle (Dark Blue), we have 👥 <strong>team practices</strong>.</p>
+
+<ul>
+  <li><strong>Continuous integration</strong>: the act of constantly integrating changes made to the main code (production), one by one. (Do not accumulate sequences of changes by integrating them all at once).</li>
+  <li><strong>Metaphor</strong>: similar to the ubiquitous language of <em>DDD</em> (<em>Domain Driven Design</em>), everyone on the team should speak the same language, and the code should reflect this language in how it's written. Personally, I like to say that readable code is one where a non-technical person could easily step in, read, and infer what's happening.</li>
+  <li><strong>Sustainable pace</strong>: we should develop at a predictable rhythm. The goal is not to finish quickly, but for the team to maintain a constant and healthy pace.</li>
+  <li><strong>Collective ownership</strong>: any team member can check and improve any module of the project at any time. Knowledge should be distributed among everyone.</li>
+</ul>
+
+<p>In the inner circle (Light Blue), we have 💻 <strong>technical practices</strong>.</p>
+
+<ul>
+  <li><strong>TDD (Test Driven Development)</strong>: we should write automated tests and, if possible, practice TDD.</li>
+  <li><strong>Pair programming</strong>: we should encourage pair programming, especially in scenarios where there's a need for knowledge exchange, mentoring, and attention to very critical demands. It's a choice for programmers and the team (it's not mandatory).</li>
+  <li><strong>Refactoring</strong>: We must deliver code better than we found it. If there's a need or opportunity for refactoring, refactor.</li>
+  <li><strong>Simple Design</strong>: <em>"It's the practice of writing only the necessary code with a structure that makes it simpler, smaller, and more expressive"</em>:</li>
+</ul>
+
+<ol>
+  <li>Run all tests</li>
+  <li>Express intent</li>
+  <li>Eliminate duplication</li>
+  <li>Reduce elements.</li>
+</ol>
+
+<h3 id="a-little-more-about-planning-in-xp">A little more about Planning in XP</h3>
+
+<p>This is the <strong>central practice</strong> of the entire framework; planning occurs in a meeting called <em>Iteration Planning</em> where:</p>
+
+<ol>
+  <li>We verify the data generated by the last iteration.</li>
+  <li>Stories are presented by business stakeholders and validated by <em>DoR</em> (<em>Definition of Ready</em>) criteria. The book <em>Clean Agile</em> cites the use of the acronym <a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"><em>INVEST</em></a> (Independent, Negotiable, Valuable, Estimable, Small, and Testable) as an example of <em>Definition of Ready</em>.</li>
+  <li>Stories can be broken down into technical <a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"><em>SMART</em></a> tasks and estimated by the technical team. Estimates can be made in various ways: in points from 1 to 6, t-shirt sizes (s, m, l), <em>Fibonacci</em> for measuring effort, or a three-point estimate if we want to estimate time.</li>
+  <li><em>Spike</em> (or discovery) stories are created if there isn't enough information or technical knowledge to deliver a certain story, or if we can't ensure it is <a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"><em>INVEST</em></a>.</li>
+  <li>What we will do in the next iteration is defined by the <strong>whole team</strong>; we use the data generated in previous iterations to support us (such as team velocity).</li>
+</ol>
+
+<blockquote>
+  <p><em>"The meeting should be scheduled to be one-twentieth the length of the iteration. The IPM (Iteration Planning Meeting) for a two-week iteration should take about half a day."</em></p>
+
+  <p><em>– Robert C. Martin, Clean Agile, p. 70</em></p>
+</blockquote>
+
+<p>Note: We can have a second <em>Iteration Planning</em> meeting after the first, only with the technical team, to break down stories into <a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"><em>SMART</em></a> tasks instead of doing the breakdown in a single meeting.</p>
+
+<h3 id="planning-in-a-zero-iteration">Planning in a Zero Iteration</h3>
+
+<p>In a project's zero iteration, we have a different planning approach, in a meeting called <em>Release Planning</em>. It's essentially the same as <em>Iteration Planning</em>, with the difference that we won't define what we'll do for a single iteration, and we don't yet have generated data. We focus on global issues (at a high level, without much detail) for the project as a whole (all iterations).</p>
+
+<p>Summarizing the flows of an <em>XP</em> project with planning as the central practice, we have:</p>
+
+<p><img src="/images/agil/xp-flow.png" alt="" /></p>
+
+<h3 id="scrum-vs-xp">Scrum vs XP</h3>
+
+<p>Scrum is an agile framework developed for use in complex and frequently changing environments. It defines roles with responsibilities (Scrum Master, Developers, Product Owner), events (Sprint, Planning, Daily, Retrospective, Review), artifacts (Product Backlog, Sprint Backlog, Increment), and the relationships between them. <strong>Scrum is intentionally incomplete</strong>, and ideally, it should be complemented with other practices. For example, the Scrum Guide doesn't define that we must do TDD or refactoring in the system's code, but it does state that 'during the Sprint, quality must not decrease.' Therefore, adding these technical practices from XP to Scrum further enriches the project and aligns with the agile principle: 'Continuous attention to technical excellence and good design enhances agility.'</p>
+
+<h4 id="similarities-between-scrum-and-xp">Similarities between Scrum and XP:</h4>
+
+<ul>
+  <li>Both define an event called <em>planning</em> to plan the iteration.</li>
+  <li>The iteration in XP is analogous to the <em>Sprint</em> in Scrum.</li>
+  <li><em>Product Backlog items</em> are similar to <em>User Stories</em>.</li>
+  <li><em>Stand-Up Meetings</em> are similar to <em>Dailies</em>.</li>
+</ul>
+
+<h4 id="xp-points-that-add-value-to-scrum">XP points that add value to Scrum:</h4>
+
+<ul>
+  <li>Although Scrum mentions that we should choose items that are <em>Ready</em> to work on in the iteration, the concept of <em>Definition of Ready</em> is not explicitly defined.</li>
+  <li><em>Spike</em> stories are fundamental for working on discovery tasks within the sprint.</li>
+  <li>Technical, team, and business practices can further enhance the quality of deliverables.</li>
+  <li>We can add acceptance criteria to <em>User Stories</em> / <em>Product Backlog Items</em>.</li>
+</ul>
+
+<h4 id="definition-of-done-vs-acceptance-criteria">Definition of Done vs. Acceptance Criteria</h4>
+
+<p>These two concepts confuse many people. Although they seem similar, <em>Definition of Done</em> (from <em>Scrum</em>) is an item-independent definition, while acceptance criteria (from <em>XP</em>) are item-dependent. Example of DoD: 'Any backlog item, to be considered done, must have test coverage of 95% or more.' Example of acceptance criteria: 'The user must be able to click on the menu item and view the shopping cart page.'</p>
+
+<h3 id="blending-xp-with-scrum">Blending XP with Scrum</h3>
+
+<p>Personally, I prefer to avoid very long meetings. I understand that accumulated mental exhaustion can lead to poor decisions. In XP, a lot of responsibility is concentrated in a single meeting (<em>Planning</em>), but following the idea of <em>Scrum Events</em>, we can separate these responsibilities into shorter meetings:</p>
+
+<ul>
+  <li>The iteration planning and commitment (<em>Sprint goal</em>) part continues in a meeting called <strong>Planning</strong>.</li>
+  <li>The estimation, creation of stories, tasks, and technical <em>spikes</em> / <em>discovery</em> are handled in a meeting called <strong>Backlog Refinement</strong> (which happens informally during the iteration, as needed). Ideally, this meeting should occur before planning to have <em>Ready</em> items for the iteration.</li>
+  <li>The review of results and data generated by the iterations takes place in a meeting called <strong>Review</strong>.</li>
+</ul>
+
+<p>In addition to these, we can also have a specific meeting to reflect on the iteration and seek opportunities for improvement, the <strong>Retrospective</strong> (usually right after the <strong>Review</strong>), making the flow more similar to the one below:</p>
+
+<p><img src="/images/agil/xp-scrum-flow.png" alt="" /></p>
+
+<p>If we replace 'Iteration' with 'Sprint' and add the <em>Daily</em>, we have all the <em>Scrum Events</em> defined in the <em>Scrum Guide</em> (<a href="https://scrumguides.org/scrum-guide.html#scrum-events">https://scrumguides.org/scrum-guide.html#scrum-events</a>).</p>
+
+<p>Furthermore, we can also address the <em>Scrum Planning</em> questions in our <strong>Planning</strong>:</p>
+
+<ul>
+  <li><em>Why is this Sprint valuable?</em></li>
+  <li><em>What can be Done this Sprint?</em></li>
+  <li><em>How will the chosen work get done?</em></li>
+</ul>
+
+<p>By using <em>XP framework</em> practices 'seasoned' with <em>Scrum</em> events, we can have an agile model that, respecting the manifesto and all its principles, leverages the benefits of both tools.</p>
+
+<h3 id="daily-meetings">Daily Meetings</h3>
+
+<p>Regarding the famous 'dailies,' I bring a quote from the book <em>Clean Agile</em>:</p>
+
+<blockquote>
+  <p><em>"Over the years, there has been much confusion about 'The Daily Scrum' and 'Daily Meetings' (aka Standup Meeting). Let me clarify this confusion.
+Here's what applies to the Daily Meeting:</em></p>
+
+  <p><em>• This meeting is optional. Many teams get along just fine without having one.</em></p>
+
+  <p><em>• It can be less frequent than daily. Choose the schedule that suits your reality.</em></p>
+
+  <p><em>• It should last about ten minutes, even if the team is large.</em></p>
+
+  <p><em>• This meeting follows a simple formula."</em>&gt;</p>
+
+  <p><em>– Robert C. Martin, Clean Agile, p. 113</em></p>
+</blockquote>
+
+<p>The author continues:</p>
+
+<blockquote>
+  <p><em>"The basic idea is for team members to stand in a circle and answer the following questions:</em></p>
+
+  <p><em>1. What did I do since the last meeting?</em></p>
+
+  <p><em>2. What will I do until the next meeting?</em></p>
+
+  <p><em>3. Are there any impediments in my way?"</em></p>
+
+  <p><em>– Robert C. Martin, Clean Agile, p. 113</em></p>
+</blockquote>
+
+<p>Although the author's ideas are slightly different from what is defined in the <em>Scrum Guide</em>, based on my professional experience, I can only agree.</p>
+
+<p>Currently, my team's dailies are asynchronous (we send updates via text); it's fast and works very well. If we need to delve deeper into something, we jump on a synchronous call, and it's resolved.</p>
+
+<ul>
+  <li>We join synchronous calls or chats as needed</li>
+  <li>We save time</li>
+  <li>We stay focused</li>
+</ul>
+
+<h2 id="avoiding-the-hangover">Avoiding the Hangover</h2>
+
+<p>If I could list three main practices that increase a team's predictability and productivity, avoiding a major 'agile hangover,' based on the book 'Clean Agile' and my professional experience, they would be:</p>
+
+<h3 id="attention-to-software-design">1. Attention to software 'design'</h3>
+
+<p><em>Design</em> is an essential stage in the software development process.</p>
+
+<blockquote>
+  <p><em>"Every iteration in the project, from beginning to end, will have a bit of analysis, design, and implementation.</em>
+<em>In an agile project, we are always analyzing and designing."</em></p>
+
+  <p><em>"The activities of analysis, architecture, design, and requirements implementation are constant throughout the iteration."</em></p>
+
+  <p><em>– Robert C. Martin, Clean Agile, p. 24/25</em></p>
+</blockquote>
+
+<p>Everyone who develops software does design, consciously or not.</p>
+
+<p>Before starting to write code, it's necessary to spend time analyzing the demand and the development environment in question to understand business rules, effort, and project patterns. In other words, it's necessary to understand what we will technically need to do and what the best practices to use are. <strong>It's necessary to plan the technical part.</strong></p>
+
+<p>Imagine a developer picked up a task with a one-week deadline and after 7 days of development discovered that the task involves much more effort than initially known, and could take up to a month to complete.</p>
+
+<p>To improve attention to <em>design</em>, we can create <em>Spike</em> stories on the <em>board</em> when necessary, or even create a dedicated board just for technical <em>discovery</em> of stories and epics. <em>Spikes</em> are fundamental for defining technical code implementation strategies and breaking down tasks.</p>
+
+<p>It's also important to adopt practices like <em>TDD</em> and Refactoring in daily work.</p>
+
+<h3 id="maintain-a-sustainable-pace">2. Maintain a sustainable pace</h3>
+
+<p>Software development is much more like a 'marathon' than a sprint.
+If we maintain the pace, we go further.</p>
+
+<p><strong>The important thing is to be predictable, more than fast. This way, we achieve more accurate metrics and deadline estimates.</strong></p>
+
+<blockquote>
+  <p><em>"Managers willing to encourage developers to work faster are using all the transparency of the process to micromanage them. Agile coaches, without a shred of commercial or technical experience, are training managers and telling development teams what to do. Managers are setting roadmaps, milestones, and shoving them down the throats of development teams."</em></p>
+
+  <p><em>– Robert C. Martin, Clean Agile, p. 171</em></p>
+</blockquote>
+
+<p>If we try to go too fast, we'll eventually burn out.</p>
+
+<p>Being burnt out makes us more prone to causing <em>bugs</em> and <em>design</em> errors in systems.</p>
+
+<p><em>Bugs</em> and design errors slow down deliveries.</p>
+
+<p>Slowed deliveries cause management problems.</p>
+
+<p>Management problems increase pressure, and the vicious cycle of the 'agile hangover' continues.</p>
+
+<h3 id="dor-definition-of-ready-and-dod-definition-of-done">3. DoR (Definition of Ready) and DoD (Definition of Done)</h3>
+
+<p>The entry of poorly 'refined' demands into the development <em>pipeline</em> causes many problems, including:</p>
+
+<ul>
+  <li>Rework</li>
+  <li>Feeling of insecurity</li>
+  <li>Waste of time</li>
+  <li>Frustrated expectations</li>
+</ul>
+
+<p>Similarly, 'finishing' a demand without a well-defined 'done' definition can cause the same problems if we deliver something different from what the business team expected, or if important details are missing.</p>
+
+<p>(Note: Understand 'demand' as a story card written by business stakeholders.)</p>
+
+<p>Before committing to a demand in the iteration, set aside time to refine it with the team:</p>
+
+<ul>
+  <li><a href="https://www.luiztools.com.br/post/backlog-deep-historias-invest-e-tarefas-smart/"><em>Use INVEST for stories and SMART for tasks</em></a>.</li>
+  <li>Write acceptance criteria for the demand.</li>
+  <li>Estimate the demand, and if there's still uncertainty, create a <em>Spike</em> story to analyze it and gather more details.</li>
+</ul>
+
+<p>The demand refinement stage can occur in a meeting specifically scheduled for it, during the <em>planning</em> meeting, or at any other time when the team is gathered.</p>
+
+<p>It's important that the entire team is present during demand refinements because this way, everyone involved gains awareness of each demand, has the opportunity to discuss them, offer opinions, and feels more secure if they are later responsible for delivering any of the demands.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p><em>Clean Agile</em> is one of the most accessible and precise books I've read on the subject. The author truly captures the current sentiment surrounding agile and brings us 'back to basics' as promised. I classify the book as essential for anyone looking to boost performance and improve the mental health of their team by shifting perspectives, breaking fallacies, and reducing noise related to agile.</p>
+
+<p>Regarding the model I presented, I have contributed to applying it in some teams, and here I offer a graph based on a real 'before and after' experience concerning task lead time from initial to completed state.</p>
+
+<p><img src="/images/agil/lead-time.png" alt="" /></p>
+
+<p>Around April and May, we decided to change our <em>mindset</em> and pay more attention to task refinement, <em>spikes</em>, and acceptance criteria, along with other <em>XP</em> ideas combined with a flow and events based on <em>Scrum</em>. We gained in:</p>
+
+<ul>
+  <li>Predictability (sustainable pace)</li>
+  <li>Trust</li>
+  <li>Mental health</li>
+</ul>
+
+<p>It's worth noting that teams, projects, and companies have their specificities, and continuous improvement learning is also part of the agile model. Therefore, there is no perfect model, but it's always good to start from well-established ideas and solid principles to gain maximum advantages.</p>
+
+
+          Hey, what did you think of this article??
+            <br/>
+            <br/>
+            Share and give your opinion by clicking on one of the networks below:
+            <br/>
+            <br/>
+            <div class="sharethis-inline-share-buttons"></div>
+            <br/>
+            Thank you very much!
+            <br/>
+            <div class="fb-comments" data-href="https://www.truehenrique.com/en/2024/04/22/clean-agile-xp-and-scrum-avoiding-the-hangover/" data-width="" data-numposts="10"></div>
+          </div>
+      </main>
+
+      <div>
+      <aside class='z-index-1'>
+        <div class='ads-div'>
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1640512874906863"
+                        crossorigin="anonymous"></script>
+          <!-- truehenrique -->
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-1640512874906863"
+               data-ad-slot="5386842633"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+        <h3 class="no-padding-top">Tags</h3>
+        <ul style="list-style-type: circle;">
+              <li><a href="/tags/thoughts/">#thoughts</a></li>
+              <li><a href="/tags/agile-methods/">#agile methods</a></li>
+              <li><a href="/tags/programming/">#programming</a></li>
+        </ul>
+        <hr/>
+
+        <h3>Recent Articles</h3>
+        <ul>
+              <li><a href="/en/2026/04/06/the-3-best-feedbacks-i-received-as-a-software-engineer/">The 3 best feedbacks I received as a software engineer that changed my career</a> <span>Apr  6</i></span></li>
+              <li><a href="/en/2024/04/22/clean-agile-xp-and-scrum-avoiding-the-hangover/">Clean Agile, XP, and Scrum - Avoiding the "Hangover"</a> <span>Apr 22</i></span></li>
+        </ul>
+
+
+
+        <h3>Full Archive</h3>
+        <a class="pseudo button" href="/en/archive/">Open</a>
+        <hr>
+        <br>
+      </aside>
+      <div class='ads-div'>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1640512874906863"
+                      crossorigin="anonymous"></script>
+        <!-- truehenrique - aside -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1640512874906863"
+             data-ad-slot="9257601626"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      </div>
+    </div>
+    <footer class="social-footer">
+  <div class="wrap">
+    @truehenrique | <a href="/privacy-policy">Privacy</a> | <a href="/terms-of-use">Terms of Use</a>
+  </div>
+</footer>
+
+  </body>
+</html>
