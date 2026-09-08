@@ -13,8 +13,14 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.truehenrique.com/en/2026/09/08/why-this-is-one-of-the-best-alternatives-to-ruby-on-rails/</loc>
+    <lastmod>2026-09-08T13:21:34-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.truehenrique.com/en/2021/10/27/single-responsibility-the-distorted-principle/</loc>
-    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <lastmod>2026-08-17T22:34:19-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -32,7 +38,7 @@
   </url>
   <url>
     <loc>https://www.truehenrique.com/pt/2021/10/27/single-responsibility-o-principio-deturpado/</loc>
-    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <lastmod>2026-08-17T22:34:19-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -69,6 +75,12 @@
   <url>
     <loc>https://www.truehenrique.com/pt/2024/04/22/clean-agile-xp-e-scrum-evitando-a-ressaca/</loc>
     <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/pt/2026/09/08/porque-essa-e-uma-das-melhores-alternativas-ao-ruby-on-rails/</loc>
+    <lastmod>2026-09-08T13:16:22-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -163,6 +175,36 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.truehenrique.com/tags/ruby/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/tags/roda/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/tags/rails/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/tags/programacao/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/tags/programming/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.truehenrique.com/tags/reflexoes/</loc>
     <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -218,12 +260,6 @@
   </url>
   <url>
     <loc>https://www.truehenrique.com/tags/nichos/</loc>
-    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.truehenrique.com/tags/programacao/</loc>
     <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -343,12 +379,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.truehenrique.com/tags/programming/</loc>
-    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://www.truehenrique.com/tags/phoenix/</loc>
     <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -356,6 +386,18 @@
   </url>
   <url>
     <loc>https://www.truehenrique.com/2026/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/2026/09/</loc>
+    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/2026/09/08/</loc>
     <lastmod>2026-05-07T15:30:33-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

@@ -56,6 +56,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
 
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
     <link href="/stylesheets/picnic.css" rel="stylesheet" /><link href="/stylesheets/site.css" rel="stylesheet" />
@@ -284,7 +285,7 @@
 
 <p>Just a sketch…</p>
 <pre>
-class PizzaDeliveryPerson
+<code class="language-ruby">class PizzaDeliveryPerson
   def deliver_pizza(pizza, customer, motorcycle)
     store_in_bag(pizza)
     motorcycle.start(motorcycle_key)
@@ -302,8 +303,7 @@ class PizzaDeliveryPerson
   def store_in_bag(pizza)
 	
   # ...
-end
-</pre>
+end</code></pre>
 
 <p><em>Single Responsibility Principle</em> is about that.</p>
 
@@ -414,16 +414,16 @@ end
         </div>
         <h3 class="no-padding-top">Tags</h3>
         <ul style="list-style-type: circle;">
+              <li><a href="/tags/programming/">#programming</a></li>
               <li><a href="/tags/thoughts/">#thoughts</a></li>
               <li><a href="/tags/agile-methods/">#agile methods</a></li>
-              <li><a href="/tags/programming/">#programming</a></li>
         </ul>
         <hr/>
 
         <h3>Recent Articles</h3>
         <ul>
+              <li><a href="/en/2026/09/08/why-this-is-one-of-the-best-alternatives-to-ruby-on-rails/">Why this is one of the best alternatives to Ruby on Rails</a> <span>Sep  8</i></span></li>
               <li><a href="/en/2026/04/06/the-3-best-feedbacks-i-received-as-a-software-engineer/">The 3 best feedbacks I received as a software engineer that changed my career</a> <span>Apr  6</i></span></li>
-              <li><a href="/en/2024/04/22/clean-agile-xp-and-scrum-avoiding-the-hangover/">Clean Agile, XP, and Scrum - Avoiding the "Hangover"</a> <span>Apr 22</i></span></li>
         </ul>
 
 
@@ -443,7 +443,11 @@ end
              data-ad-slot="9257601626"
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/ruby.min.js"></script>
         <script>
+          hljs.highlightAll();
+
           (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
       </div>

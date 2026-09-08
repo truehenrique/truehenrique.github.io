@@ -5,10 +5,325 @@
   <id>https://truehenrique.com/</id>
   <link href="https://truehenrique.com/"/>
   <link href="https://truehenrique.com/feed.xml" rel="self"/>
-  <updated>2026-04-06T10:24:00-03:00</updated>
+  <updated>2026-09-08T11:23:00-03:00</updated>
   <author>
     <name>Henrique F. Teixeira</name>
   </author>
+  <entry>
+    <title>Porque essa é uma das melhores alternativas ao Ruby on Rails</title>
+    <link rel="alternate" href="https://truehenrique.com/pt/2026/09/08/porque-essa-e-uma-das-melhores-alternativas-ao-ruby-on-rails/"/>
+    <id>https://truehenrique.com/pt/2026/09/08/porque-essa-e-uma-das-melhores-alternativas-ao-ruby-on-rails/</id>
+    <published>2026-09-08T11:23:00-03:00</published>
+    <updated>2026-09-08T13:16:22-03:00</updated>
+    <author>
+      <name>Henrique F. Teixeira</name>
+    </author>
+    <content type="html">&lt;p&gt;Se você é dev Ruby, está pensando em desenvolver um projeto novo e buscando alternativas ao Rails, seja por questões de performance ou arquitetura, considere o framework &lt;a href="https://roda.jeremyevans.net/" target="_blank"&gt;Roda&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Roda foi criado por Jeremy Evans, core commiter do Ruby e um dos desenvolvedores mais influentes da comunidade, e na minha opinião, o framework é o mais bem escrito considerando as características da linguagem: ele consegue tirar vantagem da sintaxe e metaprogramação de forma inteligente e simples ao mesmo tempo que traz extrema produtividade, extensibilidade e alta performance.&lt;/p&gt;
+
+&lt;p&gt;Através desse artigo te explico o porquê.&lt;/p&gt;
+
+&lt;h2 id="performance"&gt;Performance&lt;/h2&gt;
+
+&lt;p&gt;Quando Ruby foi criada por Yukihiro Matsumoto (conhecido como "Matz") em 1993, o objetivo principal não era desempenho máximo, mas sim tornar o desenvolvimento de software mais agradável e eficiente, e isso se traduz em:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sintaxe expressiva e legível.&lt;/li&gt;
+  &lt;li&gt;Menos código para resolver problemas.&lt;/li&gt;
+  &lt;li&gt;Preferência por produtividade e manutenibilidade em vez de performance bruta.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hoje, mais de 30 anos depois, podemos dizer que o Matz atingiu (e continua atingindo) seu objetivo, com uma adoção muito forte entre startups de alto crescimento, especialmente através de Ruby on Rails.&lt;/p&gt;
+
+&lt;p&gt;Porém, em troca desses benefícios, a linguagem traz algumas limitações importantes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;CPU&lt;/em&gt;: Ruby é uma linguagem interpretada e altamente dinâmica. Métodos podem ser redefinidos em tempo de execução, classes podem ser alteradas a qualquer momento e a resolução de chamadas acontece de forma mais complexa do que em linguagens estaticamente compiladas. O &lt;em&gt;JIT&lt;/em&gt; do Ruby moderno (&lt;em&gt;YJIT&lt;/em&gt;) melhorou bastante o cenário, mas Ruby ainda costuma ser significativamente mais lento em tarefas intensivas de &lt;em&gt;CPU&lt;/em&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Garbage Collector: Ruby utiliza um &lt;em&gt;GC&lt;/em&gt; (Garbage Collector) geracional e incremental relativamente avançado, mas ainda existem pausas de coleta que podem impactar a latência. Aplicações com muitas alocações de objetos podem passar uma parcela considerável do tempo executando o &lt;em&gt;GC&lt;/em&gt; em vez da lógica de negócio.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Fragmentação de memória: Mesmo após o &lt;em&gt;GC&lt;/em&gt; liberar objetos, o processo Ruby nem sempre devolve essa memória ao sistema operacional de forma eficiente. Em aplicações que executam por longos períodos, é comum observar crescimento gradual do consumo de memória.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;De forma resumida, um sistema escrito em Ruby com muitas abstrações, objetos alocados e metaprogração pode acabar custando mais caro e exigindo mais hardware.&lt;/p&gt;
+
+&lt;p&gt;Tendo isso em vista, vamos comparar alguns frameworks. Utilizei a classe &lt;code&gt;ObjectSpace&lt;/code&gt; para identificar quantos objetos temos criados em uma aplicação web Ruby, comparando Rails (modo "minimal"), Hanami e Roda criada com &lt;a href="https://roda-project.github.io/" target="_blank"&gt;roda-project&lt;/a&gt; (a forma mais rápida de criar uma aplicação Roda fullstack com diversos plugins habilitados). Isso significa que comparei 3 ferramentas que incluem funcionalidades equivalentes, não somente um sistema de roteamento, e ainda dei vantagem para o Rails utilizando seu modo mais "leve".&lt;/p&gt;
+
+&lt;p&gt;Para ambas as aplicações, adicionei uma rota &lt;code&gt;/home/index&lt;/code&gt; e uma view com o seguinte código:&lt;/p&gt;
+
+&lt;pre&gt;
+&lt;code class="language-ruby"&gt;&amp;lt;% @objects = ObjectSpace.count_objects %&amp;gt;
+Total (slots): &amp;lt;%= @objects[:TOTAL]  %&amp;gt;
+Free (free slots): &amp;lt;%= @objects[:FREE] %&amp;gt;
+Objects (active objects): &amp;lt;%= @objects[:T_OBJECT] %&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Para tornar os testes um pouco mais reais, também enviei uma carga alta de requisições para os endpoints utilizando o Apache Benchmark (&lt;code&gt;ab&lt;/code&gt;) e para ambos utilizei o Puma com 1 worker e 3 threads.&lt;/p&gt;
+
+&lt;p&gt;Esses foram os resultados:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Rails (minimal):&lt;/strong&gt; Total: 409268, Free: 47989, Objects: 25264&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Hanami:&lt;/strong&gt; Total: 346016, Free: 47648, Objects: 10682&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Roda (com roda-project):&lt;/strong&gt; Total: 239621, Free: 14515, Objects: 7661&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Em memória (verificado com &lt;code&gt;top -p&lt;/code&gt;), esses objetos alocados representaram:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Rails (minimal):&lt;/strong&gt; 222MB&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Hanami:&lt;/strong&gt; 139MB&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Roda (com roda-project):&lt;/strong&gt; 136MB&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;E aqui a quantidade de requisições por segundo:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Roda (com roda-project):&lt;/strong&gt; 939.89rqs&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Hanami:&lt;/strong&gt; 376.38rqs&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Rails (minimal):&lt;/strong&gt; 242.81rqs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Com uma lógica simples, podemos traduzir os resultados dos benchmarks para dinheiro gasto: Imagine que temos a mesma aplicação do benchmark rodando para diversos usuários e atualmente gastamos $3000 com servidores utilizando Ruby on Rails. Gastaríamos aproximadamente $1937 se estivessemos utilizando Hanami, e somente $775 utilizando Roda. Claro que é um exemplo simplório e hipotético, a performance pode variar drásticamente dependendo do código que escrevemos e o problema que estamos resolvendo. Além disso, o banco de dados geralmente costuma ser o maior ofensor de performance em aplicações web.&lt;/p&gt;
+
+&lt;p&gt;Mas não podemos negar um fato, Roda é o framework que entrega mais com menos quando o assunto é memória e performance, e muito se deve a sua arquitetura e sistema de roteamento:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A avaliação da requisição para no exato momento em que o caminho (path) encontra seu bloco correspondente.&lt;/li&gt;
+  &lt;li&gt;O uso de cache em estruturas internas garante um overhead mínimo (Templates pré-compilados, tabelas de lookup para rotas estáticas, app freezing).&lt;/li&gt;
+  &lt;li&gt;Sem meta-programação pesada: Muitos frameworks usam &lt;code&gt;method_missing&lt;/code&gt; ou definem métodos dinamicamente durante o tempo de execução, o que piora a performance.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Veja também os benchmarks do &lt;a href="https://www.techempower.com/benchmarks" target="_blank"&gt;techempower.com&lt;/a&gt;, onde Roda aparece constamentemente entre os frameworks melhor rankeados do ecossistema Ruby&lt;/p&gt;
+
+&lt;h2 id="plugins--extensibilidade"&gt;Plugins / Extensibilidade&lt;/h2&gt;
+
+&lt;p&gt;Roda foi projetado em torno de um sistema de plugins extremamente simples e previsível.&lt;/p&gt;
+
+&lt;p&gt;Diferentemente de outros frameworks que expõem dezenas de pontos de extensão espalhados por callbacks, middlewares, generators e convenções, o Roda concentra praticamente toda sua extensibilidade em plugins que modificam a classe da aplicação de forma explícita.&lt;/p&gt;
+
+&lt;p&gt;Quando escrevemos:&lt;/p&gt;
+
+&lt;pre&gt;
+&lt;code class="language-ruby"&gt;class App &amp;lt; Roda
+  plugin :render
+  plugin :json
+  plugin :all_verbs
+end&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cada plugin adiciona métodos, comportamento ou recursos diretamente à aplicação. Não existe mágica escondida. Você consegue rastrear exatamente de onde cada funcionalidade veio&lt;/p&gt;
+
+&lt;p&gt;Outro aspecto importante é que o núcleo do Roda é extremamente pequeno. O roteamento, que é a principal responsabilidade do framework, permanece separado de recursos adicionais. Isso permite que funcionalidades como renderização, autenticação, sessões, cache, &lt;em&gt;CSRF&lt;/em&gt;, &lt;em&gt;JSON&lt;/em&gt; e demais sejam implementadas como plugins independentes, sem aumentar a complexidade do core, permitindo também que nossa aplicação não desperdice recursos em funcionalidades que não iremos utilizar.&lt;/p&gt;
+
+&lt;p&gt;Por fim, o sistema de plugins do Roda é utilizado pelo próprio framework. Muitos recursos considerados "nativos" são implementados exatamente da mesma forma que plugins criados por usuários. Isso é um sinal de uma arquitetura extensível: os mecanismos usados internamente são os mesmos disponíveis para quem desenvolve aplicações.&lt;/p&gt;
+
+&lt;p&gt;Veja como é simples criar plugins para o Roda seguindo os passos descritos no repositório: &lt;a href="https://github.com/jeremyevans/roda#label-Plugins" target="_blank"&gt;github.com/jeremyevans/roda#label-Plugins&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id="produtividade"&gt;Produtividade&lt;/h2&gt;
+
+&lt;p&gt;Apesar de ser um framework aparentemente "pequeno", ao analizarmos a quantidade de plugins nativos e plugins disponibilizados pela comunidade, temos recursos disponíveis para torná-lo similar ao Rails em features e desenvolver qualquer tipo de aplicação.&lt;/p&gt;
+
+&lt;p&gt;Existem mais de &lt;strong&gt;100&lt;/strong&gt; plugins oficiais &lt;a href="https://roda.jeremyevans.net/documentation.html" target="_blank"&gt;listados na documentação oficial&lt;/a&gt;, alguns essenciais como:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;CSRF&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Sessions e Cookies&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;I18n&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Views / Renderização&lt;/li&gt;
+  &lt;li&gt;Hooks&lt;/li&gt;
+  &lt;li&gt;Logs&lt;/li&gt;
+  &lt;li&gt;Envio de email&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Além disso, das alternativas ao Rails, Roda é o &lt;strong&gt;único framework que conta com uma gem de autenticação própria e robusta&lt;/strong&gt;. A gem &lt;a href="https://rodauth.jeremyevans.net/" target="_blank"&gt;rodauth&lt;/a&gt; adiciona um sistema de autenticação extremamente completo e seguro na nossa app, contendo diversos recursos, como:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Gerenciamento de contas&lt;/li&gt;
+  &lt;li&gt;Recuperação de senha&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;JWT&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;SMS&lt;/em&gt; codes / Recovery codes&lt;/li&gt;
+  &lt;li&gt;Passwordless Authentication&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;E para facilitar a criação e desenvolvimento de novas aplicações, temos a gem &lt;a href="https://roda-project.github.io/" target="_blank"&gt;roda-project&lt;/a&gt;, que fornece um scaffold moderno para aplicações Roda, incluindo generators e várias tasks essenciais, tornando a experiência de desenvolvimento próxima ao Rails.&lt;/p&gt;
+
+&lt;p&gt;Não podemos deixar de falar que todo o ecossistema de gems do Ruby está a nosso dispor para o que precisarmos, incluindo &lt;code&gt;sidekiq&lt;/code&gt;, &lt;code&gt;dry-rb&lt;/code&gt;, &lt;code&gt;rom&lt;/code&gt;, &lt;code&gt;async&lt;/code&gt; e etc…&lt;/p&gt;
+
+&lt;h2 id="maturidade"&gt;Maturidade&lt;/h2&gt;
+
+&lt;p&gt;Roda existe há mais de 10 anos e tem mais de &lt;a href="https://rubygems.org/gems/roda" target="_blank"&gt;20 milhões de downloads&lt;/a&gt;. O framework é uma escolha consolidada para empresas que já utilizam Ruby e querem extrair a máxima performance com baixo consumo de memória. Atualmente existem grandes projetos utilizando o framework em produção, com destaque para a &lt;a href="https://www.ubicloud.com/" target="_blank"&gt;Ubicloud&lt;/a&gt;. Além disso, o trabalho de Jeremy Evans é notório por sua política de tolerância zero a bugs e respostas rápidas no GitHub. Correções de falhas e implementações de segurança costumam receber atualizações (releases) em prazos extremamente curtos, garantindo uma base de código confiável.&lt;/p&gt;
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/OUBvXckHPos?si=J50vbfA1UA7fCcFP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;h2 id="concluso"&gt;Conclusão&lt;/h2&gt;
+
+&lt;p&gt;Por muito tempo, a comunidade conviveu a premissa de que a agilidade de desenvolvimento no ecossistema Ruby exigia um sacrifício inevitável: alto consumo de infraestrutura, processos pesados e muita "mágica" nos bastidores. O Roda desconstrói essa ideia por completo, representando uma mudança de paradigma e unindo o que antes parecia impossível no mundo Ruby: a expressividade e a produtividade que amamos, com uma economia real de servidores e uma performance de alto nível.&lt;/p&gt;
+
+&lt;p&gt;Se o Rails foi a ferramenta que popularizou o Ruby permitindo criar negócios de forma rápida, o Roda é a resposta madura para a engenharia de software moderna, e quando falo engenharia, não quero dizer "camadas e camadas" de abstrações, falo sobre resolver problemas com as ferramentas certas, de forma inteligente, selecionando e utilizando apenas o necessário, mantendo a simplicidade e manutenabilidade (sem "overengineering" ou "underengineering").&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>Why this is one of the best alternatives to Ruby on Rails</title>
+    <link rel="alternate" href="https://truehenrique.com/en/2026/09/08/why-this-is-one-of-the-best-alternatives-to-ruby-on-rails/"/>
+    <id>https://truehenrique.com/en/2026/09/08/why-this-is-one-of-the-best-alternatives-to-ruby-on-rails/</id>
+    <published>2026-09-08T11:23:00-03:00</published>
+    <updated>2026-09-08T13:21:34-03:00</updated>
+    <author>
+      <name>Henrique F. Teixeira</name>
+    </author>
+    <content type="html">&lt;p&gt;If you are a Ruby dev thinking about building a new project and looking for alternatives to Rails, whether for performance or architecture reasons, consider the &lt;a href="https://roda.jeremyevans.net/" target="_blank"&gt;Roda&lt;/a&gt; framework.&lt;/p&gt;
+
+&lt;p&gt;Roda was created by Jeremy Evans, a Ruby core committer and one of the most influential developers in the community, and in my opinion, it is the most well-written framework considering the language's characteristics: it takes advantage of syntax and metaprogramming in an intelligent yet simple way while delivering extreme productivity, extensibility, and high performance.&lt;/p&gt;
+
+&lt;p&gt;In this article, I explain why.&lt;/p&gt;
+
+&lt;h2 id="performance"&gt;Performance&lt;/h2&gt;
+
+&lt;p&gt;When Ruby was created by Yukihiro Matsumoto (known as "Matz") in 1993, the primary goal wasn't maximum performance, but rather to make software development more pleasant and efficient, which translates to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Expressive and readable syntax.&lt;/li&gt;
+  &lt;li&gt;Less code to solve problems.&lt;/li&gt;
+  &lt;li&gt;Preference for productivity and maintainability over raw performance.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Today, more than 30 years later, we can say that Matz achieved (and continues to achieve) his goal, with strong adoption among high-growth startups, especially through Ruby on Rails.&lt;/p&gt;
+
+&lt;p&gt;However, in exchange for these benefits, the language brings a few important limitations:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;CPU&lt;/em&gt;: Ruby is an interpreted, highly dynamic language. Methods can be redefined at runtime, classes can be modified at any time, and method call resolution happens in a more complex manner than in statically compiled languages. Modern Ruby's &lt;em&gt;JIT&lt;/em&gt; (&lt;em&gt;YJIT&lt;/em&gt;) has improved the scenario significantly, but Ruby still tends to be noticeably slower in &lt;em&gt;CPU&lt;/em&gt;-intensive tasks.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Garbage Collector: Ruby uses a relatively advanced generational and incremental &lt;em&gt;GC&lt;/em&gt; (Garbage Collector), but collection pauses can still impact latency. Applications with many object allocations can spend a considerable portion of their time running the &lt;em&gt;GC&lt;/em&gt; instead of business logic.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Memory fragmentation: Even after the &lt;em&gt;GC&lt;/em&gt; frees objects, the Ruby process doesn't always return this memory to the operating system efficiently. In long-running applications, it is common to observe gradual growth in memory consumption.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In summary, a Ruby system with many abstractions, allocated objects, and metaprogramming can end up costing more and requiring more hardware.&lt;/p&gt;
+
+&lt;p&gt;With that in mind, let's compare a few frameworks. I used the &lt;code&gt;ObjectSpace&lt;/code&gt; class to identify how many objects are created in a Ruby web application, comparing Rails ("minimal" mode), Hanami, and Roda generated with &lt;a href="https://roda-project.github.io/" target="_blank"&gt;roda-project&lt;/a&gt; (the fastest way to create a fullstack Roda application with several plugins enabled). This means I compared 3 tools that include equivalent functionality—not just a routing system—and even gave Rails an advantage by using its lightest mode.&lt;/p&gt;
+
+&lt;p&gt;For each of these applications, I added a &lt;code&gt;/home/index&lt;/code&gt; route and a view with the following code:&lt;/p&gt;
+
+&lt;pre&gt;
+&lt;code class="language-ruby"&gt;&amp;lt;% @objects = ObjectSpace.count_objects %&amp;gt;
+Total (slots): &amp;lt;%= @objects[:TOTAL]  %&amp;gt;
+Free (free slots): &amp;lt;%= @objects[:FREE] %&amp;gt;
+Objects (active objects): &amp;lt;%= @objects[:T_OBJECT] %&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To make the tests a bit more realistic, I also sent a heavy load of requests to the endpoints using Apache Benchmark (&lt;code&gt;ab&lt;/code&gt;), and for each one I used Puma with 1 worker and 3 threads.&lt;/p&gt;
+
+&lt;p&gt;These were the results:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Rails (minimal):&lt;/strong&gt; Total: 409268, Free: 47989, Objects: 25264&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Hanami:&lt;/strong&gt; Total: 346016, Free: 47648, Objects: 10682&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Roda (with roda-project):&lt;/strong&gt; Total: 239621, Free: 14515, Objects: 7661&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In memory (verified with &lt;code&gt;top -p&lt;/code&gt;), these allocated objects represented:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Rails (minimal):&lt;/strong&gt; 222MB&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Hanami:&lt;/strong&gt; 139MB&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Roda (with roda-project):&lt;/strong&gt; 136MB&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And here is the number of requests per second:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Roda (with roda-project):&lt;/strong&gt; 939.89rqs&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Hanami:&lt;/strong&gt; 376.38rqs&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Rails (minimal):&lt;/strong&gt; 242.81rqs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With simple logic, we can translate these benchmark results into money spent: Imagine we have the same application from the benchmark running for multiple users and currently spend $3000 on servers using Ruby on Rails. We would spend approximately $1937 if we were using Hanami, and only $775 using Roda. Of course, this is a simplistic and hypothetical example; performance can vary drastically depending on the code we write and the problem we're solving. Furthermore, the database is usually the biggest performance offender in web applications.&lt;/p&gt;
+
+&lt;p&gt;But we can't deny one fact: Roda is the framework that delivers more with less when it comes to memory and performance, and much of this is due to its architecture and routing system:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Request evaluation stops at the exact moment the path matches its corresponding block.&lt;/li&gt;
+  &lt;li&gt;Internal caching ensures minimal overhead (precompiled templates, lookup tables for static routes, app freezing).&lt;/li&gt;
+  &lt;li&gt;No heavy metaprogramming: Many frameworks use &lt;code&gt;method_missing&lt;/code&gt; or define methods dynamically at runtime, which degrades performance.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Check out the benchmarks on &lt;a href="https://www.techempower.com/benchmarks" target="_blank"&gt;techempower.com&lt;/a&gt; as well, where Roda consistently ranks among the top-performing frameworks in the Ruby ecosystem.&lt;/p&gt;
+
+&lt;h2 id="plugins--extensibility"&gt;Plugins / Extensibility&lt;/h2&gt;
+
+&lt;p&gt;Roda was designed around an extremely simple and predictable plugin system.&lt;/p&gt;
+
+&lt;p&gt;Unlike other frameworks that expose dozens of extension points scattered across callbacks, middleware, generators, and conventions, Roda concentrates practically all of its extensibility into plugins that explicitly modify the application class.&lt;/p&gt;
+
+&lt;p&gt;When we write:&lt;/p&gt;
+
+&lt;pre&gt;
+&lt;code class="language-ruby"&gt;class App &amp;lt; Roda
+  plugin :render
+  plugin :json
+  plugin :all_verbs
+end&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Each plugin adds methods, behavior, or features directly to the application. There is no hidden magic. You can trace exactly where each functionality came from.&lt;/p&gt;
+
+&lt;p&gt;Another important aspect is that Roda's core is extremely small. Routing—the framework's main responsibility—remains separated from additional features. This allows features such as rendering, authentication, sessions, caching, &lt;em&gt;CSRF&lt;/em&gt;, &lt;em&gt;JSON&lt;/em&gt;, and others to be implemented as independent plugins without increasing core complexity, while also ensuring our application doesn't waste resources on features we won't use.&lt;/p&gt;
+
+&lt;p&gt;Finally, Roda's plugin system is used by the framework itself. Many features considered "native" are implemented in the exact same way as plugins created by users. This is the sign of an extensible architecture: the mechanisms used internally are the same ones available to application developers.&lt;/p&gt;
+
+&lt;p&gt;See how simple it is to create plugins for Roda by following the steps described in the repository: &lt;a href="https://github.com/jeremyevans/roda#label-Plugins" target="_blank"&gt;github.com/jeremyevans/roda#label-Plugins&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id="productivity"&gt;Productivity&lt;/h2&gt;
+
+&lt;p&gt;Despite being an apparently "small" framework, when analyzing the amount of native plugins and plugins provided by the community, we have enough resources available to make it similar to Rails in features and build any type of application.&lt;/p&gt;
+
+&lt;p&gt;There are more than &lt;strong&gt;100&lt;/strong&gt; official plugins &lt;a href="https://roda.jeremyevans.net/documentation.html" target="_blank"&gt;listed in the official documentation&lt;/a&gt;, including essentials like:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;CSRF&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Sessions and Cookies&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;I18n&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Views / Rendering&lt;/li&gt;
+  &lt;li&gt;Hooks&lt;/li&gt;
+  &lt;li&gt;Logs&lt;/li&gt;
+  &lt;li&gt;Email delivery&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Furthermore, among the alternatives to Rails, Roda is the &lt;strong&gt;only framework that has its own robust authentication gem&lt;/strong&gt;. The &lt;a href="https://rodauth.jeremyevans.net/" target="_blank"&gt;rodauth&lt;/a&gt; gem adds an extremely complete and secure authentication system to our app, packed with features such as:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Account management&lt;/li&gt;
+  &lt;li&gt;Password recovery&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;JWT&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;SMS&lt;/em&gt; codes / Recovery codes&lt;/li&gt;
+  &lt;li&gt;Passwordless Authentication&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To make creating and developing new applications easier, we have the &lt;a href="https://roda-project.github.io/" target="_blank"&gt;roda-project&lt;/a&gt; gem, which provides a modern scaffold for Roda applications, including generators and several essential tasks, bringing the development experience close to Rails.&lt;/p&gt;
+
+&lt;p&gt;It's also worth highlighting that the entire Ruby gem ecosystem is at our disposal for whatever we need, including &lt;code&gt;sidekiq&lt;/code&gt;, &lt;code&gt;dry-rb&lt;/code&gt;, &lt;code&gt;rom&lt;/code&gt;, &lt;code&gt;async&lt;/code&gt;, etc.&lt;/p&gt;
+
+&lt;h2 id="maturity"&gt;Maturity&lt;/h2&gt;
+
+&lt;p&gt;Roda has been around for over 10 years and has more than &lt;a href="https://rubygems.org/gems/roda" target="_blank"&gt;20 million downloads&lt;/a&gt;. The framework is a solid choice for companies already using Ruby that want to extract maximum performance with low memory consumption. Currently, major projects use the framework in production, notably &lt;a href="https://www.ubicloud.com/" target="_blank"&gt;Ubicloud&lt;/a&gt;. In addition, Jeremy Evans's work is well known for his zero-tolerance policy for bugs and fast responses on GitHub. Bug fixes and security releases typically arrive in extremely short timeframes, ensuring a dependable codebase.&lt;/p&gt;
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/OUBvXckHPos?si=J50vbfA1UA7fCcFP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;For a long time, the community lived with the premise that development velocity in the Ruby ecosystem required an inevitable sacrifice: high infrastructure consumption, heavy processes, and a lot of "magic" behind the scenes. Roda completely deconstructs this idea, representing a paradigm shift and uniting what previously seemed impossible in the Ruby world: the expressiveness and productivity we love, with real server savings and high-level performance.&lt;/p&gt;
+
+&lt;p&gt;If Rails was the tool that popularized Ruby by allowing businesses to be built quickly, Roda is the mature answer for modern software engineering—and when I say engineering, I don't mean "layers upon layers" of abstraction; I mean solving problems with the right tools in an intelligent way, selecting and using only what is necessary while maintaining simplicity and maintainability (without "overengineering" or "underengineering").&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Os 3 melhores feedbacks que recebi como engenheiro de software e que mudaram a minha carreira</title>
     <link rel="alternate" href="https://truehenrique.com/pt/2026/04/06/os-3-melhores-feedbacks-que-recebi-como-engenheiro-de-software/"/>
@@ -988,436 +1303,6 @@ If we maintain the pace, we go further.&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;It's worth noting that teams, projects, and companies have their specificities, and continuous improvement learning is also part of the agile model. Therefore, there is no perfect model, but it's always good to start from well-established ideas and solid principles to gain maximum advantages.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>O real significado de ikigai</title>
-    <link rel="alternate" href="https://truehenrique.com/pt/2024/01/27/o-real-significado-de-ikigai/"/>
-    <id>https://truehenrique.com/pt/2024/01/27/o-real-significado-de-ikigai/</id>
-    <published>2024-01-27T12:00:00-03:00</published>
-    <updated>2026-05-07T15:30:33-03:00</updated>
-    <author>
-      <name>Henrique F. Teixeira</name>
-    </author>
-    <content type="html">&lt;p&gt;Vocês já ouviram falar de &lt;em&gt;ikigai&lt;/em&gt;? Se sim, muito provavelmente já viram a mandala abaixo:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/images/mandala-ikigai-2.png" style="width:300px" /&gt;&lt;/p&gt;
-
-&lt;p&gt;Muitos artigos e fontes divulgam o "&lt;em&gt;ikigai&lt;/em&gt;" como um "método" ou "&lt;em&gt;framework&lt;/em&gt;" para encontrar seu próposito de vida, com a promessa que no centro dessa mandala estará algo que ira te deixar feliz e recompensado, e pode ser que te deixe mesmo, mas nem sempre é assim.&lt;/p&gt;
-
-&lt;p&gt;Pois bem, no início de 2023, meados de janeiro, passei exatamente de 2 a 3 dias inteiros preenchendo cada um dos lados dessa mandala e buscando meu "propósito de vida" extremamente empolgado. Até que encontrei algumas coisas que fizeram sentido estar no centro:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Algumas vertentes de programação, música e educação.&lt;/li&gt;
-  &lt;li&gt;Coisas que podem me pagar, que me considero bom, sou apaixonado e o mundo pode precisar.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;A partir daí, já que havia "encontrado o meu &lt;em&gt;ikigai&lt;/em&gt;" decidi que era em uma dessas áreas que eu deveria me dedicar ao máximo. Estar envolvido com elas iria me deixar realizado.&lt;/p&gt;
-
-&lt;p&gt;O fato é que eu ja era envolvido em uma delas (programação).&lt;/p&gt;
-
-&lt;p&gt;Gosto de programar e da minha profissão, e isso me fez acreditar que eu deveria me dedicar mais ainda, que esse seria um dos meus maiores objetivos. Que minha profissão poderia estar no centro.&lt;/p&gt;
-
-&lt;p&gt;Nesse ano, na área de TI, concluí uma pós graduação, atuei profissionalmente em uma empresa como CLT, programei em projetos paralelos, me comprometi com diversas atividades, dormi mal, tomei muita cafeína e ganhei minha primeira crise de ansiedade.&lt;/p&gt;
-
-&lt;p&gt;A culpa não é da mandala, a culpa foi minha.&lt;/p&gt;
-
-&lt;p&gt;A mandala é um exercício eficiente para nos ajudar a encontrar algo que sabemos fazer, somos apaixonados, pode nos pagar e o mundo pode precisar.&lt;/p&gt;
-
-&lt;p&gt;Só que, o que há no centro pode não ser nosso propósito de vida. E também pode não ser o nosso &lt;em&gt;ikigai&lt;/em&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Nosso propósito de vida não precisa nos pagar.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Nosso propósito de vida não precisa mudar o mundo.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Não precisamos ser bons (podemos nos tornar bons).&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;No final das contas "&lt;em&gt;ikigai&lt;/em&gt;" pode ter se tornado mais uma palavra absorvida e distorcida pelo mundo "&lt;em&gt;coach&lt;/em&gt; coorportativo". O que é uma pena, pois um ano depois de ter feito a mandala descobri o real significado de &lt;em&gt;ikigai&lt;/em&gt;: &lt;strong&gt;Razão de viver&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Nesse ano, um amigo me falou algo que chamou atenção:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;"Busque conhecimento em vias impressas (livros, revistas) e não digitais. No mundo online, tudo é editável e pode ser alterado a qualquer momento. Algo impresso é difícil de alterar, portanto, existe um esforço maior em garantir a veracidade e qualidade nas informações contidas ali."&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Até então, eu nunca tinha lido um livro sobre &lt;em&gt;ikigai&lt;/em&gt;, apenas artigos.&lt;/p&gt;
-
-&lt;p&gt;Pois bem, chegou 2024 e foi através de uma via impressa (um livro) que minha visão sobre &lt;em&gt;ikigai&lt;/em&gt; mudou.&lt;/p&gt;
-
-&lt;h2 id="nosso-real-ikigai"&gt;Nosso real &lt;em&gt;ikigai&lt;/em&gt;&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;"Ikigai é uma palavra japonesa que descreve os prazeres e sentidos da vida. A palavra consiste literalmente, e "iki"(viver) e "gai" razão&lt;/em&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;em&gt;Na língua japonesa, ikigai é um termo usado em vários contextos, e pode se aplicar a pequenas coisas diárias, assim como a grandes objetivos e conquistas"&lt;/em&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;em&gt;– "Ikigai", Ken Moji, p. 16&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;em&gt;Ikigai&lt;/em&gt; representa aquilo que nos mantêm vivos, as razões pelas quais levantamos da cama todos os dias. Sim, "razões" no plural.&lt;/p&gt;
-
-&lt;p&gt;Podemos ter vários "ikigais".&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Ikigai&lt;/em&gt; está presente nas pequenas coisas. &lt;em&gt;ikigai&lt;/em&gt; está presente nos pequenos passos. &lt;em&gt;Ikigai&lt;/em&gt; está presente no equilíbrio e harmonia.&lt;/p&gt;
-
-&lt;p&gt;Nossa razão de viver pode ser nosso filho ou filha.&lt;/p&gt;
-
-&lt;p&gt;Pode ser uma comida que gostamos de comer, o ar que respiramos todas as manhãs.&lt;/p&gt;
-
-&lt;p&gt;Ah, podemos encontrar razão de viver em nossa profissão também.&lt;/p&gt;
-
-&lt;p&gt;No final das contas, nossas razões de viver (e fazer o que fazemos) são as coisas que buscamos e desfrutamos dia após dia no presente, e não no futuro.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Ikigai&lt;/em&gt; também é sobre estar presente. &lt;em&gt;Ikigai&lt;/em&gt; também é sobre trabalhar em busca da sua razão (Fazer algo que não gostamos em busca de algo que almejamos).&lt;/p&gt;
-
-&lt;p&gt;Diferente do ano passado, em que fazer a mandala me trouxe poucos resultados práticos. Esse ano, entender o que de fato significa &lt;em&gt;ikigai&lt;/em&gt;, já me trouxe grandes diferenças na relação com a vida.&lt;/p&gt;
-
-&lt;p&gt;Comecei a me perguntar, porque faço o que faço? Qual é a razão de tudo isso?&lt;/p&gt;
-
-&lt;p&gt;Comecei a apreciar mais pequenos momentos, como o sabor do meu café da manhã (Comer bem também pode ser uma razão de viver, porque não?) e o vento fresco da janela com aroma de mato molhado após um dia de chuva.&lt;/p&gt;
-
-&lt;p&gt;Passei a prestar atenção no que me apaixona no dia a dia em minhas atividades profissionais e o que não tanto. Descobrir que o processo deve ser mais importante do que a recompensa, devemos nos libertar do ego.&lt;/p&gt;
-
-&lt;p&gt;Consequentemente minha vida começou a ficar mais leve, encontrei e prestei atenção em todas as pequenas coisas que me movem.&lt;/p&gt;
-
-&lt;p&gt;Meu real &lt;em&gt;ikigai&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Ikigai&lt;/em&gt; não é método, não é ferramenta, é uma palavra japonesa que significa: &lt;strong&gt;Razão de viver&lt;/strong&gt;, apenas isso. E os livros exemplificam como os japoneses incorporam a razão de viver em sua cultura.&lt;/p&gt;
-
-&lt;p&gt;Quais são seus "ikigais", hoje?&lt;/p&gt;
-
-&lt;p&gt;O que te faz levantar da cama todos os dias?&lt;/p&gt;
-
-&lt;p&gt;O que você continuaria fazendo independente de estar "ganhando" ou "perdendo"?&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;"Não são só os vencedores que têm ikigai. Vencedores e perdedores podem ter ikigai em pé de igualdade na grande coordenada dança que é a vida. Pela perspectiva interior do ikigai, a fronteira entre vencedores e perdedores derrete gradualmente. No fim das contas, não há diferença entre vencedores e perdedores. É tudo questão de ser humano."&lt;/em&gt;&lt;/p&gt;
-
-  &lt;p&gt;&lt;em&gt;– "Ikigai", Ken Moji, p. 161&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Se você tiver vontade de fazer a mandala, vá em frente, é um exercício legal, mas antes, liberte-se da recompensa rápida e coorporativismo: leia um livro sobre &lt;em&gt;ikigai&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;É mais profundo do que parece.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Livros:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://www.amazon.com.br/Ikigai-Segredos-Japoneses-Longa-Feliz/dp/8551002791/ref=asc_df_8551002791/?tag=googleshopp00-20&amp;amp;linkCode=df0&amp;amp;hvadid=379738544284&amp;amp;hvpos=&amp;amp;hvnetw=g&amp;amp;hvrand=9524166100949460328&amp;amp;hvpone=&amp;amp;hvptwo=&amp;amp;hvqmt=&amp;amp;hvdev=c&amp;amp;hvdvcmdl=&amp;amp;hvlocint=&amp;amp;hvlocphy=1001766&amp;amp;hvtargid=pla-837437504632&amp;amp;psc=1&amp;amp;mcid=40aa12aa237a3cb3910607246af5e029"&gt;Ikigai: Os segredos dos japoneses para uma vida longa e feliz&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://www.amazon.com.br/IKIGAI-cinco-passos-encotrar-prop%C3%B3sito/dp/8582467311/ref=asc_df_8582467311/?tag=googleshopp00-20&amp;amp;linkCode=df0&amp;amp;hvadid=379765936028&amp;amp;hvpos=&amp;amp;hvnetw=g&amp;amp;hvrand=9524166100949460328&amp;amp;hvpone=&amp;amp;hvptwo=&amp;amp;hvqmt=&amp;amp;hvdev=c&amp;amp;hvdvcmdl=&amp;amp;hvlocint=&amp;amp;hvlocphy=1001766&amp;amp;hvtargid=pla-809965134129&amp;amp;psc=1&amp;amp;mcid=2bfc9713acba3cc9bf597cb781a1cdf5"&gt;Ikigai: Os cinco passos para encontrar seu propósito de vida e ser mais feliz&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href="https://www.amazon.com.br/Ikigai-Japanese-Art-Meaningful-Life/dp/0857834916?source=ps-sl-shoppingads-lpcontext&amp;amp;ref_=fplfs&amp;amp;psc=1&amp;amp;smid=A1ZZFT5FULY4LN"&gt;Ikigai: The Japanese Art of a Meaningful Life&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-</content>
-  </entry>
-  <entry>
-    <title>A linguagem de programação "bala de prata"</title>
-    <link rel="alternate" href="https://truehenrique.com/pt/2022/02/17/a-linguagem-de-programacao-bala-de-prata/"/>
-    <id>https://truehenrique.com/pt/2022/02/17/a-linguagem-de-programacao-bala-de-prata/</id>
-    <published>2022-02-17T19:17:00-03:00</published>
-    <updated>2026-05-07T15:30:33-03:00</updated>
-    <author>
-      <name>Henrique F. Teixeira</name>
-    </author>
-    <content type="html">&lt;p&gt;Neste artigo irei mostrar a conclusão de uma pesquisa feita por mim onde comparei algumas linguagens de programação e seus possíveis casos de uso, elencando as que conseguem ser efetivas em mais nichos possíveis em relação a aquelas que atingem apenas nichos específicos. Ah, não existe "bala de prata" de fato. Mas aqui pode haver "insights" para empresas sobre qual tecnologia pode se adaptar melhor dado cada contexto.&lt;/p&gt;
-
-&lt;p&gt;Para a pesquisa selecionei as linguagens "mais populares" atualmente segundo estatísticas do &lt;em&gt;StackOverflow&lt;/em&gt; e &lt;em&gt;GitHub&lt;/em&gt; junto com algumas em crescimento no mercado:&lt;/p&gt;
-
-&lt;p&gt;Populares:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Python, Javascript&lt;/em&gt; (e derivadas), &lt;em&gt;Go, Ruby, C++, C#&lt;/em&gt; e &lt;em&gt;Java&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Tendências:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Kotlin, Elixir, Rust&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Para elencar as linguagens selecionei alguns nichos:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Mobile (iOS / Android)&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Aplicações &lt;em&gt;Web&lt;/em&gt; / Micro Serviços&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;OS&lt;/em&gt; / Programação de aplicativos desktop (&lt;em&gt;GUI&lt;/em&gt;)&lt;/li&gt;
-  &lt;li&gt;Baixo nível&lt;/li&gt;
-  &lt;li&gt;Alta performance &lt;em&gt;CPU-bound&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Concorrência / Paralelismo&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;CLI (command line interface)&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Ciência de dados&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Machine Learn&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Jogos&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;IOT&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Para cada um deles pontuei de &lt;strong&gt;0&lt;/strong&gt; a &lt;strong&gt;3&lt;/strong&gt;, sendo:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;0&lt;/strong&gt;, não atende de nenhuma maneira:
-Não encontrei nenhum suporte para tal nicho, isso inclui ausência de frameworks, bibliotecas, recursos próprios e arquitetura da linguagem ou até limitações impostas por algum outro motivo.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;1&lt;/strong&gt;, atende de forma bem escassa:
-Encontrei algum suporte mas bem escasso, como: frameworks ou bibliotecas imaturas ou obsoletas e sua comunidade também não dá muita atenção para o determinado nicho.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2&lt;/strong&gt;, atende:
-Encontrei bibliotecas e frameworks maduros e estáveis para determinado nicho, possui uma arquitetura favorável, mas claramente não é o foco da comunidade ou o principal uso da linguagem.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3&lt;/strong&gt;, atende muito bem:
-Encontrei foco da comunidade, arquitetura, bibliotecas e frameworks maduros, estáveis e populares. Além de várias pessoas recomendando a linguagem como sendo a mais adequada para o nicho.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;obs:. Não estou considerando pontos como "qualidade de código" ou "sintaxe", esses que de fato podem ser muito importantes na hora de considerar uma tecnologia ou outra. Também levando em conta que eles são bem mais complexos de medir e podem variar de time para time.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Como fiz a pesquisa&lt;/p&gt;
-
-&lt;h4 id="parte-1---entendendo-o-consenso-geral-da-comunidade"&gt;Parte 1 - Entendendo o consenso geral da comunidade.&lt;/h4&gt;
-
-&lt;p&gt;Sendo X a linguagem, primeiro pesquisei "X main usage", depois, para cada nicho pesquisei "X for Y", "Y X library" e "X Y framework" sendo Y o nicho.&lt;/p&gt;
-
-&lt;p&gt;A partir daí colhi informações e opiniões gerais de sites como Quora, Reddit, fóruns espalhados pela internet e cheguei a bibliotecas e frameworks no GitHub.&lt;/p&gt;
-
-&lt;h4 id="parte-2---analisando-projetos-no-github"&gt;Parte 2 - Analisando projetos no GitHub.&lt;/h4&gt;
-
-&lt;p&gt;Após chegar a páginas de projetos open source / bibliotecas e frameworks no GitHub, elenquei entre imaturo, maduro e estável da seguinte maneira:&lt;/p&gt;
-
-&lt;p&gt;imaturo:
-Projetos com pouca ou nenhuma atualização, muitas issues e poucos contribuidores.&lt;/p&gt;
-
-&lt;p&gt;maduro e estável:
-Projetos com atualização constante, populares, que existem a um tempo considerável e tem uma relação entre issues e contribuidores (issues / contributors) saudável.&lt;/p&gt;
-
-&lt;h2 id="resultados"&gt;Resultados&lt;/h2&gt;
-
-&lt;p&gt;Abaixo estão os resultados de cada linguagem de acordo com a minha percepção após fazer a pesquisa:&lt;/p&gt;
-
-&lt;h4 id="python"&gt;Python&lt;/h4&gt;
-&lt;p&gt;﻿
-&lt;img src="/images/silver-bullet/python.png" alt="" /&gt;&lt;/p&gt;
-
-&lt;p&gt;Sem nenhuma dúvida &lt;em&gt;Python&lt;/em&gt; é a "bola da vez" quando o assunto é ciência de dados e &lt;em&gt;IOT&lt;/em&gt;, no &lt;em&gt;GitHub&lt;/em&gt; é a linguagem com mais issues e repositórios relacionados aos temas (lado a lado com &lt;em&gt;Javascript&lt;/em&gt; para &lt;em&gt;IOT&lt;/em&gt;). Com a "simplicidade" no "core" de sua ideologia &lt;em&gt;Python&lt;/em&gt; é adotado de forma abrangente no meio acadêmico e por quem deseja se mais tornar produtivo com códigos extremamente legíveis.&lt;/p&gt;
-
-&lt;p&gt;Fora de &lt;em&gt;IOT&lt;/em&gt; e &lt;em&gt;data science Python&lt;/em&gt; ainda é uma excelente aliada se precisarmos construir aplicações &lt;em&gt;web&lt;/em&gt;, &lt;em&gt;desktop, CLI&lt;/em&gt; e jogos simples com uma "enxurrada" de bibliotecas excelentes como:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt; &lt;em&gt;(&lt;a href="https://github.com/django/django"&gt;https://github.com/django/django&lt;/a&gt;)&lt;/em&gt;. Com 54.8k de stars e 2082 contribuidores coloco lado a lado com Ruby on Rails como uma das mais maduras e robustas ferramentas para desenvolvimento web.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Kivy&lt;/strong&gt; &lt;em&gt;(&lt;a href="https://kivy.org/"&gt;https://kivy.org/&lt;/a&gt;)&lt;/em&gt;. Uma biblioteca incrível para construção de aplicativos multi-plataforma, conseguimos compilar um projeto inteiramente escrito em Python para IOS, Android ou Desktop.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Para programas CLI: &lt;strong&gt;Alive progress, asciimatics e python-prompt-toolkit&lt;/strong&gt; &lt;em&gt;(&lt;a href="https://github.com/rsalmei/alive-progress"&gt;https://github.com/rsalmei/alive-progress&lt;/a&gt;, &lt;a href="https://github.com/peterbrittain/asciimatics"&gt;https://github.com/peterbrittain/asciimatics&lt;/a&gt;, &lt;a href="https://github.com/prompt-toolkit/python-prompt-toolkit"&gt;https://github.com/prompt-toolkit/python-prompt-toolkit&lt;/a&gt;)&lt;/em&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Pygame&lt;/strong&gt; &lt;em&gt;(&lt;a href="https://www.pygame.org/news"&gt;https://www.pygame.org/news&lt;/a&gt;)&lt;/em&gt;. Uma biblioteca com mais de 20 anos de estrada, com todos os recursos necessários para criar os mais diversos jogos.&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;&lt;em&gt;"A Free and Open Source python programming language library for making multimedia applications like games built on top of the excellent SDL library. C, Python, Native, OpenGL. "&lt;/em&gt;&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Numpy&lt;/strong&gt; &lt;em&gt;(&lt;a href="https://numpy.org/devdocs/user/whatisnumpy.html"&gt;https://numpy.org/devdocs/user/whatisnumpy.html&lt;/a&gt;)&lt;/em&gt; Biblioteca escrita em &lt;em&gt;C&lt;/em&gt; muito utilizada em ciência de dados:&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;Numpy is a Python library that provides a multidimensional array object, various derived objects (such as masked arrays and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Para concorrência e &lt;em&gt;CPU-bound Python&lt;/em&gt; parece não ser uma das melhores alternativas mas ainda sim há algo que possa se fazer para otimiza-lo nessas tarefas, como por exemplo, podemos criar processos evitando o &lt;em&gt;GIL (Global Interpreter Lock)&lt;/em&gt;:
-&lt;em&gt;&lt;a href="https://docs.python.org/3/library/multiprocessing.html"&gt;https://docs.python.org/3/library/multiprocessing.html&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;h4 id="javascript-e-derivadas"&gt;Javascript (e derivadas)&lt;/h4&gt;
-&lt;p&gt;﻿
-﻿&lt;img src="/images/silver-bullet/javascript.png" alt="" /&gt;&lt;/p&gt;
-
-&lt;p&gt;Quando dizem que &lt;em&gt;Javascript&lt;/em&gt; vai dominar o mundo pode haver um pouco de verdade. Junto com suas derivadas (&lt;em&gt;Typescript, Node, Deno&lt;/em&gt; e etc…) a linguagem consegue ter ferramentas para os mais diversos nichos, muitas que dispensam apresentação e comentários como: &lt;em&gt;Vue, React, Angular, Express, Nest, Next, Nuxt, Electron&lt;/em&gt; ou &lt;em&gt;React Native&lt;/em&gt;. Com Javascript conseguimos atingir a maioria das plataformas (&lt;em&gt;IOS, Android, Desktop, Debian, Windows&lt;/em&gt;), produzir aplicativos &lt;em&gt;CLI&lt;/em&gt; e desenvolver jogos com ferramentas maduras como &lt;a href="https://phaser.io/"&gt;https://phaser.io/&lt;/a&gt;, &lt;a href="https://github.com/pixijs/pixi.js"&gt;https://github.com/pixijs/pixi.js&lt;/a&gt; e &lt;a href="https://gdevelop-app.com/"&gt;https://gdevelop-app.com/&lt;/a&gt; não deixando a desejar em quase nada. A linguagem ainda é a que têm mais repositórios e issues relacionados a &lt;em&gt;IOT&lt;/em&gt; no GitHub.&lt;/p&gt;
-
-&lt;p&gt;Para ciência de dados senti que podem faltar algumas ferramentas, apesar disso há bibliotecas bem legais para &lt;em&gt;machine learning&lt;/em&gt; como &lt;a href="https://github.com/BrainJS/brain.js#brainjs"&gt;https://github.com/BrainJS/brain.js#brainjs&lt;/a&gt; e &lt;a href="https://js.tensorflow.org/"&gt;https://js.tensorflow.org/&lt;/a&gt;. Dependendo do projeto, consideraria dar uma comparada lado a lado com &lt;em&gt;Python&lt;/em&gt;, que provê um "arsenal" mais completo para o nicho. Muitas vezes podemos até acabar usando &lt;em&gt;Node&lt;/em&gt; e &lt;em&gt;Javascript&lt;/em&gt; em conjunto com &lt;em&gt;Python&lt;/em&gt;. Olha só que bacana esse site: &lt;a href="https://js4ds.org/"&gt;https://js4ds.org/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Ainda sim, quando o assunto se torna alta performance, concorrência e baixo nível esta não parece ser a melhor escolha. Mas aí seria exigir demais, não é?&lt;/p&gt;
-
-&lt;h4 id="ruby"&gt;Ruby&lt;/h4&gt;
-
-&lt;p&gt;﻿&lt;img src="/images/silver-bullet/ruby.png" alt="" /&gt;&lt;/p&gt;
-
-&lt;p&gt;O nicho mais forte da linguagem &lt;em&gt;Ruby&lt;/em&gt; é web. O &lt;em&gt;framework Ruby on Rails&lt;/em&gt; com 47,5k de &lt;em&gt;stars&lt;/em&gt;, 4260 contribuidores e apenas 340 &lt;em&gt;issues&lt;/em&gt; (o que da em média , 0.07 &lt;em&gt;issues&lt;/em&gt; por pessoas que já contribuiram) sem dúvida é uma das peças de &lt;em&gt;software&lt;/em&gt; mais robustas e maduras do mercado, fortemente utilizado por &lt;em&gt;GitHub, Shopify, Gitlab, Airbnb&lt;/em&gt; e por aí vai, a experiência se traduz em 15 anos de um projeto que inspirou o resto da web inteira em 2005 e até hoje continua inovando e se colocando no nível ou até a frente de suas "cópias" em outras linguagens. Além do &lt;em&gt;Ruby on Rails&lt;/em&gt;, a linguagem ainda conta com inúmeras bibliotecas que deixam a produtividade alta para quem quer desenvolver para Web, como: &lt;em&gt;Devise, Jekyll, Hotwire, Sinatra, Roda, Hanami&lt;/em&gt; e etc…&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Ruby&lt;/em&gt; também apresenta ótimos recursos para construção de CLI. Além da sintaxe focada em produtividade e no bem estar do programador, temos bibliotecas maduras como &lt;a href="https://github.com/piotrmurach/tty"&gt;https://github.com/piotrmurach/tty&lt;/a&gt;, &lt;a href="https://github.com/fazibear/colorize"&gt;https://github.com/fazibear/colorize&lt;/a&gt; e &lt;a href="https://github.com/jfelchner/ruby-progressbar"&gt;https://github.com/jfelchner/ruby-progressbar&lt;/a&gt;. Alguns programas &lt;em&gt;CLI&lt;/em&gt; notórios são escritos com a linguagem, como: &lt;em&gt;Homebrew, Vagrant e Chef&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Tirando esses dois nichos, há projetos bem legais como &lt;a href="https://github.com/hybridgroup/artoo"&gt;https://github.com/hybridgroup/artoo&lt;/a&gt; para &lt;em&gt;IOT&lt;/em&gt;, &lt;a href="https://github.com/shoes/shoes4"&gt;https://github.com/shoes/shoes4&lt;/a&gt; e &lt;a href="https://github.com/AndyObtiva/glimmer"&gt;https://github.com/AndyObtiva/glimmer&lt;/a&gt; para construção de &lt;em&gt;GUI&lt;/em&gt;, Inclusive fiquei surpreso com a quantidade de bibliotecas para &lt;em&gt;Machine Learning&lt;/em&gt;: &lt;a href="https://github.com/arbox/machine-learning-with-ruby"&gt;https://github.com/arbox/machine-learning-with-ruby&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Na sua versão 3 lançada no final de 2020 a linguagem ganhou suporte a concorrência, um início de tipagem estática e um &lt;em&gt;boost&lt;/em&gt; de performance &lt;em&gt;CPU-Bound&lt;/em&gt;, que podem trazer, quem sabe, mais recursos e atenção para outros nichos.&lt;/p&gt;
-
-&lt;h4 id="c"&gt;C++&lt;/h4&gt;
-&lt;p&gt;﻿
-﻿&lt;img src="/images/silver-bullet/cplusplus.png" alt="" /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;C++&lt;/em&gt; Apesar de ser uma das mais antigas da lista, ainda é largamente utilizada e cumpre muito bem o seu papel, sendo uma das principais quando lidamos com questões de baixo nível, alta performance e jogos. Sem dúvidas podemos fazer qualquer coisa com &lt;em&gt;C++&lt;/em&gt; e muito bem, mas entendi que uma das barreiras de sua escolha em determinados nichos é a complexidade e a preferência geral por linguagens mais simples, isso acaba acarretando em menos &lt;em&gt;frameworks&lt;/em&gt; e &lt;em&gt;bibliotecas&lt;/em&gt;, como no caso de &lt;em&gt;web, microserviços&lt;/em&gt; e até ciência de dados e &lt;em&gt;machine learn&lt;/em&gt; onde a maior parte da comunidade é acadêmica. Para jogos &lt;em&gt;C++&lt;/em&gt; é uma escolha notória, veja alguns dos títulos escritos com a linguagem:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Battlefield&lt;/em&gt;
-&lt;em&gt;Word of Warcraft&lt;/em&gt;
-&lt;em&gt;League of Legends&lt;/em&gt;
-&lt;em&gt;GTA San Andreas&lt;/em&gt;
-&lt;em&gt;DOOM&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Também encontrei um projeto bem legal para criação de aplicações mobile multi plataforma: &lt;a href="https://www.boden.io/"&gt;https://www.boden.io/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id="c-1"&gt;C#&lt;/h4&gt;
-&lt;p&gt;﻿
-﻿&lt;img src="/images/silver-bullet/csharp.png" alt="" /&gt;&lt;/p&gt;
-
-&lt;p&gt;Sem me prolongar muito, &lt;em&gt;C#&lt;/em&gt; provavelmente é uma ótima escolha para atacar a grande maioria dos nichos, principalmente se o foco é &lt;em&gt;Windows&lt;/em&gt;. A linguagem tem grande flexibilidade, &lt;em&gt;frameworks&lt;/em&gt; ótimos e performance invejável. Veja algumas das ferramentas que teremos no nosso "arsenal" ao escolhermos utilizar &lt;em&gt;C#&lt;/em&gt;:&lt;/p&gt;
-
-&lt;p&gt;.NET core: &lt;em&gt;Framework&lt;/em&gt; multiplataforma extramemente robusto, focado em performance e alta escalabilidade para desenvolvimento de aplicações &lt;em&gt;Web, Desktop&lt;/em&gt; e &lt;em&gt;CLI&lt;/em&gt;. É utilizado por empresas como &lt;em&gt;Stack Overflow&lt;/em&gt; e &lt;em&gt;Godaddy&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Xamarin: &lt;em&gt;Framework&lt;/em&gt; extremamente maduro e robusto para desenvolvimento de aplicações &lt;em&gt;mobile&lt;/em&gt; nativas e multiplataforma, pode ser considerado por muitos como a melhor opção para o nicho! O Xamarin é de fato uma ferramente fantástica, veja mais em:
-&lt;a href="https://docs.microsoft.com/pt-br/xamarin/get-started/what-is-xamarin"&gt;https://docs.microsoft.com/pt-br/xamarin/get-started/what-is-xamarin&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Unity: C# é a linguagem principal de uma das principais e mais populares ferramentas para criação de jogos.
-&lt;a href="https://unity.com/pt"&gt;https://unity.com/pt&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Não há dúvidas que &lt;em&gt;C#&lt;/em&gt; se daria muito bem para tarefas de &lt;em&gt;Data Science&lt;/em&gt;, mas claramente não há vontade dos cientistas de dados em sair do Python! Utilizando C# para algum projeto de Data Science com certeza teríamos que "re-inventar a roda" em algum momento. Ainda sim há projetos maravilhosos para o Nicho, veja: &lt;a href="https://github.com/SciSharp"&gt;https://github.com/SciSharp&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Em &lt;em&gt;IOT&lt;/em&gt; também temos uma atenção interessante por parte da &lt;em&gt;Microsoft&lt;/em&gt;: &lt;a href="https://dotnet.microsoft.com/apps/iot"&gt;https://dotnet.microsoft.com/apps/iot&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id="java--kotlin"&gt;Java / Kotlin&lt;/h4&gt;
-&lt;p&gt;﻿
-﻿&lt;img src="/images/silver-bullet/java.png" alt="" /&gt;&lt;/p&gt;
-
-&lt;p&gt;Outra grande escolha para atacar a maioria dos nichos são as linguagens da &lt;em&gt;JVM&lt;/em&gt;. O ecossitema de ferramentas, bibliotecas e &lt;em&gt;frameworks&lt;/em&gt; feitos é gigante. Vale ressaltar que adicionei &lt;em&gt;Java&lt;/em&gt; e &lt;em&gt;Kotlin&lt;/em&gt; juntos porque &lt;em&gt;Kotlin&lt;/em&gt; é 100% compatível com &lt;em&gt;Java&lt;/em&gt; e a maioria das ferramentas servem para as ambas igualmente.&lt;/p&gt;
-
-&lt;p&gt;Mobile:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Java&lt;/em&gt; é a linguagem principal dentro de desenvolvimento &lt;em&gt;Android&lt;/em&gt; e &lt;em&gt;Kotlin&lt;/em&gt; nos trás possibilidades para desenvolver também para &lt;em&gt;IOS&lt;/em&gt; (&lt;a href="https://kotlinlang.org/lp/mobile/"&gt;https://kotlinlang.org/lp/mobile/&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;Machine Learn / Ciência de dados:&lt;/p&gt;
-
-&lt;p&gt;Graças a sua performance, muitos podem indica-la como sendo a escolha perfeita para tarefas mais intensivas de &lt;em&gt;ML&lt;/em&gt;, depois de Python, é uma das linguagens mais populares no nicho.
-&lt;em&gt;Fink, Hadoop, Hive&lt;/em&gt; e &lt;em&gt;Spark&lt;/em&gt; são algumas das principais ferramentas para &lt;em&gt;Big Data&lt;/em&gt;, que anda lado a lado com Ciência de dados.&lt;/p&gt;
-
-&lt;p&gt;Jogos:&lt;/p&gt;
-
-&lt;p&gt;Diversos títulos foram escritos com a linguagem, como: &lt;em&gt;Minecraft, Runescape&lt;/em&gt; e &lt;em&gt;FIFA 11&lt;/em&gt;. Além de ser uma escolhe versátil para o nicho, &lt;em&gt;Java&lt;/em&gt; é predominante no desenvolvimento de jogos para &lt;em&gt;Android&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;CLI:&lt;/p&gt;
-
-&lt;p&gt;Existem ferramentas como &lt;a href="https://picocli.info/"&gt;https://picocli.info/&lt;/a&gt; que fornecem opções robustas para este nicho.&lt;/p&gt;
-
-&lt;p&gt;Web:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Java&lt;/em&gt; está na &lt;em&gt;web&lt;/em&gt; desde os primórdios dos anos 2000. Sempre evoluindo, não deixa nada a desejar hoje em dia com &lt;em&gt;frameworks&lt;/em&gt; mega-robustos como &lt;em&gt;Spring&lt;/em&gt;&lt;/p&gt;
-
-&lt;h4 id="elixir"&gt;Elixir&lt;/h4&gt;
-&lt;p&gt;﻿
-﻿﻿&lt;img src="/images/silver-bullet/elixir_.png" alt="" /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Elixir&lt;/em&gt; tem todos os requisitos para ser considerada a mais robusta ferramenta quando o assunto é concorrência e paralelismo: A linguagem tem total compatibilidade com &lt;em&gt;Erlang/OTP&lt;/em&gt; e é escrita em cima da &lt;em&gt;Erlang VM&lt;/em&gt; (tecnologia por trás do &lt;em&gt;Whatsapp, Facebook messenger&lt;/em&gt;), além de adotar o paradigma funcional, imutabilidade e vários conceitos que ajudam a escrever códigos extremamente assertivos e eficientes para esse nicho, como o &lt;em&gt;Actor Model&lt;/em&gt;. O resultado disso é que a linguagem tem se tornado a escolha definitiva para empresas como &lt;em&gt;Discord, Stone, MasterCard, Sumup, Square Enix&lt;/em&gt; entre outras.&lt;/p&gt;
-
-&lt;p&gt;Sua maturidade com concorrência e paralelismo também a tornam uma das melhores tecnologias para aplicações &lt;em&gt;web&lt;/em&gt; e microserviços. A escalabilidade que ganhamos utilizando o &lt;em&gt;framework Phoenix&lt;/em&gt; (&lt;a href="https://www.phoenixframework.org"&gt;https://www.phoenixframework.org&lt;/a&gt;) é em todos os sentidos: desde qualidade de código até alta performance, escalando verticalmente ou horizontamente, executando milhões de conexões &lt;em&gt;websocket&lt;/em&gt; simultâneas e etc… &lt;em&gt;Elixir&lt;/em&gt; e &lt;em&gt;Phoenix&lt;/em&gt; utilizam os recursos da máquina como CPU's e memória de forma extremamente eficiente.&lt;/p&gt;
-
-&lt;p&gt;Para &lt;em&gt;IOT&lt;/em&gt; também existem projetos que atingiram uma boa maturidade como o &lt;em&gt;Nerves&lt;/em&gt; (&lt;a href="https://github.com/nerves-project/nerves"&gt;https://github.com/nerves-project/nerves&lt;/a&gt;) e o &lt;em&gt;Scenic&lt;/em&gt; (&lt;a href="https://github.com/nerves-project/nerves"&gt;https://github.com/boydm/scenic&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;Em Ciência de dados e &lt;em&gt;Machine Learning&lt;/em&gt; há uma crescente movimentação da comunidade para explorar o potencial da linguagem, veja:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=ZgPwqN38xaA&amp;amp;feature=emb_logo"&gt;https://www.youtube.com/watch?v=ZgPwqN38xaA&amp;amp;feature=emb_logo&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.erlang-solutions.com/blog/how-to-build-a-machine-learning-project-in-elixir/"&gt;https://www.erlang-solutions.com/blog/how-to-build-a-machine-learning-project-in-elixir/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://towardsdatascience.com/tagged/elixir"&gt;https://towardsdatascience.com/tagged/elixir&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Recentemente foi criada a biblioteca &lt;em&gt;Nx&lt;/em&gt;, por José Valim: &lt;a href="https://dashbit.co/blog/elixir-and-machine-learning-nx-v0.1"&gt;https://dashbit.co/blog/elixir-and-machine-learning-nx-v0.1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Fora esses nichos, é bem difícil encontrar alguma atenção da comunidade, no máximo uma ou outra biblioteca em estágio bem inicial.&lt;/p&gt;
-
-&lt;h4 id="rust"&gt;Rust&lt;/h4&gt;
-&lt;p&gt;﻿
-﻿﻿&lt;img src="/images/silver-bullet/rust.png" alt="" /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Rust&lt;/em&gt; é uma linguagem que pode receber o título de "C moderna". Foi criada justamente para facilitar a criação de tasks "baixo nível" com uma sintaxe bem próxima a linguagens de "alto nível", o que a torna uma das linguagens mais amadas por desenvolvedores segundo pesquisas do &lt;em&gt;StackOverflow&lt;/em&gt;.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Rust held the top spot for most loved technology for the fifth year in a row&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Seu ecossistema ainda é um tanto "enxuto", mas há um potencial para &lt;em&gt;Rust&lt;/em&gt; se tornar uma das linguagens mais importantes dos próximos tempos. Suas características permitem que ela tenha todos os recursos necessários para atingir com extrema excelencia todos os nichos:&lt;/p&gt;
-
-&lt;p&gt;Performance extrema
-Sintaxe moderna
-Gerenciamento de memória eficiente&lt;/p&gt;
-
-&lt;p&gt;Em relação a comunidade, encontrei maior maturidade nos seguintes nichos:&lt;/p&gt;
-
-&lt;p&gt;Aplicações Web / Microserviços
-&lt;a href="https://rocket.rs/"&gt;https://rocket.rs/&lt;/a&gt;
-&lt;a href="https://actix.rs/"&gt;https://actix.rs/&lt;/a&gt;
-&lt;a href="https://github.com/koute/stdweb"&gt;https://github.com/koute/stdweb&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Jogos
-&lt;a href="https://ggez.rs/"&gt;https://ggez.rs/&lt;/a&gt;
-&lt;a href="https://bevyengine.org/"&gt;https://bevyengine.org/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;CLI
-&lt;a href="https://github.com/clap-rs/clap"&gt;https://github.com/clap-rs/clap&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Para &lt;em&gt;Machine Learning&lt;/em&gt; e &lt;em&gt;Data Science&lt;/em&gt; enxerguei bastante potencial, mas sinto que ainda falta engajamento da comunidade.&lt;/p&gt;
-
-&lt;h4 id="go"&gt;Go&lt;/h4&gt;
-&lt;p&gt;﻿
-﻿﻿&lt;img src="/images/silver-bullet/go.png" alt="" /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Go&lt;/em&gt; vem em grande ascenção no mercado desde a sua criação nos escritórios da gigante &lt;em&gt;Google&lt;/em&gt;, e por vários motivos:&lt;/p&gt;
-
-&lt;p&gt;Compila em qualquer plataforma e para qualquer plataforma (de forma extremamente rápida), o que é uma grande vantagem em comparação a grande maioria das linguagens e a torna uma escolha excelente para aplicações multiplataforma. Em nenhuma outra linguagem que pesquisei encontrei bibliotecas tão maduras para &lt;em&gt;CLI's&lt;/em&gt; como &lt;a href="https://github.com/spf13/cobra"&gt;https://github.com/spf13/cobra&lt;/a&gt; ou &lt;a href="https://github.com/urfave/cli"&gt;https://github.com/urfave/cli&lt;/a&gt;. Não é "a toa" que aplicações como &lt;em&gt;Docker&lt;/em&gt; foram escritas com &lt;em&gt;Go&lt;/em&gt;. Também temos ótimas bibliotecas para &lt;em&gt;GUI's&lt;/em&gt; como &lt;a href="https://github.com/fyne-io/fyne"&gt;https://github.com/fyne-io/fyne&lt;/a&gt; e &lt;a href="https://github.com/andlabs/ui"&gt;https://github.com/andlabs/ui&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;É rápida e performática, tornando-a excelente para qualquer aplicação que pode necessitar de alto desempenho: &lt;em&gt;web, microserviços críticos&lt;/em&gt; e &lt;em&gt;jogos&lt;/em&gt;, por exemplo. Para &lt;em&gt;web&lt;/em&gt; e microserviços temos uma cartela cheia de ótimas opções: &lt;em&gt;Gin, Beego, Revel, Martini, Buffalo&lt;/em&gt; e por aí vai. Para jogos temos com maior destaque as bibliotecas &lt;a href="https://github.com/faiface/pixel"&gt;https://github.com/faiface/pixel&lt;/a&gt; e &lt;a href="https://ebiten.org/"&gt;https://ebiten.org/&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;É muito simples e fácil de aprender, o que facilita para novos desenvolvedores.&lt;/p&gt;
-
-&lt;p&gt;Tem suporte nativo, fácil e muito eficiente para lidarmos com concorrência e paralelismo, com os "&lt;em&gt;go channels&lt;/em&gt; e &lt;em&gt;routines&lt;/em&gt;" é sem dúvida uma das melhores escolhas para escrever aplicações que tenham esses requisitos como fundamentais (apesar de considerar &lt;em&gt;Elixir&lt;/em&gt; como superior nesse quesito, graças suas características funcionais a excelente &lt;em&gt;Erlang VM&lt;/em&gt; e &lt;em&gt;OTP&lt;/em&gt;, ainda pretendo escrever um artigo sobre isso).&lt;/p&gt;
-
-&lt;p&gt;Na minha opinião muitas bibliotecas tendem a surgir nos próximos anos com sua popularidade crescendo e não consigo enxergar uma limitação que faça Go não se tornar uma escolha totalmente viável para quase todos os nichos em um futuro não muito distante! (deixando a parte de baixo nível e gerenciamento de memória um pouco de lado).&lt;/p&gt;
-
-&lt;h2 id="concluso"&gt;Conclusão&lt;/h2&gt;
-
-&lt;p&gt;Atualmente é impossível atingir todos o nichos com excelência utilizando uma linguagem só, de fato. Apesar da maioria delas serem de propósito geral, a influência e direcionamento das comunidades é evidente. &lt;em&gt;Ruby&lt;/em&gt; poderia ser uma excelente escolha para &lt;em&gt;Data Science&lt;/em&gt; se no meio acadêmico fosse popular e a comunidade trabalhasse em ferramentas assim como aconteceu com &lt;em&gt;Python&lt;/em&gt;…&lt;/p&gt;
-
-&lt;p&gt;Aqui vai o nosso ranking de "linguagem bala de prata" pela soma de pontos:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Java / Kotlin: 28&lt;/li&gt;
-  &lt;li&gt;C#: 26&lt;/li&gt;
-  &lt;li&gt;C++: 25&lt;/li&gt;
-  &lt;li&gt;Python, Go, Rust e Javascript: 23&lt;/li&gt;
-  &lt;li&gt;Ruby: 17&lt;/li&gt;
-  &lt;li&gt;Elixir: 16&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;E aqui pela quantidade de nichos com 2 pontos ou mais:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Java / Kotlin, C# e C++: 10&lt;/li&gt;
-  &lt;li&gt;Python, Go e Javascript: 8&lt;/li&gt;
-  &lt;li&gt;Rust: 7&lt;/li&gt;
-  &lt;li&gt;Ruby: 6&lt;/li&gt;
-  &lt;li&gt;Elixir: 4&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Devo querer que minha empresa tenha uma &lt;em&gt;stack&lt;/em&gt; mais homogênea, com menos linguagens possíveis?&lt;/p&gt;
-
-&lt;p&gt;Depende, se tratando da maioria das empresas, não. É literalmente impossível e até ruim querer manter uma linguagem só dentro de uma empresa. Não há nenhuma vantagem: Um desenvolvedor que coda &lt;em&gt;Web e Mobile&lt;/em&gt; muito provavelmente não será o mesmo que irá codar a parte de &lt;em&gt;Data Science&lt;/em&gt; ou &lt;em&gt;Devops&lt;/em&gt;. O "homogêneo" deve partir de um nicho e não de uma &lt;em&gt;stack&lt;/em&gt;. E um nicho é naturalmente separado, "não homogêneo" em relação as suas comunidades e tecnologias. Resumindo:&lt;/p&gt;
-
-&lt;p&gt;Se você é dono de uma empresa procure escolher a linguagem ideal para cada nicho e não uma linguagem que cubra todos ou a maioria dos nichos.
-Porém, se você é um desenvolvedor solo "full-mega-blaster-stack" que tem novas idéias para &lt;em&gt;startups&lt;/em&gt; ou pega "freelas" dos mais variados e precisa codar tudo sozinho pode ser interessante e produtivo escolher fazer mais com menos linguagens possíveis.&lt;/p&gt;
-
 </content>
   </entry>
 </feed>
