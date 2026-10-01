@@ -13,14 +13,14 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.truehenrique.com/en/2026/09/08/why-this-is-one-of-the-best-alternatives-to-ruby-on-rails/</loc>
-    <lastmod>2026-09-08T13:21:34-03:00</lastmod>
+    <loc>https://www.truehenrique.com/en/2021/10/27/single-responsibility-the-distorted-principle/</loc>
+    <lastmod>2026-08-17T22:34:19-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.truehenrique.com/en/2021/10/27/single-responsibility-the-distorted-principle/</loc>
-    <lastmod>2026-08-17T22:34:19-03:00</lastmod>
+    <loc>https://www.truehenrique.com/en/2026/09/08/why-roda-is-one-of-the-best-alternatives-to-ruby-on-rails/</loc>
+    <lastmod>2026-10-01T13:35:18-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -33,6 +33,12 @@
   <url>
     <loc>https://www.truehenrique.com/en/2024/04/22/clean-agile-xp-and-scrum-avoiding-the-hangover/</loc>
     <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/pt/2026/09/08/porque-roda-e-uma-das-melhores-alternativas-ao-ruby-on-rails/</loc>
+    <lastmod>2026-10-01T13:35:17-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -75,12 +81,6 @@
   <url>
     <loc>https://www.truehenrique.com/pt/2024/04/22/clean-agile-xp-e-scrum-evitando-a-ressaca/</loc>
     <lastmod>2026-05-07T15:30:33-03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.truehenrique.com/pt/2026/09/08/porque-essa-e-uma-das-melhores-alternativas-ao-ruby-on-rails/</loc>
-    <lastmod>2026-09-08T13:16:22-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
