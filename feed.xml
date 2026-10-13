@@ -14,7 +14,7 @@
     <link rel="alternate" href="https://truehenrique.com/pt/2026/09/08/porque-roda-e-uma-das-melhores-alternativas-ao-ruby-on-rails/"/>
     <id>https://truehenrique.com/pt/2026/09/08/porque-roda-e-uma-das-melhores-alternativas-ao-ruby-on-rails/</id>
     <published>2026-09-08T11:23:00-03:00</published>
-    <updated>2026-10-01T13:35:17-03:00</updated>
+    <updated>2026-10-12T23:56:20-03:00</updated>
     <author>
       <name>Henrique F. Teixeira</name>
     </author>
@@ -157,7 +157,7 @@ end&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Roda existe há mais de 10 anos e tem mais de &lt;a href="https://rubygems.org/gems/roda" target="_blank"&gt;20 milhões de downloads&lt;/a&gt;. O framework é uma escolha consolidada para empresas que já utilizam Ruby e querem extrair a máxima performance com baixo consumo de memória. Atualmente existem grandes projetos utilizando o framework em produção, com destaque para a &lt;a href="https://www.ubicloud.com/" target="_blank"&gt;Ubicloud&lt;/a&gt;. Além disso, o trabalho de Jeremy Evans é notório por sua política de tolerância zero a bugs e respostas rápidas no GitHub. Correções de falhas e implementações de segurança costumam receber atualizações (releases) em prazos extremamente curtos, garantindo uma base de código confiável.&lt;/p&gt;
 
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/OUBvXckHPos?si=J50vbfA1UA7fCcFP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""&gt;&lt;/iframe&gt;
+&lt;iframe src="https://www.youtube.com/embed/OUBvXckHPos?si=J50vbfA1UA7fCcFP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""&gt;&lt;/iframe&gt;
 
 &lt;h2 id="concluso"&gt;Conclusão&lt;/h2&gt;
 
@@ -172,7 +172,7 @@ end&lt;/code&gt;&lt;/pre&gt;
     <link rel="alternate" href="https://truehenrique.com/en/2026/09/08/why-roda-is-one-of-the-best-alternatives-to-ruby-on-rails/"/>
     <id>https://truehenrique.com/en/2026/09/08/why-roda-is-one-of-the-best-alternatives-to-ruby-on-rails/</id>
     <published>2026-09-08T11:23:00-03:00</published>
-    <updated>2026-10-01T13:35:18-03:00</updated>
+    <updated>2026-10-12T23:56:32-03:00</updated>
     <author>
       <name>Henrique F. Teixeira</name>
     </author>
@@ -315,7 +315,7 @@ end&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Roda has been around for over 10 years and has more than &lt;a href="https://rubygems.org/gems/roda" target="_blank"&gt;20 million downloads&lt;/a&gt;. The framework is a solid choice for companies already using Ruby that want to extract maximum performance with low memory consumption. Currently, major projects use the framework in production, notably &lt;a href="https://www.ubicloud.com/" target="_blank"&gt;Ubicloud&lt;/a&gt;. In addition, Jeremy Evans's work is well known for his zero-tolerance policy for bugs and fast responses on GitHub. Bug fixes and security releases typically arrive in extremely short timeframes, ensuring a dependable codebase.&lt;/p&gt;
 
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/OUBvXckHPos?si=J50vbfA1UA7fCcFP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""&gt;&lt;/iframe&gt;
+&lt;iframe src="https://www.youtube.com/embed/OUBvXckHPos?si=J50vbfA1UA7fCcFP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""&gt;&lt;/iframe&gt;
 
 &lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
 
