@@ -128,13 +128,13 @@
   </url>
   <url>
     <loc>https://www.truehenrique.com/en/</loc>
-    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <lastmod>2026-10-13T21:13:52-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.truehenrique.com/</loc>
-    <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <lastmod>2026-10-13T21:13:52-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -165,6 +165,12 @@
   <url>
     <loc>https://www.truehenrique.com/en/archive/</loc>
     <lastmod>2026-05-07T15:30:33-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.truehenrique.com/en/</loc>
+    <lastmod>2026-10-13T21:12:05-03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
