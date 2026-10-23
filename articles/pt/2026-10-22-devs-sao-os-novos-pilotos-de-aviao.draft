@@ -1,0 +1,28 @@
+Já faz um tempo que venho acompanhando as infinitas discussões sobre desenvolvimento de software + IA, então resolvi materializar nesse artigo minhas conclusões e o que enxergo como a melhor analogia para o futuro da área. 
+
+Devs são os novos "pilotos de avião". Ou melhor dizendo: "pilotos de software".
+
+Para quem não sabe, desde 1912 a maior parte do vôo de um avião comercial acontece através de um piloto automático, mas não é por conta disso que deixamos de ter um piloto e um copiloto na cabine. Os pilotos são responsáveis por todo o planejamento do vôo, rotas, análise do estado do avião, cenários adversos e estratégia operacional. Tudo isso é documentado. Essas atividades podem ser separadas em 4 fases: 
+
+1. **Planejamento em solo (pré-voo)**: Análise de Meteorolgia, definições de rota e cartas, cálculo de performance e combustível, envio do plano de voo.
+2. **Na aeronave antes da decolagem**: Inspeção pré-voo, briefing da tripulação, autorização de saída.
+3. **Execução do Voo**: Decolagem e subida, monitoramento contínuo dos instrumentos, consumo de combustível e torca de frequências de rádio conforme cruza os setores de controle.
+4. **Pós-Voo:** Corte de motores e checklist final e fechamento do plano de Voo.
+
+Algumas pessoas talvez imaginem que a única (ou principal) função do piloto, é pilotar dentro da aeronave. Da mesma forma, várias pessoas imaginam que a função do engenheiro de software é principalmente sobre escrever código. A realidade é que escrever código nos últimos anos nunca foi o maior gargalo (exceto naqueles sistemas legados monstruosos sem testes 🫠), principalmente com a quantidade de frameworks e bibliotecas completas como Ruby on Rails, Laravel ou Spring. No ecossistema javascript, por exemplo, temos até biblioteca para verificar se um número é par ou impar (risos). Então já tínhamos um ambiente muito simplificado. Imagino que no passado antes do advento desses frameworks, de fato o código poderia ter sido um dos maiores gargalos, mas isso fica no início dos anos 2000.
+
+Algumas coisas que o mercado têm notado com a integração dos agentes ao dia a dia na engenharia de software:
+
+- Gargalo em PR's
+- Bugs (quem diria?)
+
+
+
+
+
+
+
+
+
+
+Você teria coragem de viajar em um avião 100% controlado por IA?

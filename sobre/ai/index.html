@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='ie=edge' />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Chat with my curriculum">
+    <link rel="manifest" href="/manifest.json">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1640512874906863"
+                  crossorigin="anonymous"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register('/javascripts/service_worker.js').then(function(registration) {
+            console.log('ServiceWorker registered');
+          }).catch(function(err) {
+            console.log('ServiceWorker error: ', err);
+          });
+        })
+      }
+    </script>
+    <meta name="author" content="Henrique Fernandez Teixeira">
+    <link rel="icon" type="image/ico" href="/images/icon-16x16.png">
+
+    <title>@truehenrique | Ai chat</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
+
+      <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+      <style>
+        [x-cloak] {
+          display: none !important;
+        }
+
+        .ai-chat {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .ai-chat h2 {
+          margin-bottom: 0;
+        }
+
+        .no-padding {
+          padding: 0;
+        }
+
+        .no-margin {
+          margin: 0;
+        }
+
+        /* Área de conversa: tamanho fixo com scrollbar */
+        .chat-result-area {
+          height: 420px;
+          overflow-y: auto;
+          padding: 1rem;
+          background-color: #fafafa;
+          border: 1px solid #e0e0e0;
+          border-radius: 8px;
+        }
+
+        .chat-result-area:focus {
+          outline: 1px solid #0074d9;
+          outline-offset: 1px;
+        }
+
+        .chat-message {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          margin-bottom: 1rem;
+        }
+
+        .chat-message:last-child {
+          margin-bottom: 0;
+        }
+
+        .chat-bubble {
+          max-width: 85%;
+          padding: 0.6rem 0.9rem;
+          border-radius: 12px;
+        }
+
+        .chat-bubble p {
+          margin: 0;
+          white-space: pre-wrap;
+          overflow-wrap: anywhere;
+        }
+
+        .chat-bubble-user {
+          align-self: flex-end;
+          background-color: #0074d9;
+          color: #fff;
+          border-bottom-right-radius: 4px;
+        }
+
+        .chat-bubble-ai {
+          align-self: flex-start;
+          background-color: #ececec;
+          color: #111;
+          border-bottom-left-radius: 4px;
+        }
+
+        /* Loading em três pontinhos */
+        .chat-loading {
+          display: flex;
+          align-items: center;
+          gap: 0.3rem;
+          padding: 0.25rem 0;
+        }
+
+        .chat-loading-dot {
+          width: 0.5rem;
+          height: 0.5rem;
+          border-radius: 50%;
+          background-color: #777;
+          animation: chat-loading-bounce 1.2s infinite ease-in-out;
+        }
+
+        .chat-loading-dot:nth-child(2) {
+          animation-delay: 0.15s;
+        }
+
+        .chat-loading-dot:nth-child(3) {
+          animation-delay: 0.3s;
+        }
+
+        @keyframes chat-loading-bounce {
+          0%, 80%, 100% {
+            transform: scale(0.6);
+            opacity: 0.4;
+          }
+          40% {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+
+        .chat-error {
+          font-style: italic;
+        }
+
+        .chat-form {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+        }
+
+        .chat-input {
+          min-height: 5rem;
+          resize: vertical;
+          font-family: inherit;
+        }
+
+        .chat-actions {
+          display: flex;
+          justify-content: flex-end;
+        }
+
+        .chat-submit {
+          margin: 0;
+        }
+
+        .chat-submit[disabled] {
+          opacity: 0.6;
+          cursor: not-allowed;
+        }
+
+        body.dark .chat-result-area {
+          background-color: #111;
+          border-color: #333;
+        }
+
+        body.dark .chat-bubble-ai {
+          background-color: #2a2a2a;
+          color: #fff;
+        }
+
+        body.dark .chat-loading-dot {
+          background-color: #ccc;
+        }
+      </style>
+      <script>
+        function aiChat() {
+          // Vercel Function que recebe { message } e responde { reply }.
+          const AI_API_URL = 'https://truehenrique.vercel.app/api/chat';
+          const AI_API_TIMEOUT = 45000;
+
+          // Envia a pergunta e resolve com o texto da resposta.
+          function askAi(question) {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(function () {
+              controller.abort();
+            }, AI_API_TIMEOUT);
+
+            return fetch(AI_API_URL, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ message: question }),
+              signal: controller.signal
+            })
+              .then(function (response) {
+                if (!response.ok) {
+                  throw new Error('AI API respondeu com status ' + response.status);
+                }
+
+                return response.json();
+              })
+              .then(function (data) {
+                if (!data || typeof data.reply !== 'string' || !data.reply.trim()) {
+                  throw new Error('AI API retornou uma resposta inválida');
+                }
+
+                return data.reply;
+              })
+              .catch(function (error) {
+                if (error.name === 'AbortError') {
+                  throw new Error('AI API demorou demais para responder');
+                }
+
+                throw error;
+              })
+              .finally(function () {
+                clearTimeout(timeoutId);
+              });
+          }
+
+          return {
+            question: '',
+            messages: [],
+
+            // Sempre mantém a conversa rolada para o final. O MutationObserver
+            // reage depois que a resposta (ou o loading) é renderizada no DOM.
+            observeResultArea: function (area) {
+              if (!area || typeof MutationObserver === 'undefined') return;
+
+              this.resultAreaObserver = new MutationObserver(function () {
+                area.scrollTop = area.scrollHeight;
+              });
+
+              this.resultAreaObserver.observe(area, {
+                childList: true,
+                subtree: true,
+                characterData: true,
+                attributes: true,
+                attributeFilter: ['style']
+              });
+            },
+
+            send: function () {
+              const question = this.question.trim();
+              if (!question) return;
+
+              this.question = '';
+              this.messages.push({
+                question: question,
+                status: 'loading',
+                answer: ''
+              });
+
+              const message = this.messages[this.messages.length - 1];
+
+              askAi(question)
+                .then(function (answer) {
+                  message.answer = answer;
+                  message.status = 'done';
+                })
+                .catch(function (error) {
+                  console.error('AI API error:', error);
+                  message.status = 'error';
+                });
+            },
+
+            destroy: function () {
+              if (this.resultAreaObserver) this.resultAreaObserver.disconnect();
+            }
+          };
+        }
+      </script>
+
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <link href="/stylesheets/picnic.css" rel="stylesheet" /><link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.1/chart.min.js" integrity="sha512-5vwN8yor2fFT9pgPS9p9R7AszYaNn0LkQElTXIsZFCL7ucT8zDCAqlQXDdaqgA1mZP47hdvztBMsIoFxq/FyyQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+    <header>
+  <h1>@truehenrique | Blog sobre engenharia de software, agile e reflexões</h1>
+  <div class="wrap">
+    <a href="/"><img src="/images/logo-white.png" alt="" /></a>
+  </div>
+</header>
+<div class="nav">
+  <nav class="wrap">
+    <a href="/" class="brand">
+      <img src="/images/logo-white.png" alt="" />
+    </a>
+    <!-- responsive-->
+    <input id="bmenub" type="checkbox" class="show">
+    <label for="bmenub" class="burger pseudo button large"><i class="fi-list"></i> </label>
+
+    <div class="menu wrap">
+        <a href="/" class="pseudo button icon-puzzle active"><i class="fi-page-multiple"></i> Blog</a>
+      <a href="/sobre/" class="pseudo button icon-picture "><i class="fi-torso-business"></i> Sobre</a>
+      <a href="/arquivo/" class="pseudo button icon-picture "><i class="fi-list-bullet"></i> Arquivo</a>
+        <a href="/playlists" class="pseudo button icon-picture "><i class="fi-play"></i> Playlists</a>
+      <a href="https://github.com/henrique-ft" class="pseudo button icon-picture" target="_blank"><i class="fi-social-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/henrique-fernandez-teixeira-93a4a3127/" class="pseudo button icon-picture" target="_blank"><i class="fi-social-linkedin"></i> Linkedin</a>
+    </div>
+  </nav>
+</div>
+<div class="langs-container">
+  <div class="wrap">
+    <a href="/"><span class="flag-icon flag-icon-br"></span></a>
+    <a href="/en"><span class="flag-icon flag-icon-us"></span></a>
+  </div>
+</div>
+
+    <main role="main" class="flex full wrap about">
+  <div class="section">
+    <div class="wwrap ai-chat" x-data="aiChat()">
+      <img src="/images/avatar.png" class="no-margin no-padding" alt="" />
+      <h3 class="no-margin no-padding">Pergunte sobre minhas experiências e vida profissional</h3>
+
+      <div id="result-area"
+           class="chat-result-area"
+           x-ref="resultArea"
+           x-show="messages.length > 0"
+           x-cloak
+           x-init="observeResultArea($el)"
+           role="log"
+           aria-live="polite"
+           aria-label="Conversa"
+           tabindex="0">
+        <template x-for="(message, index) in messages" :key="index">
+          <div class="chat-message">
+            <div class="chat-bubble chat-bubble-user">
+              <p x-text="message.question"></p>
+            </div>
+
+            <div class="chat-bubble chat-bubble-ai">
+              <div class="chat-loading"
+                   x-show="message.status === 'loading'"
+                   role="status"
+                   aria-label="Aguardando resposta">
+                <span class="chat-loading-dot"></span>
+                <span class="chat-loading-dot"></span>
+                <span class="chat-loading-dot"></span>
+              </div>
+
+              <p class="chat-error"
+                 x-show="message.status === 'error'"
+                 x-text="'A API está fora do ar. Tente novamente em instantes.'">
+              </p>
+
+              <p class="chat-answer"
+                 x-show="message.status === 'done'"
+                 x-text="message.answer"></p>
+            </div>
+          </div>
+        </template>
+      </div>
+
+      <form class="chat-form" x-on:submit.prevent="send">
+        <textarea class="chat-input"
+                  x-model="question"
+                  x-ref="questionInput"
+                  x-on:keydown.enter.exact.prevent="send"
+                  rows="3"
+                  placeholder="Escreva sua pergunta... (ex:. Qual a sua linguagem preferida?)"
+                  aria-label="Sua pergunta"></textarea>
+
+        <div class="chat-actions">
+          <button type="submit"
+                  class="button chat-submit"
+                  :disabled="question.trim() === ''">
+            Enviar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+    <footer class="social-footer">
+  <div class="wrap">
+    @truehenrique | <a href="/privacidade">Privacidade</a> | <a href="/termos-de-uso">Termos de Uso</a>
+  </div>
+</footer>
+
+  </body>
+</html>
