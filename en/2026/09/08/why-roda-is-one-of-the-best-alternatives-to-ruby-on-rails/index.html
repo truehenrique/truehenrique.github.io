@@ -103,11 +103,11 @@
             <small class="color-lite">Sep  8 | Henrique F. Teixeira</small>
             <div class="article-image" style="background-image: url(/images/railsxroda.jpeg)" alt='Why Roda is one of the best alternatives to Ruby on Rails'></div>
 
-        <p>If you are a Ruby dev thinking about building a new project and looking for alternatives to Rails, whether for performance or architecture reasons, consider the <a href="https://roda.jeremyevans.net/" target="_blank">Roda</a> framework.</p>
+        <p>If you are a Ruby dev thinking about building a new project and looking for alternatives to Rails without leaving the language, consider the <a href="https://roda.jeremyevans.net/" target="_blank">Roda</a> framework.</p>
 
-<p>Roda was created by Jeremy Evans, a Ruby core committer and one of the most influential developers in the community, and in my opinion, it is the most well-written framework considering the language's characteristics: it takes advantage of syntax and metaprogramming in an intelligent yet simple way while delivering extreme productivity, extensibility, and high performance.</p>
+<p>Roda was created by Jeremy Evans, a Ruby core committer and one of the most influential developers in the community, and in my opinion, it is the most well-written framework considering the language's characteristics: it takes advantage of syntax and metaprogramming in an intelligent yet simple way while delivering productivity, extensibility, and more performance.</p>
 
-<p>In this article, I explain why.</p>
+<p>In this text, I explain why.</p>
 
 <h2 id="performance">Performance</h2>
 
@@ -137,9 +137,9 @@
 
 <p>In summary, a Ruby system with many abstractions, allocated objects, and metaprogramming can end up costing more and requiring more hardware.</p>
 
-<p>With that in mind, let's compare a few frameworks. I used the <code>ObjectSpace</code> class to identify how many objects are created in a Ruby web application, comparing Rails ("minimal" mode), Hanami, and Roda generated with <a href="https://roda-project.github.io/" target="_blank">roda-project</a> (the fastest way to create a fullstack Roda application with several plugins enabled). This means I compared 3 tools that include equivalent functionality—not just a routing system—and even gave Rails an advantage by using its lightest mode.</p>
+<p>With that in mind, let's use the <code>ObjectSpace</code> class to identify how many objects we have, comparing Rails ("minimal" mode), Hanami, and Roda (I used <a href="https://roda-project.github.io/" target="_blank">roda-project</a> to generate a fullstack Roda application with several plugins enabled).</p>
 
-<p>For each of these applications, I added a <code>/home/index</code> route and a view with the following code:</p>
+<p>For both applications, I added a <code>/home/index</code> route and a view with the following code:</p>
 
 <pre>
 <code class="language-ruby">&lt;% @objects = ObjectSpace.count_objects %&gt;
@@ -147,7 +147,7 @@ Total (slots): &lt;%= @objects[:TOTAL]  %&gt;
 Free (free slots): &lt;%= @objects[:FREE] %&gt;
 Objects (active objects): &lt;%= @objects[:T_OBJECT] %&gt;</code></pre>
 
-<p>To make the tests a bit more realistic, I also sent a heavy load of requests to the endpoints using Apache Benchmark (<code>ab</code>), and for each one I used Puma with 1 worker and 3 threads.</p>
+<p>I also sent a heavy load of requests to the endpoints using Apache Benchmark (<code>ab</code>), and for both I used Puma with 1 worker and 3 threads.</p>
 
 <p>These were the results:</p>
 
@@ -173,9 +173,9 @@ Objects (active objects): &lt;%= @objects[:T_OBJECT] %&gt;</code></pre>
   <li><strong>Rails (minimal):</strong> 242.81rqs</li>
 </ul>
 
-<p>With simple logic, we can translate these benchmark results into money spent: Imagine we have the same application from the benchmark running for multiple users and currently spend $3000 on servers using Ruby on Rails. We would spend approximately $1937 if we were using Hanami, and only $775 using Roda. Of course, this is a simplistic and hypothetical example; performance can vary drastically depending on the code we write and the problem we're solving. Furthermore, the database is usually the biggest performance offender in web applications.</p>
+<p>Of course, this is a very simple benchmark; performance can vary drastically depending on the code we write and the problem we're solving. Furthermore, the database is usually the biggest performance offender in web applications, which generally have an I/O bound bottleneck.</p>
 
-<p>But we can't deny one fact: Roda is the framework that delivers more with less when it comes to memory and performance, and much of this is due to its architecture and routing system:</p>
+<p>But we can't deny one fact: Roda is what serves the most with the least when it comes to memory and performance, especially if we have a route focused on heavier processing (CPU bound), and much of this is due to its architecture and routing system:</p>
 
 <ul>
   <li>Request evaluation stops at the exact moment the path matches its corresponding block.</li>
@@ -240,15 +240,21 @@ end</code></pre>
 
 <h2 id="maturity">Maturity</h2>
 
-<p>Roda has been around for over 10 years and has more than <a href="https://rubygems.org/gems/roda" target="_blank">20 million downloads</a>. The framework is a solid choice for companies already using Ruby that want to extract maximum performance with low memory consumption. Currently, major projects use the framework in production, notably <a href="https://www.ubicloud.com/" target="_blank">Ubicloud</a>. In addition, Jeremy Evans's work is well known for his zero-tolerance policy for bugs and fast responses on GitHub. Bug fixes and security releases typically arrive in extremely short timeframes, ensuring a dependable codebase.</p>
+<p>Roda has been around for over 10 years and has more than <a href="https://rubygems.org/gems/roda" target="_blank">20 million downloads</a>, and major projects currently use the framework in production, notably <a href="https://www.ubicloud.com/" target="_blank">Ubicloud</a>. In addition, Jeremy Evans's work is well known for his zero-tolerance policy for bugs and fast responses on GitHub. Bug fixes and security releases typically arrive in extremely short timeframes, ensuring a dependable codebase.</p>
 
 <iframe src="https://www.youtube.com/embed/OUBvXckHPos?si=J50vbfA1UA7fCcFP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>For a long time, the community lived with the premise that development velocity in the Ruby ecosystem required an inevitable sacrifice: high infrastructure consumption, heavy processes, and a lot of "magic" behind the scenes. Roda completely deconstructs this idea, representing a paradigm shift and uniting what previously seemed impossible in the Ruby world: the expressiveness and productivity we love, with real server savings and high-level performance.</p>
+<p>If you're looking for architectural flexibility without losing productivity and tooling, or if you need an API / web application with a stronger focus on processing, Roda is worth using.</p>
 
-<p>If Rails was the tool that popularized Ruby by allowing businesses to be built quickly, Roda is the mature answer for modern software engineering—and when I say engineering, I don't mean "layers upon layers" of abstraction; I mean solving problems with the right tools in an intelligent way, selecting and using only what is necessary while maintaining simplicity and maintainability (without "overengineering" or "underengineering").</p>
+<p>A few other cool links to dig deeper:</p>
+
+<ul>
+  <li><a href="https://fiachetti.gitlab.io/mastering-roda/">https://fiachetti.gitlab.io/mastering-roda/</a></li>
+  <li><a href="https://mrcook.uk/simple-roda-blog-tutorial/">https://mrcook.uk/simple-roda-blog-tutorial/</a></li>
+  <li><a href="https://www.fullstackruby.dev/fullstack-development/2022/06/03/what-would-it-take-for-roda-to-win/">https://www.fullstackruby.dev/fullstack-development/2022/06/03/what-would-it-take-for-roda-to-win/</a></li>
+</ul>
 
 
           Hey, what did you think of this article??
