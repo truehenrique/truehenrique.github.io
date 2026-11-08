@@ -14,15 +14,13 @@
     <link rel="alternate" href="https://truehenrique.com/pt/2026/09/08/porque-roda-e-uma-das-melhores-alternativas-ao-ruby-on-rails/"/>
     <id>https://truehenrique.com/pt/2026/09/08/porque-roda-e-uma-das-melhores-alternativas-ao-ruby-on-rails/</id>
     <published>2026-09-08T11:23:00-03:00</published>
-    <updated>2026-11-07T21:25:07-03:00</updated>
+    <updated>2026-11-08T16:11:01-03:00</updated>
     <author>
       <name>Henrique F. Teixeira</name>
     </author>
     <content type="html">&lt;p&gt;Se você é dev Ruby, está pensando em desenvolver um projeto novo e buscando alternativas ao Rails sem abandonar a linguagem, considere o framework &lt;a href="https://roda.jeremyevans.net/" target="_blank"&gt;Roda&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Roda foi criado por Jeremy Evans, core commiter do Ruby e um dos desenvolvedores mais influentes da comunidade, e na minha opinião, o framework é o mais bem escrito considerando as características da linguagem: ele consegue tirar vantagem da sintaxe e metaprogramação de forma inteligente e simples ao mesmo tempo que traz produtividade, extensibilidade e mais performance.&lt;/p&gt;
-
-&lt;p&gt;Através desse texto te explico o porquê.&lt;/p&gt;
+&lt;p&gt;Roda foi criado por Jeremy Evans, core commiter do Ruby e um dos desenvolvedores mais influentes da comunidade, e na minha opinião, o framework é o mais bem escrito considerando as características da linguagem: ele consegue tirar vantagem da sintaxe e metaprogramação de forma inteligente e simples ao mesmo tempo que traz produtividade, extensibilidade e mais performance. Essas são as principais vantagens:&lt;/p&gt;
 
 &lt;h2 id="performance"&gt;Performance&lt;/h2&gt;
 
@@ -178,15 +176,13 @@ end&lt;/code&gt;&lt;/pre&gt;
     <link rel="alternate" href="https://truehenrique.com/en/2026/09/08/why-roda-is-one-of-the-best-alternatives-to-ruby-on-rails/"/>
     <id>https://truehenrique.com/en/2026/09/08/why-roda-is-one-of-the-best-alternatives-to-ruby-on-rails/</id>
     <published>2026-09-08T11:23:00-03:00</published>
-    <updated>2026-11-07T21:26:45-03:00</updated>
+    <updated>2026-11-08T16:12:04-03:00</updated>
     <author>
       <name>Henrique F. Teixeira</name>
     </author>
     <content type="html">&lt;p&gt;If you are a Ruby dev thinking about building a new project and looking for alternatives to Rails without leaving the language, consider the &lt;a href="https://roda.jeremyevans.net/" target="_blank"&gt;Roda&lt;/a&gt; framework.&lt;/p&gt;
 
-&lt;p&gt;Roda was created by Jeremy Evans, a Ruby core committer and one of the most influential developers in the community, and in my opinion, it is the most well-written framework considering the language's characteristics: it takes advantage of syntax and metaprogramming in an intelligent yet simple way while delivering productivity, extensibility, and more performance.&lt;/p&gt;
-
-&lt;p&gt;In this text, I explain why.&lt;/p&gt;
+&lt;p&gt;Roda was created by Jeremy Evans, a Ruby core committer and one of the most influential developers in the community, and in my opinion, it is the most well-written framework considering the language's characteristics: it takes advantage of syntax and metaprogramming in an intelligent yet simple way while delivering productivity, extensibility, and more performance. These are the main advantages:&lt;/p&gt;
 
 &lt;h2 id="performance"&gt;Performance&lt;/h2&gt;
 
